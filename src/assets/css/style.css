@@ -114,7 +114,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   text-align: center;
 }
 .masthead__logo { display: inline-block; border: 0; }
-.masthead__logo img { width: 330px; max-width: 78vw; margin: 0 auto; }
+.masthead__logo img { width: 560px; max-width: 86vw; margin: 0 auto; }
 
 .nav {
   margin-top: 2rem;
