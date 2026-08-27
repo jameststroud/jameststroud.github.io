@@ -49,49 +49,6 @@ strapline:
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="center">
-      <p class="eyebrow">What we work on</p>
-      <h2>Three research themes</h2>
-    </div>
-
-    <div class="themes">
-      <div class="theme">
-        <span class="theme__num">I</span>
-        <h3>Measuring natural selection in the wild</h3>
-        <p>
-          A long-term study on Lizard Island, in Miami, that samples an entire
-          five-species anole community twice a year and measures selection through
-          both the reproductive and the non-reproductive season.
-        </p>
-      </div>
-      <div class="theme">
-        <span class="theme__num">II</span>
-        <h3>The evolution of thermal ecophysiology</h3>
-        <p>
-          How species adapt behaviorally and physiologically to novel climates,
-          from green anoles spanning subtropical Florida to temperate Tennessee,
-          to tropical lizards arriving in Florida within the past century.
-        </p>
-      </div>
-      <div class="theme">
-        <span class="theme__num">III</span>
-        <h3>New technology for field studies</h3>
-        <p>
-          Wearable sensors, terrestrial lidar, and deep learning, built with
-          engineers and computer scientists at Georgia Tech and applied to
-          questions that field ecology could not previously reach.
-        </p>
-      </div>
-    </div>
-
-    <p class="center" style="margin-top:3rem">
-      <a class="btn" href="/research/">Read about the research</a>
-    </p>
-  </div>
-</section>
-
 <section class="section section--band">
   <div class="wrap">
     <div class="split">
@@ -125,25 +82,15 @@ strapline:
 </section>
 
 <section class="section">
-  <div class="wrap-text">
-    <div class="center">
-      <p class="eyebrow">Recent</p>
-      <h2>Lab news</h2>
-    </div>
-
-    {%- for item in news | limit(4) %}
-    <div class="news-item">
-      <div class="news-item__date">{{ item.dateText or (item.date | prettyDate) }}</div>
-      <div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.body | safe }}</p>
-        {% if item.link %}<p><a href="{{ item.link }}">{{ item.linkText or "Read more" }}</a></p>{% endif %}
-      </div>
-    </div>
+  <div class="center" style="margin-bottom:3rem">
+    <p class="eyebrow">Explore the site</p>
+  </div>
+  <div class="tiles">
+    {%- for t in hometiles %}
+    <a class="tile{% if t.feature %} tile--feature{% endif %}" href="{{ t.url }}">
+      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}">
+      <span class="tile__label">{{ t.title }}</span>
+    </a>
     {%- endfor %}
-
-    <p class="center" style="margin-top:2.5rem">
-      <a class="btn" href="/news/">All lab news</a>
-    </p>
   </div>
 </section>

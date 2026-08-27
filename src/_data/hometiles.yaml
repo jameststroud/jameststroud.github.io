@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# HOME PAGE PICTURE GRID
+#
+# The tiles at the bottom of the home page. Order here is the order on the page.
+#
+# To add a photo: crop it to a 3:2 shape (e.g. 1200 x 800 pixels), drop it in
+# src/assets/img/tiles/, and put the filename on the `image:` line. Until then
+# each tile shows a neutral placeholder, so nothing looks broken while you
+# gather the photographs.
+#
+#   - title: Research
+#     url: /research/
+#     image: research.jpg      # optional, from src/assets/img/tiles/
+#     alt: "What the photo shows, for screen readers"
+# ---------------------------------------------------------------------------
+
+- title: Research
+  url: /research/
+
+- title: Publications
+  url: /publications/
+
+- title: Software & Tools
+  url: /software/
+
+- title: Lab Members
+  url: /people/
+
+- title: Lab News
+  url: /news/
+
+- title: Teaching & Outreach
+  url: /outreach/
+
+- title: Join the Lab!
+  url: /join/
+
+- title: Miami Lizards
+  url: /miami-lizards/
+  feature: true          # rendered in the orange accent, as in the nav
