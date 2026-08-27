@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -29,23 +29,32 @@
          alt="{{ site.title }}: {{ site.tagline }}" width="560" height="107">
   </a>
 
-  <nav class="nav" aria-label="Main">
+</header>
+
+<nav class="navbar" aria-label="Main">
+  <div class="navbar__inner">
     <ul class="nav__list">
       {%- for item in nav.main %}
       <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
       {%- endfor %}
     </ul>
-  </nav>
-  <div class="nav-feature">
-    <a href="{{ nav.feature.url }}"{% if page.url == nav.feature.url %} aria-current="page"{% endif %}>{{ nav.feature.title }}</a>
+    <a class="nav-contact" href="mailto:{{ site.email }}">Contact</a>
+    <div class="nav-feature">
+      <a href="{{ nav.feature.url }}"{% if page.url == nav.feature.url %} aria-current="page"{% endif %}>{{ nav.feature.title }}</a>
+    </div>
   </div>
-</header>
+</nav>
 
 {% if hero %}
 <div class="hero">
   <img class="hero__img" src="{{ hero }}" alt="{{ heroAlt or '' }}">
-  {% if heroCaption %}<p class="hero__caption">{{ heroCaption | safe }}</p>{% endif %}
 </div>
+{% endif %}
+
+{% if strapline %}
+<p class="strapline">
+  {% for part in strapline %}<span>{{ part }}</span>{% if not loop.last %} <b>&bull;</b> {% endif %}{% endfor %}
+</p>
 {% endif %}
 
 <main>
@@ -75,7 +84,7 @@
       </div>
     </div>
     <div class="footer__fine">
-      <span>&copy; {{ build.year }} The Stroud Lab. Photographs &copy; their respective authors.</span>
+      <span>&copy; {{ build.year }} The Stroud Lab. Photographs by Jon Suh and Day&rsquo;s Edge Productions, &copy; their respective authors.</span>
       <span>Georgia Institute of Technology, Atlanta</span>
     </div>
   </div>
