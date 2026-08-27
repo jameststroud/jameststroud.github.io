@@ -6,20 +6,20 @@
 
 :root {
   /* Colours ------------------------------------------------------------- */
-  --ink:        #22211d;   /* body text                                     */
-  --ink-soft:   #5f5d55;   /* captions, secondary text                      */
-  --ink-faint:  #8b887e;   /* metadata, dates                               */
-  --bg:         #fffdf8;   /* page background (warm off-white)              */
-  --bg-alt:     #f2eee1;   /* alternating section band                      */
-  --rule:       #e3dfd2;   /* hairlines and borders                         */
-  --pastel green:       #BAED91;   /* from the lab logo — headings, links           */
-  --navy-soft:  #3d6e9c;   /* lighter navy for hover states                 */
-  --green:      #3dc267;   /* from the lab logo                             */
-  --gold:       #b1a066;   /* from the lab logo                             */
-  --accent:     #cf6a1a;   /* dewlap orange, on light grounds               */
-  --accent-dk:  #a9520d;
-  --accent-lt:  #e8944a;   /* dewlap orange lightened, for use on navy      */
-  --on-navy:    #ffffff;
+  --ink:           #22211d;   /* body text                                     */
+  --ink-soft:      #5f5d55;   /* captions, secondary text                      */
+  --ink-faint:     #8b887e;   /* metadata, dates                               */
+  --bg:            #fffdf8;   /* page background (warm off-white)              */
+  --bg-alt:        #f2eee1;   /* alternating section band                      */
+  --rule:          #e3dfd2;   /* hairlines and borders                         */
+  --pastel green:  #76da62;   /* from the lab logo — headings, links           */
+  --navy-soft:     #3d6e9c;   /* lighter navy for hover states                 */
+  --green:         #3dc267;   /* from the lab logo                             */
+  --gold:          #b1a066;   /* from the lab logo                             */
+  --accent:        #cf6a1a;   /* dewlap orange, on light grounds               */
+  --accent-dk:     #a9520d;
+  --accent-lt:     #e8944a;   /* dewlap orange lightened, for use on navy      */
+  --on-navy:       #ffffff;
 
   /* Type ---------------------------------------------------------------- */
   --display: "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
