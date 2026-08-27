@@ -4,7 +4,7 @@ title: Software & Tools
 permalink: /software/
 hero: /assets/img/hero/software.jpg
 heroAlt: Three anoles photographed against a white background
-description: "Software from the Stroud Lab: LizardLens, AutoMorph, PyTLidar, and lande."
+description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, and lande."
 ---
 
 <section class="section">
@@ -19,23 +19,30 @@ description: "Software from the Stroud Lab: LizardLens, AutoMorph, PyTLidar, and
   </div>
 </section>
 
+<div class="rule-wrap rule-wrap--text"><hr></div>
+
 <section class="section--tight">
-  <div class="wrap" style="max-width:52rem">
+  <div class="wrap-text">
     {%- for s in software %}
-    <div class="card" style="margin-bottom:2rem">
+    <div class="tool-entry">
       <p class="card__kicker">{{ s.kicker }}</p>
       <h3>{{ s.name }}</h3>
       <p>{{ s.summary }}</p>
       {% if s.extra %}<p>{{ s.extra }}</p>{% endif %}
+      {% if s.paper or s.doi or s.repo %}
       <p class="pub__meta">
-        {% if s.paper %}{{ s.paper }}{% endif %}
-        {% if s.doi %}· <a href="{{ s.doi }}">Preprint</a>{% endif %}
-        {% if s.repo %}· <a href="{{ s.repo }}">Code</a>{% endif %}
+        {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
+        {% if s.doi %} <a href="{{ s.doi }}">Preprint</a>{% endif %}
+        {% if s.repo %}{% if s.doi %} ·{% endif %} <a href="{{ s.repo }}">Code</a>{% endif %}
       </p>
+      {% endif %}
     </div>
+    {%- if not loop.last %}<hr>{% endif %}
     {%- endfor %}
   </div>
 </section>
+
+<div class="rule-wrap rule-wrap--text"><hr></div>
 
 <section class="section section--band">
   <div class="wrap-text">
