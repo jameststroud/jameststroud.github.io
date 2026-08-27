@@ -326,8 +326,15 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .pub__title { color: var(--navy); font-weight: 600; }
 .pub__authors { color: var(--ink-soft); }
 .pub__venue { font-style: italic; }
-.pub__meta { font-size: .84rem; color: var(--ink-faint); margin-top: .2rem; }
+.pub__meta { font-size: .84rem; color: var(--ink-faint); margin-top: .3rem; }
 .pub__meta a { margin-right: .85rem; }
+.pub__pdf {
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--accent);
+  border-bottom-color: rgba(207,106,26,.35);
+}
+.pub__pdf:hover { color: var(--accent-dk); border-bottom-color: var(--accent); }
 .tag {
   display: inline-block;
   font-size: .66rem;

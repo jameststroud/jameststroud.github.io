@@ -44,8 +44,10 @@ description: "Publications from the Stroud Lab, including papers on natural sele
             <br>
             <span class="pub__authors">{{ pub.authors | highlightAuthors(site.labNames) | safe }}</span>
             <span class="pub__venue">{{ pub.journal }}</span>{% if pub.detail %}, {{ pub.detail }}{% endif %}.
-            {%- if pub.doi or pub.url %}
+            {%- set pdfFile = pdfs.byTitle[pub.title] %}
+            {%- if pub.doi or pub.url or pdfFile %}
             <div class="pub__meta">
+              {% if pdfFile %}<a class="pub__pdf" href="/files/papers/{{ pdfFile | urlencode }}">PDF</a>{% endif %}
               {% if pub.doi %}<a href="{{ pub.doi }}">DOI</a>{% endif %}
               {% if pub.url %}<a href="{{ pub.url }}">Link</a>{% endif %}
             </div>
