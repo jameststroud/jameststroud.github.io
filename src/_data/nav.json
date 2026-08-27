@@ -1,0 +1,13 @@
+{
+  "main": [
+    { "title": "Home", "url": "/" },
+    { "title": "Research", "url": "/research/" },
+    { "title": "Publications", "url": "/publications/" },
+    { "title": "Software & Tools", "url": "/software/" },
+    { "title": "Lab Members", "url": "/people/" },
+    { "title": "Lab News", "url": "/news/" },
+    { "title": "Teaching & Outreach", "url": "/outreach/" },
+    { "title": "Join the Lab!", "url": "/join/" }
+  ],
+  "feature": { "title": "Miami Lizards", "url": "/miami-lizards/" }
+}

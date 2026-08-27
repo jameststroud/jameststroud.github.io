@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: Lab News
+permalink: /news/
+description: "News and updates from the Stroud Lab at Georgia Tech."
+---
+
+<section class="section">
+  <div class="wrap-text center">
+    <p class="eyebrow">Updates</p>
+    <h1>Lab news</h1>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap-text">
+    {%- for item in news %}
+    <div class="news-item">
+      <div class="news-item__date">{{ item.dateText or (item.date | prettyDate) }}</div>
+      <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body | safe }}</p>
+        {% if item.link %}<p><a href="{{ item.link }}">{{ item.linkText or "Read more" }}</a></p>{% endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-text">
+    <h2 class="center">In the press</h2>
+    <ul class="press-list">
+      {%- for p in press %}
+      <li>
+        <span class="press-list__outlet">{{ p.year }}</span>
+        <span>
+          <strong>{{ p.outlet }}</strong> ·
+          {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+          {% if p.note %}<br><span style="color:var(--ink-faint);font-size:.9em">{{ p.note }}</span>{% endif %}
+        </span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

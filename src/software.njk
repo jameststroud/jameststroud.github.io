@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Software & Tools
+permalink: /software/
+hero: /assets/img/hero/software.jpg
+heroAlt: Three anoles photographed against a white background
+heroCaption: "Images like these are the raw material for automated morphometric landmarking."
+description: "Software from the Stroud Lab: LizardLens, AutoMorph, PyTLidar, and lande."
+---
+
+<section class="section">
+  <div class="wrap-text center">
+    <p class="eyebrow">Software &amp; tools</p>
+    <h1>What we build</h1>
+    <p class="lead">
+      Field ecology has always been rate-limited by how fast a person can measure
+      things. Most of the tools below exist because a measurement we needed was
+      possible in principle and unaffordable in practice.
+    </p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap" style="max-width:52rem">
+    {%- for s in software %}
+    <div class="card" style="margin-bottom:2rem">
+      <p class="card__kicker">{{ s.kicker }}</p>
+      <h3>{{ s.name }}</h3>
+      <p>{{ s.summary }}</p>
+      {% if s.extra %}<p>{{ s.extra }}</p>{% endif %}
+      <p class="pub__meta">
+        {% if s.paper %}{{ s.paper }}{% endif %}
+        {% if s.doi %}· <a href="{{ s.doi }}">Preprint</a>{% endif %}
+        {% if s.repo %}· <a href="{{ s.repo }}">Code</a>{% endif %}
+      </p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section section--band">
+  <div class="wrap-text">
+    <h2>Why this matters to the lab</h2>
+    <p>
+      Georgia Tech is one of the best engineering and computer science
+      universities in the world, and we are an evolutionary ecology lab inside it.
+      That is not an accident of geography we intend to waste. Wearable sensors,
+      lidar, and deep learning give access to data types that eco-evolutionary
+      field studies simply have not had before, opening questions that were
+      previously unanswerable rather than merely tedious.
+    </p>
+    <p>
+      Much of this work is done with Master's students from the OMSCS programme
+      and with undergraduate capstone teams from Electrical and Computer
+      Engineering, who have designed and built hardware for us as well as
+      software.
+    </p>
+  </div>
+</section>

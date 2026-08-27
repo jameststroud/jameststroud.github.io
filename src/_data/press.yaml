@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# SELECTED PRESS COVERAGE
+# ---------------------------------------------------------------------------
+
+- outlet: New York Times
+  year: 2025
+  title: "'Pirate Lizards' Can Get Around on 3 Legs"
+  note: "Front page of the print newspaper."
+
+- outlet: Washington Post
+  year: 2025
+  title: "What the secret lives of lizards tell us about evolution"
+  url: https://www.washingtonpost.com/science/2025/03/23/anoles-lizard-island-evolution-traits/
+
+- outlet: Atlas Obscura
+  year: 2025
+  title: "Cracking Open Evolution's Black Box on 'Lizard Island'"
+
+- outlet: Sun Sentinel
+  year: 2025
+  title: "The Lizard Wars of South Florida Help Reveal How Evolution Works"
+  note: "Front page of the print newspaper."
+
+- outlet: Quanta
+  year: 2024
+  title: "Evolution: Fast or Slow? Lizards Help Resolve a Paradox"
+
+- outlet: Scientific American
+  year: 2024
+  title: "'Living Fossil' Lizards Are Constantly Evolving — You Just Can't See It"
+
+- outlet: Sun Sentinel
+  year: 2023
+  title: "How South Florida Lizards Are Reshaping Darwin's Theory of Evolution"
+  note: "Cover story."
+
+- outlet: Science News Explores
+  year: 2023
+  title: "Godzilla's atomic breath"
+  note: "James served as scientific advisor."
+
+- outlet: Live Science
+  year: 2024
+  title: "How fast does evolution happen? / Which animals are evolving fastest?"
+  note: "James served as scientific advisor."

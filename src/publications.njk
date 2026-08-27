@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: Publications
+permalink: /publications/
+hero: /assets/img/hero/publications.jpg
+heroAlt: A brown anole displaying its dewlap on a limestone rock
+heroCaption: "<em>Anolis sagrei</em> displaying. Photograph by Jon Suh."
+description: "Publications from the Stroud Lab, including papers on natural selection in the wild, adaptive radiation, character displacement, and thermal physiology."
+---
+
+<section class="section">
+  <div class="wrap-text center">
+    <p class="eyebrow">Publications</p>
+    <h1>Papers</h1>
+    <p class="lead">
+      Names in bold are lab members. For the most current list, including citation
+      counts, see <a href="{{ site.scholar }}">Google Scholar</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="pub-controls">
+      <input id="pubSearch" class="pub-search" type="search"
+             placeholder="Search by title, author, or journal…"
+             aria-label="Search publications">
+    </div>
+
+    <div id="pubList" style="max-width:52rem;margin:0 auto">
+      {%- set total = publications | length %}
+      {%- for group in publications | groupByYear %}
+      <h2 class="year-head" data-year-head>{{ group.year }}</h2>
+        {%- for pub in group.items %}
+        <div class="pub" data-pub
+             data-text="{{ pub.title | replace('<em>','') | replace('</em>','') }} {{ pub.authors }} {{ pub.journal }}">
+          <div class="pub__n">{{ pub.year }}</div>
+          <div>
+            <span class="pub__title">{{ pub.title | safe }}</span>
+            {%- if pub.type == "inreview" %}<span class="tag">In review</span>{% endif %}
+            {%- if pub.type == "popular" %}<span class="tag tag--press">Popular writing</span>{% endif %}
+            {%- if pub.type == "note" %}<span class="tag">Note</span>{% endif %}
+            {%- if pub.type == "volume" %}<span class="tag">Edited volume</span>{% endif %}
+            <br>
+            <span class="pub__authors">{{ pub.authors | highlightAuthors(site.labNames) | safe }}</span>
+            <span class="pub__venue">{{ pub.journal }}</span>{% if pub.detail %}, {{ pub.detail }}{% endif %}.
+            {%- if pub.doi or pub.url %}
+            <div class="pub__meta">
+              {% if pub.doi %}<a href="{{ pub.doi }}">DOI</a>{% endif %}
+              {% if pub.url %}<a href="{{ pub.url }}">Link</a>{% endif %}
+            </div>
+            {%- endif %}
+          </div>
+        </div>
+        {%- endfor %}
+      {%- endfor %}
+    </div>
+
+    <p id="pubEmpty" class="center" style="display:none;color:var(--ink-faint)">
+      No publications match that search.
+    </p>
+  </div>
+</section>
+
+<script>
+// Filter the publication list as you type. Hides empty year headings too.
+(function () {
+  var input = document.getElementById('pubSearch');
+  var pubs  = Array.prototype.slice.call(document.querySelectorAll('[data-pub]'));
+  var heads = Array.prototype.slice.call(document.querySelectorAll('[data-year-head]'));
+  var empty = document.getElementById('pubEmpty');
+  if (!input) return;
+
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+
+    pubs.forEach(function (el) {
+      var match = !q || el.getAttribute('data-text').toLowerCase().indexOf(q) !== -1;
+      el.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+
+    // a year heading is visible only if something under it survived
+    heads.forEach(function (h) {
+      var visible = false;
+      var n = h.nextElementSibling;
+      while (n && !n.hasAttribute('data-year-head')) {
+        if (n.hasAttribute('data-pub') && n.style.display !== 'none') { visible = true; break; }
+        n = n.nextElementSibling;
+      }
+      h.style.display = visible ? '' : 'none';
+    });
+
+    empty.style.display = shown ? 'none' : '';
+  });
+})();
+</script>

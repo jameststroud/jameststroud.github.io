@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------------------
+# SOFTWARE & TOOLS
+# Add a repository link once the code is public and the `repo` line will appear.
+# ---------------------------------------------------------------------------
+
+- name: LizardLens
+  kicker: Species identification
+  summary: >
+    A two-stage deep learning pipeline for identifying anoles in photographs. A
+    fine-tuned YOLOv8x model finds each lizard in the frame; a Swin Transformer
+    then classifies it. Trained on 10,000 verified iNaturalist photographs across
+    five Florida anole species, it reaches 83.0% top-1 accuracy and an F1 of
+    0.890, beating the best single-stage YOLO model by 10.5 to 13.2% on every
+    metric. Splitting detection from classification is what buys the improvement:
+    each stage specialises.
+  extra: >
+    LizardLens was built for middle school students in the Lizards on the Loose
+    programme. Species identification is ordinarily the barrier that keeps
+    non-experts out; here it becomes the entry point. Students get
+    probability-ranked predictions instead of a guess, correct the bounding box
+    by hand when the model is wrong, and each validated prediction becomes a real
+    iNaturalist observation.
+  paper: "Chia et al., in review, Ecology and Evolution"
+  doi: https://doi.org/10.64898/2026.06.10.731342
+
+- name: LizardMorph
+  kicker: Morphometrics
+  summary: >
+    A generalizable machine learning framework for automated anatomical landmark
+    detection in digital images. Built to landmark the lab's lizard radiographs
+    and toepad scans without a person clicking every point, but written to
+    generalise beyond them.
+  paper: "Quintana et al., in review, Ecology and Evolution"
+  doi: https://doi.org/10.64898/2026.06.10.731351
+
+- name: PyTLidar
+  kicker: Structure from lidar
+  summary: >
+    A Python package for building quantitative structure models of trees from
+    terrestrial lidar point clouds. We use it to measure the branches on Lizard
+    Island — perch diameter and perch height are the axes anole ecomorphs are
+    built around, and until now they were measured by hand, one branch at a time.
+  paper: "Hagood et al., in review, Journal of Open Source Software"
+  doi: https://doi.org/10.32942/X2XP99
+
+- name: lande
+  kicker: Selection analysis
+  summary: >
+    An R package for analysing and visualising natural selection, in development
+    in the lab.

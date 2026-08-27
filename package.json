@@ -1,0 +1,14 @@
+{
+  "name": "thestroudlab",
+  "version": "1.0.0",
+  "description": "The Stroud Lab website",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "js-yaml": "^5.4.1"
+  }
+}

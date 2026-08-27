@@ -1,0 +1,104 @@
+# ---------------------------------------------------------------------------
+# LAB NEWS
+#
+# Newest first. To post an update, copy a block to the top and edit it.
+#
+#   - date: 2026-08-27        # used for ordering, and shown unless dateText is set
+#     dateText: "August 2026"  # optional: use when you only know month or year
+#     title: "Headline"
+#     body: >
+#       A sentence or two. Links look like [this](https://example.com).
+#     link:  https://example.com     # optional "read more" link
+#     linkText: "Read the paper"     # optional label for that link
+# ---------------------------------------------------------------------------
+
+- date: 2026-07-22
+  title: "Georgia Tech funds our wearable sensor programme"
+  body: >
+    A new Georgia Tech award supports the next phase of our ultra-light wearable
+    sensor work, with colleagues in the School of Biological Sciences. The sensors let us track
+    movement, behaviour, physiology, and interactions passively, in the wild.
+
+- date: 2026-06-30
+  title: "Simons Foundation Graduate Fellowship in Ecology and Evolution"
+  body: >
+    The Simons Foundation has funded <em>Acclimation and adaptation: rapid
+    physiological responses to the climate crisis</em>, supporting a graduate
+    fellowship in the lab.
+
+- date: 2026-06-01
+  dateText: "Summer 2026"
+  title: "Guille Garcia-Costoya joins the lab"
+  body: >
+    Guillermo (Guille) Garcia-Costoya has joined as a postdoctoral fellow.
+    Welcome, Guille.
+
+- date: 2026-04-27
+  title: "Bicentenary Medal, Linnean Society of London"
+  body: >
+    James has been awarded the Linnean Society's Bicentenary Medal, given to an
+    early-career scientist in recognition of excellent research in the natural
+    sciences.
+
+- date: 2026-02-01
+  dateText: "2026"
+  title: "Atwood Rising Star in Evolution, University of Toronto"
+  body: >
+    James was named an Atwood Rising Star in Evolution and gave the accompanying
+    lecture at the University of Toronto.
+
+- date: 2025-10-13
+  title: "Three-legged lizards make the front page of the New York Times"
+  body: >
+    Our study of lizards surviving and reproducing on three legs ran in <em>The
+    American Naturalist</em> and on the front page of the New York Times print
+    edition. Forty-eight authors contributed observations from field sites across
+    the Caribbean and beyond.
+  link: https://doi.org/10.1086/737525
+  linkText: "Read the paper"
+
+- date: 2025-10-15
+  title: "Packard Fellowship in Science and Engineering"
+  body: >
+    James has been awarded a Packard Fellowship for <em>Revealing evolution's hidden
+    pathways: how behavior shapes natural selection</em>. The fellowship provides
+    $875,000 over five years.
+
+- date: 2025-06-10
+  title: "Maxwell/Hanrahan Award in Field Biology"
+  body: >
+    The Maxwell/Hanrahan Foundation has recognised the lab's long-term field work
+    with a $100,000 Award in Field Biology.
+
+- date: 2025-03-23
+  title: "Lizard Island in the Washington Post"
+  body: >
+    James wrote about what a decade of watching anoles has taught us, for the
+    Washington Post. The piece was read 11,105 times in its first day online.
+  link: https://www.washingtonpost.com/science/2025/03/23/anoles-lizard-island-evolution-traits/
+  linkText: "Read the article"
+
+- date: 2025-03-12
+  title: "Long-term studies in Nature"
+  body: >
+    With Will Ratcliff, we argue that long-term studies give a view of evolution
+    that no snapshot can. Published in <em>Nature</em>.
+  link: https://doi.org/10.1038/s41586-025-08597-9
+  linkText: "Read the paper"
+
+- date: 2024-11-14
+  title: "Character displacement, from process to pattern"
+  body: >
+    Our <em>Nature Communications</em> paper follows two anole species from their first
+    meeting through the divergence that followed, in a community assembling in
+    real time.
+  link: https://doi.org/10.1038/s41467-024-54302-1
+  linkText: "Read the paper"
+
+- date: 2024-06-01
+  dateText: "2024"
+  title: "Founder's Prize, British Ecological Society"
+  body: >
+    James received the British Ecological Society's Founder's Prize, and was
+    elected an Early Career Fellow of the Ecological Society of America and a
+    Fellow of the Linnean Society of London in the same year.

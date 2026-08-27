@@ -1,0 +1,94 @@
+---
+layout: base.njk
+title: Lab Members
+permalink: /people/
+hero: /assets/img/hero/people.jpg
+heroAlt: Fieldwork in the canopy
+heroCaption: "Sampling on Lizard Island, Fairchild Tropical Botanic Garden, Miami."
+description: "The people of the Stroud Lab at Georgia Tech."
+---
+
+{% macro person(p) %}
+<div class="person">
+  <img class="person__photo"
+       src="/assets/img/people/{{ p.photo or 'placeholder.jpg' }}"
+       alt="{{ p.name }}">
+  <h3>{{ p.name }}</h3>
+  <p class="person__role">{{ p.role }}{% if p.started %} · {{ p.started }}{% endif %}</p>
+  {% if p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
+  <p class="person__links">
+    {% if p.email %}<a href="mailto:{{ p.email }}">Email</a>{% endif %}
+    {% if p.scholar %}<a href="{{ p.scholar }}">Scholar</a>{% endif %}
+  </p>
+</div>
+{% endmacro %}
+
+<section class="section">
+  <div class="wrap-text center">
+    <p class="eyebrow">The lab</p>
+    <h1>Lab members</h1>
+    <p class="lead">
+      Everyone here was hand-picked. The whole group goes to Lizard Island every
+      spring and every fall.
+    </p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+
+    {%- for p in people | where("group","pi") %}
+    <div class="people-group">
+      <h2 class="people-group__title">Principal Investigator</h2>
+      <div class="pi">
+        <img class="person__photo" src="/assets/img/people/{{ p.photo }}" alt="{{ p.name }}">
+        <div>
+          <h3 style="font-size:1.8rem">{{ p.name }}</h3>
+          <p class="person__role">{{ p.role }}</p>
+          <p>{{ p.bio }}</p>
+          <p class="person__links">
+            <a href="mailto:{{ p.email }}">{{ p.email }}</a>
+            <a href="{{ p.scholar }}">Google Scholar</a>
+            <a href="/files/Stroud_CV.pdf">CV</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    {%- endfor %}
+
+    {%- set groups = [
+      { key: "staff",    label: "Research staff" },
+      { key: "postdoc",  label: "Postdoctoral researchers" },
+      { key: "phd",      label: "PhD students" },
+      { key: "incoming", label: "Incoming" },
+      { key: "undergrad",label: "Undergraduate researchers" }
+    ] %}
+
+    {%- for g in groups %}
+    {%- set members = people | where("group", g.key) %}
+    {%- if members | length %}
+    <div class="people-group">
+      <h2 class="people-group__title">{{ g.label }}</h2>
+      <div class="people-grid">
+        {%- for p in members %}{{ person(p) }}{% endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- endfor %}
+
+  </div>
+</section>
+
+<section class="section section--band">
+  <div class="wrap-text center">
+    <h2>Alumni</h2>
+    <p>
+      The lab has mentored 29 undergraduates at Georgia Tech, five undergraduates
+      at other universities, 32 Master's students, and four high school students
+      through the Fairchild Tropical Botanic Garden internship programme. Several
+      have published lab research as lead or co-authors, and several have presented
+      it at international meetings.
+    </p>
+    <p><a class="btn" href="/join/">Join the lab</a></p>
+  </div>
+</section>

@@ -1,0 +1,694 @@
+# ---------------------------------------------------------------------------
+# PUBLICATIONS
+#
+# To add a paper, copy the block below, put it at the TOP of the list, and fill
+# it in. Nothing else needs changing — the page groups by year automatically.
+#
+#   - year: 2026
+#     authors: "Stroud, J.T., Someone, A.B."
+#     title: "The title of the paper"
+#     journal: "Journal Name"
+#     detail: "12(3): 100-110"          # volume(issue): pages — optional
+#     doi: "https://doi.org/10.xxxx/yyy"
+#     type: article                      # article | inreview | popular | note | volume
+#     featured: true                     # optional: pulls it onto the home page
+#     press: true                        # optional: adds a "press coverage" tag
+#
+# ---------------------------------------------------------------------------
+
+# ===== In review / submitted ===============================================
+
+- year: 2026
+  type: inreview
+  authors: "Stroud, J.T., Freeman, B.G."
+  title: "Ecological release from predators, not competitors, drives the island syndrome in Caribbean <em>Anolis</em> lizards"
+  journal: "Nature"
+
+- year: 2026
+  type: inreview
+  authors: "Chia, W.C., Jahanshahi, I., Loh, L.Y., Zheng, A., Verma, N., Mussmann, S., Shi, B., Stroud, J.T."
+  title: "LizardLens: A two-stage deep learning pipeline for detecting and classifying similar species in visually complex environments"
+  journal: "Ecology and Evolution"
+  detail: "preprint on bioRxiv"
+  doi: "https://doi.org/10.64898/2026.06.10.731342"
+
+- year: 2026
+  type: inreview
+  authors: "Quintana, M., Loh, L.Y., Parikh, A., Suh, J.J., Chavez, V., Porto, A., Shi, B., Stroud, J.T."
+  title: "LizardMorph: A generalizable machine learning framework for automated anatomical landmark detection in digital images"
+  journal: "Ecology and Evolution"
+  detail: "preprint on bioRxiv"
+  doi: "https://doi.org/10.64898/2026.06.10.731351"
+
+- year: 2025
+  type: inreview
+  authors: "Hagood, J., Yang, F., Motiwale, S., Shi, B., Cannon, J.B., Stroud, J.T."
+  title: "PyTLidar: A Python package for tree QSM modeling from terrestrial lidar data"
+  journal: "Journal of Open Source Software"
+  detail: "preprint"
+  doi: "https://doi.org/10.32942/X2XP99"
+
+# ===== Journal articles =====================================================
+
+- year: 2026
+  type: article
+  authors: "Burnetti, A.J., Stroud, J.T., Ratcliff, W.C."
+  title: "Priority effects inhibit the repeated evolution of phototrophy"
+  journal: "npj Complexity"
+  detail: "3(1): 9"
+  doi: "https://doi.org/10.1038/s44260-026-00069-z"
+
+- year: 2026
+  type: article
+  authors: "Stroud, J.T., Francisco, E., Cooper, T.L., Suh, J.J."
+  title: "Predation by a non-native Cuban Knight Anole (<em>Anolis equestris</em>) of a native Corn Snake (<em>Pantherophis guttatus</em>) in Miami, Florida, USA"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "33(1): e23091"
+  doi: "https://doi.org/10.17161/randa.v33i1.23091"
+
+- year: 2025
+  type: article
+  featured: true
+  press: true
+  authors: "Stroud, J.T., Kolbe, J.J., Doshna, B., Anderson, C.V., French, S.S., Miles, D.B., Zani, P.A., Suh, J.J., and 40 others, Losos, J.B."
+  title: "Pirates of the Caribbean (and elsewhere): Three-legged lizards and the study of evolutionary adaptation"
+  journal: "The American Naturalist"
+  detail: "206(5): 403-417"
+  doi: "https://doi.org/10.1086/737525"
+
+- year: 2025
+  type: article
+  authors: "Michaelides, S.N., Stroud, J.T., Giery, S.T., Smith, B.E., Glor, R.E., Kolbe, J.J."
+  title: "Invasion histories differ markedly among the four <em>Anolis</em> lizard species introduced to Bermuda"
+  journal: "Journal of Herpetology"
+  detail: "59(2): 19-26"
+  doi: "https://doi.org/10.1670/23-043"
+
+- year: 2025
+  type: article
+  featured: true
+  authors: "Stroud, J.T., Day, J.J., Castañeda, M. d. R., Martin, C.H."
+  title: "A global perspective on adaptive radiation: Advances, issues, and future directions"
+  journal: "Evolutionary Journal of the Linnean Society"
+  detail: "4(1): kzaf009"
+  doi: "https://doi.org/10.1093/evolinnean/kzaf009"
+
+- year: 2025
+  type: article
+  featured: true
+  press: true
+  authors: "Stroud, J.T., Ratcliff, W.C."
+  title: "Long-term studies provide unique insights into evolution"
+  journal: "Nature"
+  detail: "639: 589-601"
+  doi: "https://doi.org/10.1038/s41586-025-08597-9"
+
+- year: 2024
+  type: article
+  featured: true
+  press: true
+  authors: "Stroud, J.T., Giery, S.T., Heathcote, R.J.P., Tiatragul, S., Yuan, M., Feeley, K.J., Losos, J.B."
+  title: "Observing character displacement from process to pattern in a novel vertebrate community"
+  journal: "Nature Communications"
+  detail: "15: 9862"
+  doi: "https://doi.org/10.1038/s41467-024-54302-1"
+
+- year: 2024
+  type: article
+  authors: "Hall, J.M., Thawley, C.J., Stroud, J.T."
+  title: "Life history strategies are decoupled from ecomorphological convergence in two <em>Anolis</em> lizards"
+  journal: "Biological Journal of the Linnean Society"
+  detail: "143(2): blae088"
+  doi: "https://doi.org/10.1093/biolinnean/blae088"
+
+- year: 2024
+  type: article
+  featured: true
+  authors: "Stroud, J.T., Delory, B.M., Barnes, E.M., Chase, J.M., De Meester, L., Dieskau, J., Grainger, T.N., Halliday, F.W., Kardol, P., Knight, T.M., Ladouceur, E., Little, C.J., Roscher, C., Sarneel, J.M., Temperton, V.M., van Steijn, T., Werner, C.M., Wood, C.W., Fukami, T."
+  title: "Priority effects transcend scales and disciplines in biology"
+  journal: "Trends in Ecology and Evolution"
+  detail: "39(7): 677-688"
+  doi: "https://doi.org/10.1016/j.tree.2024.02.004"
+
+- year: 2023
+  type: article
+  featured: true
+  press: true
+  authors: "Stroud, J.T., Moore, M.P., Langerhans, R.B., Losos, J.B."
+  title: "Fluctuating selection maintains distinct species phenotypes in an ecological community in the wild"
+  journal: "Proceedings of the National Academy of Sciences"
+  detail: "120(42): e2222071120"
+  doi: "https://doi.org/10.1073/pnas.2222071120"
+
+- year: 2023
+  type: article
+  authors: "Moore, M.P., Shaich, J., Stroud, J.T."
+  title: "Upslope migration is slower in insects that depend on metabolically demanding flight"
+  journal: "Nature Climate Change"
+  detail: "13: 1063-1066"
+  doi: "https://doi.org/10.1038/s41558-023-01794-2"
+
+- year: 2023
+  type: article
+  authors: "Stroud, J.T., Petherick, A., Krasnoff, B., Walker, K., Suh, J.J., Losos, J.B."
+  title: "Signal size allometry in <em>Anolis</em> lizard dewlaps"
+  journal: "Biology Letters"
+  detail: "19: 20230160"
+  doi: "https://doi.org/10.1098/rsbl.2023.0160"
+
+- year: 2023
+  type: article
+  authors: "Miller, A.H., Stroud, J.T., Losos, J.B."
+  title: "The ecology and evolution of key innovations"
+  journal: "Trends in Ecology and Evolution"
+  detail: "38(2): 122-131"
+  doi: "https://doi.org/10.1016/j.tree.2022.09.005"
+
+- year: 2022
+  type: article
+  authors: "Miller, A.H., Stroud, J.T."
+  title: "Novel tests of the key innovation hypothesis: Adhesive toepads in arboreal lizards"
+  journal: "Systematic Biology"
+  detail: "71(1): 139-152"
+  doi: "https://doi.org/10.1093/sysbio/syab041"
+
+- year: 2021
+  type: article
+  authors: "Sanger, T.J., Harding, L., Kyrkos, J., Arnaudoff, L., Nunez, S.A., Lachance, D., Dhindsa, S., Stroud, J.T., Diaz, R.E., Czesny, B."
+  title: "Environmental thermal stress induces neuronal cell death and developmental malformations in reptiles"
+  journal: "Integrative Organismal Biology"
+  detail: "3(1): 1-18"
+  doi: "https://doi.org/10.1093/iob/obab033"
+
+- year: 2021
+  type: article
+  authors: "Kolbe, J.J., Gilbert, N., Stroud, J.T., Chejanovski, Z.A."
+  title: "An experimental analysis of perch diameter and substrate preferences of <em>Anolis</em> lizards from natural forest and urban habitats"
+  journal: "Journal of Herpetology"
+  detail: "55(3): 215-221"
+  doi: "https://doi.org/10.1670/0022-1511-55.3.215"
+
+- year: 2021
+  type: article
+  featured: true
+  authors: "Stroud, J.T."
+  title: "Island species experience higher niche expansion and lower niche conservatism during invasion"
+  journal: "Proceedings of the National Academy of Sciences"
+  detail: "118(1): e2018949118"
+  doi: "https://doi.org/10.1073/pnas.2018949118"
+
+- year: 2021
+  type: article
+  authors: "Herrmann, N., Stroud, J.T., Losos, J.B."
+  title: "The evolution of 'ecological release' into the 21st century"
+  journal: "Trends in Ecology and Evolution"
+  detail: "36(3): 206-215"
+  doi: "https://doi.org/10.1016/j.tree.2020.10.019"
+
+- year: 2020
+  type: article
+  authors: "Stroud, J.T., Mothes, C.C., Beckles, W., Heathcote, R.J.P., Donihue, C.M., Losos, J.B."
+  title: "An extreme cold event leads to community-wide convergence in lower temperature tolerance in a lizard community"
+  journal: "Biology Letters"
+  detail: "16(10): 20200625"
+  doi: "https://doi.org/10.1098/rsbl.2020.0625"
+
+- year: 2020
+  type: article
+  authors: "Donihue, C.M., Kowaleski, A., Algar, A., Baeckens, S., Buchkowski, R.W., Fabre, A.-C., Frank, H.K., Geneva, A.J., Mahler, D.L., Reynolds, R.G., Stroud, J.T., Velasco, J.A., Kolbe, J.J., Losos, J.B., Herrel, A."
+  title: "Hurricane effects on Neotropical lizards span geographic and phylogenetic scales"
+  journal: "Proceedings of the National Academy of Sciences"
+  detail: "117(19): 10429-10434"
+  doi: "https://doi.org/10.1073/pnas.2000801117"
+
+- year: 2020
+  type: article
+  authors: "Hall, J.M., Mitchell, T.S., Thawley, C.J., Stroud, J.T., Warner, D.A."
+  title: "Adaptive seasonal shift towards investment in fewer, larger offspring: Evidence from field and laboratory studies"
+  journal: "Journal of Animal Ecology"
+  detail: "89(5): 1242-1253"
+  doi: "https://doi.org/10.1111/1365-2656.13182"
+
+- year: 2020
+  type: article
+  authors: "Gillespie, R.G., Bennett, G., De Meester, L., Fleischer, R.C., Harmon, L., Hendry, A., Knope, M., Mallet, J., Martin, C., Parent, C., Patton, A., Pfennig, K., Rubinoff, D., Schluter, D., Seehausen, O., Shaw, K., Stacy, E., Stervander, M., Stroud, J.T., Wagner, C., Wogan, G."
+  title: "Comparing adaptive radiations across space, time, and taxa"
+  journal: "Journal of Heredity"
+  detail: "111(1): 1-20"
+  doi: "https://doi.org/10.1093/jhered/esz064"
+
+- year: 2020
+  type: article
+  authors: "Stroud, J.T., Losos, J.B."
+  title: "Bridging the process-pattern divide to understand the origins and early stages of adaptive radiation: A review of approaches with insights from studies of <em>Anolis</em> lizards"
+  journal: "Journal of Heredity"
+  detail: "111(1): 33-42"
+  doi: "https://doi.org/10.1093/jhered/esz055"
+
+- year: 2019
+  type: article
+  authors: "Stroud, J.T., Thompson, M.E."
+  title: "Looking to the past to understand the future of tropical conservation: The importance of collecting basic data"
+  journal: "Biotropica"
+  detail: "51(3): 293-299"
+  doi: "https://doi.org/10.1111/btp.12665"
+
+- year: 2019
+  type: article
+  authors: "Stroud, J.T., Colom, M., Ferrer, P., Palermo, N., Vargas, V., Cavallini, M., Lopez, J., Jones, I."
+  title: "Behavioral shifts with urbanization may facilitate biological invasion of a widespread lizard"
+  journal: "Urban Ecosystems"
+  detail: "22(3): 425-434"
+  doi: "https://doi.org/10.1007/s11252-019-0831-9"
+
+- year: 2019
+  type: article
+  authors: "Mothes, C.C., Stroud, J.T., Clements, S.L., Searcy, C.A."
+  title: "Evaluating ecological niche model accuracy in predicting biotic invasions using South Florida's exotic lizard community"
+  journal: "Journal of Biogeography"
+  detail: "46(2): 432-441"
+  doi: "https://doi.org/10.1111/jbi.13511"
+
+- year: 2019
+  type: article
+  authors: "Stroud, J.T., Giery, S.T., Outerbridge, M., Feeley, K.J."
+  title: "Ecological character displacement alters the outcome of priority effects during community assembly"
+  journal: "Ecology"
+  detail: "100(8): e02727"
+  doi: "https://doi.org/10.1002/ecy.2727"
+
+- year: 2018
+  type: article
+  authors: "Perez, T.M., Valverde, O., Bravo, C., Taylor, T.C., Fadrique, B., Hogan, J.A., Pardo, C.J., Stroud, J.T., Baraloto, C., Feeley, K.J."
+  title: "Botanic gardens are an untapped resource for studying the functional ecology of tropical plants"
+  journal: "Philosophical Transactions of the Royal Society B"
+  detail: "374(1763): 1-9"
+  doi: "https://doi.org/10.1098/rstb.2017.0390"
+
+- year: 2018
+  type: article
+  authors: "Sanger, T.J., Kyrkos, J., Lachance, D., Czesny, B., Stroud, J.T."
+  title: "The effects of thermal stress on the early development of the lizard <em>Anolis sagrei</em>"
+  journal: "Journal of Experimental Zoology A"
+  detail: "329(4): 244-251"
+  doi: "https://doi.org/10.1002/jez.2185"
+
+- year: 2018
+  type: article
+  authors: "Stroud, J.T., Richardson, A.J., Sim, J., Airnes, A., Stritch, J.M."
+  title: "Onward to the Mid-Atlantic: First records of Cuban Brown Anoles (<em>Anolis sagrei</em>) on Ascension Island"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "25(3): 220-222"
+  doi: "https://doi.org/10.17161/randa.v25i3.14316"
+
+- year: 2018
+  type: article
+  authors: "Maurer, A.S., Thawley, C.J., Fireman, A.L., Giery, S.T., Stroud, J.T."
+  title: "Nocturnal activity of Antiguan lizards under artificial light"
+  journal: "Herpetological Conservation and Biology"
+  detail: "14(1): 105-110"
+  url: "http://www.herpconbio.org/Volume_14/Issue_1/Maurer_etal_2019.pdf"
+
+- year: 2017
+  type: article
+  authors: "Giery, S.T., Vezzani, E., Zona, S., Stroud, J.T."
+  title: "Frugivory and seed dispersal by the invasive knight anole (<em>Anolis equestris</em>) in Florida, USA"
+  journal: "Food Webs"
+  detail: "11: 13-16"
+  doi: "https://doi.org/10.1016/j.fooweb.2017.05.003"
+
+- year: 2018
+  type: article
+  authors: "Feeley, K.J., Stroud, J.T."
+  title: "Where on Earth are the tropics?"
+  journal: "Frontiers of Biogeography"
+  detail: "10.1-2: e38649"
+  doi: "https://doi.org/10.21425/F5FBG38649"
+
+- year: 2017
+  type: article
+  authors: "Stroud, J.T., Giery, S.T., Outerbridge, M.E."
+  title: "Establishment of <em>Anolis sagrei</em> on Bermuda represents a novel ecological threat to Critically Endangered Bermuda skinks (<em>Plestiodon longirostris</em>)"
+  journal: "Biological Invasions"
+  detail: "19: 1723-1731"
+  doi: "https://doi.org/10.1007/s10530-017-1389-1"
+
+- year: 2017
+  type: article
+  authors: "Stroud, J.T., Feeley, K.J."
+  title: "Neglect of the tropics is widespread in ecology and evolution: A comment on Clarke et al."
+  journal: "Trends in Ecology and Evolution"
+  detail: "32(9): 626-628"
+  doi: "https://doi.org/10.1016/j.tree.2017.06.006"
+
+- year: 2017
+  type: article
+  authors: "Giery, S.T., Donte, R., Stroud, J.T."
+  title: "Establishment of the Eastern Narrow-mouthed Frog (<em>Gastrophryne carolinensis</em>) to Abaco Island in the Bahamas, with notes on the species' current distribution in the West Indies"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "24(2): 139-141"
+  doi: "https://doi.org/10.17161/randa.v24i2.14170"
+
+- year: 2017
+  type: article
+  authors: "Stroud, J.T., Alexander, P., Powell, I.V., Krysko, K.L."
+  title: "First record of a polychrotid lizard outside the native range of the family: The Many-colored Bush Anole, <em>Polychrus marmoratus</em>, in Florida, USA"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "24(2): 148-149"
+  doi: "https://doi.org/10.17161/randa.v24i2.14173"
+
+- year: 2017
+  type: article
+  authors: "Tiatragul, S., Murali, G., Stroud, J.T."
+  title: "Digest: Different evolutionary dynamics led to the convergence of clinging performance in lizard toepads"
+  journal: "Evolution"
+  detail: "71(10): 2537-2538"
+  doi: "https://doi.org/10.1111/evo.13338"
+
+- year: 2017
+  type: article
+  authors: "Stroud, J.T."
+  title: "Digest: Ecological opportunity, competition, and diversity dependence in macroevolution"
+  journal: "Evolution"
+  detail: "71(7): 1915-1916"
+  doi: "https://doi.org/10.1111/evo.13295"
+
+- year: 2017
+  type: article
+  authors: "Martin, T.E., Guilleman, M., Nivet-Mazerolles, V., Landsmann, C., Dubos, J., Eudeline, R., Stroud, J.T."
+  title: "The herpetofauna of central Uzbekistan"
+  journal: "Amphibian & Reptile Conservation"
+  detail: "11(1): 93-107 (e140)"
+  url: "https://biostor.org/reference/286363"
+
+- year: 2016
+  type: article
+  authors: "Perez, T.M., Stroud, J.T., Feeley, K.J."
+  title: "Thermal trouble in the tropics"
+  journal: "Science"
+  detail: "351(6280): 1392-1393"
+  doi: "https://doi.org/10.1126/science.aaf3343"
+
+- year: 2017
+  type: article
+  authors: "Feeley, K.J., Stroud, J.T., Perez, T.M."
+  title: "Most 'global' reviews of species' responses to climate change are not truly global"
+  journal: "Diversity and Distributions"
+  detail: "23(3): 231-234"
+  doi: "https://doi.org/10.1111/ddi.12517"
+
+- year: 2016
+  type: article
+  featured: true
+  authors: "Stroud, J.T., Losos, J.B."
+  title: "Ecological opportunity and adaptive radiation"
+  journal: "Annual Review of Ecology, Evolution & Systematics"
+  detail: "47: 507-532"
+  doi: "https://doi.org/10.1146/annurev-ecolsys-121415-032254"
+
+- year: 2016
+  type: article
+  authors: "Kolbe, J.J., VanMiddlesworth, P., Battles, A.C., Stroud, J.T., Buffum, B., Forman, R.T.T., Losos, J.B."
+  title: "Determinants of spread in an urban landscape by an introduced lizard"
+  journal: "Landscape Ecology"
+  detail: "31(8): 1795-1813"
+  doi: "https://doi.org/10.1007/s10980-016-0362-1"
+
+- year: 2016
+  type: article
+  authors: "Stroud, J.T., Outerbridge, M.E., Giery, S.T."
+  title: "First specimen of an American green anole (<em>Anolis carolinensis</em>) on the oceanic island of Bermuda, with a review of the species' current global distribution"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "23(3): 188-190"
+  doi: "https://doi.org/10.17161/randa.v23i3.14134"
+
+- year: 2016
+  type: article
+  authors: "Stroud, J.T., Giery, S.T."
+  title: "Nesting behavior of introduced Brown Basilisks (<em>Basiliscus vittatus</em>) in southern Florida"
+  journal: "IRCF Reptiles & Amphibians"
+  detail: "23(2): 104-107"
+  doi: "https://doi.org/10.17161/randa.v23i2.14116"
+
+- year: 2015
+  type: article
+  authors: "Stroud, J.T., Bush, M.R., Ladd, M.C., Nowicki, R.J., Shantz, A.A., Sweatman, J."
+  title: "Is a community still a community? Reviewing definitions of key terms in community ecology"
+  journal: "Ecology & Evolution"
+  detail: "5(21): 4757-4765"
+  doi: "https://doi.org/10.1002/ece3.1651"
+
+- year: 2015
+  type: article
+  authors: "Stroud, J.T., Feeley, K.J."
+  title: "A downside of diversity? A response to Gallagher et al."
+  journal: "Trends in Ecology and Evolution"
+  detail: "30(6): 296-297"
+  doi: "https://doi.org/10.1016/j.tree.2015.02.005"
+
+- year: 2015
+  type: article
+  authors: "Gillespie, G.R., Howard, S., Stroud, J.T., Ul-Hassanah, A., Campling, M., Lardner, B., Scroggie, M., Kusrini, M."
+  title: "Responses of tropical forest herpetofauna to moderate anthropogenic disturbance and effects of natural habitat variation in Sulawesi, Indonesia"
+  journal: "Biological Conservation"
+  detail: "192: 161-173"
+  doi: "https://doi.org/10.1016/j.biocon.2015.08.034"
+
+- year: 2015
+  type: article
+  authors: "Rehm, E., Olivas, P., Stroud, J.T., Feeley, K.J."
+  title: "Losing your edge: Climate change and the conservation value of range-edge populations"
+  journal: "Ecology & Evolution"
+  detail: "5(19): 4315-4326"
+  doi: "https://doi.org/10.1002/ece3.1645"
+
+- year: 2015
+  type: article
+  authors: "Stroud, J.T., Feeley, K.J."
+  title: "Responsible academia: Optimizing conference locations to minimize greenhouse gas emissions"
+  journal: "Ecography"
+  detail: "38(4): 402-404"
+  doi: "https://doi.org/10.1111/ecog.01366"
+
+- year: 2014
+  type: article
+  authors: "Feeley, K.J., Rehm, E., Stroud, J.T."
+  title: "There are many barriers to species migrations"
+  journal: "Frontiers of Biogeography"
+  detail: "6(2): fb_22006"
+  doi: "https://doi.org/10.21425/F5FBG22006"
+
+- year: 2014
+  type: article
+  authors: "Stroud, J.T., Rehm, E., Ladd, M.C., Olivas, P., Feeley, K.J."
+  title: "Is conservation research money being spent wisely? Changing trends in conservation research priorities"
+  journal: "Journal for Nature Conservation"
+  detail: "22: 471-473"
+  doi: "https://doi.org/10.1016/j.jnc.2014.05.003"
+
+# ===== Edited volumes =======================================================
+
+- year: 2019
+  type: volume
+  authors: "Stroud, J.T., Geneva, A.J., Losos, J.B. (Eds.)"
+  title: "<em>Anolis</em> Newsletter VII"
+  journal: "Washington University, St. Louis MO"
+  detail: "pp. 1-323"
+  doi: "https://doi.org/10.7936/gjg3-h168"
+
+# ===== Writing for a wider audience =========================================
+
+- year: 2025
+  type: popular
+  authors: "Stroud, J.T., Losos, J.B."
+  title: "3-legged lizards can thrive against all odds, challenging assumptions about how evolution works in the wild"
+  journal: "The Conversation"
+  url: "https://theconversation.com/3-legged-lizards-can-thrive-against-all-odds-challenging-assumptions-about-how-evolution-works-in-the-wild-262467"
+
+- year: 2025
+  type: popular
+  authors: "Stroud, J.T."
+  title: "What the secret lives of lizards tell us about evolution"
+  journal: "The Washington Post"
+  url: "https://www.washingtonpost.com/science/2025/03/23/anoles-lizard-island-evolution-traits/"
+
+- year: 2025
+  type: popular
+  authors: "Stroud, J.T."
+  title: "Amid a tropical paradise known as 'Lizard Island,' researchers are cracking open evolution's black box"
+  journal: "The Conversation"
+  url: "https://theconversation.com/amid-a-tropical-paradise-known-as-lizard-island-researchers-are-cracking-open-evolutions-black-box-scientist-at-work-246474"
+
+- year: 2023
+  type: popular
+  authors: "Moore, M.P., Stroud, J.T."
+  title: "Climate change is already forcing lizards, insects and other species to evolve – and most can't keep up"
+  journal: "The Conversation"
+  url: "https://theconversation.com/climate-change-is-already-forcing-lizards-insects-and-other-species-to-evolve-and-most-cant-keep-up-215222"
+
+# ===== Natural history notes and other contributions ========================
+
+- year: 2020
+  type: note
+  authors: "Martin, T.E., Gillespie, G.R., Kusrini, M.D., Stroud, J.T."
+  title: "<em>Xenochrophis trianguligerus</em> (Sulawesi Triangle Keelback). Diet and feeding behavior"
+  journal: "Herpetological Review"
+  detail: "51(3): 631-632"
+
+- year: 2019
+  type: note
+  authors: "Stroud, J.T."
+  title: "Using introduced anoles as natural experiments in ecology and evolution"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 242-260"
+
+- year: 2019
+  type: note
+  authors: "Stroud, J.T."
+  title: "Thoughts on the ecology and evolution of anoles; insights from 5 years of meandering strolls"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 261-274"
+
+- year: 2019
+  type: note
+  authors: "Walker, K., Battles, A.C., Stroud, J.T."
+  title: "Inter-specific predation between two eco-morphologically similar <em>Anolis</em> lizards"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 296-300"
+
+- year: 2019
+  type: note
+  authors: "Giery, S.T., Stroud, J.T."
+  title: "Geographic variation in trophic ecology of the brown anole (<em>Anolis sagrei</em>): Species-rich communities are composed of more diverse populations"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 76-100"
+
+- year: 2019
+  type: note
+  authors: "Mothes, C.C., Stroud, J.T., Clements, S.L., Searcy, C.A."
+  title: "Predicting the invasion dynamics of anoles (and other lizards) using ecological niche modeling"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 194-205"
+
+- year: 2019
+  type: note
+  authors: "Mantilla, D.C., Morales, S.D., Parra-Medina, R., Stroud, J.T."
+  title: "Histopathology of large epidermal cysts on the invasive Puerto Rican crested anole (<em>Anolis cristatellus</em>) in Miami, Florida USA"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 154-157"
+
+- year: 2019
+  type: note
+  authors: "Ljustina, O., Stroud, J.T."
+  title: "Little evidence for size-structured habitat use in a diverse <em>Anolis</em> community"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. 136-143"
+
+- year: 2019
+  type: note
+  authors: "Stroud, J.T., Setzer, K."
+  title: "Geckos in the garden: Florida reef gecko (<em>Sphaerodactylus notatus</em>)"
+  journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
+
+- year: 2019
+  type: note
+  authors: "Maurer, A., Stroud, J.T."
+  title: "<em>Anolis wattsi</em> (Watts' anole). Nocturnal activity"
+  journal: "Herpetological Review"
+  detail: "51(1): 119"
+
+- year: 2019
+  type: note
+  authors: "Stroud, J.T., Sanger, T.J."
+  title: "<em>Hemidactylus mabouia</em> (African house gecko). Predation by <em>Anolis carolinensis</em>"
+  journal: "Herpetological Review"
+  detail: "51(1): 125"
+
+- year: 2018
+  type: note
+  authors: "Simpson, S.E., Giery, S.T., Stroud, J.T., Thawley, C.J."
+  title: "<em>Anolis sagrei</em> (brown anole). Predation"
+  journal: "Herpetological Review"
+  detail: "50(2): 363-364"
+
+- year: 2018
+  type: note
+  authors: "Campbell, N., Thawley, C.J., Stroud, J.T."
+  title: "<em>Anolis cristatellus</em> (Puerto Rican crested anole). Cannibalism"
+  journal: "Herpetological Review"
+  detail: "49(1): 27-28"
+
+- year: 2017
+  type: note
+  authors: "Thawley, C.J., Stroud, J.T."
+  title: "<em>Phelsuma grandis</em> (Madagascan giant day gecko). Geographic distribution: New record for Miami-Dade County"
+  journal: "Herpetological Review"
+  detail: "48(4): 812"
+
+- year: 2017
+  type: note
+  authors: "Ljustina, O., Stroud, J.T."
+  title: "<em>Anolis carolinensis</em> (American green anole). Kleptothermy"
+  journal: "Herpetological Review"
+  detail: "48(2): 434-435"
+
+- year: 2016
+  type: note
+  authors: "Ljustina, O., Stroud, J.T."
+  title: "<em>Anolis equestris</em> (Cuban knight anole): Novel predator-prey interaction"
+  journal: "Herpetological Review"
+  detail: "47(3): 459-460"
+
+- year: 2016
+  type: note
+  authors: "Ljustina, O., Stroud, J.T."
+  title: "<em>Anolis cristatellus</em> (Puerto Rican crested anole): Absent tympanum"
+  journal: "Herpetological Review"
+  detail: "47(3): 459"
+
+- year: 2015
+  type: note
+  authors: "Martin, T., Guillemin, M., Eudeline, R., Landsmann, C., Nivet-Mazerolles, V., Stroud, J.T."
+  title: "Reptiles and amphibians of semi-deserts, mountains, and other habitats of south central Uzbekistan"
+  journal: "Field Museum of Natural History, Chicago"
+
+- year: 2015
+  type: note
+  authors: "Stroud, J.T."
+  title: "Reptiles y anfibios de Amacayacu Parque Nacional, Amazonas – Colombia"
+  journal: "Field Museum of Natural History, Chicago"
+
+- year: 2014
+  type: note
+  authors: "Stroud, J.T., Beckles, W."
+  title: "<em>Anolis cristatellus</em> (Puerto Rican crested anole): Abnormal dewlap color"
+  journal: "Herpetological Review"
+  detail: "45(4): 693-694"
+
+- year: 2014
+  type: note
+  authors: "Stroud, J.T."
+  title: "An introduction to the lizards of Fairchild Tropical Botanic Garden"
+  journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
+  detail: "69(1): 28-29"
+
+- year: 2013
+  type: note
+  authors: "Stroud, J.T."
+  title: "<em>Anolis equestris</em> (Cuban knight anole): Exotic intra-guild predation"
+  journal: "Herpetological Review"
+  detail: "44(4): 660-661"
+
+- year: 2013
+  type: note
+  authors: "Stroud, J.T., Giery, S.T."
+  title: "<em>Anolis equestris</em> (Cuban knight anole): Nocturnal activity"
+  journal: "Herpetological Review"
+  detail: "44(4): 661"
+
+- year: 2013
+  type: note
+  authors: "Stroud, J.T., Krysko, K.L."
+  title: "<em>Ctenosaura similis</em> (Gray's spiny-tailed iguana): Non-native diet"
+  journal: "Herpetological Review"
+  detail: "44(2): 322"
