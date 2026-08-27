@@ -26,6 +26,7 @@
   /* Measure and rhythm --------------------------------------------------- */
   --measure: 42rem;   /* reading width for body copy */
   --wide:    68rem;   /* grids, galleries            */
+  --hero:    76rem;   /* hero image and its caption  */
   --gutter:  1.75rem;
 }
 
@@ -96,6 +97,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    ========================================================================== */
 .wrap      { max-width: var(--wide);    margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-text { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
+/* a slightly wider box for centred page openings, so big headings do not
+   break onto a line with a single orphaned word */
+.wrap-text--intro { max-width: 50rem; }
+.wrap-text--intro .lead { max-width: 34rem; margin-left: auto; margin-right: auto; }
 .section   { padding: 5rem 0; }
 .section--tight { padding: 3rem 0; }
 .section--band  { background: var(--bg-alt); }
@@ -110,17 +115,16 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    Masthead + navigation
    ========================================================================== */
 .masthead {
-  padding: 2.25rem 0 0;
+  padding: 1.6rem 0 0;
   text-align: center;
 }
 .masthead__logo { display: inline-block; border: 0; }
-.masthead__logo img { width: 560px; max-width: 86vw; margin: 0 auto; }
+.masthead__logo img { width: 480px; max-width: 84vw; margin: 0 auto; }
 
 .nav {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: .9rem 0;
+  padding: .75rem 0 .6rem;
 }
 .nav__list {
   list-style: none;
@@ -143,7 +147,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .nav__list a[aria-current="page"] { color: var(--navy); border-bottom: 1px solid var(--gold); }
 
 /* the orange feature link, sitting on its own line beneath the main nav */
-.nav-feature { text-align: center; padding: .85rem 0 0; }
+.nav-feature { text-align: center; padding: 0 0 .8rem; border-bottom: 1px solid var(--rule); margin-top: -1px; }
 .nav-feature a {
   font-family: var(--sans);
   font-size: .74rem;
@@ -158,14 +162,17 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero { margin-top: 2.5rem; }
+.hero { margin-top: 1.75rem; }
 .hero__img {
+  display: block;
   width: 100%;
-  aspect-ratio: 2.4 / 1;
+  max-width: var(--hero);        /* inset, not full-bleed */
+  margin: 0 auto;
+  aspect-ratio: 3.2 / 1;         /* the Stoddard proportion */
   object-fit: cover;
 }
 .hero__caption {
-  max-width: var(--wide);
+  max-width: var(--hero);
   margin: .85rem auto 0;
   padding: 0 var(--gutter);
   font-family: var(--serif);
@@ -479,8 +486,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   .press-list li { grid-template-columns: 1fr; gap: .25rem; }
   .pub { grid-template-columns: 1fr; gap: .25rem; }
   .pub__n { display: none; }
-  .hero { margin-top: 1.5rem; }
-  .hero__img { aspect-ratio: 16/10; }
+  .hero { margin-top: 1.25rem; }
+  .hero__img { aspect-ratio: 2 / 1; }
   .nav__list { gap: .35rem 1.1rem; }
   .footer { margin-top: 4rem; }
 }
