@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: Software & Tools
+permalink: /software/
+hero: /assets/img/hero/software.jpg
+heroAlt: Three anoles photographed against a white background
+description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, and lande."
+---
+
+<section class="section">
+  <div class="wrap-text wrap-text--intro center">
+    <p class="eyebrow">Software &amp; tools</p>
+    <h1>What we build</h1>
+    <p class="lead">
+      Field ecology has always been rate-limited by how fast a person can measure
+      things. Most of the tools below exist because a measurement we needed was
+      possible in principle and unaffordable in practice.
+    </p>
+  </div>
+</section>
+
+<div class="rule-wrap rule-wrap--text"><hr></div>
+
+<section class="section--tight">
+  <div class="wrap-text">
+    {%- for s in software %}
+    <div class="tool-entry">
+      <p class="card__kicker">{{ s.kicker }}</p>
+      <h3>{{ s.name }}</h3>
+      <p>{{ s.summary }}</p>
+      {% if s.extra %}<p>{{ s.extra }}</p>{% endif %}
+      {% if s.paper or s.doi or s.repo %}
+      <p class="pub__meta">
+        {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
+        {% if s.doi %} <a href="{{ s.doi }}">Preprint</a>{% endif %}
+        {% if s.repo %}{% if s.doi %} ·{% endif %} <a href="{{ s.repo }}">Code</a>{% endif %}
+      </p>
+      {% endif %}
+    </div>
+    {%- if not loop.last %}<hr>{% endif %}
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="rule-wrap rule-wrap--text"><hr></div>
+
+<section class="section section--band">
+  <div class="wrap-text">
+    <h2>Why this matters to the lab</h2>
+    <p>
+      Georgia Tech is one of the best engineering and computer science
+      universities in the world, and we are an evolutionary ecology lab inside it.
+      That is not an accident of geography we intend to waste. Wearable sensors,
+      lidar, and deep learning give access to data types that eco-evolutionary
+      field studies simply have not had before, opening questions that were
+      previously unanswerable rather than merely tedious.
+    </p>
+    <p>
+      Much of this work is done with Master's students from the OMSCS programme
+      and with undergraduate capstone teams from Electrical and Computer
+      Engineering, who have designed and built hardware for us as well as
+      software.
+    </p>
+  </div>
+</section>

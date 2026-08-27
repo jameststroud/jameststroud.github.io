@@ -1,0 +1,301 @@
+diff --git a/src/assets/css/style.css b/src/assets/css/style.css
+index fe74c36..4a158a9 100644
+--- a/src/assets/css/style.css
++++ b/src/assets/css/style.css
+@@ -12,8 +12,8 @@
+   --bg:            #fffdf8;   /* page background (warm off-white)              */
+   --bg-alt:        #f2eee1;   /* alternating section band                      */
+   --rule:          #e3dfd2;   /* hairlines and borders                         */
+-  --navy:          #76da62;   /* from the lab logo — headings, links           */
+-  --navy-soft:     #3d6e9c;   /* lighter navy for hover states                 */
++  --navy:          #1f6fb2;   /* friendly sky blue — headings, links, nav bar  */
++  --navy-soft:     #17547f;   /* darker blue for hover/active states           */
+   --green:         #3dc267;   /* from the lab logo                             */
+   --gold:          #b1a066;   /* from the lab logo                             */
+   --accent:        #cf6a1a;   /* dewlap orange, on light grounds               */
+@@ -48,7 +48,7 @@ body {
+   text-rendering: optimizeLegibility;
+ }
+ img { max-width: 100%; height: auto; display: block; }
+-a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(0,48,88,.28); transition: border-color .15s, color .15s; }
++a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(31,111,178,.32); transition: border-color .15s, color .15s; }
+ a:hover { color: var(--accent-dk); border-bottom-color: var(--accent); }
+ 
+ /* ==========================================================================
+@@ -285,6 +285,54 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
+   line-height: 1.45;
+ }
+ 
++/* Photo with a caption that only appears on hover/focus, no persistent
++   figcaption beneath it. Falls back to always-visible on touch devices,
++   where hover isn't available. */
++.photo-hover {
++  position: relative;
++  display: block;
++  overflow: hidden;
++  margin: 0;
++  border-radius: 2px;
++}
++.photo-hover img { transition: transform .5s ease; }
++.photo-hover:hover img, .photo-hover:focus-within img { transform: scale(1.035); }
++.photo-hover__caption {
++  position: absolute;
++  inset: 0;
++  display: flex;
++  align-items: flex-end;
++  padding: 1.5rem 1.4rem;
++  background: linear-gradient(to top, rgba(20,19,16,.78) 0%, rgba(20,19,16,0) 62%);
++  opacity: 0;
++  transition: opacity .25s ease;
++}
++.photo-hover__caption span {
++  font-family: var(--serif);
++  font-style: italic;
++  font-size: .96rem;
++  line-height: 1.45;
++  color: #fff;
++}
++.photo-hover:hover .photo-hover__caption,
++.photo-hover:focus .photo-hover__caption,
++.photo-hover:focus-within .photo-hover__caption { opacity: 1; }
++.photo-hover:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
++@media (hover: none) {
++  .photo-hover__caption {
++    opacity: 1;
++    background: linear-gradient(to top, rgba(20,19,16,.65) 0%, rgba(20,19,16,0) 72%);
++  }
++}
++
++/* A thin rule confined to the content measure, used between stacked
++   sections instead of alternating background bands. */
++.rule-wrap { padding: 0 var(--gutter); }
++.rule-wrap hr { max-width: var(--wide); margin: 0 auto; }
++.rule-wrap--text hr { max-width: var(--measure); }
++
++.tool-entry h3 { margin-bottom: .5rem; }
++
+ .stats {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+diff --git a/src/research.njk b/src/research.njk
+index 756418a..93607ec 100644
+--- a/src/research.njk
++++ b/src/research.njk
+@@ -4,7 +4,7 @@ title: Research
+ permalink: /research/
+ hero: /assets/img/hero/research.jpg
+ heroAlt: Two brown anoles on a tree trunk
+-description: "Research in the Stroud Lab: measuring natural selection in the wild, the evolution of thermal ecophysiology, and new technology for eco-evolutionary field studies."
++description: "Research in the Stroud Lab: measuring natural selection in the wild, the evolution of thermal ecophysiology, new technology for eco-evolutionary field studies, and introduced species as natural experiments."
+ ---
+ 
+ <section class="section">
+@@ -20,31 +20,18 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
+   </div>
+ </section>
+ 
+-<section class="section section--band">
+-  <div class="wrap-text">
+-    <h2>Introduced species as natural experiments</h2>
+-    <p>
+-      A theme running under all three of the programmes below is our use of
+-      introduced species. Introductions are experiments in ecology and evolution
+-      at temporal and spatial scales no one could establish deliberately: novel
+-      abiotic conditions, novel species interactions, and communities assembling
+-      from scratch, all with a known start date. South Florida, where a diverse
+-      community of tropical lizards has arrived over the past century, is
+-      probably the best place in the world to take advantage of this.
+-    </p>
+-    <p>
+-      They let us ask questions that are otherwise almost unaskable. How do
+-      species respond to novel abiotic environments? What are the outcomes of
+-      novel species interactions? How do communities assemble when every
+-      interaction is new? Do niches expand, contract, or stay stable during an
+-      introduction?
+-    </p>
+-  </div>
+-</section>
++<div class="rule-wrap"><hr></div>
+ 
+ <section class="section">
+   <div class="wrap">
+     <div class="split">
++      <div class="photo-hover" tabindex="0">
++        <img src="/assets/img/photos/sagrei-dewlap-rock.jpg" alt="A brown anole extending its orange dewlap">
++        <span class="photo-hover__caption"><span>
++          A brown anole extends its dewlap. Signal size scales with body size across
++          anoles, a relationship we described in <em>Biology Letters</em> in 2023.
++        </span></span>
++      </div>
+       <div>
+         <p class="eyebrow">Theme I</p>
+         <h2>Measuring natural selection in the wild</h2>
+@@ -70,27 +57,15 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
+           become one of the best known evolutionary field studies in the world.
+         </p>
+       </div>
+-      <figure>
+-        <img src="/assets/img/photos/sagrei-dewlap-rock.jpg" alt="A brown anole extending its orange dewlap">
+-        <figcaption>
+-          A brown anole extends its dewlap. Signal size scales with body size across
+-          anoles, a relationship we described in <em>Biology Letters</em> in 2023.
+-        </figcaption>
+-      </figure>
+     </div>
+   </div>
+ </section>
+ 
+-<section class="section section--band">
++<div class="rule-wrap"><hr></div>
++
++<section class="section">
+   <div class="wrap">
+     <div class="split">
+-      <figure>
+-        <img src="/assets/img/photos/carolinensis-portrait.jpg" alt="A green anole">
+-        <figcaption>
+-          <em>Anolis carolinensis</em>, which colonised south Florida from Cuba
+-          roughly 5 to 7 million years ago and now ranges to North Carolina.
+-        </figcaption>
+-      </figure>
+       <div>
+         <p class="eyebrow">Theme II</p>
+         <h2>The evolution of thermal ecophysiology</h2>
+@@ -120,13 +95,29 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
+           another.
+         </p>
+       </div>
++      <div class="photo-hover" tabindex="0">
++        <img src="/assets/img/photos/carolinensis-portrait.jpg" alt="A green anole">
++        <span class="photo-hover__caption"><span>
++          <em>Anolis carolinensis</em>, which colonised south Florida from Cuba
++          roughly 5 to 7 million years ago and now ranges to North Carolina.
++        </span></span>
++      </div>
+     </div>
+   </div>
+ </section>
+ 
++<div class="rule-wrap"><hr></div>
++
+ <section class="section">
+   <div class="wrap">
+     <div class="split">
++      <div class="photo-hover" tabindex="0">
++        <img src="/assets/img/photos/carolinensis-specimen.jpg" alt="A green anole photographed against a white background">
++        <span class="photo-hover__caption"><span>
++          Automated landmarking turns images like this into morphometric data
++          without a person placing every point.
++        </span></span>
++      </div>
+       <div>
+         <p class="eyebrow">Theme III</p>
+         <h2>New technology for eco-evolutionary field studies</h2>
+@@ -149,18 +140,49 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
+         </p>
+         <p><a href="/software/">See the software and tools</a></p>
+       </div>
+-      <figure>
+-        <img src="/assets/img/photos/carolinensis-specimen.jpg" alt="A green anole photographed against a white background">
+-        <figcaption>
+-          Automated landmarking turns images like this into morphometric data
+-          without a person placing every point.
+-        </figcaption>
+-      </figure>
+     </div>
+   </div>
+ </section>
+ 
+-<section class="section section--band">
++<div class="rule-wrap"><hr></div>
++
++<section class="section">
++  <div class="wrap">
++    <div class="split">
++      <div>
++        <p class="eyebrow">Theme IV</p>
++        <h2>Introduced species as natural experiments</h2>
++        <p>
++          A theme running under all three of the programmes above is our use of
++          introduced species. Introductions are experiments in ecology and evolution
++          at temporal and spatial scales no one could establish deliberately: novel
++          abiotic conditions, novel species interactions, and communities assembling
++          from scratch, all with a known start date. South Florida, where a diverse
++          community of tropical lizards has arrived over the past century, is
++          probably the best place in the world to take advantage of this.
++        </p>
++        <p>
++          They let us ask questions that are otherwise almost unaskable. How do
++          species respond to novel abiotic environments? What are the outcomes of
++          novel species interactions? How do communities assemble when every
++          interaction is new? Do niches expand, contract, or stay stable during an
++          introduction?
++        </p>
++      </div>
++      <div class="photo-hover" tabindex="0">
++        <img src="/assets/img/photos/sagrei-pair.jpg" alt="A pair of brown anoles">
++        <span class="photo-hover__caption"><span>
++          <em>Anolis sagrei</em>, the brown anole: one of the introduced species
++          whose known arrival dates make South Florida a natural experiment.
++        </span></span>
++      </div>
++    </div>
++  </div>
++</section>
++
++<div class="rule-wrap"><hr></div>
++
++<section class="section">
+   <div class="wrap-text">
+     <p class="eyebrow">Foundations</p>
+     <h2>Conceptual papers from the lab</h2>
+diff --git a/src/software.njk b/src/software.njk
+index 739bd3c..1e02eb5 100644
+--- a/src/software.njk
++++ b/src/software.njk
+@@ -4,7 +4,7 @@ title: Software & Tools
+ permalink: /software/
+ hero: /assets/img/hero/software.jpg
+ heroAlt: Three anoles photographed against a white background
+-description: "Software from the Stroud Lab: LizardLens, AutoMorph, PyTLidar, and lande."
++description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, and lande."
+ ---
+ 
+ <section class="section">
+@@ -19,24 +19,31 @@ description: "Software from the Stroud Lab: LizardLens, AutoMorph, PyTLidar, and
+   </div>
+ </section>
+ 
++<div class="rule-wrap rule-wrap--text"><hr></div>
++
+ <section class="section--tight">
+-  <div class="wrap" style="max-width:52rem">
++  <div class="wrap-text">
+     {%- for s in software %}
+-    <div class="card" style="margin-bottom:2rem">
++    <div class="tool-entry">
+       <p class="card__kicker">{{ s.kicker }}</p>
+       <h3>{{ s.name }}</h3>
+       <p>{{ s.summary }}</p>
+       {% if s.extra %}<p>{{ s.extra }}</p>{% endif %}
++      {% if s.paper or s.doi or s.repo %}
+       <p class="pub__meta">
+-        {% if s.paper %}{{ s.paper }}{% endif %}
+-        {% if s.doi %}· <a href="{{ s.doi }}">Preprint</a>{% endif %}
+-        {% if s.repo %}· <a href="{{ s.repo }}">Code</a>{% endif %}
++        {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
++        {% if s.doi %} <a href="{{ s.doi }}">Preprint</a>{% endif %}
++        {% if s.repo %}{% if s.doi %} ·{% endif %} <a href="{{ s.repo }}">Code</a>{% endif %}
+       </p>
++      {% endif %}
+     </div>
++    {%- if not loop.last %}<hr>{% endif %}
+     {%- endfor %}
+   </div>
+ </section>
+ 
++<div class="rule-wrap rule-wrap--text"><hr></div>
++
+ <section class="section section--band">
+   <div class="wrap-text">
+     <h2>Why this matters to the lab</h2>
