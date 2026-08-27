@@ -12,8 +12,8 @@
   --bg:            #fffdf8;   /* page background (warm off-white)              */
   --bg-alt:        #f2eee1;   /* alternating section band                      */
   --rule:          #e3dfd2;   /* hairlines and borders                         */
-  --navy:          #76da62;   /* from the lab logo — headings, links           */
-  --navy-soft:     #3d6e9c;   /* lighter navy for hover states                 */
+  --navy:          #1f6fb2;   /* friendly sky blue — headings, links, nav bar  */
+  --navy-soft:     #17547f;   /* darker blue for hover/active states           */
   --green:         #3dc267;   /* from the lab logo                             */
   --gold:          #b1a066;   /* from the lab logo                             */
   --accent:        #cf6a1a;   /* dewlap orange, on light grounds               */
@@ -48,7 +48,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(0,48,88,.28); transition: border-color .15s, color .15s; }
+a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(31,111,178,.32); transition: border-color .15s, color .15s; }
 a:hover { color: var(--accent-dk); border-bottom-color: var(--accent); }
 
 /* ==========================================================================
@@ -284,6 +284,54 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   margin-top: .6rem;
   line-height: 1.45;
 }
+
+/* Photo with a caption that only appears on hover/focus, no persistent
+   figcaption beneath it. Falls back to always-visible on touch devices,
+   where hover isn't available. */
+.photo-hover {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 2px;
+}
+.photo-hover img { transition: transform .5s ease; }
+.photo-hover:hover img, .photo-hover:focus-within img { transform: scale(1.035); }
+.photo-hover__caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem 1.4rem;
+  background: linear-gradient(to top, rgba(20,19,16,.78) 0%, rgba(20,19,16,0) 62%);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.photo-hover__caption span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .96rem;
+  line-height: 1.45;
+  color: #fff;
+}
+.photo-hover:hover .photo-hover__caption,
+.photo-hover:focus .photo-hover__caption,
+.photo-hover:focus-within .photo-hover__caption { opacity: 1; }
+.photo-hover:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (hover: none) {
+  .photo-hover__caption {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(20,19,16,.65) 0%, rgba(20,19,16,0) 72%);
+  }
+}
+
+/* A thin rule confined to the content measure, used between stacked
+   sections instead of alternating background bands. */
+.rule-wrap { padding: 0 var(--gutter); }
+.rule-wrap hr { max-width: var(--wide); margin: 0 auto; }
+.rule-wrap--text hr { max-width: var(--measure); }
+
+.tool-entry h3 { margin-bottom: .5rem; }
 
 .stats {
   display: grid;
