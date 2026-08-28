@@ -183,14 +183,20 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   flex: 1 0 100%;
   padding: .1rem 0 0;
 }
+.nav-feature {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
 .nav-feature a {
-  font-family: var(--display);
-  font-size: .76rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--accent-lt);
-  border: 0;
+  font-size: .9rem;   /* match whatever you set the white nav links to */
+}
+
+.nav-feature a + a::before {
+  content: "•";
+  margin: 0 0.5rem;
+  color: var(--accent);
 }
 .nav-feature a:hover { border-bottom: 1px solid var(--accent-lt); }
 
