@@ -275,6 +275,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   align-items: center;
 }
 .split--text-first { }
+.split--reverse > *:first-child { order: 2; }
+.split--reverse > *:last-child  { order: 1; }
 .split figure { margin: 0; }
 .split figcaption, .figcaption {
   font-family: var(--serif);
