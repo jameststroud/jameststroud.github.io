@@ -104,7 +104,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 /* a slightly wider box for centred page openings, so big headings do not
    break onto a line with a single orphaned word */
 .wrap-text--intro { max-width: 50rem; }
-.wrap-text--intro .lead { max-width: 34rem; margin-left: auto; margin-right: auto; }
+.wrap-text--intro .lead { max-width: 34rem; margin-left: 0; margin-right: auto; }
 .section   { padding: 2.5rem 0; }
 .section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
