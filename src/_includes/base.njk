@@ -39,12 +39,12 @@
       <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
       {%- endfor %}
     </ul>
-</div>
 <div class="nav-feature">
   {%- for item in nav.feature %}
   <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
   {%- endfor %}
   </div>
+/div>
 </nav>
 
 {% if hero %}
