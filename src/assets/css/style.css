@@ -107,7 +107,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section   { padding: 5rem 0; }
 .section--tight { padding: 3rem 0; }
 .section--band  { background: var(--bg-alt); }
-.section--dark  { background: var(--navy); color: rgba(255,255,255,.92); }
+.section--dark  { background: var(--navy); color: rgba(255,255,255,.92); max-width: var(--hero); margin: 0 auto; }
 .section--dark h1,
 .section--dark h2,
 .section--dark h3,
