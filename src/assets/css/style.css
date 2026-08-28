@@ -112,6 +112,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section--dark {
   background: var(--navy);
   color: rgba(255,255,255,.92);
+  max-width: var(--hero);   /* matches navbar and hero image */
+  margin-left: auto;
+  margin-right: auto;
 }
 .section--dark h1,
 .section--dark h2,
@@ -148,12 +151,13 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    ========================================================================== */
 .navbar {
   background: var(--navy-lt);
+  width: 100%;              /* full bleed background */
 }
 .navbar__inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: var(--wide);
+  max-width: var(--hero);   /* was --wide, now matches hero image */
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -188,7 +192,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .nav-feature {
   display: flex;
   align-items: center;
-  flex: 0 0 100%;
+  flex: 0 0 100%;           /* full row inside the inner container */
   padding: .1rem 0 .55rem;
   gap: 0;
 }
