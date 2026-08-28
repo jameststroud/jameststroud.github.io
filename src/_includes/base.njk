@@ -39,12 +39,11 @@
       <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
       {%- endfor %}
     </ul>
-    <a class="nav-contact" href="mailto:{{ site.email }}">Contact</a>
-    <div class="nav-feature">
+</div>
+<div class="nav-feature">
   {%- for item in nav.feature %}
   <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
   {%- endfor %}
-</div>
   </div>
 </nav>
 
