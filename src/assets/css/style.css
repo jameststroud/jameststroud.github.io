@@ -22,6 +22,8 @@
   --accent-lt:     #e8944a;   /* dewlap orange lightened, for use on navy      */
   --on-navy:       #ffffff;
 
+.wrap-hero { max-width: var(--hero); margin: 0 auto; padding: 0 var(--gutter); }
+   
   /* Type ---------------------------------------------------------------- */
   --display: "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --serif: "Cormorant Garamond", Georgia, serif;
