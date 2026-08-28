@@ -209,7 +209,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   width: 100%;
   max-width: var(--hero);        /* inset, not full-bleed */
   margin: 0 auto;
-  aspect-ratio: 2400 / 500;         /* the Stoddard proportion */
+  aspect-ratio: 2400 / 500;      /* 4.8 : 1 */
   object-fit: cover;
 }
 .hero__caption {
@@ -645,7 +645,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   .pub { grid-template-columns: 1fr; gap: .25rem; }
   .pub__n { display: none; }
   .hero { margin-top: 1.25rem; }
-  .hero__img { aspect-ratio: 2400/500; }
+  .hero__img { aspect-ratio: 2400 / 500; }
   .navbar__inner { padding: .6rem var(--gutter) .7rem; }
   .nav__list { gap: .1rem 1.05rem; }
   .nav-contact { display: none; }
