@@ -12,8 +12,8 @@
   --bg:            #fffdf8;   /* page background (warm off-white)              */
   --bg-alt:        #f2eee1;   /* alternating section band                      */
   --rule:          #e3dfd2;   /* hairlines and borders                         */
-  --navy:          #ABD0DE;   /* friendly sky blue — headings, links, nav bar  */
-  --navy-dk:       #4a8fab;   /* darker sky blue — welcome/dark section bands  */
+  --navy:          #4a8fab;   /* sky blue — headings, links, text              */
+  --navy-lt:       #ABD0DE;   /* light sky blue — nav bar background only      */
   --navy-soft:     #17547f;   /* darker blue for hover/active states           */
   --green:         #3dc267;   /* from the lab logo                             */
   --gold:          #b1a066;   /* from the lab logo                             */
@@ -108,7 +108,13 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section   { padding: 2.5rem 0; }
 .section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
-.section--dark  { background: var(--navy-dk); color: rgba(255,255,255,.92); ... }
+.section--dark  { background: transparent; color: rgba(255,255,255,.92); }
+.section--dark > .wrap,
+.section--dark > .wrap-text {
+  background: var(--navy);
+  max-width: var(--hero);
+  border-radius: 0;
+}
 .section--dark h1,
 .section--dark h2,
 .section--dark h3,
@@ -143,7 +149,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .navbar__inner {
   max-width: var(--hero);
   margin: 0 auto;
-  background: var(--navy);
+  background: var(--navy-lt);
   padding: .7rem var(--gutter) .75rem;
   display: flex;
   flex-wrap: wrap;
