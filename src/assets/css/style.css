@@ -155,9 +155,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 .navbar__inner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: var(--hero);   /* was --wide, now matches hero image */
+  flex-direction: column;    /* stack rows vertically */
+  align-items: flex-start;
+  max-width: var(--hero);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -171,7 +171,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   list-style: none;
   margin: 0;
   padding: .55rem 0;
-  flex: 1 1 auto;
+  width: 100%;
 }
 .nav__list a {
   font-family: var(--display);
@@ -192,7 +192,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .nav-feature {
   display: flex;
   align-items: center;
-  flex: 0 0 100%;           /* full row inside the inner container */
+  width: 100%;
   padding: .1rem 0 .55rem;
   gap: 0;
 }
