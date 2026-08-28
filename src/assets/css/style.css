@@ -13,6 +13,7 @@
   --bg-alt:        #f2eee1;   /* alternating section band                      */
   --rule:          #e3dfd2;   /* hairlines and borders                         */
   --navy:          #ABD0DE;   /* friendly sky blue — headings, links, nav bar  */
+  --navy-dk:       #4a8fab;   /* darker sky blue — welcome/dark section bands  */
   --navy-soft:     #17547f;   /* darker blue for hover/active states           */
   --green:         #3dc267;   /* from the lab logo                             */
   --gold:          #b1a066;   /* from the lab logo                             */
@@ -107,7 +108,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section   { padding: 5rem 0; }
 .section--tight { padding: 3rem 0; }
 .section--band  { background: var(--bg-alt); }
-.section--dark  { background: var(--navy); color: rgba(255,255,255,.92); max-width: var(--hero); margin: 0 auto; }
+.section--dark  { background: var(--navy-dk); color: rgba(255,255,255,.92); ... }
 .section--dark h1,
 .section--dark h2,
 .section--dark h3,
