@@ -105,8 +105,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    break onto a line with a single orphaned word */
 .wrap-text--intro { max-width: 50rem; }
 .wrap-text--intro .lead { max-width: 34rem; margin-left: auto; margin-right: auto; }
-.section   { padding: 5rem 0; }
-.section--tight { padding: 3rem 0; }
+.section   { padding: 2.5rem 0; }
+.section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
 .section--dark  { background: var(--navy-dk); color: rgba(255,255,255,.92); ... }
 .section--dark h1,
@@ -273,7 +273,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: 1.5rem;
   align-items: center;
 }
 .split--text-first { }
