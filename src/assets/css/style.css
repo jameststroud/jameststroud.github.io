@@ -93,7 +93,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    ========================================================================== */
 .wrap      { max-width: var(--wide); margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-text { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
-.wrap-hero { max-width: var(--hero); margin: 0 auto; padding: 0 var(--gutter); }
+.wrap-hero { max-width: var(--hero); margin: 0 auto; padding: 1.5rem 3.5rem; }
 .wrap-text--intro { max-width: 50rem; }
 .wrap-text--intro .lead { max-width: none; margin-left: 0; margin-right: 0; }
 
