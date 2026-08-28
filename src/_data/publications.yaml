@@ -20,12 +20,6 @@
 
 - year: 2026
   type: inreview
-  authors: "Stroud, J.T., Freeman, B.G."
-  title: "Ecological release from predators, not competitors, drives the island syndrome in Caribbean <em>Anolis</em> lizards"
-  journal: "Nature"
-
-- year: 2026
-  type: inreview
   authors: "Chia, W.C., Jahanshahi, I., Loh, L.Y., Zheng, A., Verma, N., Mussmann, S., Shi, B., Stroud, J.T."
   title: "LizardLens: A two-stage deep learning pipeline for detecting and classifying similar species in visually complex environments"
   journal: "Ecology and Evolution"
