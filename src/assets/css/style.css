@@ -106,6 +106,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .wrap-text--intro { max-width: 50rem; }
 .wrap-text--intro .lead { max-width: 34rem; margin-left: 0; margin-right: auto; }
 .section   { padding: 2.5rem 0; }
+.section--roomy { padding: 7rem 0; }
 .section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
 .section--dark  { background: transparent; color: rgba(255,255,255,.92); }
