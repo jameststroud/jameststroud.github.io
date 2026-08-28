@@ -148,22 +148,26 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    inside the same bar. */
 .navbar { background: transparent; }
 .navbar__inner {
-  max-width: var(--hero);
-  margin: 0 auto;
-  background: var(--navy-lt);
-  padding: .7rem var(--gutter) .75rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .1rem 1.5rem;
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
+
 .nav__list {
-  list-style: none;
-  margin: 0; padding: 0;
-  display: flex; flex-wrap: wrap;
-  gap: .1rem 1.6rem;
-  flex: 1 1 auto;
+  width: 100%;
 }
+
+.nav-feature {
+  width: 100%;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
 .nav__list a {
   font-family: var(--display);
   font-size: .9rem;
@@ -190,7 +194,12 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 
 .nav-feature a {
-  font-size: .9rem;   /* match whatever you set the white nav links to */
+  color: var(--accent);
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .nav-feature a + a::before {
@@ -198,6 +207,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   margin: 0 0.5rem;
   color: var(--accent);
 }
+
 .nav-feature a:hover { border-bottom: 1px solid var(--accent-lt); }
 
 .nav-contact {
