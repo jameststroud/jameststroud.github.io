@@ -13,7 +13,7 @@
   --bg-alt:        #f2eee1;   /* alternating section band                      */
   --rule:          #e3dfd2;   /* hairlines and borders                         */
   --navy:          #4a8fab;   /* sky blue — headings, links, text              */
-  --navy-lt:       #ABD0DE;   /* light sky blue — nav bar background only      */
+  --navy-lt:       #ABD0DE;   /* light sky blue — nav bar background           */
   --navy-soft:     #17547f;   /* darker blue for hover/active states           */
   --green:         #3dc267;   /* from the lab logo                             */
   --gold:          #b1a066;   /* from the lab logo                             */
@@ -24,13 +24,13 @@
 
   /* Type ---------------------------------------------------------------- */
   --display: "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --serif: "Cormorant Garamond", Georgia, serif;   /* kept for pull quotes */
+  --serif: "Cormorant Garamond", Georgia, serif;
   --sans:  "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* Measure and rhythm --------------------------------------------------- */
-  --measure: 42rem;   /* reading width for body copy */
-  --wide:    68rem;   /* grids, galleries            */
-  --hero:    76rem;   /* hero image and its caption  */
+  --measure: 42rem;
+  --wide:    68rem;
+  --hero:    76rem;
   --gutter:  1.75rem;
 }
 
@@ -85,7 +85,6 @@ ul, ol { margin: 0 0 1.35em; padding-left: 1.3em; }
 li { margin-bottom: .5em; }
 code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .9em; background: var(--bg-alt); padding: .12em .38em; border-radius: 3px; }
 
-/* Small caps label used above section headings ------------------------------ */
 .eyebrow {
   font-family: var(--display);
   font-size: .72rem;
@@ -101,20 +100,18 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    ========================================================================== */
 .wrap      { max-width: var(--wide);    margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-text { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
-/* a slightly wider box for centred page openings, so big headings do not
-   break onto a line with a single orphaned word */
 .wrap-text--intro { max-width: 50rem; }
 .wrap-text--intro .lead { max-width: none; margin-left: 0; margin-right: 0; }
-.section   { padding: 2.5rem 0; }
+
+.section        { padding: 2.5rem 0; }
 .section--roomy { padding: 7rem 0; }
 .section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
-.section--dark  { background: transparent; color: rgba(255,255,255,.92); }
-.section--dark > .wrap,
-.section--dark > .wrap-text {
+
+/* Dark welcome section — full-width blue background */
+.section--dark {
   background: var(--navy);
-  max-width: var(--hero);
-  border-radius: 0;
+  color: rgba(255,255,255,.92);
 }
 .section--dark h1,
 .section--dark h2,
@@ -127,7 +124,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section--dark a:hover { color: var(--accent-lt); border-bottom-color: var(--accent-lt); }
 .section--dark .btn { border-color: rgba(255,255,255,.6); color: var(--on-navy); }
 .section--dark .btn:hover { background: var(--on-navy); color: var(--navy); border-color: var(--on-navy); }
-.center    { text-align: center; }
+
+.center { text-align: center; }
 .lead {
   font-size: 1.2rem;
   line-height: 1.65;
@@ -135,18 +133,22 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 
 /* ==========================================================================
-   Masthead + navigation
+   Masthead
    ========================================================================== */
 .masthead {
   padding: 1.6rem 0 1.4rem;
   text-align: center;
 }
+.masthead:empty { padding: 0; }
 .masthead__logo { display: inline-block; border: 0; }
 .masthead__logo img { width: 480px; max-width: 84vw; margin: 0 auto; }
 
-/* Solid navy bar, links left-aligned, secondary links as a second row
-   inside the same bar. */
-.navbar { background: transparent; }
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  background: var(--navy-lt);
+}
 .navbar__inner {
   display: flex;
   flex-wrap: wrap;
@@ -156,18 +158,17 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   padding: 0 var(--gutter);
 }
 
+/* White nav links — horizontal row */
 .nav__list {
-  width: 100%;
-}
-
-.nav-feature {
-  width: 100%;
-  padding-bottom: 0.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0;
+  gap: .1rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: .55rem 0;
+  flex: 1 1 auto;
 }
-
 .nav__list a {
   font-family: var(--display);
   font-size: .9rem;
@@ -183,46 +184,33 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .nav__list a:hover { opacity: 1; border-bottom: 1px solid rgba(255,255,255,.55); }
 .nav__list a[aria-current="page"] { opacity: 1; border-bottom: 2px solid var(--accent-lt); }
 
-.nav-feature {
-  flex: 1 0 100%;
-  padding: .1rem 0 0;
-}
+/* Orange feature links — second row inside the same navy bar */
 .nav-feature {
   display: flex;
   align-items: center;
+  flex: 0 0 100%;
+  padding: .1rem 0 .55rem;
   gap: 0;
 }
-
 .nav-feature a {
-  color: var(--accent);
+  font-family: var(--display);
   font-size: .9rem;
-  text-transform: uppercase;
-  letter-spacing: .06em;
   font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 0;
   text-decoration: none;
 }
+.nav-feature a:hover { border-bottom: 1px solid var(--accent-lt); color: var(--accent-dk); }
+.nav-feature a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
 
+/* Bullet separator between orange links */
 .nav-feature a + a::before {
   content: "•";
-  margin: 0 0.5rem;
+  margin: 0 0.6rem;
   color: var(--accent);
 }
-
-.nav-feature a:hover { border-bottom: 1px solid var(--accent-lt); }
-
-.nav-contact {
-  font-family: var(--display);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--on-navy);
-  border: 1px solid rgba(255,255,255,.5);
-  border-radius: 2rem;
-  padding: .4rem 1.1rem;
-  white-space: nowrap;
-}
-.nav-contact:hover { background: var(--on-navy); color: var(--navy); border-color: var(--on-navy); }
 
 /* ==========================================================================
    Hero
@@ -231,9 +219,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .hero__img {
   display: block;
   width: 100%;
-  max-width: var(--hero);        /* inset, not full-bleed */
+  max-width: var(--hero);
   margin: 0 auto;
-  aspect-ratio: 2400 / 500;      /* 4.8 : 1 */
+  aspect-ratio: 2400 / 500;
   object-fit: cover;
 }
 .hero__caption {
@@ -249,7 +237,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 .hero__caption a { color: inherit; border-bottom-color: var(--rule); }
 
-/* Bold all-caps strip of research themes beneath the hero */
+/* Strapline beneath hero */
 .strapline {
   max-width: var(--hero);
   margin: 1.6rem auto 0;
@@ -299,9 +287,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   gap: 1.5rem;
   align-items: center;
 }
-.split--text-first { }
-.split--reverse > *:first-child { order: 2; }
-.split--reverse > *:last-child  { order: 1; }
 .split figure { margin: 0; }
 .split figcaption, .figcaption {
   font-family: var(--serif);
@@ -311,10 +296,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   margin-top: .6rem;
   line-height: 1.45;
 }
+.split--reverse > *:first-child { order: 2; }
+.split--reverse > *:last-child  { order: 1; }
 
-/* Photo with a caption that only appears on hover/focus, no persistent
-   figcaption beneath it. Falls back to always-visible on touch devices,
-   where hover isn't available. */
+/* Photo with hover caption */
 .photo-hover {
   position: relative;
   display: block;
@@ -352,8 +337,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   }
 }
 
-/* A thin rule confined to the content measure, used between stacked
-   sections instead of alternating background bands. */
 .rule-wrap { padding: 0 var(--gutter); }
 .rule-wrap hr { max-width: var(--wide); margin: 0 auto; }
 .rule-wrap--text hr { max-width: var(--measure); }
@@ -385,8 +368,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 
 /* ==========================================================================
    Home page picture grid
-   Tiles are 3:2, matching the proportions Stoddard uses, with the label
-   centred beneath each one.
    ========================================================================== */
 .tiles {
   max-width: var(--hero);
@@ -420,8 +401,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .tile--feature:hover .tile__label { color: var(--accent-dk); }
 
 @media (max-width: 62rem) { .tiles { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 40rem) { .tiles { grid-template-columns: repeat(2, 1fr); gap: 1.6rem .7rem; }
-                            .tile__label { font-size: .7rem; letter-spacing: .1em; } }
+@media (max-width: 40rem) {
+  .tiles { grid-template-columns: repeat(2, 1fr); gap: 1.6rem .7rem; }
+  .tile__label { font-size: .7rem; letter-spacing: .1em; }
+}
 
 /* ==========================================================================
    People
@@ -463,7 +446,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .person__links { font-size: .82rem; }
 .person__links a { margin-right: .9rem; white-space: nowrap; }
 
-/* the PI gets a wider treatment */
 .pi { display: grid; grid-template-columns: 15rem 1fr; gap: 3rem; align-items: start; }
 .pi .person__photo { margin-bottom: 0; }
 
@@ -555,7 +537,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .news-item p:last-child { margin-bottom: 0; }
 
 /* ==========================================================================
-   Cards (software, outreach, press)
+   Cards
    ========================================================================== */
 .cards {
   display: grid;
@@ -652,8 +634,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 /* ==========================================================================
    Responsive
    ========================================================================== */
-/* below this the pill would claim a whole row of the bar to itself; Contact
-   is still in the footer and on the Join page */
 @media (max-width: 70rem) {
   .nav-contact { display: none; }
 }
@@ -672,11 +652,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   .hero__img { aspect-ratio: 2400 / 500; }
   .navbar__inner { padding: .6rem var(--gutter) .7rem; }
   .nav__list { gap: .1rem 1.05rem; }
-  .nav-contact { display: none; }
   .strapline { font-size: .82rem; margin-top: 1.1rem; }
   .footer { margin-top: 0; }
 }
 
 @media print {
-  .nav, .nav-feature, .hero, .footer { display: none; }
+  .navbar, .nav-feature, .hero, .footer { display: none; }
 }
