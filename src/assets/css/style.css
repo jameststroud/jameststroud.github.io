@@ -12,7 +12,7 @@
   --bg:            #fffdf8;   /* page background (warm off-white)              */
   --bg-alt:        #f2eee1;   /* alternating section band                      */
   --rule:          #e3dfd2;   /* hairlines and borders                         */
-  --navy:          #ABD0DE;   /* friendly sky blue — headings, links, nav bar  */
+  --navy:          #1f6fb2;   /* friendly sky blue — headings, links, nav bar  */
   --navy-soft:     #17547f;   /* darker blue for hover/active states           */
   --green:         #3dc267;   /* from the lab logo                             */
   --gold:          #b1a066;   /* from the lab logo                             */
@@ -138,10 +138,11 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 
 /* Solid navy bar, links left-aligned, secondary links as a second row
    inside the same bar. */
-.navbar { background: var(--navy); }
+.navbar { background: transparent; }
 .navbar__inner {
   max-width: var(--hero);
   margin: 0 auto;
+  background: var(--navy);
   padding: .7rem var(--gutter) .75rem;
   display: flex;
   flex-wrap: wrap;
