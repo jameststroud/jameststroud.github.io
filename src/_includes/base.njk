@@ -41,8 +41,10 @@
     </ul>
     <a class="nav-contact" href="mailto:{{ site.email }}">Contact</a>
     <div class="nav-feature">
-      <a href="{{ nav.feature.url }}"{% if page.url == nav.feature.url %} aria-current="page"{% endif %}>{{ nav.feature.title }}</a>
-    </div>
+  {%- for item in nav.feature %}
+  <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+  {%- endfor %}
+</div>
   </div>
 </nav>
 
