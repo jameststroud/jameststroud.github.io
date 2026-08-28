@@ -166,7 +166,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 .nav__list a {
   font-family: var(--display);
-  font-size: .76rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -244,7 +244,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   font-size: clamp(.95rem, 1.55vw, 1.32rem);
   letter-spacing: .01em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: #000000;
   line-height: 1.35;
 }
 .strapline span { white-space: nowrap; }
