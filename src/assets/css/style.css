@@ -1,35 +1,26 @@
 /* ==========================================================================
    The Stroud Lab — design system
-   Everything visual is controlled from the variables in :root below.
-   Change a colour or a font here and it changes across the whole site.
    ========================================================================== */
 
 :root {
-  /* Colours ------------------------------------------------------------- */
-  --ink:           #22211d;   /* body text                                     */
-  --ink-soft:      #5f5d55;   /* captions, secondary text                      */
-  --ink-faint:     #8b887e;   /* metadata, dates                               */
-  --bg:            #fffdf8;   /* page background (warm off-white)              */
-  --bg-alt:        #f2eee1;   /* alternating section band                      */
-  --rule:          #e3dfd2;   /* hairlines and borders                         */
-  --navy:          #4a8fab;   /* sky blue — headings, links, text              */
-  --navy-lt:       #ABD0DE;   /* light sky blue — nav bar background           */
-  --navy-soft:     #17547f;   /* darker blue for hover/active states           */
-  --green:         #3dc267;   /* from the lab logo                             */
-  --gold:          #b1a066;   /* from the lab logo                             */
-  --accent:        #cf6a1a;   /* dewlap orange, on light grounds               */
+  --ink:           #22211d;
+  --ink-soft:      #5f5d55;
+  --ink-faint:     #8b887e;
+  --bg:            #fffdf8;
+  --bg-alt:        #f2eee1;
+  --rule:          #e3dfd2;
+  --navy:          #4a8fab;
+  --navy-lt:       #ABD0DE;
+  --navy-soft:     #17547f;
+  --green:         #3dc267;
+  --gold:          #b1a066;
+  --accent:        #cf6a1a;
   --accent-dk:     #a9520d;
-  --accent-lt:     #e8944a;   /* dewlap orange lightened, for use on navy      */
+  --accent-lt:     #e8944a;
   --on-navy:       #ffffff;
-
-.wrap-hero { max-width: var(--hero); margin: 0 auto; padding: 0 var(--gutter); }
-   
-  /* Type ---------------------------------------------------------------- */
   --display: "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans:  "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-
-  /* Measure and rhythm --------------------------------------------------- */
   --measure: 42rem;
   --wide:    68rem;
   --hero:    76rem;
@@ -100,8 +91,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 /* ==========================================================================
    Layout containers
    ========================================================================== */
-.wrap      { max-width: var(--wide);    margin: 0 auto; padding: 0 var(--gutter); }
+.wrap      { max-width: var(--wide); margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-text { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
+.wrap-hero { max-width: var(--hero); margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-text--intro { max-width: 50rem; }
 .wrap-text--intro .lead { max-width: none; margin-left: 0; margin-right: 0; }
 
@@ -110,11 +102,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .section--tight { padding: 1rem 0; }
 .section--band  { background: var(--bg-alt); }
 
-/* Dark welcome section — full-width blue background */
 .section--dark {
   background: var(--navy);
   color: rgba(255,255,255,.92);
-  max-width: var(--hero);   /* matches navbar and hero image */
+  max-width: var(--hero);
   margin-left: auto;
   margin-right: auto;
 }
@@ -153,18 +144,17 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
    ========================================================================== */
 .navbar {
   background: var(--navy-lt);
-  width: 100%;              /* full bleed background */
+  width: 100%;
 }
+
+/* This single container centers everything and constrains to hero width */
 .navbar__inner {
-  display: flex;
-  flex-direction: column;    /* stack rows vertically */
-  align-items: flex-start;
   max-width: var(--hero);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
 
-/* White nav links — horizontal row */
+/* White links row */
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -172,8 +162,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   gap: .1rem 1.5rem;
   list-style: none;
   margin: 0;
-  padding: .55rem 0;
-  width: 100%;
+  padding: .55rem 0 0;
 }
 .nav__list a {
   font-family: var(--display);
@@ -190,12 +179,11 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .nav__list a:hover { opacity: 1; border-bottom: 1px solid rgba(255,255,255,.55); }
 .nav__list a[aria-current="page"] { opacity: 1; border-bottom: 2px solid var(--accent-lt); }
 
-/* Orange feature links — second row inside the same navy bar */
+/* Orange links row — sits directly inside navbar__inner, below nav__list */
 .nav-feature {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: .1rem 0 .55rem;
+  padding: .2rem 0 .55rem;
   gap: 0;
 }
 .nav-feature a {
@@ -205,13 +193,11 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--accent);
-  border: 0;
+  border: 0 !important;
   text-decoration: none;
 }
-.nav-feature a:hover { border-bottom: 1px solid var(--accent-lt); color: var(--accent-dk); }
-.nav-feature a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
-
-/* Bullet separator between orange links */
+.nav-feature a:hover { border-bottom: 1px solid var(--accent-lt) !important; color: var(--accent-dk); }
+.nav-feature a[aria-current="page"] { border-bottom: 2px solid var(--accent) !important; }
 .nav-feature a + a::before {
   content: "•";
   margin: 0 0.6rem;
@@ -243,7 +229,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 }
 .hero__caption a { color: inherit; border-bottom-color: var(--rule); }
 
-/* Strapline beneath hero */
 .strapline {
   max-width: var(--hero);
   margin: 1.6rem auto 0;
@@ -305,7 +290,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .split--reverse > *:first-child { order: 2; }
 .split--reverse > *:last-child  { order: 1; }
 
-/* Photo with hover caption */
 .photo-hover {
   position: relative;
   display: block;
@@ -640,10 +624,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 70rem) {
-  .nav-contact { display: none; }
-}
-
 @media (max-width: 46rem) {
   body { font-size: 1rem; }
   .section { padding: 3.25rem 0; }
