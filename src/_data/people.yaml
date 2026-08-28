@@ -16,12 +16,13 @@
   scholar: https://scholar.google.com/citations?user=2QdWvJ4AAAAJ&hl=en
   bio: >
     James is an Assistant Professor in the School of Biological Sciences and the
-    Elizabeth Smithgall-Watts Endowed Faculty at Georgia Tech. He read Zoology at
-    the University of Wales and Ecology at Hull, completed his PhD at Florida
-    International University with Kenneth Feeley, and was a postdoc with Jonathan
-    Losos at Washington University in St. Louis before starting the lab in 2023.
-    He founded the Lizard Island long-term study in 2015 and the Lizards on the
-    Loose community science programme in Miami.
+    Elizabeth Smithgall-Watts Endowed Faculty at Georgia Tech. Originally from 
+    London, he completed his undergraduate (Zoology) and Master's (Ecology) in the 
+    UK, before moving to Miami, Florida, to earn his PhD (Ecology and Evolution) at 
+    Florida International University in 2018. Following that, James completed a 
+    postdoc with Dr. Jonathan Losos at Washington University in St. Louis before 
+    starting the lab at Georgia Tech in 2023. He founded the Lizard Island 
+    long-term eco-evolutionary field study in 2015.
 
 - name: Jon Suh
   group: staff
@@ -29,8 +30,9 @@
   photo: jon-suh.jpg
   email: jsuh88@gatech.edu
   bio: >
-    Jon runs the lab: field logistics, permits, equipment, and the long-term
-    Lizard Island database. Anything collected on Lizard Island passes through him.
+    Jon runs the lab: field logistics, permits, equipment, discord mod, and all 
+    aspects of the long-term Lizard Island database. Anything collected on 
+    Lizard Island (or in the lab in general) passes through him!
 
 - name: Guillermo Garcia-Costoya, Ph.D.
   group: postdoc
@@ -39,7 +41,10 @@
   email: ggarciacostoya@gatech.edu
   scholar: https://scholar.google.com/citations?user=lF2WBG0AAAAJ&hl=en&oi=ao
   bio: >
-    Guille joined the lab in summer 2026.
+    Guille joined the lab in June 2026, and will be working with us to integrate
+    mechanistic biophysical models in our studies on the evoution of thermal
+    ecophysiology in lizards, as well as to tackle some of the big outstanding
+    Lizard Island analyses.
 
 - name: Taylor Cooper
   group: phd
@@ -50,7 +55,9 @@
   started: Fall 2024
   bio: >
     Taylor started in Fall 2024 and works at the intersection of bioinformatics
-    and the Lizard Island long-term dataset.
+    and ecology and evolution. Taylor's PhD is focusing on understanding the
+    transcriptomic responses of ectotherms (lizards) to extreme thermal stress,
+    and the genomic signatures of selection on Lizard Island.
 
 - name: Emma Glenn
   group: phd
