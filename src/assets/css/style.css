@@ -209,7 +209,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   width: 100%;
   max-width: var(--hero);        /* inset, not full-bleed */
   margin: 0 auto;
-  aspect-ratio: 3.2 / 1;         /* the Stoddard proportion */
+  aspect-ratio: 2400 / 500;         /* the Stoddard proportion */
   object-fit: cover;
 }
 .hero__caption {
