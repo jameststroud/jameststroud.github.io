@@ -3,6 +3,16 @@
 # Add a repository link once the code is public and the `repo` line will appear.
 # ---------------------------------------------------------------------------
 
+- name: LizardMorph
+  kicker: Morphometrics
+  summary: >
+    A generalizable machine learning framework for automated anatomical landmark
+    detection in digital images. Built to landmark the lab's lizard radiographs
+    and toepad scans without a person clicking every point, but written to
+    generalise beyond them.
+  paper: "Quintana et al., in review, Ecology and Evolution"
+  doi: https://doi.org/10.64898/2026.06.10.731351
+  
 - name: LizardLens
   kicker: Species identification
   summary: >
@@ -22,16 +32,6 @@
     iNaturalist observation.
   paper: "Chia et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731342
-
-- name: LizardMorph
-  kicker: Morphometrics
-  summary: >
-    A generalizable machine learning framework for automated anatomical landmark
-    detection in digital images. Built to landmark the lab's lizard radiographs
-    and toepad scans without a person clicking every point, but written to
-    generalise beyond them.
-  paper: "Quintana et al., in review, Ecology and Evolution"
-  doi: https://doi.org/10.64898/2026.06.10.731351
 
 - name: PyTLidar
   kicker: Structure from lidar
