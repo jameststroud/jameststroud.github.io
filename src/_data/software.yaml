@@ -26,7 +26,6 @@
     metric. Splitting detection from classification is what buys the improvement:
     each stage specialises.
   extra: >
-      extra: >
     LizardLens was built for middle school students in the <a href="/lizards-on-the-loose/">Lizards on the Loose</a>
     programme. Species identification is ordinarily the barrier that keeps
     non-experts out; here it becomes the entry point. Students get
