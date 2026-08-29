@@ -15,6 +15,8 @@
   
 - name: LizardLens
   kicker: Species identification
+  image: lizardlens_equestris.jpg
+  imageAlt: Screenshot of LizardLens identifying a Cuban knight anole
   summary: >
     A two-stage deep learning pipeline for identifying anoles in photographs. A
     fine-tuned YOLOv8x model finds each lizard in the frame; a Swin Transformer
