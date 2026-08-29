@@ -340,6 +340,19 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   border-radius: 2px;
 }
 
+.tool-entry--with-img {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.tool-entry--with-img .tool-entry__img {
+  width: 100%;
+  border-radius: 4px;
+  grid-row: 1 / -1;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
