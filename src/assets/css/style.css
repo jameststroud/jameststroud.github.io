@@ -332,6 +332,13 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .rule-wrap--text hr { max-width: var(--measure); }
 
 .tool-entry h3 { margin-bottom: .5rem; }
+.tool-entry__img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
 
 .stats {
   display: grid;
