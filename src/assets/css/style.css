@@ -331,15 +331,19 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .rule-wrap hr { max-width: var(--wide); margin: 0 auto; }
 .rule-wrap--text hr { max-width: var(--measure); }
 
+/* ==========================================================================
+   Software / tool entries
+   ========================================================================== */
 .tool-entry h3 { margin-bottom: .5rem; }
+
+/* Default: no image — text only */
 .tool-entry__img {
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
   border-radius: 2px;
+  display: block;
 }
 
+/* With image: two-column grid, image left, all text right */
 .tool-entry--with-img {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -350,7 +354,10 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .tool-entry--with-img .tool-entry__img {
   width: 100%;
   border-radius: 4px;
-  grid-row: 1 / -1;
+}
+
+.tool-entry__body {
+  min-width: 0;
 }
 
 .stats {
@@ -660,6 +667,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   .nav__list { gap: .1rem 1.05rem; }
   .strapline { font-size: .82rem; margin-top: 1.1rem; }
   .footer { margin-top: 0; }
+  .tool-entry--with-img {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media print {
