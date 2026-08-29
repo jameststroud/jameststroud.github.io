@@ -38,7 +38,7 @@ description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, a
       <p class="card__kicker">{{ s.kicker }}</p>
       <h3>{{ s.name }}</h3>
       <p>{{ s.summary }}</p>
-      {% if s.extra %}<p>{{ s.extra }}</p>{% endif %}
+      {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
       {% if s.paper or s.doi or s.repo %}
       <p class="pub__meta">
         {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
