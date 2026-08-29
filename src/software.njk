@@ -34,9 +34,14 @@ description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, a
 <section class="section--tight">
   <div class="wrap-text">
     {%- for s in software %}
-    <div class="tool-entry">
-      <p class="card__kicker">{{ s.kicker }}</p>
-      <h3>{{ s.name }}</h3>
+    <div class="tool-entry{% if s.image %} tool-entry--with-img{% endif %}">
+  {% if s.image %}
+  <img class="tool-entry__img"
+       src="/assets/img/software/{{ s.image }}"
+       alt="{{ s.imageAlt or s.name }}">
+  {% endif %}
+  <p class="card__kicker">{{ s.kicker }}</p>
+  <h3>{{ s.name }}</h3>
       <p>{{ s.summary }}</p>
       {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
       {% if s.paper or s.doi or s.repo %}
