@@ -1,0 +1,9 @@
+# Eleventy build output
+_site/
+
+# Dependencies
+node_modules/
+
+# Logs and OS cruft
+npm-debug.log*
+.DS_Store
