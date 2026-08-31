@@ -71,16 +71,6 @@ The palette is taken from the lab logo.
 
 ---
 
-## Files you still need to add
-
-Two links on the site point at PDFs that are not in the repository yet. Drop them
-into `src/files/` with exactly these names:
-
-- `Stroud_CV.pdf` — linked from the footer and the Lab Members page
-- `Stroud_Lab_Handbook.pdf` — linked from the Join the Lab page
-
----
-
 ## Setting up GitHub Pages (once)
 
 1. Push this repository to `main`.
