@@ -3,18 +3,20 @@
 # Add a repository link once the code is public and the `repo` line will appear.
 # ---------------------------------------------------------------------------
 
-- name: LizardMorph
-  kicker: Morphometrics
+- name: AutoMorph
+  kicker: Automated Morphometric Landmarking
+  image: automorph-image.png
+  imageAlt: Screenshot of AutoMorph main control panel
   summary: >
     A generalizable machine learning framework for automated anatomical landmark
     detection in digital images. Built to landmark the lab's lizard radiographs
     and toepad scans without a person clicking every point, but written to
-    generalise beyond them.
+    generalise beyond them. You can try out AutoMorph for yourself here - <a href="https://haag-1.cc.gatech.edu/">https://haag-1.cc.gatech.edu/</a>.
   paper: "Quintana et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731351
   
 - name: LizardLens
-  kicker: Species identification
+  kicker: Automated Species identification
   image: lizardlens-equestris.jpg
   imageAlt: Screenshot of LizardLens identifying a Cuban knight anole
   summary: >
@@ -31,12 +33,12 @@
     non-experts out; here it becomes the entry point. Students get
     probability-ranked predictions instead of a guess, correct the bounding box
     by hand when the model is wrong, and each validated prediction becomes a real
-    iNaturalist observation.
+    iNaturalist observation. You can try out LizardLens for yourself here - <a href="https://lizard-class.cc.gatech.edu/">https://lizard-class.cc.gatech.edu/</a>.
   paper: "Chia et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731342
 
 - name: PyTLidar
-  kicker: Structure from lidar
+  kicker: Structural Environment Quantification using LiDAR
   summary: >
     A Python package for building quantitative structure models of trees from
     terrestrial lidar point clouds. We use it to measure the branches on Lizard
@@ -46,7 +48,7 @@
   doi: https://doi.org/10.32942/X2XP99
 
 - name: lande
-  kicker: Selection analysis
+  kicker: Toolbox for Natural Selection Anlayses
   summary: >
     An R package for analysing and visualising natural selection, in development
     in the lab.
