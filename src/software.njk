@@ -4,42 +4,36 @@ title: Software & Tools
 permalink: /software/
 description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, and lande."
 ---
+
 <section class="section">
   <div class="wrap-text wrap-text--intro center">
     <p class="eyebrow">Software &amp; tools</p>
     <h1>What we build</h1>
     <p class="lead">
       We are entering a new generation of how we can study ecology and evolution. Our lab
-      focuses on two major innovations:
-</p>
-<p>
-(1) automated pipelines that use machine-learning techniques to process data at previously-unprecedented speeds and scales for our field,
-</p>
-<p>
-(2) advanced instrumentation of field biology, specifically using or developing
-      sensors for passively collecting data in the wild, either from the environment (e.g.,
-      quantifying the structural or thermal environment) or from organisms (e.g., wearable
-      sensors....i.e., lizard backpacks!). 
-</p>
-<p>We developed most of the tools below to facilitate
-      our lab's specific research needs, however developed them in a way that they are 
-      customizable and/or broadly of use to biologists.
+      focuses on two major innovations: automated pipelines that use machine-learning
+      techniques to process data at previously-unprecedented speeds and scales, and advanced
+      instrumentation of field biology using sensors for passively collecting data in the
+      wild. We developed most of the tools below to facilitate our lab's specific research
+      needs, but built them to be customizable and broadly useful to biologists.
     </p>
   </div>
 </section>
-<div class="rule-wrap rule-wrap--text"><hr></div>
-<section class="section--tight">
-  <div class="wrap-text">
-    {%- for s in software %}
-    <div class="tool-entry{% if s.image %} tool-entry--with-img{% endif %}">
-      {% if s.image %}
-      <img class="tool-entry__img"
-           src="/assets/img/software/{{ s.image }}"
-           alt="{{ s.imageAlt or s.name }}">
-      {% endif %}
-      <div class="tool-entry__body">
-        <p class="card__kicker">{{ s.kicker }}</p>
-        <h3>{{ s.name }}</h3>
+
+<div class="rule-wrap"><hr></div>
+
+{%- for s in software %}
+
+{% if s.image %}
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="photo-hover" tabindex="0">
+        <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}">
+      </div>
+      <div>
+        <p class="eyebrow">{{ s.kicker }}</p>
+        <h2>{{ s.name }}</h2>
         <p>{{ s.summary }}</p>
         {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
         {% if s.paper or s.doi or s.repo %}
@@ -51,11 +45,32 @@ description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, a
         {% endif %}
       </div>
     </div>
-    {%- if not loop.last %}<hr>{% endif %}
-    {%- endfor %}
   </div>
 </section>
-<div class="rule-wrap rule-wrap--text"><hr></div>
+{% else %}
+<section class="section">
+  <div class="wrap-text">
+    <p class="eyebrow">{{ s.kicker }}</p>
+    <h2>{{ s.name }}</h2>
+    <p>{{ s.summary }}</p>
+    {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
+    {% if s.paper or s.doi or s.repo %}
+    <p class="pub__meta">
+      {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
+      {% if s.doi %} <a href="{{ s.doi }}">Preprint</a>{% endif %}
+      {% if s.repo %}{% if s.doi %} ·{% endif %} <a href="{{ s.repo }}">Code</a>{% endif %}
+    </p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{%- if not loop.last %}<div class="rule-wrap"><hr></div>{% endif %}
+
+{%- endfor %}
+
+<div class="rule-wrap"><hr></div>
+
 <section class="section section--band">
   <div class="wrap-text">
     <h2>Why this matters to the lab</h2>
