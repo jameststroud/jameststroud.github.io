@@ -90,40 +90,40 @@
   group: undergrad
   role: Undergraduate Researcher
   photo: haelin-lee.jpg
-  started: Fall 2024
+  started: Started: Fall 2024
+  
+- name: Brynne Hobart
+  group: undergrad
+  role: Undergraduate Researcher
+  started: Started: Fall 2024
+
+- name: Loan (Rita) Tran
+  group: undergrad
+  role: Undergraduate Researcher
+  started: Started: Fall 2025
+
+- name: Elle Garman
+  group: undergrad
+  role: Undergraduate Researcher
+  started: Started: Fall 2025
 
 - name: Ashlyn Willis
   group: undergrad
   role: Undergraduate Researcher
   photo: ashyn-willis.jpeg
-  started: Spring 2025
-
-- name: Loan (Rita) Tran
-  group: undergrad
-  role: Undergraduate Researcher
-  started: Fall 2025
-
-- name: Elle Garman
-  group: undergrad
-  role: Undergraduate Researcher
-  started: Fall 2025
-
-- name: Brynne Hobart
-  group: undergrad
-  role: Undergraduate Researcher
-  started: Fall 2024
-
+  started: Started: Spring 2025
+  
 - name: Katie Stone
   group: undergrad
   role: Undergraduate Researcher
-  started: Spring 2026
+  started: Started: Spring 2026
 
 - name: Tessa Allers
   group: undergrad
   role: Undergraduate Researcher
-  started: Spring 2026
+  started: Started: Spring 2026
 
 - name: Camdyn Gates
   group: undergrad
   role: Undergraduate Researcher
-  started: Summer 2026
+  started: Started: Summer 2026
