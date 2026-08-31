@@ -30,9 +30,9 @@
   photo: jon-suh.jpg
   email: jsuh88@gatech.edu
   bio: >
-    Jon runs the lab: field logistics, permits, equipment, and all 
+    Jon runs the lab: field logistics, permits, equipment, ordering, and all 
     aspects of the long-term Lizard Island database. Anything collected on 
-    Lizard Island (or in the lab in general) passes through him!
+    Lizard Island (or in the lab in general) passes through Jon!
 
 - name: Guillermo Garcia-Costoya, Ph.D.
   group: postdoc
@@ -40,6 +40,7 @@
   photo: guille-garciacostoya.JPG
   email: ggarciacostoya@gatech.edu
   scholar: https://scholar.google.com/citations?user=lF2WBG0AAAAJ&hl=en&oi=ao
+  started: Summer 2026
   bio: >
     Guille joined the lab in June 2026, and will be working with us to integrate
     mechanistic biophysical models into our studies on the evolution of thermal
