@@ -58,8 +58,8 @@
     and ecology and evolution. Taylor's PhD is focusing on understanding the
     transcriptomic responses of ectotherms (lizards) to extreme thermal stress,
     and the genomic signatures of selection on Lizard Island.
-
-    <b>Taylor is support by an NSF Graduate Research Fellowship (GRFP).</b>
+  award: >
+    NSF Graduate Research Fellow (<a href="https://www.nsf.gov/funding/initiatives/grfp">GRFP</a>)
 
 - name: Emma Glenn
   group: phd
@@ -72,9 +72,9 @@
     Emma started in Fall 2025 and is exploring the physiological mechanisms
     that lizards employ to survive extreme thermal stress, specifically
     extreme cold (sub-CTmin) conditions.
-
-    <b>Emma is supported by a Simons Foundation Graduate Fellowship in 
-    Ecology and Evolution.</b>
+  award: > 
+    Simons Graduate Fellow in Ecology and Evolution
+    (<a href="https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/">Simons Foundation</a>)
 
 - name: Sam Clay
   group: phd
