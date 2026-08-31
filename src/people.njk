@@ -13,6 +13,7 @@ description: "The people of the Stroud Lab at Georgia Tech."
   <h3>{{ p.name }}</h3>
   <p class="person__role">{{ p.role }}{% if p.started %} · {{ p.started }}{% endif %}</p>
   {% if p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
+  {% if p.award %}<p class="person__bio"><strong>{{ p.award | safe }}</strong></p>{% endif %}
   <p class="person__links">
     {% if p.email %}<a href="mailto:{{ p.email }}">Email</a>{% endif %}
     {% if p.scholar %}<a href="{{ p.scholar }}">Scholar</a>{% endif %}
