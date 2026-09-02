@@ -675,11 +675,17 @@
   detail: "45(4): 693-694"
 
 - year: 2014
-  type: note
+  type: popular
   authors: "Stroud, J.T."
   title: "An introduction to the lizards of Fairchild Tropical Botanic Garden"
   journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
   detail: "69(1): 28-29"
+
+- year: 2014
+  type: popular
+  authors: "Kolbe, J.J., Feeley, K.J., Battles, A., Stroud, J.T."
+  title: "An introduction to the lizards of Fairchild Tropical Botanic Garden"
+  journal: "The Fairchild Challenge, Fairchild Tropical Botanic Garden"
 
 - year: 2013
   type: note
