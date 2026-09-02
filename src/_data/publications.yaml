@@ -34,6 +34,12 @@
   detail: "preprint on bioRxiv"
   doi: "https://doi.org/10.64898/2026.06.10.731351"
 
+- year: 2026
+  type: inreview
+  authors: "Kukla, Y., Riedel, J., Stroud, J.T., Rödder, D."
+  title: "Global patterns of temporal niche partitioning in lizards"
+  journal: "Global Ecology and Biogeography"
+
 - year: 2025
   type: inreview
   authors: "Hagood, J., Yang, F., Motiwale, S., Shi, B., Cannon, J.B., Stroud, J.T."
