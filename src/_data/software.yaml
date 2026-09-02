@@ -11,7 +11,9 @@
     A generalizable machine learning framework for automated anatomical landmark
     detection in digital images. Built to landmark the lab's lizard radiographs
     and toepad scans without a person clicking every point, but written to
-    generalise beyond them. You can try out AutoMorph for yourself here - <a href="https://haag-1.cc.gatech.edu/">https://haag-1.cc.gatech.edu/</a>.
+    generalise beyond them.
+  extra: >
+    You can try out AutoMorph for yourself here - <a href="https://haag-1.cc.gatech.edu/">https://haag-1.cc.gatech.edu/</a>.
   paper: "Quintana et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731351
   
