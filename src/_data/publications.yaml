@@ -526,10 +526,24 @@
 
 - year: 2020
   type: note
+  authors: "Stroud, J.T., Sanger, T."
+  title: "<em>Hemidactylus mabouia</em> (African Wood Slave). Predation by <em>Anolis carolinensis</em> (American green anole)"
+  journal: "Herpetological Review"
+  detail: "51(1): 125"
+
+- year: 2020
+  type: note
+  authors: "Maurer, A.S., Stroud, J.T."
+  title: "<em>Anolis wattsi</em> (Watts' Anole). Nocturnal activity"
+  journal: "Herpetological Review"
+  detail: "51(3): 631-632"
+
+- year: 2020
+  type: note
   authors: "Martin, T.E., Gillespie, G.R., Kusrini, M.D., Stroud, J.T."
   title: "<em>Xenochrophis trianguligerus</em> (Sulawesi Triangle Keelback). Diet and feeding behavior"
   journal: "Herpetological Review"
-  detail: "51(3): 631-632"
+  detail: "51(1): 119"
 
 - year: 2019
   type: note
@@ -539,66 +553,59 @@
   detail: "pp. 242-260"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Stroud, J.T."
   title: "Thoughts on the ecology and evolution of anoles; insights from 5 years of meandering strolls"
   journal: "Anolis Newsletter VII"
   detail: "pp. 261-274"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Walker, K., Battles, A.C., Stroud, J.T."
   title: "Inter-specific predation between two eco-morphologically similar <em>Anolis</em> lizards"
   journal: "Anolis Newsletter VII"
   detail: "pp. 296-300"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Giery, S.T., Stroud, J.T."
   title: "Geographic variation in trophic ecology of the brown anole (<em>Anolis sagrei</em>): Species-rich communities are composed of more diverse populations"
   journal: "Anolis Newsletter VII"
   detail: "pp. 76-100"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Mothes, C.C., Stroud, J.T., Clements, S.L., Searcy, C.A."
   title: "Predicting the invasion dynamics of anoles (and other lizards) using ecological niche modeling"
   journal: "Anolis Newsletter VII"
   detail: "pp. 194-205"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Mantilla, D.C., Morales, S.D., Parra-Medina, R., Stroud, J.T."
   title: "Histopathology of large epidermal cysts on the invasive Puerto Rican crested anole (<em>Anolis cristatellus</em>) in Miami, Florida USA"
   journal: "Anolis Newsletter VII"
   detail: "pp. 154-157"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Ljustina, O., Stroud, J.T."
   title: "Little evidence for size-structured habitat use in a diverse <em>Anolis</em> community"
   journal: "Anolis Newsletter VII"
   detail: "pp. 136-143"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Stroud, J.T., Setzer, K."
   title: "Geckos in the garden: Florida reef gecko (<em>Sphaerodactylus notatus</em>)"
   journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Maurer, A., Stroud, J.T."
   title: "<em>Anolis wattsi</em> (Watts' anole). Nocturnal activity"
   journal: "Herpetological Review"
   detail: "51(1): 119"
-
-- year: 2019
-  type: note
-  authors: "Stroud, J.T., Sanger, T.J."
-  title: "<em>Hemidactylus mabouia</em> (African house gecko). Predation by <em>Anolis carolinensis</em>"
-  journal: "Herpetological Review"
-  detail: "51(1): 125"
 
 - year: 2018
   type: note
