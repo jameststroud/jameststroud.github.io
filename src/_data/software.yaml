@@ -35,9 +35,7 @@
     non-experts out; here it becomes the entry point. Students get
     probability-ranked predictions instead of a guess, correct the bounding box
     by hand when the model is wrong, and each validated prediction becomes a real
-    iNaturalist observation. 
-  extra: >
-    You can try out LizardLens for yourself here - <a href="https://lizard-class.cc.gatech.edu/">https://lizard-class.cc.gatech.edu/</a>.
+    iNaturalist observation. You can try out LizardLens for yourself here - <a href="https://lizard-class.cc.gatech.edu/">https://lizard-class.cc.gatech.edu/</a>.
   paper: "Chia et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731342
 
