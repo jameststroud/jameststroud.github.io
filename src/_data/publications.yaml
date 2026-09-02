@@ -555,7 +555,7 @@
   detail: "51(1): 119"
 
 - year: 2019
-  type: note
+  type: article
   authors: "Stroud, J.T."
   title: "Using introduced anoles as natural experiments in ecology and evolution"
   journal: "Anolis Newsletter VII"
@@ -604,17 +604,10 @@
   detail: "pp. 136-143"
 
 - year: 2019
-  type: article
+  type: popular
   authors: "Stroud, J.T., Setzer, K."
   title: "Geckos in the garden: Florida reef gecko (<em>Sphaerodactylus notatus</em>)"
   journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
-
-- year: 2019
-  type: article
-  authors: "Maurer, A., Stroud, J.T."
-  title: "<em>Anolis wattsi</em> (Watts' anole). Nocturnal activity"
-  journal: "Herpetological Review"
-  detail: "51(1): 119"
 
 - year: 2018
   type: note
