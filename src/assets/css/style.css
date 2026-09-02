@@ -506,7 +506,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   line-height: 1.6;
 }
 .pub__n { color: var(--ink-faint); font-size: .85rem; padding-top: .2rem; font-variant-numeric: tabular-nums; }
-.pub__title { color: var(--navy); font-weight: 600; }
+.pub__title { color: var(--navy); font-weight: 600; text-decoration: none; }
+a.pub__title:hover { text-decoration: underline; }
 .pub__authors { color: var(--ink-soft); }
 .pub__venue { font-style: italic; color: var(--navy-soft); }
 .pub__meta { font-size: .84rem; color: var(--ink-faint); margin-top: .3rem; }
