@@ -49,7 +49,7 @@
 
 {% if hero %}
 <div class="hero">
-  <img class="hero__img" src="{{ hero }}" alt="{{ heroAlt or '' }}">
+  <img class="hero__img{% if heroClass %} {{ heroClass }}{% endif %}" src="{{ hero }}" alt="{{ heroAlt or '' }}">
 </div>
 {% endif %}
 
