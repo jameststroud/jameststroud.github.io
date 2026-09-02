@@ -216,7 +216,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   aspect-ratio: 2400 / 500;
   object-fit: cover;
 }
-.hero__img--short { aspect-ratio: 2400 / 840; }
+.hero__img--short { aspect-ratio: auto; height: auto; object-fit: fill; background: var(--bg); }
 .hero__caption {
   max-width: var(--hero);
   margin: .85rem auto 0;
@@ -664,6 +664,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   .pub__n { display: none; }
   .hero { margin-top: 1.25rem; }
   .hero__img { aspect-ratio: 2400 / 500; }
+  .hero__img--short { aspect-ratio: auto; height: auto; }
   .navbar__inner { padding: .6rem var(--gutter) .7rem; }
   .nav__list { gap: .1rem 1.05rem; }
   .strapline { font-size: .82rem; margin-top: 1.1rem; }
