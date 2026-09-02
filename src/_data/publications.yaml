@@ -491,6 +491,7 @@
   journal: "Washington University, St. Louis MO"
   detail: "pp. 1-323"
   doi: "https://doi.org/10.7936/gjg3-h168"
+  pdf: "Stroud et al_2019_Anolis Newsletter_intro.pdf"
 
 # ===== Writing for a wider audience =========================================
 
@@ -524,6 +525,13 @@
 
 # ===== Natural history notes and other contributions ========================
 
+- year: 2019
+  type: article
+  authors: "Stroud, J.T."
+  title: "Fairchild's Anole <em>Anolis fairchildi</em>"
+  journal: "Anolis Newsletter VII"
+  detail: "pp. v"
+
 - year: 2020
   type: note
   authors: "Stroud, J.T., Sanger, T."
@@ -556,7 +564,7 @@
 - year: 2019
   type: article
   authors: "Stroud, J.T."
-  title: "Thoughts on the ecology and evolution of anoles; insights from 5 years of meandering strolls"
+  title: "Thoughts on the ecology and evolution of anoles: insights from 5 years of meandering strolls"
   journal: "Anolis Newsletter VII"
   detail: "pp. 261-274"
 
