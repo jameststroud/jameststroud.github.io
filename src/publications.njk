@@ -36,7 +36,11 @@ description: "Publications from the Stroud Lab, including papers on natural sele
              data-text="{{ pub.title | replace('<em>','') | replace('</em>','') }} {{ pub.authors }} {{ pub.journal }}">
           <div class="pub__n">{{ pub.year }}</div>
           <div>
+            {%- if pub.doi or pub.url %}
+            <a class="pub__title" href="{{ pub.doi or pub.url }}">{{ pub.title | safe }}</a>
+            {%- else %}
             <span class="pub__title">{{ pub.title | safe }}</span>
+            {%- endif %}
             {%- if pub.type == "inreview" %}<span class="tag">In review</span>{% endif %}
             {%- if pub.type == "popular" %}<span class="tag tag--press">Popular writing</span>{% endif %}
             {%- if pub.type == "note" %}<span class="tag">Note</span>{% endif %}
