@@ -22,7 +22,6 @@
   type: inreview
   authors: "Chia, W.C., Jahanshahi, I., Loh, L.Y., Zheng, A., Verma, N., Mussmann, S., Shi, B., Stroud, J.T."
   title: "LizardLens: A two-stage deep learning pipeline for detecting and classifying similar species in visually complex environments"
-  journal: "Ecology and Evolution"
   detail: "preprint on bioRxiv"
   doi: "https://doi.org/10.64898/2026.06.10.731342"
 
@@ -30,7 +29,6 @@
   type: inreview
   authors: "Quintana, M., Loh, L.Y., Parikh, A., Suh, J.J., Chavez, V., Porto, A., Shi, B., Stroud, J.T."
   title: "LizardMorph: A generalizable machine learning framework for automated anatomical landmark detection in digital images"
-  journal: "Ecology and Evolution"
   detail: "preprint on bioRxiv"
   doi: "https://doi.org/10.64898/2026.06.10.731351"
 
@@ -38,13 +36,11 @@
   type: inreview
   authors: "Kukla, Y., Riedel, J., Stroud, J.T., Rödder, D."
   title: "Global patterns of temporal niche partitioning in lizards"
-  journal: "Global Ecology and Biogeography"
-
-- year: 2025
+  
+- year: 2026
   type: inreview
   authors: "Hagood, J., Yang, F., Motiwale, S., Shi, B., Cannon, J.B., Stroud, J.T."
   title: "PyTLidar: A Python package for tree QSM modeling from terrestrial lidar data"
-  journal: "Journal of Open Source Software"
   detail: "preprint"
   doi: "https://doi.org/10.32942/X2XP99"
 
