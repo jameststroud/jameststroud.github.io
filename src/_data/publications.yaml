@@ -24,6 +24,7 @@
   title: "LizardLens: A two-stage deep learning pipeline for detecting and classifying similar species in visually complex environments"
   detail: "preprint on bioRxiv"
   doi: "https://doi.org/10.64898/2026.06.10.731342"
+  pdf: "Chia et al_2025_LizardLens_preprint.pdf"
 
 - year: 2026
   type: inreview
@@ -43,6 +44,7 @@
   title: "PyTLidar: A Python package for tree QSM modeling from terrestrial lidar data"
   detail: "preprint"
   doi: "https://doi.org/10.32942/X2XP99"
+  pdf: "Hagood et al_2025_PyTLidar_preprint.pdf"
 
 # ===== Journal articles =====================================================
 
@@ -356,7 +358,7 @@
 - year: 2017
   type: article
   authors: "Tiatragul, S., Murali, G., Stroud, J.T."
-  title: "Digest: Different evolutionary dynamics led to the convergence of clinging performance in lizard toepads"
+  title: "Different evolutionary dynamics led to the convergence of clinging performance in lizard toepads"
   journal: "Evolution"
   detail: "71(10): 2537-2538"
   doi: "https://doi.org/10.1111/evo.13338"
@@ -364,7 +366,7 @@
 - year: 2017
   type: article
   authors: "Stroud, J.T."
-  title: "Digest: Ecological opportunity, competition, and diversity dependence in macroevolution"
+  title: "Ecological opportunity, competition, and diversity dependence in macroevolution"
   journal: "Evolution"
   detail: "71(7): 1915-1916"
   doi: "https://doi.org/10.1111/evo.13295"
