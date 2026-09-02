@@ -58,7 +58,7 @@
     and ecology and evolution. Taylor's PhD is focusing on understanding the
     transcriptomic responses of ectotherms (lizards) to extreme thermal stress,
     and the genomic signatures of selection on Lizard Island.
-  award: 'NSF Graduate Research Fellow (<a href="https://www.nsf.gov/funding/initiatives/grfp">GRFP</a>)'
+  award: 'Taylor is supported by an <a href="https://www.nsf.gov/funding/initiatives/grfp">NSF Graduate Research Fellowship</a>.'
 
 - name: Emma Glenn
   group: phd
@@ -71,17 +71,20 @@
     Emma started in Fall 2025 and is exploring the physiological mechanisms
     that lizards employ to survive extreme thermal stress, specifically
     extreme cold (sub-CTmin) conditions.
-  award: 'Simons Graduate Fellow in Ecology and Evolution (<a href="https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/">Simons Foundation</a>)'
+  award: 'Emma is supported by a <a href="https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/">Simons Foundation Graduate Fellowship in Ecology and Evolution</a>.'
 
 - name: Sam Clay
   group: phd
   role: PhD Student, Biology
   photo: sam-clay.jpeg
   email: seclay00@gmail.com
+  scholar: https://scholar.google.com/citations?user=NibJMVUAAAAJ&hl=en
   started: Fall 2027
   bio: >
     Sam deferred a Fall 2026 start to take up a Fulbright Fellowship in Ecuador,
     and will officially start in the lab in Fall 2027. 
+  award: 'Sam is currently in Ecuador, supported by a <a href="https://fulbrightscholars.org/us-scholar-awards/">Fulbright Scholar Program</a> Award.'
+    
 
 - name: Haelin Lee
   group: undergrad
