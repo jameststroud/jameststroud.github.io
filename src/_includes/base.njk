@@ -89,5 +89,17 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var host = location.hostname;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href && /^https?:\/\//i.test(href) && !href.includes(host)) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+})();
+</script>
 </body>
 </html>
