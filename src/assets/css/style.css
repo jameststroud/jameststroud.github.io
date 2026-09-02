@@ -216,7 +216,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   aspect-ratio: 2400 / 500;
   object-fit: cover;
 }
-.hero__img--short { aspect-ratio: 2400 / 330; }
+.hero__img--short { aspect-ratio: 2400 / 840; }
 .hero__caption {
   max-width: var(--hero);
   margin: .85rem auto 0;
