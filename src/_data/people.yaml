@@ -86,6 +86,11 @@
   award: 'Sam is currently in Ecuador, supported by a <a href="https://fulbrightscholars.org/us-scholar-awards/">Fulbright Scholar Program</a> Award.'
     
 
+- name: Matthew Smith
+  group: undergrad
+  role: Master's Researcher
+  started: Fall 2025
+  
 - name: Haelin Lee
   group: undergrad
   role: Undergraduate Researcher
@@ -130,8 +135,3 @@
   role: Undergraduate Researcher
   photo: camdyn-gates.jpg
   started: Summer 2026
-
-- name: Matthew Smith
-  group: undergrad
-  role: Masters Researcher
-  started: Fall 2025
