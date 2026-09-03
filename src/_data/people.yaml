@@ -95,7 +95,7 @@
 - name: Haelin Lee
   group: undergrad
   role: Undergraduate Researcher
-  photo: haelin-lee.png
+  photo: haelin-lee.jpg
   started: Fall 2024
   
 - name: Brynne Hobart
@@ -151,6 +151,12 @@
   photo: miles-appleton.jpg
   started: Fall 2025
 
+- name: Larkin Wynn
+  group: undergrad
+  role: Lab Alumni
+  photo: larkin-wynn.jpg
+  started: Fall 2025
+  
 - name: Eli Vazquez
   group: undergrad
   role: Lab Alumni
