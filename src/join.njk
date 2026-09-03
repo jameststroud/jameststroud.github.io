@@ -15,10 +15,21 @@ description: "Opportunities for prospective PhD students, postdocs, and undergra
 <section class="section--tight">
   <div class="wrap">
     <div class="split">
+      <div>
       <figure>
         <img src="/assets/img/people/cold_snap_26.jpg" alt="Lab members during fieldwork">
         <figcaption>The Lab in atypically cold conditions...ready to sample cold-stunned lizards at 4am during the during the extreme cold snap event of Feb 2026 in Miami!</figcaption>
       </figure>
+      <div class="labpics">
+        {%- if labpics.length %}
+        {%- for src in labpics %}
+        <img class="labpics__img{% if loop.first %} is-active{% endif %}" src="{{ src }}" alt="Lab photo">
+        {%- endfor %}
+        {%- else %}
+        <p class="labpics__empty">Lab photos coming soon.</p>
+        {%- endif %}
+      </div>
+      </div>
       <div>
     <h2>What the lab is like</h2>
     <p>
