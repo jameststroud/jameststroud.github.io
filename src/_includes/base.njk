@@ -89,6 +89,11 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img class="lightbox__img" id="lightbox-img" src="" alt="">
+</div>
+
 <script>
 (function () {
   var host = location.hostname;
@@ -98,6 +103,55 @@
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener noreferrer');
     }
+  });
+})();
+
+(function () {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  var closeBtn = document.getElementById('lightbox-close');
+  var lastFocused = null;
+
+  function openLightbox(img) {
+    lastFocused = document.activeElement;
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.hidden = false;
+    requestAnimationFrame(function () { lightbox.classList.add('is-open'); });
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(function () {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+    }, 200);
+    if (lastFocused) { lastFocused.focus(); }
+  }
+
+  document.querySelectorAll('main img, .hero img').forEach(function (img) {
+    img.classList.add('lightbox-trigger');
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'View full-resolution photo');
+    img.addEventListener('click', function () { openLightbox(img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(img);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) { closeLightbox(); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) { closeLightbox(); }
   });
 })();
 </script>
