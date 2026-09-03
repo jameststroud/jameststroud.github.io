@@ -291,6 +291,44 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .split--reverse > *:first-child { order: 2; }
 .split--reverse > *:last-child  { order: 1; }
 
+.labpics {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--bg-alt);
+}
+.labpics__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+.labpics__img.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+.labpics__empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
 .photo-hover {
   position: relative;
   display: block;

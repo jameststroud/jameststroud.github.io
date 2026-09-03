@@ -154,6 +154,19 @@
     if (e.key === 'Escape' && lightbox.classList.contains('is-open')) { closeLightbox(); }
   });
 })();
+
+(function () {
+  document.querySelectorAll('.labpics').forEach(function (el) {
+    var imgs = el.querySelectorAll('.labpics__img');
+    if (imgs.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      imgs[i].classList.remove('is-active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('is-active');
+    }, 4000);
+  });
+})();
 </script>
 </body>
 </html>
