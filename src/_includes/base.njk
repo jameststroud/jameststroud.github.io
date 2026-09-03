@@ -159,12 +159,40 @@
   document.querySelectorAll('.labpics').forEach(function (el) {
     var imgs = el.querySelectorAll('.labpics__img');
     if (imgs.length < 2) return;
+    var prevBtn = el.querySelector('.labpics__nav--prev');
+    var nextBtn = el.querySelector('.labpics__nav--next');
     var i = 0;
-    setInterval(function () {
+    var timer = null;
+
+    function show(n) {
       imgs[i].classList.remove('is-active');
-      i = (i + 1) % imgs.length;
+      i = (n + imgs.length) % imgs.length;
       imgs[i].classList.add('is-active');
-    }, 4000);
+    }
+
+    function startAuto() {
+      timer = setInterval(function () { show(i + 1); }, 4000);
+    }
+
+    function restartAuto() {
+      if (timer) { clearInterval(timer); }
+      startAuto();
+    }
+
+    startAuto();
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        show(i - 1);
+        restartAuto();
+      });
+      nextBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        show(i + 1);
+        restartAuto();
+      });
+    }
   });
 })();
 </script>

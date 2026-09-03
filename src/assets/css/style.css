@@ -315,6 +315,33 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   pointer-events: auto;
   z-index: 1;
 }
+.labpics__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 19, 15, .45);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s ease, background .2s ease;
+}
+.labpics:hover .labpics__nav,
+.labpics__nav:focus {
+  opacity: 1;
+}
+.labpics__nav:hover { background: rgba(20, 19, 15, .7); }
+.labpics__nav--prev { left: .7rem; }
+.labpics__nav--next { right: .7rem; }
+@media (hover: none) {
+  .labpics__nav { opacity: 1; }
+}
 .labpics__empty {
   position: absolute;
   inset: 0;

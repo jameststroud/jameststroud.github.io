@@ -25,6 +25,10 @@ description: "Opportunities for prospective PhD students, postdocs, and undergra
         {%- for src in labpics %}
         <img class="labpics__img{% if loop.first %} is-active{% endif %}" src="{{ src }}" alt="Lab photo">
         {%- endfor %}
+        {%- if labpics.length > 1 %}
+        <button class="labpics__nav labpics__nav--prev" type="button" aria-label="Previous photo">&#8249;</button>
+        <button class="labpics__nav labpics__nav--next" type="button" aria-label="Next photo">&#8250;</button>
+        {%- endif %}
         {%- else %}
         <p class="labpics__empty">Lab photos coming soon.</p>
         {%- endif %}
