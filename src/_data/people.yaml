@@ -86,79 +86,80 @@
   award: 'Sam is currently in Ecuador, supported by a <a href="https://fulbrightscholars.org/us-scholar-awards/">Fulbright Scholar Program</a> Award.'
     
 
-- name: Matthew Anderson
-  group: undergrad
-  role: Master's Researcher
-  photo: matthew-anderson.jpg
-  started: Fall 2025
-  
-- name: Haelin Lee
+- name: Camdyn Gates
   group: undergrad
   role: Undergraduate Researcher
-  photo: haelin-lee.jpg
-  started: Fall 2024
-  
-- name: Brynne Hobart
-  group: undergrad
-  role: Undergraduate Researcher
-  photo: brynne-hobart.jpg
-  started: Fall 2024
+  photo: camdyn-gates.jpg
+  started: Summer 2026-present
 
-- name: Loan (Rita) Tran
+- name: Tessa Allers
   group: undergrad
   role: Undergraduate Researcher
-  photo: rita-tran.jpg
-  started: Fall 2025
-
-- name: Elle Garman
-  group: undergrad
-  role: Undergraduate Researcher
-  photo: elle-garman.jpg
-  started: Fall 2025
-
-- name: Ashlyn Willis
-  group: undergrad
-  role: Undergraduate Researcher
-  photo: ashyn-willis.png
-  started: Spring 2025
+  photo: tessa-allers.png
+  started: Spring 2026-present  
   
 - name: Katie Stone
   group: undergrad
   role: Undergraduate Researcher
   photo: katie-stone.jpg
-  started: Spring 2026
+  started: Spring 2026-present
 
-- name: Tessa Allers
+- name: Ashlyn Willis
   group: undergrad
   role: Undergraduate Researcher
-  started: Spring 2026
+  photo: ashyn-willis.png
+  started: Spring 2025-present
 
-- name: Camdyn Gates
+- name: Matthew Anderson
+  group: undergrad
+  role: Master's Researcher
+  photo: matthew-anderson.jpg
+  started: Fall 2025-present
+
+- name: Elle Garman
   group: undergrad
   role: Undergraduate Researcher
-  photo: camdyn-gates.jpg
-  started: Summer 2026
+  photo: elle-garman.jpg
+  started: Fall 2025-present
+
+- name: Loan (Rita) Tran
+  group: undergrad
+  role: Undergraduate Researcher
+  photo: rita-tran.jpg
+  started: Fall 2025-present
+  
+- name: Brynne Hobart
+  group: undergrad
+  role: Undergraduate Researcher
+  photo: brynne-hobart.jpg
+  started: Fall 2024-present
+
+- name: Haelin Lee
+  group: undergrad
+  role: Undergraduate Researcher
+  photo: haelin-lee.jpg
+  started: Fall 2024-present
+ 
+- name: Larkin Wynn
+  group: undergrad
+  role: Lab Alumni
+  photo: larkin-wynn.jpg
+  started: Fall 2024-Spring 2026
   
 - name: Katie Griffin
   group: undergrad
   role: Lab Alumni
   photo: katie-griffin.jpg
-  started: Fall 2025
+  started: Spring 2024-Spring 2026
 
 - name: Miles Appleton
   group: undergrad
   role: Lab Alumni
   photo: miles-appleton.jpg
-  started: Fall 2025
-
-- name: Larkin Wynn
-  group: undergrad
-  role: Lab Alumni
-  photo: larkin-wynn.jpg
-  started: Fall 2025
+  started: Spring 2024-Spring 2026
   
 - name: Eli Vazquez
   group: undergrad
   role: Lab Alumni
   photo: eli-vazquez.png
-  started: Fall 2025
+  started: Spring 2024-Spring 2025
