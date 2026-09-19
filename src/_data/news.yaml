@@ -10,6 +10,9 @@
 #       A sentence or two. Links look like [this](https://example.com).
 #     link:  https://example.com     # optional "read more" link
 #     linkText: "Read the paper"     # optional label for that link
+#     image: /assets/img/news/photo.jpg  # optional picture; drop the file in
+#                                         # src/assets/img/news/ first
+#     imageAlt: "Description of the photo"  # optional; defaults to the title
 # ---------------------------------------------------------------------------
 
 - date: 2026-07-22

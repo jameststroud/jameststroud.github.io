@@ -617,6 +617,13 @@ a.pub__title:hover { text-decoration: underline; }
   color: var(--ink-faint);
   padding-top: .35rem;
 }
+.news-item__img {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
 .news-item h3 { font-size: 1.3rem; margin-bottom: .4rem; }
 .news-item p { margin-bottom: .5rem; }
 .news-item p:last-child { margin-bottom: 0; }
