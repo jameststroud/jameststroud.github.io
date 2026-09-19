@@ -18,6 +18,7 @@ description: "News and updates from the Stroud Lab at Georgia Tech."
     <div class="news-item">
       <div class="news-item__date">{{ item.dateText or (item.date | prettyDate) }}</div>
       <div>
+        {% if item.image %}<img class="news-item__img" src="{{ item.image }}" alt="{{ item.imageAlt or item.title }}">{% endif %}
         <h3>{{ item.title }}</h3>
         <p>{{ item.body | safe }}</p>
         {% if item.link %}<p><a href="{{ item.link }}">{{ item.linkText or "Read more" }}</a></p>{% endif %}
