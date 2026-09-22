@@ -20,7 +20,7 @@
   body: >
     PhD student Taylor Cooper and undergrad research assitant Haelin Lee just completed the first ever
     DNA extractions in our new genetics lab! A very exciting moment for us. Onwards to the results!
-  image: src/assets/img/news/tlc_haelin_dna.jpg
+  image: /assets/img/news/tlc_haelin_dna.jpg
   imageAlt: "Taylor Cooper and Haelin Lee with the first Stroud Lab DNA extractions!"  
 
 - date: 2026-09-10
@@ -29,7 +29,7 @@
     James presented at his first Packard Foundation annual meeting, telling everyone all about the 
     science we have done--and plan to do--on Lizard Island! The meeting was inside the beautiful Monterey Bay 
     Aquarium, and all of the talks were spectacular.
-  image: src/assets/img/news/james_packard.jpg
+  image: /assets/img/news/james_packard.jpg
   imageAlt: "James presenting at the 2026 Packard Foundation meeting with Lizard Island and a happy Jon Suh on the screen"  
     
 - date: 2026-07-22
@@ -38,7 +38,7 @@
     A new Georgia Tech award supports the next phase of our ultra-light wearable
     sensor work, with colleagues Dr. Ben Freeman and Dr. Emily Weigl in the School of Biological Sciences. The sensors let us track
     movement, behaviour, physiology, and interactions of lots of animals on campus, from butterflies to lizards to birds!
-  image: src/assets/img/news/caro-ctt-tag.jpg
+  image: /assets/img/news/caro-ctt-tag.jpg
   imageAlt: "A green anole on Georgia Tech's campus wearing an ultra-lightweight wearable tracker"  
 
 - date: 2026-06-30
