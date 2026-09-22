@@ -52,7 +52,7 @@
   type: inreview
   authors: "Hagood, J., Yang, F., Motiwale, S., Shi, B., Cannon, J.B., Stroud, J.T."
   title: "PyTLidar: A Python package for tree QSM modeling from terrestrial lidar data"
-  detail: "preprint"
+  detail: "preprint on EcoEvoRxiv"
   doi: "https://doi.org/10.32942/X2XP99"
   pdf: "Hagood et al_2025_PyTLidar_preprint.pdf"
 
