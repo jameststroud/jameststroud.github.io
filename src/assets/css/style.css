@@ -609,7 +609,15 @@ a.pub__title:hover { text-decoration: underline; }
   padding: 2rem 0;
   border-bottom: 1px solid var(--rule);
 }
+.news-item:has(.news-item__img) {
+  grid-template-columns: 14rem 1fr;
+}
 .news-item:first-of-type { padding-top: 0; }
+.news-item__media {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
 .news-item__date {
   font-size: .74rem;
   letter-spacing: .12em;
@@ -620,9 +628,7 @@ a.pub__title:hover { text-decoration: underline; }
 .news-item__img {
   display: block;
   width: 100%;
-  max-width: 22rem;
   border-radius: 4px;
-  margin-bottom: 1rem;
 }
 .news-item h3 { font-size: 1.3rem; margin-bottom: .4rem; }
 .news-item p { margin-bottom: .5rem; }
