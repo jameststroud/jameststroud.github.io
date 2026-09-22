@@ -15,6 +15,17 @@
 #     imageAlt: "Description of the photo"  # optional; defaults to the title
 # ---------------------------------------------------------------------------
 
+- date: 2026-09-21
+  title: "First Fall 2026 Sleepy Lizard survey....57 lizards in 60 mins!"
+  body: >
+    As part of our larger "Sleepy Lizard Project" investiating seasona thermoregulatory behavior in
+    American green anoles across their entire range, our Stroud Lab team kicked off the season with 
+    a whopping 57 lizards last night!
+  link:  https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/
+  linkText: "Read more about our Sleepy Lizard Project here!"     
+  image: /assets/img/news/sleeplizards_21Sept.jpg
+  imageAlt: "Members of the Stroud Lab out in force for opening day of Sleepy Lizard Project: GT Campus"  
+  
 - date: 2026-09-16
   title: "A historic moment in the Stroud Lab: First DNA extractions in our new genetics lab!"
   body: >
