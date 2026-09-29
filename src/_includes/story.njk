@@ -25,6 +25,16 @@ layout: base.njk
       {%- if mediaTopics %}
       <p class="media-contact__topics">Available to comment on {{ mediaTopics | safe }}.</p>
       {%- endif %}
+      {%- set po = site.pressOffice %}
+      {%- if po and po.name %}
+      <p class="media-contact__office">
+        <span class="media-contact__label">Georgia Tech press office</span>
+        <strong>{{ po.name }}</strong>, {{ po.title }}, {{ po.org }}
+        {%- if po.email %}<br><a href="mailto:{{ po.email }}">{{ po.email }}</a>{% endif %}
+        {%- if po.phone %}{% if po.email %} · {% else %}<br>{% endif %}<a href="tel:{{ po.phone | replace(' ', '') }}">{{ po.phone }}</a>{% endif %}
+        {%- if not po.email and not po.phone and po.url %}<br><a href="{{ po.url }}">College of Sciences contact page</a>{% endif %}
+      </p>
+      {%- endif %}
       {%- if coverage.length %}
       <p class="media-contact__more"><a href="#in-the-news">See previous coverage of this research</a></p>
       {%- endif %}

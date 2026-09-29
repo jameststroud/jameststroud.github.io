@@ -889,3 +889,8 @@ a.species__card:hover h3 { color: var(--accent-dk); }
   letter-spacing: .08em; text-transform: uppercase; color: var(--navy-soft);
 }
 .media-list__meta { display: block; font-size: .85rem; color: var(--ink-faint); }
+.media-contact__office { font-size: .95rem; border-top: 1px solid var(--rule); padding-top: .7rem; margin-top: .2rem; }
+.media-contact__label {
+  display: block; font-family: var(--display); font-weight: 700; font-size: .75rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--navy-soft);
+}

@@ -139,6 +139,12 @@ To preview locally without changing anything:
 - **Research stories** live in `src/research/` (e.g. `lizard-island.njk`) and
   appear as cards on the Research page. `relatedPapers:` lists the start of each
   paper title to link at the bottom.
+- **Media contact boxes** sit at the top of every research story. Your details
+  come from `site.json`; the Georgia Tech press office contact is under
+  `"pressOffice"` there (fill in `"email"` and `"phone"` and they appear; until
+  then the box links to the College of Sciences contact page). Press coverage
+  for each story is listed in `src/_data/media.yaml`, ordered by the outlet
+  ranking at the top of that file.
 - **Every publication has its own page** at `/publications/<year>-<author>-<title>/`,
   built from `publications.yaml`, with the tags Google Scholar reads, a citation
   and BibTeX. Abstracts come from `src/_data/abstracts.yaml`, which the weekly
