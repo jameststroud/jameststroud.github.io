@@ -7,12 +7,23 @@
 <meta name="description" content="{{ description or 'The Stroud Lab at Georgia Tech studies the evolutionary ecology of lizards: natural selection in the wild, thermal physiology, and new technology for eco-evolutionary field studies.' }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
+{%- set shareTitle = site.tagline if page.url == "/" else (title or site.title) %}
+{%- set shareText = description or site.tagline %}
+{%- set shareImage = shareTitle | plain | ogCard(ogImage or hero or "/assets/img/photos/carolinensis-grass.jpg", page.url) %}
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ title or site.title }}">
-<meta property="og:description" content="{{ description or site.tagline }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ (title if page.url != "/" else site.title) | plain }}">
+<meta property="og:description" content="{{ shareText | plain }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}src/assets/img/hero/home.jpg>
+<meta property="og:image" content="{{ site.url }}{{ shareImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ shareTitle | plain }}: {{ site.title }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ (title if page.url != "/" else site.title) | plain }}">
+<meta name="twitter:description" content="{{ shareText | plain }}">
+<meta name="twitter:image" content="{{ site.url }}{{ shareImage }}">
+<script type="application/ld+json">{{ schema.graph | jsonld | safe }}</script>
 
 <link rel="icon" href="/assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">

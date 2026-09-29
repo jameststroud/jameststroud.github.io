@@ -1,0 +1,41 @@
+name: Check for new publications
+
+# Every Monday, look up the ORCID record and Crossref for papers that are not
+# yet in src/_data/publications.yaml. If any turn up, open a pull request that
+# adds them, for a person to check and merge. Nothing is published until then.
+# Run it by hand from the Actions tab with "Run workflow".
+
+on:
+  schedule:
+    - cron: "17 13 * * 1"   # Mondays, 13:17 UTC (9:17 in Atlanta during daylight time)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Look for new papers
+        run: node scripts/update-publications.js --report "$RUNNER_TEMP/pr-body.md"
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: src/_data/publications.yaml
+          branch: automation/new-publications
+          delete-branch: true
+          commit-message: "Add new publications found on ORCID and Crossref"
+          title: "New publications to check"
+          body-path: ${{ runner.temp }}/pr-body.md

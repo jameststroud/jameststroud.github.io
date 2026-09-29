@@ -45,7 +45,9 @@ Open `src/_data/publications.yaml`, and paste a block like this at the top:
 `featured: true` to also show it in the "Conceptual papers" list on the Research
 page. Species names can be italicised with `<em>Anolis sagrei</em>`.
 
-The page groups by year and builds the search box on its own.
+The page groups by year and builds the search box on its own. Most new
+papers will also be found for you each week (see *New papers are found for
+you* below).
 
 ### Adding a person
 
@@ -103,6 +105,47 @@ To switch tracking off, set `"goatcounter": ""` again.
 
 ---
 
+## New papers are found for you
+
+Every Monday a GitHub Action checks your ORCID record
+(`"orcid"` in `src/_data/site.json`) and Crossref for papers that are not yet
+in `publications.yaml`. If it finds any, it opens a pull request called
+**"New publications to check"** that adds them in the house style, with a
+comment line on each. Check the authors, species italics and page numbers,
+delete the comment lines, and merge. Nothing appears on the site until you do.
+
+It skips corrections, peer reviews and datasets, and anything whose DOI or
+title is already listed. When a published paper matches a preprint you have
+listed, the pull request says so, so you can delete the preprint entry.
+
+**One-time setting:** in the repository, go to **Settings → Actions → General**,
+and under *Workflow permissions* tick **Allow GitHub Actions to create and
+approve pull requests**. Without it the check runs but cannot open the pull
+request. To run it straight away, open the **Actions** tab, choose *Check for
+new publications*, and click **Run workflow**.
+
+To preview locally without changing anything:
+`node scripts/update-publications.js --dry-run`
+
+---
+
+## Search engines and link previews
+
+These build themselves; there is nothing to maintain.
+
+- **Link previews.** Every page gets its own 1200 × 630 preview card (photo,
+  page title, lab name), made at build time by `scripts/og-cards.js`. A page
+  uses its `hero` photo, or `ogImage` in its front matter if you want a
+  different one.
+- **Sitemap** at `/sitemap.xml`, listed in `/robots.txt`, so search engines
+  find every page.
+- **Structured data** tells Google the site is a research lab at Georgia Tech,
+  who the PI and members are, and lists every published paper with its DOI.
+  It is generated from `site.json`, `people.yaml` and `publications.yaml`
+  (see `src/_data/schema.js`), so it stays current as you edit those.
+
+---
+
 ## Setting up GitHub Pages (once)
 
 1. Push this repository to `main`.
@@ -151,6 +194,7 @@ src/
 ├── files/            PDFs (CV, handbook)
 ├── CNAME             the custom domain
 └── *.njk             one file per page
+scripts/              link-preview cards; the weekly publication check
 .eleventy.js          build configuration and template filters
 .github/workflows/    the deploy job
 ```
