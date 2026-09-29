@@ -96,6 +96,25 @@
 
 <script>
 (function () {
+  // Label downloads, outbound links and email clicks so the visitor
+  // dashboard (/stats/) can count them. Harmless if tracking is off.
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href') || '';
+    if (a.hasAttribute('data-goatcounter-click')) return;
+    if (/^mailto:/i.test(href)) {
+      a.setAttribute('data-goatcounter-click', 'email/' + href.slice(7).split('?')[0]);
+    } else if (/^\/files\//.test(href) || /\.(pdf|zip|csv|xlsx?|docx?)$/i.test(href)) {
+      a.setAttribute('data-goatcounter-click', 'download' + (href.charAt(0) === '/' ? '' : '/') + href);
+    } else if (/^https?:\/\//i.test(href) && a.hostname !== location.hostname) {
+      a.setAttribute('data-goatcounter-click', 'outbound/' + a.hostname.replace(/^www\./, '') + a.pathname);
+    }
+    if (a.hasAttribute('data-goatcounter-click')) {
+      a.setAttribute('data-goatcounter-title', (a.textContent || '').trim().slice(0, 120));
+    }
+  });
+})();
+
+(function () {
   var host = location.hostname;
   document.querySelectorAll('a[href]').forEach(function (a) {
     var href = a.getAttribute('href');
@@ -196,5 +215,8 @@
   });
 })();
 </script>
+{% if site.goatcounter %}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}
 </body>
 </html>

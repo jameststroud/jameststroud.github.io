@@ -71,6 +71,38 @@ The palette is taken from the lab logo.
 
 ---
 
+## Visitor statistics (private)
+
+The site counts visitors with [GoatCounter](https://www.goatcounter.com), which
+is free for non-commercial sites, uses no cookies, and stores no IP addresses,
+so no cookie banner is needed. A private dashboard lives at **`/stats/`**. It is
+not linked from anywhere, is hidden from search engines, and shows only a lock
+screen until you enter an API token. The token is never in this repository; it
+stays in your own browser.
+
+**Turning it on (once):**
+
+1. Sign up at [goatcounter.com](https://www.goatcounter.com/signup) and pick a
+   site code, for example `thestroudlab`. Your stats will live at
+   `https://thestroudlab.goatcounter.com`.
+2. In `src/_data/site.json`, set `"goatcounter": "thestroudlab"` (your code)
+   and commit. Counting starts once the site rebuilds.
+3. In GoatCounter, open **Preferences** in your user menu and set the
+   timezone to America/New_York. Then open **Settings**, and under *Data
+   collection* tick **Region** and **Language** if you want those.
+4. Open **API** in your user menu, create a token, and tick **only "Read
+   statistics"**.
+5. Visit `www.thestroudlab.com/stats/`, enter the site code and paste the
+   token. Click **Stop counting my visits** so your own browsing is left out.
+   Do this once on each device and browser you use.
+
+Downloads (anything in `/files/`, such as the CV), outbound links, and email
+links are counted automatically as clicks.
+
+To switch tracking off, set `"goatcounter": ""` again.
+
+---
+
 ## Setting up GitHub Pages (once)
 
 1. Push this repository to `main`.
@@ -114,6 +146,7 @@ src/
 │   └── base.njk      the page shell: masthead, nav, hero, footer
 ├── assets/
 │   ├── css/style.css the whole design system
+│   ├── stats/        the private visitor dashboard (script, styles, world map)
 │   └── img/          heroes, portraits, photographs, logo
 ├── files/            PDFs (CV, handbook)
 ├── CNAME             the custom domain

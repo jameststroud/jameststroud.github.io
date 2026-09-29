@@ -1,0 +1,161 @@
+---
+permalink: /stats/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Visitor dashboard</title>
+<link rel="icon" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/stats/dashboard.css">
+</head>
+<body>
+<!--
+  Private visitor dashboard. This page holds no data itself: every number is
+  fetched from GoatCounter with an API token that lives only in the owner's
+  browser. Without the token the page shows a lock screen and nothing else.
+  It is not linked from anywhere on the site and does not load the tracker.
+-->
+<div id="app" class="viz-root" data-site="{{ site.goatcounter }}" data-domain="{{ site.url | replace('https://', '') }}">
+
+  <section id="lock" class="lock" hidden>
+    <form id="lock-form" class="lock__card" autocomplete="off">
+      <img class="lock__logo" src="/assets/img/logo.png" alt="">
+      <h1>Visitor dashboard</h1>
+      <p class="muted">Private. Enter your GoatCounter details to unlock. They are kept in this browser only and are never sent anywhere except GoatCounter.</p>
+      <label>Site code
+        <span class="lock__code"><span>https://</span><input id="lock-site" required pattern="[a-z0-9\-]+" spellcheck="false" placeholder="yourcode"><span>.goatcounter.com</span></span>
+      </label>
+      <label>API token
+        <input id="lock-token" type="password" required spellcheck="false" placeholder="Paste a read-statistics token">
+      </label>
+      <label class="check"><input id="lock-remember" type="checkbox" checked> Remember on this device</label>
+      <button type="submit">Unlock</button>
+      <p id="lock-error" class="lock__error" role="alert"></p>
+    </form>
+  </section>
+
+  <div id="dash" hidden>
+    <header class="top">
+      <div class="top__title">
+        <h1>Visitor dashboard</h1>
+        <p class="muted" id="top-sub"></p>
+      </div>
+      <div class="top__actions">
+        <button type="button" id="btn-skip" class="ghost" title="Stop counting your own visits in this browser"></button>
+        <button type="button" id="btn-refresh" class="ghost" title="Fetch fresh numbers">Refresh</button>
+        <button type="button" id="btn-lock" class="ghost" title="Forget the token on this device">Lock</button>
+      </div>
+    </header>
+
+    <nav class="filters" aria-label="Date range">
+      <div class="seg" id="ranges" role="radiogroup">
+        <button type="button" data-range="today">Today</button>
+        <button type="button" data-range="7">7 days</button>
+        <button type="button" data-range="30">30 days</button>
+        <button type="button" data-range="90">90 days</button>
+        <button type="button" data-range="365">12 months</button>
+      </div>
+      <div class="custom">
+        <input type="date" id="from" aria-label="From"> <span class="muted">to</span> <input type="date" id="to" aria-label="To">
+        <button type="button" id="btn-custom" class="ghost">Apply</button>
+      </div>
+      <span id="status" class="status muted" aria-live="polite"></span>
+    </nav>
+
+    <main id="main">
+      <section class="tiles" id="tiles"></section>
+
+      <section class="card card--wide">
+        <div class="card__head">
+          <h2>Visitors over time</h2>
+          <div class="legend" id="trend-legend"></div>
+          <button type="button" class="link" id="btn-trend-table">Table</button>
+        </div>
+        <div id="trend" class="chart chart--trend"></div>
+        <div id="trend-table" class="tablewrap" hidden></div>
+      </section>
+
+      <section class="card card--wide">
+        <div class="card__head">
+          <h2>Where visitors are</h2>
+          <span class="muted small">Click a country for regions</span>
+        </div>
+        <div class="geo">
+          <div id="map" class="map"></div>
+          <div id="countries" class="barlist barlist--scroll"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>When they visit</h2><span class="muted small" id="tz-note"></span></div>
+        <div id="heat" class="chart"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>How they found you</h2><span class="muted small">Click a source for exact links</span></div>
+        <div id="refs" class="barlist barlist--scroll"></div>
+      </section>
+
+      <section class="card card--wide">
+        <div class="card__head"><h2>Most visited pages</h2><span class="muted small">Click a page to see where its visitors came from</span></div>
+        <div id="pages"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Downloads and clicks</h2><span class="muted small">CV, PDFs, outbound links, email</span></div>
+        <div id="events" class="barlist barlist--scroll"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Campaigns</h2><span class="muted small">Links tagged with ?utm_campaign=</span></div>
+        <div id="campaigns" class="barlist"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Devices</h2></div>
+        <div id="sizes" class="barlist"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Browsers</h2><span class="muted small">Click for versions</span></div>
+        <div id="browsers" class="barlist"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Operating systems</h2><span class="muted small">Click for versions</span></div>
+        <div id="systems" class="barlist"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__head"><h2>Languages</h2></div>
+        <div id="languages" class="barlist"></div>
+      </section>
+    </main>
+
+    <footer class="foot muted small">
+      Data from GoatCounter. It uses no cookies and stores no IP addresses, so visitors are counted, not identified.
+      <a id="gc-link" href="#" rel="noopener noreferrer" target="_blank">Open the full GoatCounter dashboard</a>
+    </footer>
+  </div>
+
+  <aside id="drawer" class="drawer" hidden aria-modal="true" role="dialog" aria-labelledby="drawer-title">
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <h2 id="drawer-title"></h2>
+        <button type="button" id="drawer-close" class="ghost" aria-label="Close">&times;</button>
+      </div>
+      <p class="muted small" id="drawer-sub"></p>
+      <div id="drawer-body" class="barlist"></div>
+    </div>
+  </aside>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+</div>
+<script src="/assets/stats/dashboard.js"></script>
+</body>
+</html>
