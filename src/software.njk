@@ -2,7 +2,9 @@
 layout: base.njk
 title: Software & Tools
 permalink: /software/
-description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, and lande."
+description: "Tools built in the Stroud Lab: LizardLens for identifying Florida anoles in photos, AutoMorph for automated landmarking, PyTLidar for LiDAR tree models, and lande for selection analyses."
+ogImage: /assets/img/hero/software.jpg
+seoTitle: "LizardLens, AutoMorph & PyTLidar Software · Stroud Lab"
 ---
 
 <section class="section">
@@ -29,7 +31,7 @@ description: "Software from the Stroud Lab: LizardLens, LizardMorph, PyTLidar, a
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}">
+        <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}" sizes="(min-width: 60rem) 34rem, 100vw">
       </div>
       <div>
         <p class="eyebrow">{{ s.kicker }}</p>

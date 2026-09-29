@@ -5,13 +5,14 @@ permalink: /publications/
 hero: /assets/img/hero/journal-covers-png.png
 heroAlt: Journal covers from Stroud Lab publications.
 heroClass: hero__img--short
-description: "Publications from the Stroud Lab, including papers on natural selection in the wild, adaptive radiation, character displacement, and thermal physiology."
+description: "Papers from the Stroud Lab at Georgia Tech on natural selection in the wild, Anolis lizard ecology and evolution, adaptive radiation, character displacement, and thermal physiology."
+seoTitle: "Publications on Anole & Lizard Evolution · Stroud Lab"
 ---
 
 <section class="section">
   <div class="wrap-text wrap-text--intro center">
     <p class="eyebrow">Publications</p>
-    <h1>Papers</h1>
+    <h1>Papers on lizard ecology and evolution</h1>
     <p class="lead">
       For the most current list, including citation
       counts, see <a href="{{ site.scholar }}">Google Scholar</a>.
@@ -29,6 +30,8 @@ description: "Publications from the Stroud Lab, including papers on natural sele
 
     <div id="pubList" style="max-width:52rem;margin:0 auto">
       {%- set total = publications | length %}
+      {%- set pageFor = {} %}
+      {%- for pp in papers %}{% set pageFor = pageFor | setKey(pp.title, pp.url_page) %}{% endfor %}
       {%- for group in publications | groupByYear %}
       <h2 class="year-head" data-year-head>{{ group.year }}</h2>
         {%- for pub in group.items %}
@@ -36,11 +39,7 @@ description: "Publications from the Stroud Lab, including papers on natural sele
              data-text="{{ pub.title | replace('<em>','') | replace('</em>','') }} {{ pub.authors }} {{ pub.journal }}">
           <div class="pub__n">{{ pub.year }}</div>
           <div>
-            {%- if pub.doi or pub.url %}
-            <a class="pub__title" href="{{ pub.doi or pub.url }}">{{ pub.title | safe }}</a>
-            {%- else %}
-            <span class="pub__title">{{ pub.title | safe }}</span>
-            {%- endif %}
+            <a class="pub__title" href="{{ pageFor[pub.title] }}">{{ pub.title | safe }}</a>
             {%- if pub.type == "inreview" %}<span class="tag">In review</span>{% endif %}
             {%- if pub.type == "popular" %}<span class="tag tag--press">Popular writing</span>{% endif %}
             {%- if pub.type == "note" %}<span class="tag">Note</span>{% endif %}
@@ -102,3 +101,5 @@ description: "Publications from the Stroud Lab, including papers on natural sele
   });
 })();
 </script>
+
+<script type="application/ld+json">{{ publications | articlesLd(site, schema) | jsonld | safe }}</script>

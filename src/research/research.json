@@ -1,0 +1,5 @@
+{
+  "layout": "story.njk",
+  "tags": "stories",
+  "permalink": "/research/{{ page.fileSlug }}/"
+}

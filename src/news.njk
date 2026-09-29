@@ -2,7 +2,9 @@
 layout: base.njk
 title: Lab News
 permalink: /news/
-description: "News and updates from the Stroud Lab at Georgia Tech."
+description: "News from the Stroud Lab at Georgia Tech: new papers, awards, fieldwork on Miami's anole lizards, and people joining the lab."
+ogImage: /assets/img/photos/lizard-island-drone.jpg
+seoTitle: "Lab News · Stroud Lab, Georgia Tech"
 ---
 
 <section class="section">
@@ -18,7 +20,7 @@ description: "News and updates from the Stroud Lab at Georgia Tech."
     <div class="news-item">
       <div class="news-item__media">
         <div class="news-item__date">{{ item.dateText or (item.date | prettyDate) }}</div>
-        {% if item.image %}<img class="news-item__img" src="{{ item.image }}" alt="{{ item.imageAlt or item.title }}">{% endif %}
+        {% if item.image %}<img class="news-item__img" src="{{ item.image }}" alt="{{ item.imageAlt or item.title }}" sizes="(min-width: 60rem) 24rem, 100vw">{% endif %}
       </div>
       <div>
         <h3>{{ item.title }}</h3>

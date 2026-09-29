@@ -3,16 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if title and page.url != "/" %}{{ title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
+<title>{% if seoTitle %}{{ seoTitle }}{% elif title and page.url != "/" %}{{ title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
 <meta name="description" content="{{ description or 'The Stroud Lab at Georgia Tech studies the evolutionary ecology of lizards: natural selection in the wild, thermal physiology, and new technology for eco-evolutionary field studies.' }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ title or site.title }}">
-<meta property="og:description" content="{{ description or site.tagline }}">
+{%- set shareTitle = site.tagline if page.url == "/" else (title or site.title) %}
+{%- set shareText = description or site.tagline %}
+{%- set shareImage = shareTitle | plain | ogCard(ogImage or hero or photo or "/assets/img/photos/carolinensis-grass.jpg", page.url) %}
+<meta property="og:type" content="{{ 'article' if paper else 'website' }}">
+{%- if paper %}
+{% include "scholar-meta.njk" %}
+{%- endif %}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ (title if page.url != "/" else site.title) | plain }}">
+<meta property="og:description" content="{{ shareText | plain }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}src/assets/img/hero/home.jpg>
+<meta property="og:image" content="{{ site.url }}{{ shareImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ shareTitle | plain }}: {{ site.title }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ (title if page.url != "/" else site.title) | plain }}">
+<meta name="twitter:description" content="{{ shareText | plain }}">
+<meta name="twitter:image" content="{{ site.url }}{{ shareImage }}">
+<script type="application/ld+json">{{ schema.graph | jsonld | safe }}</script>
 
 <link rel="icon" href="/assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +39,7 @@
 <header class="masthead">
   <a class="masthead__logo" href="/">
     <img src="/assets/img/stroud-lab-logo-website-header.png"
-         alt="{{ site.title }}: {{ site.tagline }}">
+         alt="{{ site.title }}: {{ site.tagline }}" loading="eager" sizes="480px">
   </a>
 </header>
 
@@ -46,7 +60,7 @@
 
 {% if hero %}
 <div class="hero">
-  <img class="hero__img{% if heroClass %} {{ heroClass }}{% endif %}" src="{{ hero }}" alt="{{ heroAlt or '' }}">
+  <img class="hero__img{% if heroClass %} {{ heroClass }}{% endif %}" src="{{ hero }}" alt="{{ heroAlt or '' }}" loading="eager" fetchpriority="high" sizes="100vw">
 </div>
 {% endif %}
 
@@ -91,7 +105,7 @@
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
-  <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  <img class="lightbox__img" id="lightbox-img" src="" alt="" eleventy:ignore>
 </div>
 
 <script>
@@ -133,7 +147,9 @@
 
   function openLightbox(img) {
     lastFocused = document.activeElement;
-    lightboxImg.src = img.currentSrc || img.src;
+    // Show the largest version the build made, not the one sized for the page.
+    var largest = (img.getAttribute('srcset') || '').split(',').pop().trim().split(/\s+/)[0];
+    lightboxImg.src = largest || img.currentSrc || img.src;
     lightboxImg.alt = img.alt || '';
     lightbox.hidden = false;
     requestAnimationFrame(function () { lightbox.classList.add('is-open'); });
@@ -183,11 +199,25 @@
     var i = 0;
     var timer = null;
 
+    // Only the showing photo and its two neighbours are displayed, so the
+    // browser downloads photos as they come up rather than all at once.
+    function mark() {
+      Array.prototype.forEach.call(imgs, function (im, k) {
+        var near = k === (i + 1) % imgs.length || k === (i - 1 + imgs.length) % imgs.length;
+        im.classList.toggle('is-near', near);
+      });
+    }
+
     function show(n) {
-      imgs[i].classList.remove('is-active');
+      var old = imgs[i];
+      old.classList.remove('is-active');
+      old.classList.add('is-prev');
+      setTimeout(function () { old.classList.remove('is-prev'); }, 1100);
       i = (n + imgs.length) % imgs.length;
       imgs[i].classList.add('is-active');
+      mark();
     }
+    mark();
 
     function startAuto() {
       timer = setInterval(function () { show(i + 1); }, 4000);

@@ -1,0 +1,90 @@
+---
+layout: base.njk
+---
+{#- Layout for one anole species. Facts live in the page's front matter;
+    the prose is the page body. See src/miami-lizards/*.njk. -#}
+<section class="section">
+  <div class="wrap-text wrap-text--intro center">
+    <p class="eyebrow">Lizards of Miami &middot; {{ status }}</p>
+    <h1>{{ common }} <span class="species__sci">(<em>{{ scientific }}</em>)</span></h1>
+    <p class="lead">{{ lead | safe }}</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="split species__top">
+      {%- if photo %}
+      <figure>
+        <img src="{{ photo }}" alt="{{ photoAlt }}" sizes="(min-width: 60rem) 34rem, 100vw" loading="eager">
+        {%- if photoCaption %}<figcaption>{{ photoCaption | safe }}</figcaption>{% endif %}
+      </figure>
+      {%- else %}
+      <div class="species__nophoto"><p><em>{{ scientific }}</em></p></div>
+      {%- endif %}
+      <div class="species__facts">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>Scientific name</dt><dd><em>{{ scientific }}</em></dd>
+          <dt>Native to</dt><dd>{{ nativeTo }}</dd>
+          {%- if arrived %}<dt>In Miami since</dt><dd>{{ arrived }}</dd>{% endif %}
+          <dt>Size</dt><dd>{{ size | safe }}</dd>
+          <dt>Dewlap</dt><dd>{{ dewlap }}</dd>
+          <dt>Where to look</dt><dd>{{ whereToLook }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap-text species__body">
+    {{ content | safe }}
+
+    <h2>How to tell it apart</h2>
+    <ul class="species__id">
+      {%- for f in idFeatures %}<li>{{ f | safe }}</li>{% endfor %}
+    </ul>
+
+    {%- set related = papers | papersMatching(relatedPapers) %}
+    {%- if related.length %}
+    <h2>Our research on the {{ common | lower }}</h2>
+    <ul class="species__papers">
+      {%- for p in related %}
+      <li><a href="{{ p.url_page }}">{{ p.title | safe }}</a>. {% if p.journal %}<span class="pub__venue">{{ p.journal | safe }}</span> {% endif %}({{ p.year }})</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <p class="species__source">Identification details follow our
+      <a href="/files/papers/Kolbe%20et%20al_2014_A%20field%20guide%20to%20the%20anole%20lizards%20of%20Florida.pdf">field identification guide to the anole lizards of Miami</a>.
+      Spotted one? Photograph it and add it to <a href="https://www.inaturalist.org">iNaturalist</a>.</p>
+  </div>
+</section>
+
+<section class="section section--band">
+  <div class="wrap">
+    <h2 class="center">Other anoles you will meet in Miami</h2>
+    <div class="cards" style="margin-top:2rem">
+      {%- for s in collections.species %}{% if s.url != page.url %}
+      <a class="card species__card" href="{{ s.url }}">
+        <p class="card__kicker">{{ s.data.status }}</p>
+        <h3>{{ s.data.common }}</h3>
+        <p><em>{{ s.data.scientific }}</em></p>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+    <p class="center" style="margin-top:2rem"><a class="btn" href="/miami-lizards/">The lizards of Miami</a></p>
+  </div>
+</section>
+
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": common ~ " (" ~ scientific ~ "): " ~ (lead | plain),
+  "about": { "@type": "Taxon", "name": scientific, "alternateName": common, "taxonRank": "species" },
+  "author": { "@id": schema.labId },
+  "publisher": { "@id": schema.labId },
+  "image": (site.url ~ photo) if photo else undefined,
+  "mainEntityOfPage": site.url ~ page.url
+} | jsonld | safe }}</script>

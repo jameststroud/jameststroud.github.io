@@ -1,0 +1,64 @@
+---
+layout: base.njk
+pagination:
+  data: papers
+  size: 1
+  alias: paper
+  addAllPagesToCollections: true
+permalink: "{{ paper.url_page }}"
+ogImage: /assets/img/photos/carolinensis-grass.jpg
+eleventyComputed:
+  title: "{{ paper.plainTitle | safe }}"
+  seoTitle: "{{ paper.plainTitle | truncate(62) | safe }} · Stroud Lab"
+  description: "{{ paper | paperDescription | safe }}"
+---
+
+{%- set typeLabel = {"inreview": "Preprint / in review", "popular": "Popular writing", "note": "Natural history note", "volume": "Edited volume"}[paper.type] %}
+<section class="section">
+  <div class="wrap-text wrap-text--intro paper">
+    <p class="eyebrow">{{ typeLabel or "Publication" }} · {{ paper.year }}</p>
+    <h1 class="paper__title">{{ paper.title | safe }}</h1>
+    <p class="paper__authors pub__authors">{{ paper.authors | highlightAuthors(site.labNames) | safe }}</p>
+    <p class="paper__venue">
+      {%- if paper.journal %}<span class="pub__venue">{{ paper.journal | safe }}</span>{% endif %}
+      {%- if paper.detail %}{% if paper.journal %}, {% endif %}{{ paper.detail }}{% endif %}
+      {%- if paper.journal or paper.detail %} ({{ paper.year }}){% endif %}
+    </p>
+
+    <p class="paper__links">
+      {%- if paper.doi %}<a class="btn btn--accent" href="{{ paper.doi }}">Read the paper</a>{% endif %}
+      {%- if paper.pdfFile %} <a class="btn" href="/files/papers/{{ paper.pdfFile | urlencode }}">Download PDF</a>{% endif %}
+      {%- if paper.url and not paper.doi %} <a class="btn btn--accent" href="{{ paper.url }}">Read it online</a>{% endif %}
+    </p>
+
+    {%- if paper.abstract %}
+    <h2 class="paper__h2">Abstract</h2>
+    <div class="paper__abstract">{{ paper.abstract | abstractHtml | safe }}</div>
+    {%- endif %}
+
+    {%- if paper.type != "popular" %}
+    <details class="paper__cite">
+      <summary>Cite this paper</summary>
+      <p class="paper__citation">{{ paper | citation | safe }}</p>
+      <pre class="paper__bibtex" id="bibtex">{{ paper | bibtex }}</pre>
+      <button type="button" class="btn paper__copy" data-copy="bibtex">Copy BibTeX</button>
+    </details>
+    {%- endif %}
+
+    <p class="paper__back"><a href="/publications/">&larr; All publications from the lab</a></p>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = document.getElementById(b.getAttribute('data-copy')).textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+      b.textContent = 'Copied';
+      setTimeout(function () { b.textContent = 'Copy BibTeX'; }, 1500);
+    }).catch(function () {});
+  });
+});
+</script>
+
+<script type="application/ld+json">{{ [paper] | articlesLd(site, schema) | jsonld | safe }}</script>

@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# DESCRIPTIONS FOR THE JOIN-THE-LAB PHOTO ALBUM
+#
+# One line per photo in src/assets/img/labpics/: the file name, then what the
+# photo shows. Screen readers read these aloud and Google Images indexes them.
+# A photo with no line here is described as "A Stroud Lab photo".
+# ---------------------------------------------------------------------------
+
+"croc.jpg": "Three lab members take a selfie on a pond bank at Fairchild Tropical Botanic Garden, with a crocodile basking on the grass behind them"
+"el mago.jpg": "Lab members celebrating over Cuban food at El Mago de las Fritas in Miami"
+"el mago 2.jpg": "Lab members giving a thumbs-up over lunch at El Mago de las Fritas in Miami"
+"extended summer 2.jpg": "Three lab members in the tropical greenery of Fairchild Tropical Botanic Garden"
+"extended summer suh kg.jpg": "Two lab members give a thumbs-up during fieldwork at Fairchild Tropical Botanic Garden"
+"fall 2024.jpg": "The fall 2024 field team on the lawn at Fairchild Tropical Botanic Garden, one holding a lizard-catching pole"
+"night lizards.jpg": "About a dozen lab members on a lamp-lit campus path at night"
+"pizza.jpg": "Lab members sharing pizza around a long restaurant table"
+"summer 2024.jpg": "Six lab members under palms and tropical trees in a botanic garden"
+"summer 2025 cypress dome.jpg": "Lab members standing in a cypress swamp full of air plants, one holding a small snake"
+"summer 2025 everglades.jpg": "The summer 2025 field team at the Everglades National Park entrance sign"
+"summer 2025.jpg": "The lab and collaborators in front of tall pine trees in south Florida"
+"tlc tj suh.jpg": "Three lab members take a selfie in the field at Fairchild Tropical Botanic Garden"

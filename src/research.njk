@@ -2,14 +2,44 @@
 layout: base.njk
 title: Research
 permalink: /research/
-description: "Research in the Stroud Lab: measuring natural selection in the wild, the evolution of thermal ecophysiology, new technology for eco-evolutionary field studies, and introduced species as natural experiments."
+description: "How natural selection works in the wild: the Lizard Island long-term study of Miami's anoles, the thermal ecology of green anoles, wearable sensors and LiDAR, and introduced lizards as natural experiments."
+ogImage: /assets/img/hero/research.jpg
+seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
 ---
+
+<section class="section">
+  <div class="wrap-text wrap-text--intro center">
+    <p class="eyebrow">Research</p>
+    <h1>Research on lizard ecology and evolution</h1>
+    <p class="lead">
+      How does natural selection operate in the wild, and how quickly can species
+      respond to a changing world? Nearly all of our work is built on lizards,
+      mostly <em>Anolis</em> lizards (anoles), in Florida, the Caribbean, and across
+      the southeastern United States.
+    </p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <h2 class="center">Stories from the lab</h2>
+    <div class="cards" style="margin-top:1.5rem">
+      {%- for s in collections.stories %}
+      <a class="card species__card" href="{{ s.url }}">
+        <p class="card__kicker">Story</p>
+        <h3>{{ s.data.cardTitle }}</h3>
+        <p>{{ s.data.cardText }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/photos/stroud-pnas-fig2.jpg" alt="A community-wide fitness landscape from Lizard Island">
+        <img src="/assets/img/photos/stroud-pnas-fig2.jpg" alt="A community-wide fitness landscape from Lizard Island" sizes="(min-width: 60rem) 34rem, 100vw">
         <span class="photo-hover__caption"><span>
           A multi-peaked fitness landscape underlies the observed anole community on Lizard Island, a result we published in <em>PNAS</em> in 2023.
         </span></span>
@@ -47,7 +77,7 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/photos/cold-iguana.jpg" alt="A green anole">
+        <img src="/assets/img/photos/cold-iguana.jpg" alt="A cold-stunned green iguana lying on its back on leaf litter, with a digital thermometer probe beside it" sizes="(min-width: 60rem) 34rem, 100vw">
         <span class="photo-hover__caption"><span>
           A cold-stunned green iguana (<em>Iguana iguana</em>) in the wild
           during an extreme cold event in south Florida.
@@ -90,7 +120,7 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/photos/caro-ctt-tag.jpg" alt="A green anole with a wearable sensor">
+        <img src="/assets/img/photos/caro-ctt-tag.jpg" alt="A green anole with a wearable sensor" sizes="(min-width: 60rem) 34rem, 100vw">
         <span class="photo-hover__caption"><span>
           A green anole with an ultra-lightweight wearable tracking sensor.
         </span></span>
@@ -127,7 +157,7 @@ description: "Research in the Stroud Lab: measuring natural selection in the wil
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/photos/sagrei-pair.jpg" alt="A pair of brown anoles">
+        <img src="/assets/img/photos/sagrei-pair.jpg" alt="A pair of brown anoles" sizes="(min-width: 60rem) 34rem, 100vw">
         <span class="photo-hover__caption"><span>
           <em>Anolis sagrei</em>, the brown anole: one of the introduced species
           whose known arrival dates make South Florida a natural experiment.

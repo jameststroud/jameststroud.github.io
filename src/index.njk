@@ -7,6 +7,9 @@ strapline:
   - Evolution in the wild
   - Thermal ecophysiology
   - Connecting process-to-pattern
+ogImage: /assets/img/photos/carolinensis-grass.jpg
+description: "The Stroud Lab at Georgia Tech studies natural selection and evolution in the wild using Anolis lizards (anoles), from the Lizard Island long-term study in Miami to thermal ecology across the southeastern US."
+seoTitle: "Stroud Lab at Georgia Tech · Anole Lizard Ecology & Evolution"
 ---
 
 <section class="section section--dark">
@@ -56,7 +59,7 @@ strapline:
       We are eager to apply our work in ways that help answer these questions.
     </p>
     <p>
-      You can read more about our research on the <a href="http://jameststroud.github.io/publications/">Publications page</a>!
+      You can read more about our research on the <a href="/publications/">Publications page</a>!
     </p>
   </div>
 </section>
@@ -66,11 +69,11 @@ strapline:
     <div class="split">
       <div>
         <figure>
-          <img src="/assets/img/photos/sagrei-pair.jpg" alt="Two brown anoles on a mossy tree trunk">
+          <img src="/assets/img/photos/sagrei-pair.jpg" alt="Two brown anoles on a mossy tree trunk" sizes="(min-width: 60rem) 34rem, 100vw">
           <figcaption>Brown anoles, <em>Anolis sagrei</em>, on Lizard Island.</figcaption>
         </figure>
         <figure style="margin-top:1rem">
-          <img src="/assets/img/photos/lizard-island-drone.jpg" alt="Aerial drone view of Lizard Island">
+          <img src="/assets/img/photos/lizard-island-drone.jpg" alt="Aerial drone view of Lizard Island" sizes="(min-width: 60rem) 34rem, 100vw">
           <figcaption>Lizard Island from the air, Fairchild Tropical Botanic Garden, Miami.</figcaption>
         </figure>
       </div>
@@ -95,7 +98,7 @@ strapline:
           through the summer reproductive season and the winter non-reproductive
           season.
         </p>
-        <p><a href="/research/">More on the Lizard Island study</a></p>
+        <p><a href="/research/lizard-island/">More on the Lizard Island study</a></p>
         <p>
           Long-term field studies measuring natural selection in multiple species 
           are relatively rare--the most famous example is Peter and Rosemary Grant's
@@ -122,7 +125,7 @@ strapline:
   <div class="tiles">
     {%- for t in hometiles %}
     <a class="tile{% if t.feature %} tile--feature{% endif %}" href="{{ t.url }}">
-      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}">
+      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}" sizes="(min-width: 60rem) 19rem, 50vw">
       <span class="tile__label">{{ t.title }}</span>
     </a>
     {%- endfor %}

@@ -310,6 +310,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   pointer-events: none;
   transition: opacity 1s ease;
 }
+.labpics__img:not(.is-active):not(.is-near):not(.is-prev) { display: none; }
 .labpics__img.is-active {
   opacity: 1;
   pointer-events: auto;
@@ -831,3 +832,42 @@ a.pub__title:hover { text-decoration: underline; }
 @media print {
   .lightbox { display: none; }
 }
+
+/* ==========================================================================
+   Paper pages (/publications/<slug>/)
+   ========================================================================== */
+.paper__title { font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.2; }
+.paper__authors { margin-bottom: .3rem; }
+.paper__venue { color: var(--ink-soft); }
+.paper__links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 2rem; }
+.paper__h2 { font-size: 1.35rem; margin-top: 1rem; }
+.paper__abstract p { margin-bottom: 1rem; }
+.paper__cite { margin: 2rem 0; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.paper__cite summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+.paper__citation { margin-top: 1rem; font-size: .95rem; }
+.paper__bibtex {
+  background: var(--bg-alt); padding: 1rem; border-radius: 4px; font-size: .8rem;
+  line-height: 1.5; overflow-x: auto; white-space: pre;
+}
+.paper__back { margin-top: 2.5rem; }
+
+/* ==========================================================================
+   Species and story pages
+   ========================================================================== */
+.species__sci { font-weight: 400; font-size: .6em; color: var(--ink-soft); white-space: nowrap; }
+.species__top { align-items: start; }
+.species__nophoto {
+  aspect-ratio: 4 / 3; background: var(--bg-alt); border-radius: 4px;
+  display: grid; place-items: center; color: var(--ink-faint); font-family: var(--serif); font-size: 1.6rem;
+}
+.species__facts h2 { font-size: 1.3rem; }
+.species__facts dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.2rem; margin: 0; }
+.species__facts dt { font-weight: 700; color: var(--navy-soft); font-size: .9rem; padding-top: .1rem; }
+.species__facts dd { margin: 0; }
+@media (max-width: 34rem) { .species__facts dl { grid-template-columns: 1fr; } .species__facts dd { margin-bottom: .5rem; } }
+.species__body h2, .story__body h2 { font-size: 1.45rem; margin-top: 2.2rem; }
+.species__id li, .species__papers li { margin-bottom: .45rem; }
+.species__source { margin-top: 2rem; font-size: .92rem; color: var(--ink-soft); }
+a.species__card { border-bottom: 0; color: inherit; display: block; }
+a.species__card:hover h3 { color: var(--accent-dk); }
+.story__body blockquote { margin: 1.5rem 0; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-family: var(--serif); font-size: 1.25rem; font-style: italic; color: var(--ink-soft); }
