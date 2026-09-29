@@ -88,10 +88,18 @@
         setStatus('GoatCounter asked us to slow down, retrying…');
         return sleep((isFinite(ra) ? ra * 1000 : 1500) * (tries + 1)).then(function () { return attempt(url, tries + 1); });
       }
+      // GoatCounter answers the very first request made with a new token with a
+      // 404 page; the same request succeeds straight after. Retry once.
+      if (res.status === 404 && tries === 0) {
+        return sleep(600).then(function () { return attempt(url, 1); });
+      }
       if (!res.ok) {
         return res.text().then(function (t) {
           var msg = t;
-          try { var j = JSON.parse(t); msg = j.error || (j.errors && JSON.stringify(j.errors)) || t; } catch (e) {}
+          try { var j = JSON.parse(t); msg = j.error || (j.errors && JSON.stringify(j.errors)) || t; } catch (e) {
+            var h = /<h1>([\s\S]*?)<\/h1>\s*<p>([\s\S]*?)<\/p>/.exec(t);  // HTML error page
+            if (h) msg = (h[1] + ': ' + h[2]).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+          }
           var err = new Error(res.status + ': ' + msg);
           err.status = res.status;
           throw err;
