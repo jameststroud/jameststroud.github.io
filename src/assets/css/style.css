@@ -871,3 +871,21 @@ a.pub__title:hover { text-decoration: underline; }
 a.species__card { border-bottom: 0; color: inherit; display: block; }
 a.species__card:hover h3 { color: var(--accent-dk); }
 .story__body blockquote { margin: 1.5rem 0; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-family: var(--serif); font-size: 1.25rem; font-style: italic; color: var(--ink-soft); }
+
+/* Media contact box and coverage list on research stories */
+.media-contact {
+  border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+  background: var(--bg-alt); border-radius: 4px; padding: 1.1rem 1.4rem;
+}
+.media-contact h2 { font-size: 1.15rem; margin-bottom: .4rem; }
+.media-contact p { margin: 0 0 .6rem; }
+.media-contact p:last-child { margin-bottom: 0; }
+.media-contact__how .btn { text-transform: none; letter-spacing: 0; }
+.media-contact__topics, .media-contact__more { font-size: .95rem; color: var(--ink-soft); }
+.media-list { list-style: none; padding: 0; margin: 0; }
+.media-list li { padding: .75rem 0; border-bottom: 1px solid var(--rule); }
+.media-list__outlet {
+  display: block; font-family: var(--display); font-weight: 700; font-size: .8rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--navy-soft);
+}
+.media-list__meta { display: block; font-size: .85rem; color: var(--ink-faint); }
