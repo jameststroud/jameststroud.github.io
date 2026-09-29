@@ -20,6 +20,21 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
   </div>
 </section>
 
+<section class="section--tight">
+  <div class="wrap">
+    <h2 class="center">Stories from the lab</h2>
+    <div class="cards" style="margin-top:1.5rem">
+      {%- for s in collections.stories %}
+      <a class="card species__card" href="{{ s.url }}">
+        <p class="card__kicker">Story</p>
+        <h3>{{ s.data.cardTitle }}</h3>
+        <p>{{ s.data.cardText }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
     <div class="split">

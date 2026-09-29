@@ -18,6 +18,13 @@ module.exports = function (eleventyConfig) {
     await buildCards(ogJobs, dir.output);
   });
 
+  // Papers whose plain title starts with any of the given phrases, in the
+  // order the phrases are listed. Used by species and story pages.
+  eleventyConfig.addFilter("papersMatching", function (papers, starts) {
+    const norm = (s) => String(s || "").replace(/<[^>]*>/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+    return (starts || []).map((st) => (papers || []).find((p) => norm(p.title).startsWith(norm(st)))).filter(Boolean);
+  });
+
   eleventyConfig.addFilter("setKey", function (obj, key, value) {
     return Object.assign({}, obj, { [key]: value });
   });

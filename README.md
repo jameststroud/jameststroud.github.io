@@ -129,6 +129,33 @@ To preview locally without changing anything:
 
 ---
 
+## Species guides, research stories and paper pages
+
+- **Species guides** live in `src/miami-lizards/` (one file per anole, e.g.
+  `green-anole.njk`). The facts in the box at the top (size, dewlap, where to
+  look) are in each file's front matter; the prose is below it. To add a
+  species, copy a file and change it; it joins the "Other anoles" cards
+  automatically. Set `photo:` to add or change its picture.
+- **Research stories** live in `src/research/` (e.g. `lizard-island.njk`) and
+  appear as cards on the Research page. `relatedPapers:` lists the start of each
+  paper title to link at the bottom.
+- **Every publication has its own page** at `/publications/<year>-<author>-<title>/`,
+  built from `publications.yaml`, with the tags Google Scholar reads, a citation
+  and BibTeX. Abstracts come from `src/_data/abstracts.yaml`, which the weekly
+  publication check fills from Crossref; you can paste one in by hand too.
+
+---
+
+## Photos load fast on their own
+
+Every photo is resized and converted to WebP when the site builds, so you can
+drop full-size camera files into `src/assets/img/` as before. Photos below the
+fold load only when a visitor scrolls to them. The album on the Join page takes
+its descriptions from `src/_data/labpics-alt.yaml`; add a line there when you
+add a photo.
+
+---
+
 ## Search engines and link previews
 
 These build themselves; there is nothing to maintain.

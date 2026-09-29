@@ -1,0 +1,65 @@
+---
+layout: base.njk
+---
+{#- Layout for a research story. See src/research/*.njk. -#}
+<section class="section">
+  <div class="wrap-text wrap-text--intro center">
+    <p class="eyebrow">Stories from the lab</p>
+    <h1>{{ headline | safe }}</h1>
+    <p class="lead">{{ lead | safe }}</p>
+  </div>
+</section>
+
+{%- if photo %}
+<section class="section--tight">
+  <div class="wrap-text">
+    <figure>
+      <img src="{{ photo }}" alt="{{ photoAlt }}" sizes="(min-width: 60rem) 42rem, 100vw" loading="eager">
+      {%- if photoCaption %}<figcaption>{{ photoCaption | safe }}</figcaption>{% endif %}
+    </figure>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section--tight">
+  <div class="wrap-text story__body">
+    {{ content | safe }}
+
+    {%- set related = papers | papersMatching(relatedPapers) %}
+    {%- if related.length %}
+    <h2>Read the research</h2>
+    <ul class="species__papers">
+      {%- for p in related %}
+      <li><a href="{{ p.url_page }}">{{ p.title | safe }}</a>. {% if p.journal %}<span class="pub__venue">{{ p.journal | safe }}</span> {% endif %}({{ p.year }})</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section section--band">
+  <div class="wrap">
+    <h2 class="center">More stories from the lab</h2>
+    <div class="cards" style="margin-top:2rem">
+      {%- for s in collections.stories %}{% if s.url != page.url %}
+      <a class="card species__card" href="{{ s.url }}">
+        <p class="card__kicker">Story</p>
+        <h3>{{ s.data.cardTitle }}</h3>
+        <p>{{ s.data.cardText }}</p>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+    <p class="center" style="margin-top:2rem"><a class="btn" href="/research/">All of our research</a></p>
+  </div>
+</section>
+
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": headline | plain,
+  "description": description,
+  "author": { "@id": schema.labId },
+  "publisher": { "@id": schema.labId },
+  "image": (site.url ~ photo) if photo else undefined,
+  "mainEntityOfPage": site.url ~ page.url
+} | jsonld | safe }}</script>
