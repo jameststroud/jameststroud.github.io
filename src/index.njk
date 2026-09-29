@@ -67,11 +67,11 @@ ogImage: /assets/img/photos/carolinensis-grass.jpg
     <div class="split">
       <div>
         <figure>
-          <img src="/assets/img/photos/sagrei-pair.jpg" alt="Two brown anoles on a mossy tree trunk">
+          <img src="/assets/img/photos/sagrei-pair.jpg" alt="Two brown anoles on a mossy tree trunk" sizes="(min-width: 60rem) 34rem, 100vw">
           <figcaption>Brown anoles, <em>Anolis sagrei</em>, on Lizard Island.</figcaption>
         </figure>
         <figure style="margin-top:1rem">
-          <img src="/assets/img/photos/lizard-island-drone.jpg" alt="Aerial drone view of Lizard Island">
+          <img src="/assets/img/photos/lizard-island-drone.jpg" alt="Aerial drone view of Lizard Island" sizes="(min-width: 60rem) 34rem, 100vw">
           <figcaption>Lizard Island from the air, Fairchild Tropical Botanic Garden, Miami.</figcaption>
         </figure>
       </div>
@@ -123,7 +123,7 @@ ogImage: /assets/img/photos/carolinensis-grass.jpg
   <div class="tiles">
     {%- for t in hometiles %}
     <a class="tile{% if t.feature %} tile--feature{% endif %}" href="{{ t.url }}">
-      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}">
+      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}" sizes="(min-width: 60rem) 19rem, 50vw">
       <span class="tile__label">{{ t.title }}</span>
     </a>
     {%- endfor %}

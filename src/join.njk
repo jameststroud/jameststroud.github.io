@@ -18,13 +18,13 @@ ogImage: /assets/img/hero/join.jpg
     <div class="split">
       <div>
       <figure>
-        <img src="/assets/img/people/cold_snap_26.jpg" alt="Lab members during fieldwork">
+        <img src="/assets/img/people/cold_snap_26.jpg" alt="Seven lab members in winter hats and head torches, ready to sample cold-stunned lizards before dawn during the February 2026 Miami cold snap" sizes="(min-width: 60rem) 34rem, 100vw">
         <figcaption>The Lab in atypically cold conditions...ready to sample cold-stunned lizards at 4am during the extreme cold snap event of Feb 2026 in Miami!</figcaption>
       </figure>
       <div class="labpics">
         {%- if labpics.length %}
-        {%- for src in labpics %}
-        <img class="labpics__img{% if loop.first %} is-active{% endif %}" src="{{ src }}" alt="Lab photo">
+        {%- for pic in labpics %}
+        <img class="labpics__img{% if loop.first %} is-active{% endif %}" src="{{ pic.src }}" alt="{{ pic.alt }}" sizes="(min-width: 60rem) 34rem, 100vw"{% if loop.first %} loading="eager"{% endif %}>
         {%- endfor %}
         {%- if labpics.length > 1 %}
         <button class="labpics__nav labpics__nav--prev" type="button" aria-label="Previous photo">&#8249;</button>

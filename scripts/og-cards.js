@@ -62,7 +62,7 @@ function text(markup, font, fontfile, width) {
 
 async function card({ title, image, eyebrow }, outFile) {
   const src = path.join(ROOT, "src", image.replace(/^\//, ""));
-  const photo = await sharp(src).resize(W, H, { fit: "cover", position: "attention" }).toBuffer();
+  const photo = await sharp(src).rotate().resize(W, H, { fit: "cover", position: "attention" }).toBuffer();
 
   // Bottom-weighted shade so white type reads on any photograph.
   const shade = Buffer.from(

@@ -1,5 +1,6 @@
 const yaml = require("js-yaml");
 const { buildCards, cardFile } = require("./scripts/og-cards.js");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
@@ -71,6 +72,28 @@ module.exports = function (eleventyConfig) {
       numberOfItems: items.length,
       itemListElement: items,
     };
+  });
+
+  // Every <img> on the site is resized and re-encoded at build time: WebP at
+  // up to four widths (never enlarged), with width/height set so the page does
+  // not jump, and lazy loading unless a template says otherwise. The original
+  // files in src/assets/img are untouched. Add `eleventy:ignore` to an <img>
+  // to leave it alone.
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp"],
+    fixOrientation: true,   // honour the rotation phones store in photo metadata
+    widths: [480, 960, 1600, 2400],
+    urlPath: "/img/",
+    outputDir: "./_site/img/",
+    failOnError: false,
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+        sizes: "(min-width: 76rem) 76rem, 100vw",
+      },
+    },
+    sharpWebpOptions: { quality: 78 },
   });
 
   eleventyConfig.addPassthroughCopy("src/assets");

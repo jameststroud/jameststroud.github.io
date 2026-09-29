@@ -10,7 +10,7 @@ ogImage: /assets/img/hero/people.jpg
 <div class="person">
   <img class="person__photo"
        src="/assets/img/people/{{ p.photo or 'placeholder.jpg' }}"
-       alt="{{ p.name }}">
+       alt="{{ p.name }}" sizes="(min-width: 40rem) 16rem, 90vw">
   <h3>{{ p.name }}</h3>
   <p class="person__role">{{ p.role }}{% if p.started %} · {{ p.started }}{% endif %}</p>
   {% if p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
@@ -35,7 +35,7 @@ ogImage: /assets/img/hero/people.jpg
     <div class="people-group">
       <h2 class="people-group__title">Principal Investigator</h2>
       <div class="pi">
-        <img class="person__photo" src="/assets/img/people/{{ p.photo }}" alt="{{ p.name }}">
+        <img class="person__photo" src="/assets/img/people/{{ p.photo }}" alt="{{ p.name }}" sizes="15rem">
         <div>
           <h3 style="font-size:1.8rem">{{ p.name }}</h3>
           <p class="person__role">{{ p.role }}</p>

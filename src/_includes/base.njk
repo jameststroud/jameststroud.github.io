@@ -36,7 +36,7 @@
 <header class="masthead">
   <a class="masthead__logo" href="/">
     <img src="/assets/img/stroud-lab-logo-website-header.png"
-         alt="{{ site.title }}: {{ site.tagline }}">
+         alt="{{ site.title }}: {{ site.tagline }}" loading="eager" sizes="480px">
   </a>
 </header>
 
@@ -57,7 +57,7 @@
 
 {% if hero %}
 <div class="hero">
-  <img class="hero__img{% if heroClass %} {{ heroClass }}{% endif %}" src="{{ hero }}" alt="{{ heroAlt or '' }}">
+  <img class="hero__img{% if heroClass %} {{ heroClass }}{% endif %}" src="{{ hero }}" alt="{{ heroAlt or '' }}" loading="eager" fetchpriority="high" sizes="100vw">
 </div>
 {% endif %}
 
@@ -102,7 +102,7 @@
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
-  <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  <img class="lightbox__img" id="lightbox-img" src="" alt="" eleventy:ignore>
 </div>
 
 <script>
@@ -144,7 +144,9 @@
 
   function openLightbox(img) {
     lastFocused = document.activeElement;
-    lightboxImg.src = img.currentSrc || img.src;
+    // Show the largest version the build made, not the one sized for the page.
+    var largest = (img.getAttribute('srcset') || '').split(',').pop().trim().split(/\s+/)[0];
+    lightboxImg.src = largest || img.currentSrc || img.src;
     lightboxImg.alt = img.alt || '';
     lightbox.hidden = false;
     requestAnimationFrame(function () { lightbox.classList.add('is-open'); });
@@ -194,11 +196,25 @@
     var i = 0;
     var timer = null;
 
+    // Only the showing photo and its two neighbours are displayed, so the
+    // browser downloads photos as they come up rather than all at once.
+    function mark() {
+      Array.prototype.forEach.call(imgs, function (im, k) {
+        var near = k === (i + 1) % imgs.length || k === (i - 1 + imgs.length) % imgs.length;
+        im.classList.toggle('is-near', near);
+      });
+    }
+
     function show(n) {
-      imgs[i].classList.remove('is-active');
+      var old = imgs[i];
+      old.classList.remove('is-active');
+      old.classList.add('is-prev');
+      setTimeout(function () { old.classList.remove('is-prev'); }, 1100);
       i = (n + imgs.length) % imgs.length;
       imgs[i].classList.add('is-active');
+      mark();
     }
+    mark();
 
     function startAuto() {
       timer = setInterval(function () { show(i + 1); }, 4000);

@@ -310,6 +310,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   pointer-events: none;
   transition: opacity 1s ease;
 }
+.labpics__img:not(.is-active):not(.is-near):not(.is-prev) { display: none; }
 .labpics__img.is-active {
   opacity: 1;
   pointer-events: auto;
