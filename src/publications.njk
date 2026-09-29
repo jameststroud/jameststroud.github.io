@@ -30,6 +30,8 @@ seoTitle: "Publications on Anole & Lizard Evolution · Stroud Lab"
 
     <div id="pubList" style="max-width:52rem;margin:0 auto">
       {%- set total = publications | length %}
+      {%- set pageFor = {} %}
+      {%- for pp in papers %}{% set pageFor = pageFor | setKey(pp.title, pp.url_page) %}{% endfor %}
       {%- for group in publications | groupByYear %}
       <h2 class="year-head" data-year-head>{{ group.year }}</h2>
         {%- for pub in group.items %}
@@ -37,11 +39,7 @@ seoTitle: "Publications on Anole & Lizard Evolution · Stroud Lab"
              data-text="{{ pub.title | replace('<em>','') | replace('</em>','') }} {{ pub.authors }} {{ pub.journal }}">
           <div class="pub__n">{{ pub.year }}</div>
           <div>
-            {%- if pub.doi or pub.url %}
-            <a class="pub__title" href="{{ pub.doi or pub.url }}">{{ pub.title | safe }}</a>
-            {%- else %}
-            <span class="pub__title">{{ pub.title | safe }}</span>
-            {%- endif %}
+            <a class="pub__title" href="{{ pageFor[pub.title] }}">{{ pub.title | safe }}</a>
             {%- if pub.type == "inreview" %}<span class="tag">In review</span>{% endif %}
             {%- if pub.type == "popular" %}<span class="tag tag--press">Popular writing</span>{% endif %}
             {%- if pub.type == "note" %}<span class="tag">Note</span>{% endif %}

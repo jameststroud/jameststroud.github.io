@@ -33,9 +33,11 @@ jobs:
       - name: Open or update the pull request
         uses: peter-evans/create-pull-request@v8
         with:
-          add-paths: src/_data/publications.yaml
+          add-paths: |
+            src/_data/publications.yaml
+            src/_data/abstracts.yaml
           branch: automation/new-publications
           delete-branch: true
-          commit-message: "Add new publications found on ORCID and Crossref"
-          title: "New publications to check"
+          commit-message: "Add new publications and abstracts from ORCID and Crossref"
+          title: "New publications and abstracts to check"
           body-path: ${{ runner.temp }}/pr-body.md

@@ -832,3 +832,21 @@ a.pub__title:hover { text-decoration: underline; }
 @media print {
   .lightbox { display: none; }
 }
+
+/* ==========================================================================
+   Paper pages (/publications/<slug>/)
+   ========================================================================== */
+.paper__title { font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.2; }
+.paper__authors { margin-bottom: .3rem; }
+.paper__venue { color: var(--ink-soft); }
+.paper__links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 2rem; }
+.paper__h2 { font-size: 1.35rem; margin-top: 1rem; }
+.paper__abstract p { margin-bottom: 1rem; }
+.paper__cite { margin: 2rem 0; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.paper__cite summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+.paper__citation { margin-top: 1rem; font-size: .95rem; }
+.paper__bibtex {
+  background: var(--bg-alt); padding: 1rem; border-radius: 4px; font-size: .8rem;
+  line-height: 1.5; overflow-x: auto; white-space: pre;
+}
+.paper__back { margin-top: 2.5rem; }

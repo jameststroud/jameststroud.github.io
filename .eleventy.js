@@ -18,6 +18,10 @@ module.exports = function (eleventyConfig) {
     await buildCards(ogJobs, dir.output);
   });
 
+  eleventyConfig.addFilter("setKey", function (obj, key, value) {
+    return Object.assign({}, obj, { [key]: value });
+  });
+
   // Plain-text version of a string for meta tags and structured data.
   eleventyConfig.addFilter("plain", function (s) {
     return String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
@@ -35,6 +39,60 @@ module.exports = function (eleventyConfig) {
       out.push((m[2].trim() + " " + family).replace(/\s+/g, " "));
     }
     return out.length ? out : [s];
+  });
+
+  // Authors as "Family, I.I." for Google Scholar's citation_author tags.
+  eleventyConfig.addFilter("scholarAuthors", function (authors) {
+    return eleventyConfig.getFilter("authorList")(authors).map((n) => {
+      const m = /^(.*?\.)\s+(.+)$/.exec(n);
+      return m ? `${m[2]}, ${m[1]}` : n;
+    });
+  });
+
+  // Meta description for a paper page: its abstract, or title, venue and authors.
+  eleventyConfig.addFilter("paperDescription", function (p) {
+    const plain = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+    const cut = (s, n) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…");
+    if (p.abstract) return cut(plain(p.abstract), 158);
+    const names = eleventyConfig.getFilter("authorList")(p.authors);
+    const who = names.length > 2 ? `${names[0]} et al.` : names.join(" and ");
+    const venue = p.journal ? `${plain(p.journal)}, ${p.year}` : String(p.year);
+    const full = `${plain(p.title)}. ${who} (${venue}). A Stroud Lab publication.`;
+    return full.length <= 158 ? full : cut(`${plain(p.title)}. ${who} (${venue}).`, 158);
+  });
+
+  // A reference in the site's house style, e.g. for "Cite this paper".
+  eleventyConfig.addFilter("citation", function (p) {
+    const doi = p.doi ? ` <a href="${p.doi}">${p.doi}</a>` : "";
+    const venue = [p.journal ? `<em>${p.journal}</em>` : "", p.detail || ""].filter(Boolean).join(", ");
+    return `${p.authors} (${p.year}) ${p.title}. ${venue}.${doi}`;
+  });
+
+  // BibTeX entry for a paper.
+  eleventyConfig.addFilter("bibtex", function (p) {
+    const plain = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+    const tex = (s) => plain(s).replace(/([&%$#_])/g, "\\$1");
+    const people = eleventyConfig.getFilter("scholarAuthors")(p.authors);
+    const others = /\d+\s+others/.test(p.authors) ? " and others" : "";
+    const first = (people[0] || "anon").split(",")[0].normalize("NFD").replace(/[^A-Za-z]/g, "").toLowerCase();
+    const word = (plain(p.title).toLowerCase().match(/[a-z]{4,}/) || ["paper"])[0];
+    const kind = p.type === "volume" ? "book" : p.type === "inreview" ? "misc" : "article";
+    const f = [["author", people.join(" and ") + others], ["title", "{" + tex(p.title) + "}"]];
+    if (p.journal) f.push([kind === "book" ? "publisher" : kind === "misc" ? "howpublished" : "journal", tex(p.journal)]);
+    f.push(["year", String(p.year)]);
+    if (p.volume) f.push(["volume", p.volume]);
+    if (p.issue) f.push(["number", p.issue]);
+    if (p.firstpage) f.push(["pages", p.lastpage ? `${p.firstpage}--${p.lastpage}` : p.firstpage]);
+    if (p.doiBare) f.push(["doi", p.doiBare]);
+    return `@${kind}{${first}${p.year}${word},\n` + f.map(([k, v]) => `  ${k} = {${v}}`).join(",\n") + "\n}";
+  });
+
+  // Abstract text to HTML: escape everything, keep <em> for species names,
+  // blank lines become paragraphs.
+  eleventyConfig.addFilter("abstractHtml", function (s) {
+    const esc = String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/&lt;(\/?)em&gt;/g, "<$1em>");
+    return esc.split(/\n\s*\n/).map((para) => `<p>${para.trim()}</p>`).join("\n");
   });
 
   // Serialise structured data for a <script type="application/ld+json"> block.

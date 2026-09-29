@@ -76,7 +76,10 @@ async function card({ title, image, eyebrow }, outFile) {
     </svg>`
   );
 
-  const titleImg = await text(`<span foreground="#ffffff">${esc(title)}</span>`, "Archivo Bold 60", ARCHIVO(), W - 160);
+  // Long titles (paper pages) step down in size and are cut at about 140 characters.
+  const t = title.length > 140 ? title.slice(0, 139).replace(/\s+\S*$/, "") + "…" : title;
+  const size = t.length > 90 ? 42 : t.length > 55 ? 50 : 60;
+  const titleImg = await text(`<span foreground="#ffffff">${esc(t)}</span>`, `Archivo Bold ${size}`, ARCHIVO(), W - 160);
   const tMeta = await sharp(titleImg).metadata();
   const labImg = await text(
     `<span foreground="#ffffff" letter_spacing="2048">${esc(eyebrow.toUpperCase())}</span>`,

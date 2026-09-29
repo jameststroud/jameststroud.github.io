@@ -19,6 +19,7 @@ const yaml = require("js-yaml");
 
 const ROOT = path.join(__dirname, "..");
 const PUBS = path.join(ROOT, "src", "_data", "publications.yaml");
+const ABSTRACTS = path.join(ROOT, "src", "_data", "abstracts.yaml");
 const site = require(path.join(ROOT, "src", "_data", "site.json"));
 
 const args = process.argv.slice(2);
@@ -157,6 +158,49 @@ function toEntry(w) {
   return { e, text: lines.join("\n") + "\n" };
 }
 
+/* ------------------------------------------------------------- abstracts */
+
+// Crossref abstracts are JATS XML. Keep paragraphs and italics, drop the rest.
+function jatsToText(x) {
+  return String(x || "")
+    .replace(/<jats:title>[\s\S]*?<\/jats:title>/gi, "")
+    .replace(/<\/?jats:(italic|i)>/gi, (m) => (m[1] === "/" ? "</em>" : "<em>"))
+    .replace(/<\/jats:p>\s*<jats:p[^>]*>/gi, "\n\n")
+    .replace(/<(?!\/?em>)[^>]*>/g, "")
+    .replace(/&(amp|lt|gt|quot|apos|nbsp);/g, (_, e) => ENTITIES[e])
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+    .replace(/[ \t]+/g, " ")
+    .replace(/ *\n */g, "\n")
+    .trim();
+}
+
+// Fill abstracts.yaml for every listed DOI we have not looked up before.
+// An empty string records "Crossref has no abstract", so it is not re-asked.
+async function fillAbstracts(dois, knownWorks) {
+  const current = fs.existsSync(ABSTRACTS) ? yaml.load(fs.readFileSync(ABSTRACTS, "utf8")) || {} : {};
+  const have = new Set(Object.keys(current).map(normDoi));
+  let found = 0;
+  for (const doi of dois) {
+    if (!doi || have.has(doi)) continue;
+    const w = knownWorks.get(doi) || (await crossrefWork(doi));
+    const text = w && w.abstract ? jatsToText(w.abstract) : "";
+    current[doi] = text;
+    if (text) found++;
+  }
+  const header = [
+    "# ---------------------------------------------------------------------------",
+    "# ABSTRACTS, keyed by DOI. Shown on each paper's page on the website.",
+    "#",
+    "# Filled automatically from Crossref by the weekly publication check. An",
+    "# empty value means Crossref had none; paste one in by hand if you like.",
+    "# <em>...</em> is allowed for species names; blank lines start paragraphs.",
+    "# ---------------------------------------------------------------------------",
+    "",
+  ].join("\n");
+  const sorted = Object.fromEntries(Object.keys(current).sort().map((k) => [k, current[k]]));
+  return { found, text: header + yaml.dump(sorted, { lineWidth: 100, quotingType: '"' }) };
+}
+
 /* ------------------------------------------------------------- filtering */
 
 const KEEP_TYPES = new Set(["journal-article", "posted-content"]);
@@ -262,6 +306,9 @@ async function main() {
     for (const s of skipped) report.push(`- ${s.title || "(untitled)"}: ${s.why}. https://doi.org/${s.doi}`);
     report.push("", "</details>");
   }
+  const allDois = parsed.map((p) => normDoi(p.doi)).filter(Boolean);
+  const abs = await fillAbstracts(allDois, works);
+  if (abs.found) report.push("", `Also added ${abs.found} paper abstract${abs.found === 1 ? "" : "s"} from Crossref to \`abstracts.yaml\`; they appear on each paper's own page.`);
   report.push("", "---", "_Opened automatically by the weekly publication check (`.github/workflows/update-publications.yml`)._");
   const md = report.join("\n") + "\n";
 
@@ -272,6 +319,7 @@ async function main() {
     return;
   }
   if (added.length) fs.writeFileSync(PUBS, out);
+  fs.writeFileSync(ABSTRACTS, abs.text);
   console.log(md);
 }
 

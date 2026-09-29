@@ -10,7 +10,10 @@
 {%- set shareTitle = site.tagline if page.url == "/" else (title or site.title) %}
 {%- set shareText = description or site.tagline %}
 {%- set shareImage = shareTitle | plain | ogCard(ogImage or hero or "/assets/img/photos/carolinensis-grass.jpg", page.url) %}
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ 'article' if paper else 'website' }}">
+{%- if paper %}
+{% include "scholar-meta.njk" %}
+{%- endif %}
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ (title if page.url != "/" else site.title) | plain }}">
 <meta property="og:description" content="{{ shareText | plain }}">
