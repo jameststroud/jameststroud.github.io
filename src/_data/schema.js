@@ -72,6 +72,12 @@ module.exports = () => {
             parentOrganization: { "@type": "CollegeOrUniversity", name: "Georgia Institute of Technology", url: "https://www.gatech.edu/" },
           },
           founder: { "@id": piId },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "media relations",
+            email: site.email,
+            name: clean(pi.name),
+          },
           member: [{ "@id": piId }].concat(
             current.map((p) => ({ "@type": "Person", name: clean(p.name), jobTitle: p.role }))
           ),

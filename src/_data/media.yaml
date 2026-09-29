@@ -1,0 +1,118 @@
+# ---------------------------------------------------------------------------
+# MEDIA COVERAGE shown on each research story page (/research/<story>/)
+#
+# `outlets` sets the order: coverage is listed by the outlet's position in
+# this list (most prestigious first), not by date. Add an outlet here before
+# using it below; anything not listed goes to the end.
+#
+# Under `stories`, the key is the story's file name (e.g. cold-snaps).
+#
+#   - outlet: The New York Times
+#     title: "Headline exactly as published"
+#     date: 2025-10-21          # or just 2025 if the day is unknown
+#     url: https://...
+#     note: "Front page of the print edition"   # optional
+#     byStroud: true            # optional: written by James rather than about him
+# ---------------------------------------------------------------------------
+
+outlets:
+  - The New York Times
+  - Science
+  - The Washington Post
+  - CNN
+  - Scientific American
+  - Smithsonian Magazine
+  - Quanta Magazine
+  - Science News
+  - Atlas Obscura
+  - South Florida Sun Sentinel
+  - The Conversation
+  - Phys.org
+
+stories:
+  lizard-island:
+    - outlet: The Washington Post
+      title: "What the secret lives of lizards tell us about evolution"
+      date: 2025-03-23
+      url: https://www.washingtonpost.com/science/2025/03/23/anoles-lizard-island-evolution-traits/
+      byStroud: true
+    - outlet: Scientific American
+      title: "'Living Fossil' Lizards Are Constantly Evolving: You Just Can't See It"
+      date: 2024-05-02
+      url: https://www.scientificamerican.com/article/living-fossil-lizards-are-constantly-evolving-you-just-cant-see-it/
+    - outlet: Quanta Magazine
+      title: "Evolution: Fast or Slow? Lizards Help Resolve a Paradox."
+      date: 2024-01-02
+      url: https://www.quantamagazine.org/evolution-fast-or-slow-lizards-help-resolve-a-paradox-20240102/
+    - outlet: Atlas Obscura
+      title: "Cracking Open Evolution's Black Box on 'Lizard Island'"
+      date: 2025
+      url: https://www.atlasobscura.com/articles/lizard-island-florida-evolution
+      byStroud: true
+    - outlet: South Florida Sun Sentinel
+      title: "How South Florida Lizards Are Reshaping Darwin's Theory of Evolution"
+      date: 2024-01-25
+      url: https://www.sun-sentinel.com/2024/01/25/how-south-florida-lizards-are-reshaping-darwins-theory-of-evolution/
+      note: "Cover story"
+    - outlet: South Florida Sun Sentinel
+      title: "The Lizard Wars of South Florida Help Reveal How Evolution Works"
+      date: 2024-11-30
+      url: https://www.sun-sentinel.com/2024/11/30/the-lizard-wars-of-south-florida-help-reveal-how-evolution-works/
+      note: "Front page of the print edition"
+    - outlet: The Conversation
+      title: "Amid a tropical paradise known as 'Lizard Island,' researchers are cracking open evolution's black box"
+      date: 2025
+      url: https://theconversation.com/amid-a-tropical-paradise-known-as-lizard-island-researchers-are-cracking-open-evolutions-black-box-scientist-at-work-246474
+      byStroud: true
+    - outlet: Phys.org
+      title: "Scientists witness evolution in action when two lizard species meet for the first time"
+      date: 2024-12
+      url: https://phys.org/news/2024-12-scientists-witness-evolution-action-lizard.html
+
+  three-legged-lizards:
+    - outlet: The New York Times
+      title: "'Pirate Lizards' Can Get Around on 3 Legs"
+      date: 2025-10-21
+      url: https://www.nytimes.com/2025/10/21/science/lizards-3-legs.html
+      note: "Front page of the print edition"
+    - outlet: Science
+      title: "'Pirate lizards' can adapt to survive on just three legs"
+      date: 2025
+      url: https://www.science.org/content/article/pirate-lizards-can-adapt-survive-just-three-legs
+    - outlet: Smithsonian Magazine
+      title: "These 'Pirate Lizards' Thrive With Three Legs"
+      date: 2025-10-21
+      url: https://www.smithsonianmag.com/smart-news/these-pirate-lizards-thrive-with-three-legs-180987549/
+    - outlet: The Conversation
+      title: "3-legged lizards can thrive against all odds, challenging assumptions about how evolution works in the wild"
+      date: 2025
+      url: https://theconversation.com/3-legged-lizards-can-thrive-against-all-odds-challenging-assumptions-about-how-evolution-works-in-the-wild-262467
+      byStroud: true
+
+  cold-snaps:
+    - outlet: The Washington Post
+      title: "Florida cold temperatures pose risk to people, crops and iguanas"
+      date: 2022-01-28
+      url: https://www.washingtonpost.com/weather/2022/01/28/florida-cold-temperatures-frost-iguanas/
+    - outlet: CNN
+      title: "Florida's falling lizards are getting used to cold winter temperatures"
+      date: 2020-10-20
+      url: https://www.cnn.com/2020/10/20/americas/falling-lizards-florida-scn-trnd
+    - outlet: Scientific American
+      title: "It's so cold in Florida that iguanas might rain from the skies"
+      date: 2026-01-16
+      url: https://www.scientificamerican.com/article/its-so-cold-in-florida-that-iguanas-might-rain-from-the-skies/
+    - outlet: Smithsonian Magazine
+      title: "Lizards Fell From Palm Trees During a Florida Cold Snap, but Now They've Toughened Up"
+      date: 2020
+      url: https://www.smithsonianmag.com/smart-news/lizards-fell-palm-trees-during-florida-cold-snap-now-theyve-toughened-180976207/
+    - outlet: Science News
+      title: "How frigid lizards falling from trees revealed rising cold tolerance"
+      date: 2020-10-30
+      url: https://www.sciencenews.org/article/cold-lizards-falling-trees-cold-tolerance-climate-change
+    - outlet: Phys.org
+      title: "What cold lizards in Miami can tell us about climate change resilience"
+      date: 2020-10
+      url: https://phys.org/news/2020-10-cold-lizards-miami-climate-resilience.html
+
+  hurricanes-and-lizards: []

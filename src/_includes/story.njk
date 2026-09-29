@@ -10,6 +10,38 @@ layout: base.njk
   </div>
 </section>
 
+{%- set coverage = media.stories[page.fileSlug] | byOutletRank(media.outlets) %}
+<section class="section--tight">
+  <div class="wrap-text">
+    <aside class="media-contact" aria-labelledby="media-contact-title">
+      <h2 id="media-contact-title">Media contact</h2>
+      <p class="media-contact__who">
+        <strong>James T. Stroud</strong>, Assistant Professor, School of Biological Sciences,
+        Georgia Institute of Technology
+      </p>
+      <p class="media-contact__how">
+        <a class="btn btn--accent" href="mailto:{{ site.email }}?subject={{ ('Media request: ' ~ (cardTitle or title)) | urlencode }}">Email {{ site.email }}</a>
+      </p>
+      {%- if mediaTopics %}
+      <p class="media-contact__topics">Available to comment on {{ mediaTopics | safe }}.</p>
+      {%- endif %}
+      {%- set po = site.pressOffice %}
+      {%- if po and po.name %}
+      <p class="media-contact__office">
+        <span class="media-contact__label">Georgia Tech press office</span>
+        <strong>{{ po.name }}</strong>, {{ po.title }}, {{ po.org }}
+        {%- if po.email %}<br><a href="mailto:{{ po.email }}">{{ po.email }}</a>{% endif %}
+        {%- if po.phone %}{% if po.email %} · {% else %}<br>{% endif %}<a href="tel:{{ po.phone | replace(' ', '') }}">{{ po.phone }}</a>{% endif %}
+        {%- if not po.email and not po.phone and po.url %}<br><a href="{{ po.url }}">College of Sciences contact page</a>{% endif %}
+      </p>
+      {%- endif %}
+      {%- if coverage.length %}
+      <p class="media-contact__more"><a href="#in-the-news">See previous coverage of this research</a></p>
+      {%- endif %}
+    </aside>
+  </div>
+</section>
+
 {%- if photo %}
 <section class="section--tight">
   <div class="wrap-text">
@@ -24,6 +56,19 @@ layout: base.njk
 <section class="section--tight">
   <div class="wrap-text story__body">
     {{ content | safe }}
+
+    {%- if coverage.length %}
+    <h2 id="in-the-news">In the news</h2>
+    <ul class="media-list">
+      {%- for m in coverage %}
+      <li>
+        <span class="media-list__outlet">{{ m.outlet }}</span>
+        <a href="{{ m.url }}">{{ m.title }}</a>
+        <span class="media-list__meta">{{ m.date | mediaDate }}{% if m.byStroud %} · by James Stroud{% endif %}{% if m.note %} · {{ m.note }}{% endif %}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
 
     {%- set related = papers | papersMatching(relatedPapers) %}
     {%- if related.length %}

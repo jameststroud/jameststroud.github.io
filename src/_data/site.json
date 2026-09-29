@@ -16,5 +16,13 @@
   "researchgate": "https://www.researchgate.net/profile/James-Stroud-2",
   "orcid": "0000-0003-0734-6795",
   "goatcounter": "thestroudlab",
+  "pressOffice": {
+    "name": "Jess Hunt-Ralston",
+    "title": "Director of Communications, College of Sciences",
+    "org": "Georgia Institute of Technology",
+    "email": "",
+    "phone": "",
+    "url": "https://sciences.gatech.edu/contact-us"
+  },
   "labNames": ["Stroud, J.T.", "Stroud, J. T."]
 }

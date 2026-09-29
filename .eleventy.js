@@ -25,6 +25,22 @@ module.exports = function (eleventyConfig) {
     return (starts || []).map((st) => (papers || []).find((p) => norm(p.title).startsWith(norm(st)))).filter(Boolean);
   });
 
+  // Media coverage in the order of media.yaml's `outlets` list (prestige),
+  // newest first within the same outlet.
+  eleventyConfig.addFilter("byOutletRank", function (items, outlets) {
+    const rank = (o) => { const i = (outlets || []).indexOf(o); return i < 0 ? 999 : i; };
+    const t = (d) => new Date(d instanceof Date ? d : String(d)).getTime() || 0;
+    return (items || []).slice().sort((a, b) => rank(a.outlet) - rank(b.outlet) || t(b.date) - t(a.date));
+  });
+
+  // 2025-10-21 -> "October 2025"; "2024-12" -> "December 2024"; 2025 -> "2025".
+  eleventyConfig.addFilter("mediaDate", function (d) {
+    const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    if (d instanceof Date) return `${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+    const m = /^(\d{4})-(\d{2})/.exec(String(d));
+    return m ? `${MONTHS[+m[2] - 1]} ${m[1]}` : String(d || "");
+  });
+
   eleventyConfig.addFilter("setKey", function (obj, key, value) {
     return Object.assign({}, obj, { [key]: value });
   });
