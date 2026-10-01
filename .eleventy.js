@@ -33,6 +33,12 @@ module.exports = function (eleventyConfig) {
     return (items || []).slice().sort((a, b) => rank(a.outlet) - rank(b.outlet) || t(b.date) - t(a.date));
   });
 
+  // Every item in media.yaml's `stories`, each tagged with its story's key.
+  eleventyConfig.addFilter("allMedia", function (stories) {
+    return Object.entries(stories || {}).flatMap(([story, items]) =>
+      (items || []).map((it) => Object.assign({ story }, it)));
+  });
+
   // 2025-10-21 -> "October 2025"; "2024-12" -> "December 2024"; 2025 -> "2025".
   eleventyConfig.addFilter("mediaDate", function (d) {
     const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
