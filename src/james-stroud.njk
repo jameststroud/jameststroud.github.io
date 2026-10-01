@@ -1,0 +1,142 @@
+---
+layout: base.njk
+title: James Stroud
+permalink: /james-stroud/
+seoTitle: "James Stroud · Evolutionary Ecologist, Georgia Tech"
+description: "James T. Stroud is an evolutionary ecologist and Assistant Professor at Georgia Tech who studies natural selection, evolution and ecology in the wild using Anolis lizards, and leads the Stroud Lab."
+ogImage: /assets/img/people/james-stroud.jpg
+---
+
+{#- Profile page for the PI. Google treats this page as the home of the
+    "James Stroud" Person described in src/_data/schema.js, so keep the name
+    in the title and the first heading. Links at the bottom should match that
+    Person's sameAs list. -#}
+{%- set pi = (people | where("group","pi"))[0] %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": schema.profileUrl + "#page",
+  "url": schema.profileUrl,
+  "name": "James Stroud, evolutionary ecologist",
+  "dateModified": build.date,
+  "isPartOf": { "@id": site.url + "/#website" },
+  "mainEntity": { "@id": schema.piId }
+} | jsonld | safe }}</script>
+
+<section class="section">
+  <div class="wrap">
+    <div class="pi">
+      <img class="person__photo" src="/assets/img/people/{{ pi.photo }}" alt="James Stroud holding a Jackson's chameleon" sizes="15rem">
+      <div>
+        <p class="eyebrow">Evolutionary ecologist</p>
+        <h1>James T. Stroud</h1>
+        <p class="person__role">
+          Assistant Professor and Elizabeth Smithgall-Watts Endowed Faculty,
+          School of Biological Sciences, Georgia Institute of Technology
+        </p>
+        <p>
+          James Stroud studies how natural selection operates in the wild, and how
+          those short-term processes add up to the patterns of biodiversity we see
+          across space and through time. Nearly all of his work is built on lizards,
+          mostly <em>Anolis</em> lizards (anoles), a group of more than 400 species
+          whose ecology has been documented across 40 million years of
+          diversification. In 2015 he founded
+          <a href="/research/lizard-island/">Lizard Island</a>, a long-term field
+          study in Miami where every lizard on a 6,000 square meter island is caught
+          and measured twice a year, connecting evolution measured in real time to
+          the large-scale patterns it is meant to explain.
+        </p>
+        <p>
+          Originally from London, James studied Zoology at the University of Wales
+          and Ecology at the University of Hull, then moved to Miami for a PhD in
+          Ecology and Evolution at Florida International University (2018). He was a
+          postdoc with Jonathan Losos at Washington University in St. Louis from 2018
+          to 2023, and started <a href="/">the Stroud Lab</a> at Georgia Tech in 2023.
+        </p>
+        <p class="person__links">
+          <a href="mailto:{{ pi.email }}">{{ pi.email }}</a>
+          <a href="/files/Stroud_CV.pdf">CV</a>
+          <a href="/people/">The lab</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap-text">
+    <h2>Research</h2>
+    <p>
+      The lab's questions sit where ecology and evolution meet: how natural selection
+      acts on whole communities rather than single species, how lizards cope with
+      thermal extremes and a changing climate, and how new species colonizing a
+      community reshape the ones already there.
+    </p>
+    <ul>
+      {%- for s in collections.stories %}
+      <li><a href="{{ s.url }}">{{ s.data.headline or s.data.title }}</a></li>
+      {%- endfor %}
+      <li><a href="/miami-lizards/">A field guide to the anoles of Miami</a></li>
+    </ul>
+    <p><a class="btn" href="/research/">Research in the Stroud Lab</a></p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap-text">
+    <h2>Selected papers</h2>
+    <ul>
+      {%- for p in papers | papersMatching([
+        "Long-term studies provide unique insights into evolution",
+        "Observing character displacement from process to pattern",
+        "Fluctuating selection maintains distinct species phenotypes"
+      ]) %}
+      <li><a href="{{ p.url_page }}">{{ p.title | safe }}</a>. {% if p.journal %}<span class="pub__venue">{{ p.journal | safe }}</span> {% endif %}({{ p.year }})</li>
+      {%- endfor %}
+    </ul>
+    <p><a href="/publications/">All publications</a> ·
+       <a href="{{ pi.scholar }}">Google Scholar</a></p>
+  </div>
+</section>
+
+{%- if pi.awards %}
+<section class="section section--tight">
+  <div class="wrap-text">
+    <h2>Honors</h2>
+    <ul>
+      {%- for a in pi.awards %}
+      <li>{{ a }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section section--tight">
+  <div class="wrap-text">
+    <h2>Writing and press</h2>
+    <ul>
+      {%- for m in (media.stories | allMedia | byOutletRank(media.outlets)) %}
+      {%- if loop.index <= 8 %}
+      <li><a href="{{ m.url }}">{{ m.title }}</a>, <em>{{ m.outlet }}</em>{% if m.byStroud %} (by James Stroud){% endif %}, {{ m.date | mediaDate }}</li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap-text">
+    <h2>James Stroud elsewhere</h2>
+    <p class="person__links">
+      {%- if site.gatechProfile %}<a href="{{ site.gatechProfile }}">Georgia Tech profile</a>{% endif %}
+      <a href="{{ pi.scholar }}">Google Scholar</a>
+      <a href="https://orcid.org/{{ site.orcid }}">ORCID</a>
+      {%- if site.x %}<a href="{{ site.x }}">X (@jamesTstroud)</a>{% endif %}
+      {%- if site.bluesky %}<a href="{{ site.bluesky }}">Bluesky</a>{% endif %}
+      <a href="{{ site.researchgate }}">ResearchGate</a>
+      <a href="{{ site.github }}">GitHub</a>
+      {%- if site.wikidata %}<a href="{{ site.wikidata }}">Wikidata</a>{% endif %}
+    </p>
+  </div>
+</section>

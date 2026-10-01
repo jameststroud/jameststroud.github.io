@@ -176,6 +176,13 @@ These build themselves; there is nothing to maintain.
   who the PI and members are, and lists every published paper with its DOI.
   It is generated from `site.json`, `people.yaml` and `publications.yaml`
   (see `src/_data/schema.js`), so it stays current as you edit those.
+- **Your profile page** at `/james-stroud/` is the page Google ties to the
+  name "James Stroud". Keep it linked from the home page, people page and
+  footer. The awards on it come from `awards:` under your entry in
+  `people.yaml`. Every profile elsewhere goes in `site.json` (`x`,
+  `bluesky`, `gatechProfile`, `wikidata`, `orcid`, `scholar`): it is shown on
+  the page and listed for Google as the same person. If you create a Wikidata
+  item, paste its URL into `"wikidata"`.
 
 ---
 
