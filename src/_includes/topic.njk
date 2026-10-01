@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+{#- Research topic page. Body text lives in src/topics/<topic>.njk. -#}
+<section class="section">
+  <div class="wrap-text wrap-text--intro center">
+    <p class="eyebrow">Research topic</p>
+    <h1>{{ headline or title }}</h1>
+    {% if lead %}<p class="lead">{{ lead | safe }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap-text">
+    {{ content | safe }}
+
+    {%- set related = papers | papersMatching(relatedPapers) %}
+    {%- if related.length %}
+    <h2>Papers on this topic</h2>
+    <ul>
+      {%- for p in related %}
+      <li><a href="{{ p.url_page }}">{{ p.title | safe }}</a>. {% if p.journal %}<span class="pub__venue">{{ p.journal | safe }}</span> {% endif %}({{ p.year }})</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <p style="margin-top:2rem">
+      <a href="/research/">All research in the Stroud Lab</a> ·
+      <a href="/james-stroud/">About James Stroud</a> ·
+      <a href="/">Home</a>
+    </p>
+  </div>
+</section>

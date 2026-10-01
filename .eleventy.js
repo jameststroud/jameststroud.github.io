@@ -39,6 +39,11 @@ module.exports = function (eleventyConfig) {
       (items || []).map((it) => Object.assign({ story }, it)));
   });
 
+  // Topic pages that are live: drafts have no URL until `draft: true` is removed.
+  eleventyConfig.addFilter("published", function (items) {
+    return (items || []).filter((it) => it.url);
+  });
+
   // 2025-10-21 -> "October 2025"; "2024-12" -> "December 2024"; 2025 -> "2025".
   eleventyConfig.addFilter("mediaDate", function (d) {
     const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

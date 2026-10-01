@@ -17,38 +17,36 @@ module.exports = () => {
   const clean = (s) => String(s || "").replace(/,?\s*Ph\.?D\.?$/i, "").trim();
   const org = (name, url) => ({ "@type": "CollegeOrUniversity", name, url });
 
-  // The PI's profile page (/james-stroud/) is the "home" of this Person for
-  // Google's Knowledge Graph. Every name variant he publishes under goes in
-  // alternateName, and every profile elsewhere goes in sameAs, so that
-  // searches on any of them resolve to the same person.
+  // The home page is the "home" of this Person for Google's Knowledge Graph;
+  // /james-stroud/ is a ProfilePage about the same Person. Every name form he
+  // publishes under goes in alternateName, and every profile elsewhere goes in
+  // sameAs, so that searches on any of them resolve to the same person.
   const piNode = {
     "@type": "Person",
     "@id": piId,
-    name: "James Stroud",
-    alternateName: ["James T. Stroud", "J.T. Stroud", "James Stroud, Ph.D.", "Dr. James Stroud"],
+    name: clean(pi.name),
+    alternateName: ["James Stroud", "J.T. Stroud", "Dr. James Stroud"],
     givenName: "James",
     familyName: "Stroud",
-    description: "Evolutionary ecologist at Georgia Tech who studies natural selection in the wild using Anolis lizards.",
-    jobTitle: /Assistant Professor/.test(pi.bio || "") ? "Assistant Professor" : pi.role,
+    jobTitle: pi.role,
+    description: "Evolutionary ecologist studying lizard evolution and ecology",
     hasOccupation: { "@type": "Occupation", name: "Evolutionary ecologist" },
     email: pi.email ? "mailto:" + pi.email : undefined,
     image: pi.photo ? site.url + "/assets/img/people/" + pi.photo : undefined,
-    url: profileUrl,
-    mainEntityOfPage: profileUrl,
+    url: site.url + "/",
     worksFor: [
       { "@id": labId },
       org("Georgia Institute of Technology", "https://www.gatech.edu/"),
     ],
-    affiliation: org("Georgia Institute of Technology", "https://www.gatech.edu/"),
+    affiliation: { "@type": "Organization", name: "Georgia Institute of Technology", url: "https://www.gatech.edu/" },
     alumniOf: [
       org("Florida International University", "https://www.fiu.edu/"),
       org("University of Hull"),
       org("University of Wales"),
     ],
     knowsAbout: [
-      "Evolutionary ecology", "Natural selection", "Anolis lizards", "Lizards", "Herpetology",
-      "Adaptive radiation", "Character displacement", "Community ecology",
-      "Thermal ecophysiology", "Global change biology", "Invasive species",
+      "Evolutionary ecology", "Lizards", "Anolis", "Community ecology",
+      "Natural selection", "Adaptive radiation", "Invasive species", "Thermal ecophysiology",
     ],
     award: pi.awards,
     identifier: site.orcid ? { "@type": "PropertyValue", propertyID: "ORCID", value: site.orcid } : undefined,
@@ -59,6 +57,7 @@ module.exports = () => {
       site.wikidata,
       site.x,
       site.bluesky,
+      site.conversation,
       site.researchgate,
       site.github,
     ].filter(Boolean),

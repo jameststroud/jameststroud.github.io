@@ -188,6 +188,20 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
 
 <div class="rule-wrap"><hr></div>
 
+{%- set topics = collections.topics | published %}
+{%- if topics.length %}
+<section class="section--tight">
+  <div class="wrap-text">
+    <h2>Research topics</h2>
+    <ul>
+      {%- for t in topics %}
+      <li><a href="{{ t.url }}">{{ t.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
 <section class="section">
   <div class="wrap-text">
     <p class="eyebrow">Foundations</p>
