@@ -8,18 +8,22 @@ strapline:
   - Thermal ecophysiology
   - Connecting process-to-pattern
 ogImage: /assets/img/photos/carolinensis-grass.jpg
-description: "The Stroud Lab at Georgia Tech studies natural selection and evolution in the wild using Anolis lizards (anoles), from the Lizard Island long-term study in Miami to thermal ecology across the southeastern US."
-seoTitle: "Stroud Lab at Georgia Tech · Anole Lizard Ecology & Evolution"
+description: "James Stroud is an evolutionary ecologist at Georgia Tech who leads the Stroud Lab, studying natural selection and evolution in lizards in the wild."
+seoTitle: "James Stroud | Evolutionary Ecologist, Georgia Tech"
 ---
 
 <section class="section section--dark">
   <div class="wrap-hero" style="text-align:left">
     <h1>Welcome to the Stroud Lab!</h1>
+    <p>
+      The Stroud Lab is led by <a href="/james-stroud/">James Stroud</a>, an
+      evolutionary ecologist at Georgia Tech who studies how lizards evolve in the wild.
+    </p>
     <p class="lead">
       Why are there so many species, and why do they live where they live?
      </p>
      <p>
-      We are an evolutionary ecology lab, led by <a href="/james-stroud/">James Stroud</a> at Georgia Tech, with broad interests, unified by a single theme: 
+      We are an evolutionary ecology lab with broad interests, unified by a single theme: 
       that ecology and evolution are not separable. We use field studies to directly 
       investigate behavior, ecology, and physiology in the wild, and use these insights to 
       understand patterns of biodiversity across space and through time. This epitomizes 
@@ -117,6 +121,20 @@ seoTitle: "Stroud Lab at Georgia Tech · Anole Lizard Ecology & Evolution"
     </div>
   </div>
 </section>
+
+{%- set topics = collections.topics | published %}
+{%- if topics.length %}
+<section class="section--tight">
+  <div class="wrap-text">
+    <h2>Research topics</h2>
+    <ul>
+      {%- for t in topics %}
+      <li><a href="{{ t.url }}">{{ t.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
 
 <section class="section">
   <div class="center" style="margin-bottom:3rem">

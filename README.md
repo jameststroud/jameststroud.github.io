@@ -176,11 +176,17 @@ These build themselves; there is nothing to maintain.
   who the PI and members are, and lists every published paper with its DOI.
   It is generated from `site.json`, `people.yaml` and `publications.yaml`
   (see `src/_data/schema.js`), so it stays current as you edit those.
+- **Research topic pages** live in `src/topics/` (one file per topic). A page
+  with `draft: true` at the top is not built, not in the sitemap and not linked
+  from anywhere. Fill in every `[JAMES: ...]` placeholder, delete the
+  `draft: true` line, and the page goes live at `/topics/<file-name>/` with
+  links to it added to the home and Research pages automatically. To preview
+  drafts on your own machine: `SHOW_DRAFTS=1 npm start`.
 - **Your profile page** at `/james-stroud/` is the page Google ties to the
   name "James Stroud". Keep it linked from the home page, people page and
   footer. The awards on it come from `awards:` under your entry in
   `people.yaml`. Every profile elsewhere goes in `site.json` (`x`,
-  `bluesky`, `gatechProfile`, `wikidata`, `orcid`, `scholar`): it is shown on
+  `bluesky`, `conversation`, `gatechProfile`, `wikidata`, `orcid`, `scholar`): it is shown on
   the page and listed for Google as the same person. If you create a Wikidata
   item, paste its URL into `"wikidata"`.
 
