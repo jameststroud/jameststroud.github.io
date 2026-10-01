@@ -674,6 +674,30 @@ a.pub__title:hover { text-decoration: underline; }
   border-radius: 2px;
 }
 
+/* Research-page story cards: one row of four on wide screens, two on
+   tablets, one on phones. An optional `cardPhoto` sits at the bottom. */
+.cards--stories {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 62rem) { .cards--stories { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .cards--stories { grid-template-columns: 1fr; } }
+a.species__card.story-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.4rem;
+}
+.story-card p:last-of-type { margin-bottom: 0; }
+.story-card__photo { margin-top: auto; padding-top: 1.1rem; }
+.story-card__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
 .press-list { list-style: none; margin: 0; padding: 0; }
 .press-list li {
   padding: 1.1rem 0;

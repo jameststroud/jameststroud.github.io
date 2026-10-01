@@ -139,6 +139,10 @@ To preview locally without changing anything:
 - **Research stories** live in `src/research/` (e.g. `lizard-island.njk`) and
   appear as cards on the Research page. `relatedPapers:` lists the start of each
   paper title to link at the bottom.
+  To put a photo at the bottom of a story's card, add `cardPhoto:` (a path such
+  as `/assets/img/photos/cold-iguana.jpg`) and `cardPhotoAlt:` (a one-line
+  description) to the story's front matter. Leave them out and the card has no
+  photo.
 - **Media contact boxes** sit at the top of every research story. Your details
   come from `site.json`; the Georgia Tech press office contact is under
   `"pressOffice"` there (fill in `"email"` and `"phone"` and they appear; until
