@@ -33,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
 
@@ -45,17 +46,35 @@
 
 <nav class="navbar" aria-label="Main">
   <div class="navbar__inner">
-    <ul class="nav__list">
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-list">
+      <span class="nav__menu-icon" aria-hidden="true"></span>Menu
+    </button>
+    <ul class="nav__list" id="nav-list">
       {%- for item in nav.main %}
-      <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+      {%- set active = false %}
+      {%- for prefix in item.section %}{% if page.url and page.url.startsWith(prefix) %}{% set active = true %}{% endif %}{% endfor %}
+      <li class="nav__item{% if item.children %} nav__item--sub{% endif %}{% if active %} is-active{% endif %}">
+        <a class="nav__link" href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {%- if item.children %}
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-sub-{{ item.id }}">
+          <span class="visually-hidden">{{ item.title }} pages</span>
+        </button>
+        <ul class="nav__sub" id="nav-sub-{{ item.id }}">
+          {%- for child in item.children %}
+          <li>
+            {%- if child.external %}
+            <a href="{{ child.url }}" target="_blank" rel="noopener">{{ child.title }}<span class="nav__ext" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            {%- else %}
+            <a href="{{ child.url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </li>
       {%- endfor %}
     </ul>
-<div class="nav-feature">
-  {%- for item in nav.feature %}
-  <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-  {%- endfor %}
   </div>
-</div>
 </nav>
 
 {% if hero %}
@@ -244,6 +263,59 @@
         restartAuto();
       });
     }
+  });
+})();
+(function () {
+  // Main navigation: the caret buttons open each dropdown for keyboard and
+  // touch users (mouse users also get hover, from the CSS), and the Menu
+  // button opens the whole list on small screens.
+  var nav = document.querySelector('.navbar');
+  if (!nav) return;
+  var menu = nav.querySelector('.nav__menu');
+  var items = nav.querySelectorAll('.nav__item--sub');
+
+  function setOpen(item, open) {
+    item.classList.toggle('is-open', open);
+    item.querySelector('.nav__toggle').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeAll(except) {
+    items.forEach(function (it) { if (it !== except) setOpen(it, false); });
+  }
+
+  items.forEach(function (item) {
+    var toggle = item.querySelector('.nav__toggle');
+    toggle.addEventListener('click', function () {
+      var open = !item.classList.contains('is-open');
+      closeAll(item);
+      setOpen(item, open);
+    });
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && item.classList.contains('is-open')) {
+        setOpen(item, false);
+        toggle.focus();
+        e.stopPropagation();
+      }
+    });
+    item.addEventListener('focusout', function (e) {
+      // Clicks outside are handled below; this covers Tab moving focus away.
+      if (e.relatedTarget && !item.contains(e.relatedTarget)) setOpen(item, false);
+    });
+  });
+
+  menu.addEventListener('click', function () {
+    var open = !nav.classList.contains('is-open');
+    nav.classList.toggle('is-open', open);
+    menu.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open') && !nav.querySelector('.nav__item--sub.is-open')) {
+      nav.classList.remove('is-open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.focus();
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target)) closeAll();
   });
 })();
 </script>
