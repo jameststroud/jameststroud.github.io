@@ -13,6 +13,8 @@
 #     type: article                      # article | inreview | popular | note | volume
 #     featured: true                     # optional: pulls it onto the home page
 #     press: true                        # optional: adds a "press coverage" tag
+#     pdf: "filename.pdf"                # optional: force which file in src/files/papers/ is linked
+#     slug: "2016-stroud-..."            # optional: pin the paper page's URL (keep the old slug when fixing a title or year)
 #
 # ---------------------------------------------------------------------------
 
@@ -68,7 +70,7 @@
 
 - year: 2026
   type: article
-  authors: "Stroud, J.T., Francisco, E., Cooper, T.L., Suh, J.J."
+  authors: "Stroud, J.T., Cooper, T.L., Francisco, E., Suh, J.J."
   title: "Predation by a non-native Cuban Knight Anole (<em>Anolis equestris</em>) of a native Corn Snake (<em>Pantherophis guttatus</em>) in Miami, Florida, USA"
   journal: "IRCF Reptiles & Amphibians"
   detail: "33(1): e23091"
@@ -182,7 +184,7 @@
 
 - year: 2021
   type: article
-  authors: "Sanger, T.J., Harding, L., Kyrkos, J., Arnaudoff, L., Nunez, S.A., Lachance, D., Dhindsa, S., Stroud, J.T., Diaz, R.E., Czesny, B."
+  authors: "Sanger, T.J., Harding, L., Kyrkos, J., Turnquist, A.J., Epperlein, L., Nunez, S.A., Lachance, D., Dhindsa, S., Stroud, J.T., Diaz, R.E., Czesny, B."
   title: "Environmental thermal stress induces neuronal cell death and developmental malformations in reptiles"
   journal: "Integrative Organismal Biology"
   detail: "3(1): 1-18"
@@ -223,7 +225,7 @@
 
 - year: 2020
   type: article
-  authors: "Donihue, C.M., Kowaleski, A., Algar, A., Baeckens, S., Buchkowski, R.W., Fabre, A.-C., Frank, H.K., Geneva, A.J., Mahler, D.L., Reynolds, R.G., Stroud, J.T., Velasco, J.A., Kolbe, J.J., Losos, J.B., Herrel, A."
+  authors: "Donihue, C.M., Kowaleski, A., Losos, J.B., Algar, A., Baeckens, S., Buchkowski, R.W., Fabre, A.-C., Frank, H.K., Geneva, A.J., Reynolds, R.G., Stroud, J.T., Velasco, J.A., Kolbe, J.J., Mahler, D.L., Herrel, A."
   title: "Hurricane effects on Neotropical lizards span geographic and phylogenetic scales"
   journal: "Proceedings of the National Academy of Sciences"
   detail: "117(19): 10429-10434"
@@ -287,7 +289,7 @@
 
 - year: 2018
   type: article
-  authors: "Perez, T.M., Valverde, O., Bravo, C., Taylor, T.C., Fadrique, B., Hogan, J.A., Pardo, C.J., Stroud, J.T., Baraloto, C., Feeley, K.J."
+  authors: "Perez, T.M., Valverde-Barrantes, O., Bravo, C., Taylor, T.C., Fadrique, B., Hogan, J.A., Pardo, C.J., Stroud, J.T., Baraloto, C., Feeley, K.J."
   title: "Botanic gardens are an untapped resource for studying the functional ecology of tropical plants"
   journal: "Philosophical Transactions of the Royal Society B"
   detail: "374(1763): 1-9"
@@ -385,7 +387,7 @@
 
 - year: 2017
   type: article
-  authors: "Martin, T.E., Guilleman, M., Nivet-Mazerolles, V., Landsmann, C., Dubos, J., Eudeline, R., Stroud, J.T."
+  authors: "Martin, T.E., Guillemin, M., Nivet-Mazerolles, V., Landsmann, C., Dubos, J., Eudeline, R., Stroud, J.T."
   title: "The herpetofauna of central Uzbekistan"
   journal: "Amphibian & Reptile Conservation"
   detail: "11(1): 93-107 (e140)"
@@ -431,6 +433,7 @@
   journal: "IRCF Reptiles & Amphibians"
   detail: "23(3): 188-190"
   doi: "https://doi.org/10.17161/randa.v23i3.14134"
+  pdf: "Stroud et al_2016_IRCF Reptiles & Amphibians.pdf"
 
 - year: 2016
   type: article
@@ -439,6 +442,7 @@
   journal: "IRCF Reptiles & Amphibians"
   detail: "23(2): 104-107"
   doi: "https://doi.org/10.17161/randa.v23i2.14116"
+  pdf: "Stroud & Giery_2016_IRCF Reptiles & Amphibians.pdf"
 
 - year: 2015
   type: article
@@ -565,7 +569,7 @@
   authors: "Maurer, A.S., Stroud, J.T."
   title: "<em>Anolis wattsi</em> (Watts' Anole). Nocturnal activity"
   journal: "Herpetological Review"
-  detail: "51(3): 631-632"
+  detail: "51(1): 119"
   pdf: "Maurer & Stroud_2020_Herpetological Review.pdf"
 
 - year: 2020
@@ -573,7 +577,7 @@
   authors: "Martin, T.E., Gillespie, G.R., Kusrini, M.D., Stroud, J.T."
   title: "<em>Xenochrophis trianguligerus</em> (Sulawesi Triangle Keelback). Diet and feeding behavior"
   journal: "Herpetological Review"
-  detail: "51(1): 119"
+  detail: "51(3): 631-632"
 
 - year: 2019
   type: article
@@ -654,9 +658,11 @@
 - year: 2017
   type: note
   authors: "Ljustina, O., Stroud, J.T."
-  title: "<em>Anolis carolinensis</em> (American green anole). Kleptothermy"
+  title: "<em>Anolis carolinensis</em> (American green anole). Possible kleptothermy"
   journal: "Herpetological Review"
   detail: "48(2): 434-435"
+  pdf: "Ljustina & Stroud_2017_Herpetological Review.pdf"
+  slug: "2017-ljustina-anolis-carolinensis-american-green-anole-kleptothermy"
 
 - year: 2016
   type: note
@@ -672,11 +678,13 @@
   journal: "Herpetological Review"
   detail: "47(3): 459"
 
-- year: 2015
+- year: 2016
   type: note
   authors: "Martin, T., Guillemin, M., Eudeline, R., Landsmann, C., Nivet-Mazerolles, V., Stroud, J.T."
   title: "Reptiles and amphibians of semi-deserts, mountains, and other habitats of south central Uzbekistan"
   journal: "Field Museum of Natural History, Chicago"
+  pdf: "Martin et al_2015_Chicago Field Museum.pdf"
+  slug: "2015-martin-reptiles-amphibians-semi-deserts-mountains-other"
 
 - year: 2015
   type: note
@@ -697,26 +705,31 @@
   title: "An introduction to the lizards of Fairchild Tropical Botanic Garden"
   journal: "The Tropical Garden, Fairchild Tropical Botanic Garden"
   detail: "69(1): 28-29"
+  pdf: "Stroud_2014_Fairchild magazine.pdf"
 
 - year: 2014
   type: popular
   authors: "Kolbe, J.J., Feeley, K.J., Battles, A., Stroud, J.T."
-  title: "An introduction to the lizards of Fairchild Tropical Botanic Garden"
+  title: "Field identification guide for the anole lizards of Miami"
   journal: "The Fairchild Challenge, Fairchild Tropical Botanic Garden"
+  pdf: "Kolbe et al_2014_A field guide to the anole lizards of Florida.pdf"
+  slug: "2014-kolbe-introduction-lizards-fairchild-tropical-botanic-garden"
 
 - year: 2013
   type: note
   authors: "Stroud, J.T."
   title: "<em>Anolis equestris</em> (Cuban knight anole): Exotic intra-guild predation"
   journal: "Herpetological Review"
-  detail: "44(4): 660-661"
+  detail: "44(4): 661"
+  pdf: "Stroud_2013_Herpetological Review.pdf"
 
 - year: 2013
   type: note
   authors: "Stroud, J.T., Giery, S.T."
   title: "<em>Anolis equestris</em> (Cuban knight anole): Nocturnal activity"
   journal: "Herpetological Review"
-  detail: "44(4): 661"
+  detail: "44(4): 660-661"
+  pdf: "Stroud & Giery_2013_Herpetological Review.pdf"
 
 - year: 2013
   type: note
@@ -724,3 +737,4 @@
   title: "<em>Ctenosaura similis</em> (Gray's spiny-tailed iguana): Non-native diet"
   journal: "Herpetological Review"
   detail: "44(2): 322"
+  pdf: "Stroud & Krysko_2013_Herpetological Review.pdf"
