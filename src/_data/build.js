@@ -1,4 +1,5 @@
 module.exports = () => ({
   year: new Date().getFullYear(),
-  date: new Date().toISOString().slice(0, 10),
+  // Full ISO 8601 date-time with time zone, as Google requires for dateModified.
+  datetime: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
 });
