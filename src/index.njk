@@ -48,13 +48,12 @@ seoTitle: "James Stroud | Evolutionary Ecologist, Georgia Tech"
     evolutionary genetics, and macroevolution, connecting short-term microevolutionary and
     ecological dynamics measured in real time to the long-term patterns that manifest across continents and clades. 
     Our research is rooted in collecting data in the field, and combining those insights with  theoretical models and
-    large-scale comparative datasets. Our primary field sites span the south
-    eastern United States--especially Florida--as well as the Caribbean and mainland Central and South America.
+    large-scale comparative datasets. Our primary field sites span the southeastern United States, especially Florida, as well as the Caribbean and mainland Central and South America.
     In the field, we combine targeted field sampling of populations with long-term 
     mark-recapture studies that let us measure natural selection directly. 
     Back at Georgia Tech, we are developing new approaches to advance cutting-edge field studies, such as developing new
     machine-learning approaches for high-throughput phenotyping and quantification of the structural environment, as well
-    as both employing existing, and developing our own, wearable sensors for passive behavioral data collection....welcome
+    as both employing existing, and developing our own, wearable sensors for passive behavioral data collection. Welcome
     to the world of lizard backpacks!
     </p>
     <p>
@@ -85,16 +84,16 @@ seoTitle: "James Stroud | Evolutionary Ecologist, Georgia Tech"
         <p class="eyebrow">The long-term evolutionary field study</p>
         <h2>Lizard Island</h2>
         <p>
-          For over a decade, we have been measuring natural seleciton in the wild on 
+          For over a decade, we have been measuring natural selection in the wild on 
           the entire anole community of a small
-          island in Fairchild Tropical Botanic Gardens (Miami, Florida). Originally,
+          island in Fairchild Tropical Botanic Garden (Miami, Florida). Originally,
           the community consisted of four species: a semi-terrestrial specialist (the Cuban
           brown anole, <em>Anolis sagrei</em>), a tree trunk specialist 
           (Hispaniolan bark anole, <em>Anolis distichus</em>), and two arboreal 
-          canopy specialists (the native American green anole, <em>Anolis carolinensis</em>),
+          canopy specialists (the native American green anole, <em>Anolis carolinensis</em>,
           and the "crown-giant" Cuban knight anole, <em>Anolis equestris</em>). In
           late 2017, a fifth species joined the community: the Puerto Rican crested
-          anole (<em>Anolis cristatellus</em>), another semi-terrestrial specialist--
+          anole (<em>Anolis cristatellus</em>), another semi-terrestrial specialist,
           and we have been watching its evolutionary battle with the resident brown anole
           population ever since. On Lizard Island, there are approximately 800 to 
           1,000 lizards at any given time; we return every spring (May/June) and 
@@ -105,7 +104,7 @@ seoTitle: "James Stroud | Evolutionary Ecologist, Georgia Tech"
         <p><a href="/research/lizard-island/">More on the Lizard Island study</a></p>
         <p>
           Long-term field studies measuring natural selection in multiple species 
-          are relatively rare--the most famous example is Peter and Rosemary Grant's
+          are relatively rare: the most famous example is Peter and Rosemary Grant's
           exceptional <a href="https://press.princeton.edu/books/paperback/9780691263229/40-years-of-evolution?srsltid=AfmBOooB65LdUsFDbH4wSy4Uxccgdfnsw8lNK1aVmi2Pd0k2qEQP92Iu">40 year field study of Darwin's finches on Daphne Major in the Galapagos</a>
           . On Lizard Island, we are trying to emulate that study: already, it is now
           one of the longest-running active field studies in the world measuring natural selection
@@ -135,17 +134,3 @@ seoTitle: "James Stroud | Evolutionary Ecologist, Georgia Tech"
   </div>
 </section>
 {%- endif %}
-
-<section class="section">
-  <div class="center" style="margin-bottom:3rem">
-    <p class="eyebrow">Explore the site</p>
-  </div>
-  <div class="tiles">
-    {%- for t in hometiles %}
-    <a class="tile{% if t.feature %} tile--feature{% endif %}" href="{{ t.url }}">
-      <img src="/assets/img/tiles/{{ t.image or 'placeholder.jpg' }}" alt="{{ t.alt or '' }}" sizes="(min-width: 60rem) 19rem, 50vw">
-      <span class="tile__label">{{ t.title }}</span>
-    </a>
-    {%- endfor %}
-  </div>
-</section>

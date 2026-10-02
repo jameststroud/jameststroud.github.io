@@ -116,10 +116,9 @@ ogImage: /assets/img/people/james-stroud.jpg
   <div class="wrap-text">
     <h2>Writing and press</h2>
     <ul>
-      {%- for m in (media.stories | allMedia | byOutletRank(media.outlets)) %}
-      {%- if loop.index <= 8 %}
+      {#- The eight most prominent outlets, listed newest first. #}
+      {%- for m in (media.stories | allMedia | byOutletRank(media.outlets)).slice(0, 8) | byDateDesc %}
       <li><a href="{{ m.url }}">{{ m.title }}</a>, <em>{{ m.outlet }}</em>{% if m.byStroud %} (by James Stroud){% endif %}, {{ m.date | mediaDate }}</li>
-      {%- endif %}
       {%- endfor %}
     </ul>
   </div>

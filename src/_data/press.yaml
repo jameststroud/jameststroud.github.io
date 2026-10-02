@@ -5,6 +5,7 @@
 - outlet: New York Times
   year: 2025
   title: "'Pirate Lizards' Can Get Around on 3 Legs"
+  url: https://www.nytimes.com/2025/10/21/science/lizards-3-legs.html
   note: "Front page of the print newspaper."
 
 - outlet: Washington Post
@@ -15,31 +16,36 @@
 - outlet: Atlas Obscura
   year: 2025
   title: "Cracking Open Evolution's Black Box on 'Lizard Island'"
+  url: https://www.atlasobscura.com/articles/lizard-island-florida-evolution
 
 - outlet: Sun Sentinel
-  year: 2025
-  title: "The Lizard Wars of South Florida Help Reveal How Evolution Works"
-  note: "Front page of the print newspaper."
-
-- outlet: Quanta
   year: 2024
-  title: "Evolution: Fast or Slow? Lizards Help Resolve a Paradox"
+  title: "The Lizard Wars of South Florida Help Reveal How Evolution Works"
+  url: https://www.sun-sentinel.com/2024/11/30/the-lizard-wars-of-south-florida-help-reveal-how-evolution-works/
+  note: "Front page of the print newspaper."
 
 - outlet: Scientific American
   year: 2024
   title: "'Living Fossil' Lizards Are Constantly Evolving — You Just Can't See It"
+  url: https://www.scientificamerican.com/article/living-fossil-lizards-are-constantly-evolving-you-just-cant-see-it/
 
 - outlet: Sun Sentinel
-  year: 2023
+  year: 2024
   title: "How South Florida Lizards Are Reshaping Darwin's Theory of Evolution"
+  url: https://www.sun-sentinel.com/2024/01/25/how-south-florida-lizards-are-reshaping-darwins-theory-of-evolution/
   note: "Cover story."
 
-- outlet: Science News Explores
-  year: 2023
-  title: "Godzilla's atomic breath"
-  note: "James served as scientific advisor."
+- outlet: Quanta
+  year: 2024
+  title: "Evolution: Fast or Slow? Lizards Help Resolve a Paradox"
+  url: https://www.quantamagazine.org/evolution-fast-or-slow-lizards-help-resolve-a-paradox-20240102/
 
 - outlet: Live Science
   year: 2024
   title: "How fast does evolution happen? / Which animals are evolving fastest?"
+  note: "James served as scientific advisor."
+
+- outlet: Science News Explores
+  year: 2023
+  title: "Godzilla's atomic breath"
   note: "James served as scientific advisor."
