@@ -46,7 +46,9 @@ seoTitle: "Publications on Anole & Lizard Evolution · Stroud Lab"
             {%- if pub.type == "volume" %}<span class="tag">Edited volume</span>{% endif %}
             <br>
             <span class="pub__authors">{{ pub.authors | highlightAuthors(site.labNames) | safe }}</span>
-            <span class="pub__venue">{{ pub.journal }}</span>{% if pub.detail %}, {{ pub.detail }}{% endif %}.
+            {%- if pub.journal %} <span class="pub__venue">{{ pub.journal }}</span>{% endif %}
+            {%- if pub.detail %}, {{ pub.detail }}{% endif %}
+            {%- if (pub.journal or pub.detail) and not (pub.detail and pub.detail.endsWith(".")) %}.{% endif %}
             {%- set pdfFile = pdfs.byTitle[pub.title] %}
             {%- if pub.doi or pub.url or pdfFile %}
             <div class="pub__meta">

@@ -81,10 +81,18 @@ seoTitle: "Lab Members · Stroud Lab, Georgia Tech"
     <p>
       The lab has mentored 29 undergraduates at Georgia Tech, five undergraduates
       at other universities, 32 Master's students, and four high school students
-      through the Fairchild Tropical Botanic Garden internship programme. Several
+      through the Fairchild Tropical Botanic Garden internship program. Several
       have published lab research as lead or co-authors, and several have presented
       it at international meetings.
     </p>
     <p><a class="btn" href="/join/">Join the lab</a></p>
   </div>
+  {%- set alumni = people | where("group", "alumni") %}
+  {%- if alumni | length %}
+  <div class="wrap" style="margin-top:3rem">
+    <div class="people-grid">
+      {%- for p in alumni %}{{ person(p) }}{% endfor %}
+    </div>
+  </div>
+  {%- endif %}
 </section>

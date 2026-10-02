@@ -33,6 +33,13 @@ module.exports = function (eleventyConfig) {
     return (items || []).slice().sort((a, b) => rank(a.outlet) - rank(b.outlet) || t(b.date) - t(a.date));
   });
 
+  // Newest first. A year-only or month-only date sorts to the start of that
+  // year or month, so it lands after the fully dated items from the same period.
+  eleventyConfig.addFilter("byDateDesc", function (items) {
+    const t = (d) => new Date(d instanceof Date ? d : String(d)).getTime() || 0;
+    return (items || []).slice().sort((a, b) => t(b.date) - t(a.date));
+  });
+
   // Every item in media.yaml's `stories`, each tagged with its story's key.
   eleventyConfig.addFilter("allMedia", function (stories) {
     return Object.entries(stories || {}).flatMap(([story, items]) =>
@@ -99,7 +106,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("citation", function (p) {
     const doi = p.doi ? ` <a href="${p.doi}">${p.doi}</a>` : "";
     const venue = [p.journal ? `<em>${p.journal}</em>` : "", p.detail || ""].filter(Boolean).join(", ");
-    return `${p.authors} (${p.year}) ${p.title}. ${venue}.${doi}`;
+    const end = venue ? ` ${venue}${venue.endsWith(".") ? "" : "."}` : "";
+    return `${p.authors} (${p.year}) ${p.title}.${end}${doi}`;
   });
 
   // BibTeX entry for a paper.

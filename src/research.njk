@@ -54,8 +54,8 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
           operates across individuals, species, space, and time, not in theory but
           as a measurable process in a real natural community. The community has five
           species: two semi-terrestrial specialists, two arboreal canopy
-          specialists, and one tree trunk specialist. We sample every single lizard--between 800 and 1,000 lizards at any given time--every
-          every spring and fall.
+          specialists, and one tree trunk specialist. We sample every single lizard (between 800 and 1,000 lizards at any given time) every
+          spring and fall.
         </p>
         <p>
           Sampling twice a year lets us measure
@@ -65,8 +65,8 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
           since (albeit with a forced hiatus during COVID).
         </p>
         <p>
-          Our Lizard Island field study is modelled on Peter and Rosemary Grants' exceptional
-          long-term evolutionary field study of Darwin's finches in the Galápagos - our ambition is
+          Our Lizard Island field study is modeled on Peter and Rosemary Grant's exceptional
+          long-term evolutionary field study of Darwin's finches in the Galápagos. Our ambition is
           for Lizard Island to be the lizard analogue!
         </p>
       </div>
@@ -96,19 +96,19 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
           The first is a gradient, on which we are perfectly situated here at Georgia
           Tech in Atlanta, Georgia. Green anoles naturally colonized south Florida from tropical
           Cuba about 5 to 7 million years ago and now live all of the way north into deeply
-          temperate Tennessee and North Carolina. Our initial work suggests that changes to thier
+          temperate Tennessee and North Carolina. Our initial work suggests that changes to their
           physiological tolerance limits are not what facilitated this range expansion: lower thermal limits differ
           surprisingly little across that range, especially set against how much
-          the enviornment itself varies thermally. Instead, behavior is what differs. In regions where air temperatures drop
-          below their green anole's critical cold tolerance limit, they stop being obligate arboreal
-          specialists and move down into subterranean thermal refugia. The major ecological transition has been the
+          the environment itself varies thermally. Instead, behavior is what differs. In regions where air temperatures drop
+          below the green anole's critical cold tolerance limit, they stop being obligate arboreal
+          specialists and move down into subterranean thermal refugia. This ecological transition has been the
           key to unlocking a tropical-to-temperate transition, which is notoriously difficult to achieve.
         </p>
         <p>
           The second is speed. How fast can any of this happen? The tropical
           lizards that have arrived in Florida over the past century give us
           contemporary introductions with known start dates, allowing us to estimate 
-          both the adaptive pathways--and rate--of evolutionary response. We combine ecological,
+          both the adaptive pathways (and rate) of evolutionary response. We combine ecological,
           physiological, and genomic and transcriptomic approaches, working toward
           an integrated account of how species can rapidly adapt to their local environments.
         </p>
@@ -137,7 +137,7 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
           current frontier of the discipline.
         </p>
         <p>
-          We are confident that advanced instrumentation of both orgnaisms and ecosystems 
+          We are confident that advanced instrumentation of both organisms and ecosystems 
           in the wild is the future of ecology and evolution. For example, 
           ultra-lightweight wearable sensors let us track movement, behavior,
           physiology, and interactions passively, on free-living animals, in ways
@@ -169,7 +169,7 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
       <div>
         <h2>Introduced species as natural experiments</h2>
         <p>
-          A theme running under all three of the programmes above is our use of
+          A theme running under all three of the programs above is our use of
           introduced species. Introductions are "natural" field experiments in ecology and evolution
           at temporal and spatial scales no one could (or would be allowed to) establish deliberately: novel
           abiotic conditions, novel species interactions, and communities assembling
@@ -220,7 +220,9 @@ seoTitle: "Research on Natural Selection in Anole Lizards · Stroud Lab"
         <span class="pub__title">{{ pub.title | safe }}</span><br>
         <span class="pub__authors">{{ pub.authors }}</span>
         ({{ pub.year }})
-        <span class="pub__venue">{{ pub.journal }}</span>{% if pub.detail %}, {{ pub.detail }}{% endif %}.
+        {%- if pub.journal %} <span class="pub__venue">{{ pub.journal }}</span>{% endif %}
+        {%- if pub.detail %}, {{ pub.detail }}{% endif %}
+        {%- if (pub.journal or pub.detail) and not (pub.detail and pub.detail.endsWith(".")) %}.{% endif %}
         {% if pub.doi %}<div class="pub__meta"><a href="{{ pub.doi }}">DOI</a></div>{% endif %}
       </div>
     </div>

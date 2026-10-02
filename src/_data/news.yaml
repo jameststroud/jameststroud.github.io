@@ -16,9 +16,9 @@
 # ---------------------------------------------------------------------------
 
 - date: 2026-09-21
-  title: "First Fall 2026 Sleepy Lizard survey....57 lizards in 60 mins!"
+  title: "First Fall 2026 Sleepy Lizard survey: 57 lizards in 60 mins!"
   body: >
-    As part of our larger "Sleepy Lizard Project" investiating seasona thermoregulatory behavior in
+    As part of our larger "Sleepy Lizard Project" investigating seasonal thermoregulatory behavior in
     American green anoles across their entire range, our Stroud Lab team kicked off the season with 
     a whopping 57 lizards last night!
   link:  https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/
@@ -29,7 +29,7 @@
 - date: 2026-09-16
   title: "A historic moment in the Stroud Lab: First DNA extractions in our new genetics lab!"
   body: >
-    PhD student Taylor Cooper and undergrad research assitant Haelin Lee just completed the first ever
+    PhD student Taylor Cooper and undergrad research assistant Haelin Lee just completed the first ever
     DNA extractions in our new genetics lab! A very exciting moment for us. Onwards to the results!
   image: /assets/img/news/tlc_haelin_dna.jpg
   imageAlt: "Taylor Cooper and Haelin Lee with the first Stroud Lab DNA extractions!"  
@@ -38,17 +38,17 @@
   title: "Presentation at the Packard Foundation annual meeting"
   body: >
     James presented at his first Packard Foundation annual meeting, telling everyone all about the 
-    science we have done--and plan to do--on Lizard Island! The meeting was inside the beautiful Monterey Bay 
+    science we have done (and plan to do) on Lizard Island! The meeting was inside the beautiful Monterey Bay 
     Aquarium, and all of the talks were spectacular.
   image: /assets/img/news/james_packard.jpg
   imageAlt: "James presenting at the 2026 Packard Foundation meeting with Lizard Island and a happy Jon Suh on the screen"  
     
 - date: 2026-07-22
-  title: "Georgia Tech funds our wearable sensor programme"
+  title: "Georgia Tech funds our wearable sensor program"
   body: >
     A new Georgia Tech award supports the next phase of our ultra-light wearable
     sensor work, with colleagues Dr. Ben Freeman and Dr. Emily Weigl in the School of Biological Sciences. The sensors let us track
-    movement, behaviour, physiology, and interactions of lots of animals on campus, from butterflies to lizards to birds!
+    movement, behavior, physiology, and interactions of lots of animals on campus, from butterflies to lizards to birds!
   image: /assets/img/news/caro-ctt-tag.jpg
   imageAlt: "A green anole on Georgia Tech's campus wearing an ultra-lightweight wearable tracker"  
 
@@ -79,6 +79,13 @@
     James was named an Atwood Rising Star in Evolution and gave the accompanying
     lecture at the University of Toronto.
 
+- date: 2025-10-15
+  title: "Packard Fellowship in Science and Engineering"
+  body: >
+    James has been awarded a Packard Fellowship for <em>Revealing evolution's hidden
+    pathways: how behavior shapes natural selection</em>. The fellowship provides
+    $875,000 over five years.
+
 - date: 2025-10-13
   title: "Three-legged lizards make the front page of the New York Times"
   body: >
@@ -89,17 +96,10 @@
   link: https://doi.org/10.1086/737525
   linkText: "Read the paper"
 
-- date: 2025-10-15
-  title: "Packard Fellowship in Science and Engineering"
-  body: >
-    James has been awarded a Packard Fellowship for <em>Revealing evolution's hidden
-    pathways: how behavior shapes natural selection</em>. The fellowship provides
-    $875,000 over five years.
-
 - date: 2025-06-10
   title: "Maxwell/Hanrahan Award in Field Biology"
   body: >
-    The Maxwell/Hanrahan Foundation has recognised the lab's long-term field work
+    The Maxwell/Hanrahan Foundation has recognized the lab's long-term field work
     with a $100,000 Award in Field Biology.
 
 - date: 2025-03-23
