@@ -154,7 +154,9 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   padding: 0 var(--gutter);
 }
 
-/* White links row */
+/* White links row. Research, People and Outreach carry a dropdown: the label
+   links to the section's first page, and the caret button beside it opens
+   the menu for keyboard and touch users. Mouse users also get it on hover. */
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -162,9 +164,11 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   gap: .1rem 1.5rem;
   list-style: none;
   margin: 0;
-  padding: .55rem 0 0;
+  padding: .55rem 0;
 }
-.nav__list a {
+.nav__item { position: relative; display: flex; align-items: center; }
+.nav__link,
+.nav__menu {
   font-family: var(--display);
   font-size: .9rem;
   font-weight: 600;
@@ -176,32 +180,95 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   display: inline-block;
   opacity: .88;
 }
-.nav__list a:hover { opacity: 1; border-bottom: 1px solid rgba(255,255,255,.55); }
-.nav__list a[aria-current="page"] { opacity: 1; border-bottom: 2px solid var(--accent-lt); }
+.nav__menu { display: none; }
+/* Tablet widths: tighten slightly so the six items stay on one line. */
+@media (max-width: 62rem) {
+  .nav__list { gap: .1rem 1rem; }
+  .nav__link { font-size: .85rem; letter-spacing: .07em; }
+}
+.nav__link:hover { color: var(--on-navy); opacity: 1; border-bottom: 1px solid rgba(255,255,255,.55); }
+.nav__item--sub:hover > .nav__link,
+.nav__item.is-open > .nav__link { opacity: 1; }
+.nav__item.is-active > .nav__link { opacity: 1; border-bottom: 2px solid var(--accent-lt); }
 
-/* Orange links row — sits directly inside navbar__inner, below nav__list */
-.nav-feature {
-  display: flex;
-  align-items: center;
-  padding: .2rem 0 .55rem;
-  gap: 0;
+.nav__toggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  margin: 0 0 0 .3rem;
+  padding: .45rem .25rem;
+  color: var(--on-navy);
+  opacity: .88;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
-.nav-feature a {
+.nav__toggle:hover { opacity: 1; }
+.nav__toggle::before {
+  content: "";
+  display: block;
+  width: .42rem;
+  height: .42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-25%) rotate(45deg);
+  transition: transform .15s ease;
+}
+.nav__item.is-open > .nav__toggle::before { transform: translateY(25%) rotate(-135deg); }
+
+.navbar a:focus-visible,
+.navbar button:focus-visible {
+  outline: 2px solid var(--navy-soft);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.nav__sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  z-index: 50;
+  min-width: 14rem;
+  margin: 0;
+  padding: .45rem 0;
+  list-style: none;
+  background: var(--bg);
+  border-top: 2px solid var(--accent-lt);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 10px 24px rgba(34, 33, 29, .14);
+}
+.nav__item.is-open > .nav__sub { display: block; }
+@media (hover: hover) and (min-width: 46.0625rem) {
+  .nav__item--sub:hover > .nav__sub { display: block; }
+}
+/* Without JavaScript the caret buttons do nothing, so let focus open the menu. */
+html:not(.js) .nav__item--sub:focus-within > .nav__sub { display: block; }
+.nav__sub a {
+  display: block;
+  padding: .4rem 1rem;
   font-family: var(--display);
-  font-size: .9rem;
-  font-weight: 700;
+  font-size: .8rem;
+  font-weight: 600;
   letter-spacing: .08em;
+  line-height: 1.5;
   text-transform: uppercase;
-  color: var(--accent);
-  border: 0 !important;
-  text-decoration: none;
+  white-space: nowrap;
+  color: var(--navy-soft);
+  border: 0;
 }
-.nav-feature a:hover { border-bottom: 1px solid var(--accent-lt) !important; color: var(--accent-dk); }
-.nav-feature a[aria-current="page"] { border-bottom: 2px solid var(--accent) !important; }
-.nav-feature a + a::before {
-  content: "•";
-  margin: 0 0.6rem;
-  color: var(--accent);
+.nav__sub a:hover { background: var(--bg-alt); color: var(--accent-dk); }
+.nav__sub a[aria-current="page"] { color: var(--accent-dk); box-shadow: inset 3px 0 0 var(--accent-lt); }
+.nav__ext { margin-left: .3em; font-size: .9em; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ==========================================================================
@@ -784,7 +851,6 @@ a.species__card.story-card {
   .hero__img { aspect-ratio: 2400 / 500; }
   .hero__img--short { aspect-ratio: auto; height: auto; }
   .navbar__inner { padding: .6rem var(--gutter) .7rem; }
-  .nav__list { gap: .1rem 1.05rem; }
   .strapline { font-size: .82rem; margin-top: 1.1rem; }
   .footer { margin-top: 0; }
   .tool-entry--with-img {
@@ -793,25 +859,62 @@ a.species__card.story-card {
 
   .wrap-hero { padding: 1.5rem var(--gutter); }
 
+  /* Small screens: a Menu button opens the list, and each dropdown becomes
+     an indented list under its section, opened by the caret button. */
+  .js .nav__menu {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    background: none;
+    cursor: pointer;
+  }
+  .nav__menu-icon {
+    width: 1.1rem;
+    height: 2px;
+    background: currentColor;
+    box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor;
+  }
   .nav__list {
+    flex-direction: column;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    justify-content: flex-start;
-    padding-bottom: .3rem;
+    align-items: stretch;
+    gap: 0;
+    padding: .3rem 0 0;
   }
-  .nav__list li { flex: 0 0 auto; }
-  .nav__list a { font-size: .78rem; letter-spacing: .06em; }
-
-  .nav-feature {
+  .js .nav__list { display: none; }
+  .js .navbar.is-open .nav__list { display: flex; }
+  .nav__item {
     flex-wrap: wrap;
-    row-gap: .3rem;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,.35);
   }
-  .nav-feature a { font-size: .78rem; }
+  .nav__link { font-size: .85rem; letter-spacing: .06em; padding: .55rem 0; }
+  .nav__toggle { padding: .75rem .6rem; }
+  .nav__sub,
+  html:not(.js) .nav__item--sub:focus-within > .nav__sub {
+    position: static;
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 0 0 .55rem 1rem;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  html:not(.js) .nav__sub { display: block; }
+  .nav__sub a {
+    padding: .35rem 0;
+    font-size: .78rem;
+    letter-spacing: .06em;
+    white-space: normal;
+    color: var(--on-navy);
+  }
+  .nav__sub a:hover { background: none; color: var(--on-navy); text-decoration: underline; }
+  .nav__sub a[aria-current="page"] { color: var(--on-navy); box-shadow: inset 3px 0 0 var(--accent-lt); padding-left: .6rem; }
 }
 
 @media print {
-  .navbar, .nav-feature, .hero, .footer { display: none; }
+  .navbar, .hero, .footer { display: none; }
 }
 
 /* Lightbox ------------------------------------------------------------ */

@@ -1,16 +1,36 @@
 {
   "main": [
-    { "title": "Home", "url": "/" },
-    { "title": "Research", "url": "/research/" },
-    { "title": "Publications", "url": "/publications/" },
-    { "title": "Software & Tools", "url": "/software/" },
-    { "title": "Lab Members", "url": "/people/" },
-    { "title": "Lab News", "url": "/news/" },
-    { "title": "Teaching & Outreach", "url": "/outreach/" },
-    { "title": "Join the Lab!", "url": "/join/" }
-  ],
-  "feature": [
-  { "title": "Florida Anoles", "url": "/miami-lizards/" },
-  { "title": "Sleepy Lizard Project", "url": "https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/" },
-  { "title": "Lizards on the Loose", "url": "/outreach/" }
-]}
+    {
+      "title": "Research", "url": "/research/", "id": "research",
+      "section": ["/research/", "/software/"],
+      "children": [
+        { "title": "Research overview", "url": "/research/" },
+        { "title": "Lizard Island", "url": "/research/lizard-island/" },
+        { "title": "Cold snaps and lizards", "url": "/research/cold-snaps/" },
+        { "title": "Hurricanes and lizards", "url": "/research/hurricanes-and-lizards/" },
+        { "title": "Three-legged lizards", "url": "/research/three-legged-lizards/" },
+        { "title": "Software & Tools", "url": "/software/" }
+      ]
+    },
+    { "title": "Publications", "url": "/publications/", "section": ["/publications/"] },
+    {
+      "title": "People", "url": "/james-stroud/", "id": "people",
+      "section": ["/people/", "/james-stroud/"],
+      "children": [
+        { "title": "James Stroud", "url": "/james-stroud/" },
+        { "title": "Lab Members", "url": "/people/" }
+      ]
+    },
+    { "title": "News", "url": "/news/", "section": ["/news/"] },
+    {
+      "title": "Outreach", "url": "/outreach/", "id": "outreach",
+      "section": ["/outreach/", "/miami-lizards/", "/lizards-on-the-loose/"],
+      "children": [
+        { "title": "Teaching & Outreach", "url": "/outreach/" },
+        { "title": "Florida Anoles", "url": "/miami-lizards/" },
+        { "title": "Sleepy Lizard Project", "url": "https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/", "external": true }
+      ]
+    },
+    { "title": "Join the Lab!", "url": "/join/", "section": ["/join/"] }
+  ]
+}
