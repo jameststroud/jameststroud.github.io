@@ -47,8 +47,11 @@ module.exports = function () {
 
   const used = new Set();
   return pubs.filter((p) => p.title).map((p) => {
-    let slug = slugFor(p);
-    for (let n = 2; used.has(slug); n++) slug = slugFor(p) + "-" + n;
+    // `slug:` in publications.yaml pins a page's URL, so correcting a title
+    // or year later does not break links to the old page.
+    const base = p.slug || slugFor(p);
+    let slug = base;
+    for (let n = 2; used.has(slug); n++) slug = base + "-" + n;
     used.add(slug);
     const doi = normDoi(p.doi);
     return Object.assign({}, p, parseDetail(p.detail), {
