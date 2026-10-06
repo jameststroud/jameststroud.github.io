@@ -940,6 +940,47 @@ a.species__card.story-card {
   .person__links a:hover, .footer p a:hover, .pub__meta a:hover { text-decoration-color: var(--accent); }
 }
 
+/* Phones: layout polish. Everything here sits below the 46rem breakpoint,
+   so tablet and desktop layouts are untouched. */
+@media (max-width: 46rem) {
+  .masthead { padding: 1.1rem 0 1rem; }
+  h1 { font-size: clamp(1.75rem, 1rem + 4vw, 2.1rem); }
+  .page-title { padding-top: 3rem; }
+
+  /* Photo heroes show the whole frame instead of a thin strip. The home
+     banner has words in the image, so it keeps its shape. */
+  .hero__img:not(.hero__img--short):not(.hero__img--banner) { aspect-ratio: 16 / 5; }
+
+  /* The strapline stacks one phrase per line, without dangling bullets. */
+  .strapline span { display: block; }
+  .strapline b { display: none; }
+
+  /* Browsers indent bare figures by 40px each side; use the full column. */
+  main figure { margin-left: 0; margin-right: 0; }
+
+  /* Headshots match the PI photo instead of filling the screen. */
+  .person__photo { max-width: 13rem; }
+
+  .card,
+  a.species__card.story-card { padding: 1.4rem 1.25rem; }
+
+  .labpics__nav { width: 2.75rem; height: 2.75rem; }
+  .lightbox { padding: 3.5rem .75rem 1.5rem; }
+  .lightbox__close { width: 2.75rem; height: 2.75rem; top: .6rem; right: .6rem; }
+}
+
+/* Phones and tablets: balance heading lines so none ends on a lone word. */
+@media (max-width: 64rem) {
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+/* Touch tablets keep the one-line menu, with taller tap targets. */
+@media (pointer: coarse) and (min-width: 46.0625rem) {
+  .nav__list { padding: .2rem 0; }
+  .nav__link { padding: .7rem 0; }
+  .nav__toggle { padding: .95rem .5rem; }
+}
+
 @media print {
   .navbar, .hero, .footer { display: none; }
 }
