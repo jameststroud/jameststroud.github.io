@@ -20,7 +20,7 @@ seoTitle: "Lab News · Stroud Lab, Georgia Tech"
     <div class="news-item">
       <div class="news-item__media">
         <div class="news-item__date">{{ item.dateText or (item.date | prettyDate) }}</div>
-        {% if item.image %}<img class="news-item__img" src="{{ item.image }}" alt="{{ item.imageAlt or item.title }}" sizes="(min-width: 60rem) 24rem, 100vw">{% endif %}
+        {% if item.image %}<img class="news-item__img" src="{{ item.image }}" alt="{{ item.imageAlt or item.title }}" sizes="(min-width: 60rem) 24rem, 100vw"{% if loop.first %} loading="eager" fetchpriority="high"{% endif %}>{% endif %}
       </div>
       <div>
         <h3>{{ item.title }}</h3>
