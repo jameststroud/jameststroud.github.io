@@ -1,0 +1,2647 @@
+{
+ "home@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=2",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=3",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=4",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=3",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 157,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "input#pubSearch.pub-search 264x43 'Search publications'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 16px type=search"
+  ]
+ },
+ "paper@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "25.6px lines=6",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 9,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=1",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 11,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 177x28 'ML-Morph Web'",
+   "a 130x28 'LizardLens'",
+   "a 66x28 'lande'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=1",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 22,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 98x43 'Google Scholar'",
+   "a 90x43 'ResearchGate'",
+   "a 44x43 'CV'",
+   "a 70x43 'Full profile'",
+   "a 44x43 'Email'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=1",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=2",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=2",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=1",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 13,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=2",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=1",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 19,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 44x43 'CV'",
+   "a 47x43 'The lab'",
+   "a 128x43 'Georgia Tech profile'",
+   "a 98x43 'Google Scholar'",
+   "a 44x43 'ORCID'",
+   "a 125x43 'X (@jamesTstroud)'",
+   "a 114x43 'The Conversation'",
+   "a 90x43 'ResearchGate'",
+   "a 46x43 'GitHub'",
+   "a 59x43 'Wikidata'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "28.8px lines=2",
+  "headerHeight": 126,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 269x37 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@320": {
+  "scrollWidth": 320,
+  "clientWidth": 320,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 195x39 ''",
+   "input#lock-token 274x39 ''",
+   "input#lock-remember 13x13 ''",
+   "button 246x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 16px type=text",
+   "input#lock-token 16px type=password",
+   "input#lock-remember 16px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ },
+ "home@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=2",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=3",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=3",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=3",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 159,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "input#pubSearch.pub-search 304x43 'Search publications'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 16px type=search"
+  ]
+ },
+ "paper@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "25.6px lines=5",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 9,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 11,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 177x28 'ML-Morph Web'",
+   "a 130x28 'LizardLens'",
+   "a 66x28 'lande'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 23,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 302x32 'James T. Stroud, Ph.D.'",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 98x43 'Google Scholar'",
+   "a 90x43 'ResearchGate'",
+   "a 44x43 'CV'",
+   "a 70x43 'Full profile'",
+   "a 44x43 'Email'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=2",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=2",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 13,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=2",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 19,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 44x43 'CV'",
+   "a 47x43 'The lab'",
+   "a 128x43 'Georgia Tech profile'",
+   "a 98x43 'Google Scholar'",
+   "a 44x43 'ORCID'",
+   "a 125x43 'X (@jamesTstroud)'",
+   "a 114x43 'The Conversation'",
+   "a 90x43 'ResearchGate'",
+   "a 46x43 'GitHub'",
+   "a 59x43 'Wikidata'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "30.4px lines=1",
+  "headerHeight": 130,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "a.masthead__logo 302x42 ''",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@360": {
+  "scrollWidth": 360,
+  "clientWidth": 360,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 115x39 ''",
+   "input#lock-token 286x39 ''",
+   "input#lock-remember 13x13 ''",
+   "button 286x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 16px type=text",
+   "input#lock-token 16px type=password",
+   "input#lock-remember 16px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ },
+ "home@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 15,
+  "smallTargetSamples": [
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=3",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 161,
+  "smallTargetSamples": [
+   "input#pubSearch.pub-search 334x43 'Search publications'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 16px type=search"
+  ]
+ },
+ "paper@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "25.6px lines=5",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "a 177x28 'ML-Morph Web'",
+   "a 130x28 'LizardLens'",
+   "a 66x28 'lande'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 22,
+  "smallTargetSamples": [
+   "a 302x32 'James T. Stroud, Ph.D.'",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 98x43 'Google Scholar'",
+   "a 90x43 'ResearchGate'",
+   "a 44x43 'CV'",
+   "a 70x43 'Full profile'",
+   "a 44x43 'Email'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 12,
+  "smallTargetSamples": [
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=2",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 18,
+  "smallTargetSamples": [
+   "a 129x43 'stroud@gatech.edu'",
+   "a 44x43 'CV'",
+   "a 47x43 'The lab'",
+   "a 128x43 'Georgia Tech profile'",
+   "a 98x43 'Google Scholar'",
+   "a 44x43 'ORCID'",
+   "a 125x43 'X (@jamesTstroud)'",
+   "a 114x43 'The Conversation'",
+   "a 90x43 'ResearchGate'",
+   "a 46x43 'GitHub'",
+   "a 59x43 'Wikidata'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "31.6px lines=1",
+  "headerHeight": 134,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@390": {
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 145x39 ''",
+   "input#lock-token 316x39 ''",
+   "input#lock-remember 13x13 ''",
+   "button 316x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 16px type=text",
+   "input#lock-token 16px type=password",
+   "input#lock-remember 16px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ },
+ "home@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=2",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=2",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 15,
+  "smallTargetSamples": [
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 44x44 'DOI'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=3",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=2",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 163,
+  "smallTargetSamples": [
+   "input#pubSearch.pub-search 374x43 'Search publications'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a 44x44 'Link'",
+   "a.pub__pdf 44x44 'PDF'",
+   "a 44x44 'DOI'",
+   "a.pub__pdf 44x44 'PDF'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 16px type=search"
+  ]
+ },
+ "paper@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "25.6px lines=4",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 8,
+  "smallTargetSamples": [
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "a 177x28 'ML-Morph Web'",
+   "a 130x28 'LizardLens'",
+   "a 66x28 'lande'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 22,
+  "smallTargetSamples": [
+   "a 302x32 'James T. Stroud, Ph.D.'",
+   "a 129x43 'stroud@gatech.edu'",
+   "a 98x43 'Google Scholar'",
+   "a 90x43 'ResearchGate'",
+   "a 44x43 'CV'",
+   "a 70x43 'Full profile'",
+   "a 44x43 'Email'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 44x43 'Email'",
+   "a 50x43 'Scholar'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=2",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 12,
+  "smallTargetSamples": [
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 18,
+  "smallTargetSamples": [
+   "a 129x43 'stroud@gatech.edu'",
+   "a 44x43 'CV'",
+   "a 47x43 'The lab'",
+   "a 128x43 'Georgia Tech profile'",
+   "a 98x43 'Google Scholar'",
+   "a 44x43 'ORCID'",
+   "a 125x43 'X (@jamesTstroud)'",
+   "a 114x43 'The Conversation'",
+   "a 90x43 'ResearchGate'",
+   "a 46x43 'GitHub'",
+   "a 59x43 'Wikidata'",
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "33.2px lines=1",
+  "headerHeight": 138,
+  "overflow": [],
+  "smallTargets": 7,
+  "smallTargetSamples": [
+   "a 132x42 'stroud@gatech.edu'",
+   "a 224x42 'Prospective students & postdoc'",
+   "a 92x42 'James Stroud'",
+   "a 100x42 'Google Scholar'",
+   "a 44x42 'X'",
+   "a 47x42 'GitHub'",
+   "a 113x42 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@430": {
+  "scrollWidth": 430,
+  "clientWidth": 430,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 185x39 ''",
+   "input#lock-token 356x39 ''",
+   "input#lock-remember 13x13 ''",
+   "button 356x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 16px type=text",
+   "input#lock-token 16px type=password",
+   "input#lock-remember 16px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ },
+ "home@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 185,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 18,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=2",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 203,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "input#pubSearch.pub-search 416x39 'Search publications'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__title 418x20 'Global patterns of temporal ni'",
+   "a.pub__title 483x20 'Quantifying priority effects i'",
+   "a.pub__title 566x20 'PyTLidar: A Python package for'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__title 449x20 'Priority effects inhibit the r'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__title 615x20 'A global perspective on adapti'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 15.2px type=search"
+  ]
+ },
+ "paper@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "25.6px lines=3",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 12,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "summary 712x30 'Cite this paper'",
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 177x28 'ML-Morph Web'",
+   "a 49x16 'Preprint'",
+   "a 130x28 'LizardLens'",
+   "a 49x16 'Preprint'",
+   "a 49x16 'Preprint'",
+   "a 66x28 'lande'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 25,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 302x32 'James T. Stroud, Ph.D.'",
+   "a 117x16 'stroud@gatech.edu'",
+   "a 89x16 'Google Scholar'",
+   "a 82x16 'ResearchGate'",
+   "a 15x16 'CV'",
+   "a 63x16 'Full profile'",
+   "a 34x16 'Email'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 12,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "button.labpics__nav.labpics__nav--prev 38x38 '‹'",
+   "button.labpics__nav.labpics__nav--next 38x38 '›'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 15,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 21,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 117x16 'stroud@gatech.edu'",
+   "a 15x16 'CV'",
+   "a 43x16 'The lab'",
+   "a 117x16 'Georgia Tech profile'",
+   "a 89x16 'Google Scholar'",
+   "a 37x16 'ORCID'",
+   "a 114x16 'X (@jamesTstroud)'",
+   "a 104x16 'The Conversation'",
+   "a 82x16 'ResearchGate'",
+   "a 42x16 'GitHub'",
+   "a 54x16 'Wikidata'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "33.6px lines=1",
+  "headerHeight": 187,
+  "overflow": [],
+  "smallTargets": 10,
+  "smallTargetSamples": [
+   "button.nav__toggle 23x37 'Research pages'",
+   "button.nav__toggle 23x37 'People pages'",
+   "button.nav__toggle 23x37 'Outreach pages'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@768": {
+  "scrollWidth": 768,
+  "clientWidth": 768,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 179x36 ''",
+   "input#lock-token 350x36 ''",
+   "input#lock-remember 13x13 ''",
+   "button 350x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 14px type=text",
+   "input#lock-token 14px type=password",
+   "input#lock-remember 14px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ },
+ "home@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 186,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=2",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 24,
+  "smallTargetSamples": [
+   "a.nav__link 92x38 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 21x16 'DOI'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "research-story@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=2",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x38 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "publications@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=2",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 233,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x38 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "input#pubSearch.pub-search 416x39 'Search publications'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__title 418x20 'Global patterns of temporal ni'",
+   "a.pub__title 483x20 'Quantifying priority effects i'",
+   "a.pub__title 754x20 'Beyond Righting Response: Dise'",
+   "a.pub__title 566x20 'PyTLidar: A Python package for'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__title 449x20 'Priority effects inhibit the r'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'",
+   "a.pub__pdf 26x16 'PDF'",
+   "a 21x16 'DOI'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag 10.56px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": [
+   "input#pubSearch.pub-search 15.2px type=search"
+  ]
+ },
+ "paper@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "32.768px lines=3",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 18,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x38 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "summary 744x30 'Cite this paper'",
+   "button.btn.paper__copy 153x42 'Copy BibTeX'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "software@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 22,
+  "smallTargetSamples": [
+   "a.nav__link 92x38 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 198x32 'ML-Morph Web'",
+   "a 49x16 'Preprint'",
+   "a 146x32 'LizardLens'",
+   "a 49x16 'Preprint'",
+   "a 49x16 'Preprint'",
+   "a 74x32 'lande'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "people@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 31,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x38 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 302x32 'James T. Stroud, Ph.D.'",
+   "a 117x16 'stroud@gatech.edu'",
+   "a 89x16 'Google Scholar'",
+   "a 82x16 'ResearchGate'",
+   "a 15x16 'CV'",
+   "a 63x16 'Full profile'",
+   "a 34x16 'Email'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 34x16 'Email'",
+   "a 45x16 'Scholar'",
+   "a 132x18 'stroud@gatech.edu'"
+  ],
+  "tinyText": [],
+  "inputs": []
+ },
+ "news@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x38 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "outreach@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x38 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "join@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 18,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x38 'Join the Lab!'",
+   "button.labpics__nav.labpics__nav--prev 38x38 '‹'",
+   "button.labpics__nav.labpics__nav--next 38x38 '›'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "miami-lizards@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 21,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x38 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 117x23 'Green anole'",
+   "a 120x23 'Brown anole'",
+   "a 134x23 'Crested anole'",
+   "a 102x23 'Bark anole'",
+   "a 121x23 'Knight anole'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "species@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x38 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "james-stroud@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 27,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x38 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x36 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 117x16 'stroud@gatech.edu'",
+   "a 15x16 'CV'",
+   "a 43x16 'The lab'",
+   "a 117x16 'Georgia Tech profile'",
+   "a 89x16 'Google Scholar'",
+   "a 37x16 'ORCID'",
+   "a 114x16 'X (@jamesTstroud)'",
+   "a 104x16 'The Conversation'",
+   "a 82x16 'ResearchGate'",
+   "a 42x16 'GitHub'",
+   "a 54x16 'Wikidata'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px"
+  ],
+  "inputs": []
+ },
+ "lizards-on-the-loose@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "17px",
+  "h1": "43.008px lines=1",
+  "headerHeight": 188,
+  "overflow": [],
+  "smallTargets": 16,
+  "smallTargetSamples": [
+   "a.nav__link 92x36 'Research'",
+   "button.nav__toggle 15x21 'Research pages'",
+   "a.nav__link 123x36 'Publications'",
+   "a.nav__link 67x36 'People'",
+   "button.nav__toggle 15x21 'People pages'",
+   "a.nav__link 49x36 'News'",
+   "a.nav__link 93x38 'Outreach'",
+   "button.nav__toggle 15x21 'Outreach pages'",
+   "a.nav__link 121x36 'Join the Lab!'",
+   "a 132x18 'stroud@gatech.edu'",
+   "a 224x18 'Prospective students & postdoc'",
+   "a 92x18 'James Stroud'",
+   "a 100x18 'Google Scholar'",
+   "a 9x18 'X'",
+   "a 47x18 'GitHub'",
+   "a 113x18 'Curriculum vitae'"
+  ],
+  "tinyText": [
+   "p.eyebrow 11.52px",
+   "span.tag.tag--press 10.56px"
+  ],
+  "inputs": []
+ },
+ "stats@1024": {
+  "scrollWidth": 1024,
+  "clientWidth": 1024,
+  "hscroll": false,
+  "bodyFont": "16px",
+  "h1": "24px lines=1",
+  "headerHeight": 0,
+  "overflow": [],
+  "smallTargets": 4,
+  "smallTargetSamples": [
+   "input#lock-site 179x36 ''",
+   "input#lock-token 350x36 ''",
+   "input#lock-remember 13x13 ''",
+   "button 350x43 'Unlock'"
+  ],
+  "tinyText": [],
+  "inputs": [
+   "input#lock-site 14px type=text",
+   "input#lock-token 14px type=password",
+   "input#lock-remember 14px type=checkbox",
+   "input#from 14px type=date",
+   "input#to 14px type=date"
+  ]
+ }
+}
