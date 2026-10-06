@@ -74,7 +74,7 @@ ogImage: /assets/img/people/james-stroud.jpg
     </p>
     <ul>
       {%- for s in collections.stories %}
-      <li><a href="{{ s.url }}">{{ s.data.headline or s.data.title }}</a></li>
+      <li><a href="{{ s.data.externalUrl or s.url }}">{{ s.data.headline or s.data.title }}</a></li>
       {%- endfor %}
       <li><a href="/miami-lizards/">A field guide to the anoles of Miami</a></li>
     </ul>

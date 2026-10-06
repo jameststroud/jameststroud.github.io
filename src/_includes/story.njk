@@ -88,7 +88,7 @@ layout: base.njk
     <h2 class="center">More stories from the lab</h2>
     <div class="cards" style="margin-top:2rem">
       {%- for s in collections.stories %}{% if s.url != page.url %}
-      <a class="card species__card" href="{{ s.url }}">
+      <a class="card species__card" href="{{ s.data.externalUrl or s.url }}"{% if s.data.externalUrl %} target="_blank" rel="noopener"{% endif %}>
         <p class="card__kicker">Story</p>
         <h3>{{ s.data.cardTitle }}</h3>
         <p>{{ s.data.cardText }}</p>
