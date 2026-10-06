@@ -15,6 +15,24 @@
 #     imageAlt: "Description of the photo"  # optional; defaults to the title
 # ---------------------------------------------------------------------------
 
+- date: 2026-10-06
+  title: "Third Fall 2026 Sleepy Lizard survey: 52 lizards and a special guest!"
+  body: >
+    Last night, we recoverd 52 green anoles in our weekly on-campus sleeping lizard survey, and were joined by our special guest
+    Ari Miller, a former Losos Lab PhD student and now Postdoc at the Smithsonian Institute
+  link:  https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/
+  linkText: "Read more about our Sleepy Lizard Project here!"     
+  image: /assets/img/news/sleepylizards_6Oct.jpg
+  imageAlt: "Members of the Stroud Lab out in force for opening day of Sleepy Lizard Project: GT Campus"  
+  
+- date: 2026-09-16
+  title: "A historic moment in the Stroud Lab: First DNA extractions in our new genetics lab!"
+  body: >
+    PhD student Taylor Cooper and undergrad research assistant Haelin Lee just completed the first ever
+    DNA extractions in our new genetics lab! A very exciting moment for us. Onwards to the results!
+  image: /assets/img/news/tlc_haelin_dna.jpg
+  imageAlt: "Taylor Cooper and Haelin Lee with the first Stroud Lab DNA extractions!"  
+
 - date: 2026-09-21
   title: "First Fall 2026 Sleepy Lizard survey: 57 lizards in 60 mins!"
   body: >
