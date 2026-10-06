@@ -944,6 +944,16 @@ a.species__card.story-card {
   .navbar, .hero, .footer { display: none; }
 }
 
+/* Visitors who ask for reduced motion get no smooth scrolling, fades or zooms. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
 /* Lightbox ------------------------------------------------------------ */
 .lightbox-trigger { cursor: zoom-in; }
 
