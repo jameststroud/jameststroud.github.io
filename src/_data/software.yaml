@@ -1,24 +1,26 @@
 # ---------------------------------------------------------------------------
 # SOFTWARE & TOOLS
 # Add a repository link once the code is public and the `repo` line will appear.
+# Add a `url` line for tools with a live web app: the name becomes a link and
+# the address is shown beneath the description.
 # ---------------------------------------------------------------------------
 
-- name: AutoMorph
+- name: ML-Morph Web
   kicker: Automated Morphometric Landmarking
+  url: https://ml-morph-web.thestroudlab.com
   image: automorph-image.png
-  imageAlt: Screenshot of AutoMorph main control panel
+  imageAlt: Screenshot of the ML-Morph Web main control panel
   summary: >
     A generalizable machine learning framework for automated anatomical landmark
     detection in digital images. Built to landmark the lab's lizard radiographs
     and toepad scans without a person clicking every point, but written to
-    generalize beyond them. 
-  extra: >
-    You can try out AutoMorph for yourself here: <a href="https://haag-1.cc.gatech.edu/">https://haag-1.cc.gatech.edu/</a>.
+    generalize beyond them.
   paper: "Quintana et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731351
   
 - name: LizardLens
   kicker: Automated Species identification
+  url: https://lizardlens.thestroudlab.com
   image: lizardlens-equestris.jpg
   imageAlt: Screenshot of LizardLens identifying a Cuban knight anole
   summary: >
@@ -35,7 +37,7 @@
     non-experts out; here it becomes the entry point. Students get
     probability-ranked predictions instead of a guess, correct the bounding box
     by hand when the model is wrong, and each validated prediction becomes a real
-    iNaturalist observation. You can try out LizardLens for yourself here: <a href="https://lizard-class.cc.gatech.edu/">https://lizard-class.cc.gatech.edu/</a>.
+    iNaturalist observation.
   paper: "Chia et al., in review, Ecology and Evolution"
   doi: https://doi.org/10.64898/2026.06.10.731342
 
@@ -51,6 +53,7 @@
 
 - name: lande
   kicker: Toolbox for Natural Selection Analyses
+  url: https://lande.thestroudlab.com
   summary: >
     An R package for analyzing and visualizing natural selection, in development
     in the lab.

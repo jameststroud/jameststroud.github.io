@@ -2,9 +2,9 @@
 layout: base.njk
 title: Software & Tools
 permalink: /software/
-description: "Tools built in the Stroud Lab: LizardLens for identifying Florida anoles in photos, AutoMorph for automated landmarking, PyTLidar for LiDAR tree models, and lande for selection analyses."
+description: "Tools built in the Stroud Lab: LizardLens for identifying Florida anoles in photos, ML-Morph Web for automated landmarking, PyTLidar for LiDAR tree models, and lande for selection analyses."
 ogImage: /assets/img/hero/software.jpg
-seoTitle: "LizardLens, AutoMorph & PyTLidar Software · Stroud Lab"
+seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
 ---
 
 <section class="section">
@@ -35,9 +35,10 @@ seoTitle: "LizardLens, AutoMorph & PyTLidar Software · Stroud Lab"
       </div>
       <div>
         <p class="eyebrow">{{ s.kicker }}</p>
-        <h2>{{ s.name }}</h2>
+        <h2>{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h2>
         <p>{{ s.summary }}</p>
         {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
+        {% if s.url %}<p><a href="{{ s.url }}">{{ s.url }}</a></p>{% endif %}
         {% if s.paper or s.doi or s.repo %}
         <p class="pub__meta">
           {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
@@ -53,9 +54,10 @@ seoTitle: "LizardLens, AutoMorph & PyTLidar Software · Stroud Lab"
 <section class="section">
   <div class="wrap-text">
     <p class="eyebrow">{{ s.kicker }}</p>
-    <h2>{{ s.name }}</h2>
+    <h2>{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h2>
     <p>{{ s.summary }}</p>
     {% if s.extra %}<p>{{ s.extra | safe }}</p>{% endif %}
+    {% if s.url %}<p><a href="{{ s.url }}">{{ s.url }}</a></p>{% endif %}
     {% if s.paper or s.doi or s.repo %}
     <p class="pub__meta">
       {% if s.paper %}For details, see {{ s.paper }}.{% endif %}
