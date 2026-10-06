@@ -1,0 +1,463 @@
+# ---------------------------------------------------------------------------
+# ABSTRACTS, keyed by DOI. Shown on each paper's page on the website.
+#
+# Filled automatically from Crossref by the weekly publication check. An
+# empty value means Crossref had none; paste one in by hand if you like.
+# <em>...</em> is allowed for species names; blank lines start paragraphs.
+# ---------------------------------------------------------------------------
+10.1002/ece3.1645: >-
+  Populations occurring at species' range edges can be locally adapted to unique environmental
+  conditions. From a species' perspective, range‐edge environments generally have higher severity
+  and frequency of extreme climatic events relative to the range core. Under future climates,
+  extreme climatic events are predicted to become increasingly important in defining species'
+  distributions. Therefore, range‐edge genotypes that are better adapted to extreme climates
+  relative to core populations may be essential to species' persistence during periods of rapid
+  climate change. We use relatively simple conceptual models to highlight the importance of locally
+  adapted range‐edge populations (leading and trailing edges) for determining the ability of species
+  to persist under future climates. Using trees as an example, we show how locally adapted
+  populations at species' range edges may expand under future climate change and become more common
+  relative to range‐core populations. We also highlight how large‐scale habitat destruction
+  occurring in some geographic areas where many species range edge converge, such as biome
+  boundaries and ecotones (e.g., the arc of deforestation along the rainforest‐cerrado ecotone in
+  the southern Amazonia), can have major implications for global biodiversity. As climate changes,
+  range‐edge populations will play key roles in helping species to maintain or expand their
+  geographic distributions. The loss of these locally adapted range‐edge populations through
+  anthropogenic disturbance is therefore hypothesized to reduce the ability of species to persist in
+  the face of rapid future climate change.
+10.1002/ece3.1651: "Community ecology is an inherently complicated field, confounded by the conflicting use of fundamental terms. Nearly two decades ago, Fauth et\_al. (1996) demonstrated that imprecise language led to the virtual synonymy of important terms and so attempted to clearly define four keywords in community ecology; “\n<em>community,</em>\n” “\n<em>assemblage,</em>\n” “\n<em>guild,</em>\n” and “\n<em>ensemble</em>\n”. We revisit Fauth et\_al.'s conclusion and discuss how the use of these terms has changed over time since their review. An updated analysis of term definition from a selection of popular ecological textbooks suggests that definitions have drifted away from those encountered pre‐1996, and slightly disagreed with results from a survey of 100 ecology professionals (comprising of academic professors, nonacademic PhDs, graduate and undergraduate biology students). Results suggest that confusion about these terms is still widespread in ecology. We conclude with clear suggestions for definitions of each term to be adopted hereafter to provide greater cohesion among research groups."
+10.1002/ecy.2727: >-
+  Character displacement may facilitate species coexistence through niche partitioning. However, the
+  degree to which character displacement influences broader patterns of community assembly is
+  unclear. Here, we capitalize on a natural experiment of community assembly on the oceanic island
+  of Bermuda. Over the past century, three species of ecologically similar but distantly
+  related<em>Anolis</em>lizards have been introduced to Bermuda where no<em>Anolis</em>has ever
+  naturally existed. The Jamaican anole (<em>A. grahami</em>) arrived first in 1905 and dispersed
+  rapidly across the island. Five decades later, the Antiguan anole (<em>A. leachii</em>) and the
+  Barbadian anole (<em>A. extremus</em>) were introduced to independent locations. In 1991,<em>A.
+  leachii</em>and<em>A. extremus</em>were observed to nearly meet at a contact zone, but not yet to
+  coexist. We record that subsequent range expansion at this contact zone has been
+  asymmetrical;<em>A. leachii</em>invaded the range of<em>A. extremus</em>, but reciprocal invasion
+  by<em>A. extremus</em>has not occurred. When in allopatry in Bermuda, both species occupy
+  identical ecological space. However,<em>A. leachii</em>underwent rapid ecological character
+  displacement to use arboreal habitat when invading the range of<em>A. extremus</em>. These
+  findings highlight how character displacement may influence the process of dispersal and drive
+  patterns of coexistence and community assembly.
+10.1002/jez.2185: >-
+  Across the globe terrestrial ectotherms—amphibians and non‐avian reptiles—are facing a range of
+  emerging challenges. Increasing global temperatures, in particular, are affecting all aspects of
+  ectotherm biology and life history. Embryonic development is a thermally sensitive period of the
+  organismal lifecycle, yet the impacts of thermal stress on the early development of ectotherms
+  have significantly lagged behind studies of later stages and adult thermal physiology.
+  Morphogenesis, the stage where the major anatomical systems are actively forming, is particularly
+  sensitive to thermal stress, yet is not studied as often as later stages where growth is the
+  primary process happening within the egg. Here, we focus on the effects of thermal stress on the
+  first 12 days of development, the stages of morphogenesis, in the lizard <em>Anolis sagrei</em>.
+  We examine the resiliency of the early developmental stages to heat stress by incubating eggs at
+  temperatures that parallel conditions observed today and predicted over the next 50–100 years of
+  projected climate change. Our results suggest that some anole nests are currently at the thermal
+  limits for which the early embryonic stages can properly develop. Our results emphasize the
+  importance of studying early embryonic stages of development and the importance of studying
+  stage‐specific effects of thermal stress on squamate development.
+10.1007/s10530-017-1389-1: ''
+10.1007/s10980-016-0362-1: ''
+10.1007/s11252-019-0831-9: ''
+10.1016/j.biocon.2015.08.034: ''
+10.1016/j.fooweb.2017.05.003: ''
+10.1016/j.jnc.2014.05.003: ''
+10.1016/j.tree.2015.02.005: ''
+10.1016/j.tree.2017.06.006: ''
+10.1016/j.tree.2020.10.019: ''
+10.1016/j.tree.2022.09.005: ''
+10.1016/j.tree.2024.02.004: ''
+10.1038/s41467-024-54302-1: ''
+10.1038/s41558-023-01794-2: ''
+10.1038/s41586-025-08597-9: ''
+10.1038/s44260-026-00069-z: >-
+  The emergence of phototrophy is one of the most significant innovations in the history of life,
+  vastly increasing available metabolic energy. Phototrophy is, however, known to have arisen only
+  twice. This raises a curious question: if phototrophy was accessible enough to evolve twice, why
+  has it never arisen again despite billions of years of subsequent evolution? Through physiological
+  modeling, we demonstrate that chlorophototrophy and retinalophototrophy together saturate the
+  bioenergetic landscape available to light-harvesting systems. They represent opposite solutions to
+  key biophysical trade-offs: maximizing efficiency per photon versus maximizing metabolic flux,
+  specialization versus versatility, and sophistication versus simplicity. Together they create an
+  evolutionary priority effect, blocking any newly-arising phototrophic system from succeeding. By
+  revealing the basis of this competitive exclusion, our work sheds light on a general principle -
+  that early innovations can saturate ecological space such that they constrain future evolutionary
+  possibilities, making apparently ‘easy’ innovations appear as rare events.
+10.1073/pnas.2000801117: >-
+  Extreme climate events such as droughts, cold snaps, and hurricanes can be powerful agents of
+  natural selection, producing acute selective pressures very different from the everyday pressures
+  acting on organisms. However, it remains unknown whether these infrequent but severe disruptions
+  are quickly erased by quotidian selective forces, or whether they have the potential to durably
+  shape biodiversity patterns across regions and clades. Here, we show that hurricanes have enduring
+  evolutionary impacts on the morphology of anoles, a diverse Neotropical lizard clade. We first
+  demonstrate a transgenerational effect of extreme selection on toepad area for two populations
+  struck by hurricanes in 2017. Given this short-term effect of hurricanes, we then asked whether
+  populations and species that more frequently experienced hurricanes have larger toepads. Using 70
+  y of historical hurricane data, we demonstrate that, indeed, toepad area positively correlates
+  with hurricane activity for both 12 island populations of
+
+  <em>Anolis sagrei</em>
+
+  and 188
+
+  <em>Anolis</em>
+
+  species throughout the Neotropics. Extreme climate events are intensifying due to climate change
+  and may represent overlooked drivers of biogeographic and large-scale biodiversity patterns.
+10.1073/pnas.2018949118: ''
+10.1073/pnas.2222071120: >-
+  Species’ phenotypic characteristics often remain unchanged over long stretches of geological time.
+  Stabilizing selection—in which fitness is highest for intermediate phenotypes and lowest for the
+  extremes—has been widely invoked as responsible for this pattern. At the community level, such
+  stabilizing selection acting individually on co-occurring species is expected to produce a rugged
+  fitness landscape on which different species occupy distinct fitness peaks. However, even with an
+  explosion of microevolutionary field studies over the past four decades, evidence for persistent
+  stabilizing selection driving long-term stasis is lacking. Nonetheless, biologists continue to
+  invoke stabilizing selection as a major factor explaining macroevolutionary patterns. Here, by
+  directly measuring natural selection in the wild, we identified a complex community-wide fitness
+  surface in which four
+
+  <em>Anolis</em>
+
+  lizard species each occupy a distinct fitness peak close to their mean phenotype. The presence of
+  local fitness optima within species, and fitness valleys between species, presents a barrier to
+  adaptive evolutionary change and acts to maintain species differences through time. However,
+  instead of continuously operating stabilizing selection, we found that species were maintained on
+  these peaks by the combination of many independent periods among which selection fluctuated in
+  form, strength, direction, or existence and in which stabilizing selection rarely occurred. Our
+  results suggest that lack of substantial phenotypic evolutionary change through time may be the
+  result of selection, but not persistent stabilizing selection as classically envisioned.
+10.1086/737525: ''
+10.1093/biolinnean/blae088: >-
+  Convergence is considered powerful evidence for adaptation to similar natural selection pressures.
+  However, for many ecologically and morphologically convergent species, it remains unclear whether
+  convergence extends to reproductive strategies, which are particularly important because of their
+  tight connection to fitness. Here, by measuring key life-history traits (e.g. reproductive status,
+  egg size, oviposition frequency, reproductive effort) across a full annual cycle comprising both
+  reproductive and non-reproductive seasons, we discover divergence in reproductive strategies in
+  two Anolis lizards that are otherwise strikingly convergent in ecology, morphology, and behaviour.
+  The Cuban brown anole (Anolis sagrei) rapidly produces many small eggs during a concentrated
+  summer reproductive season, whereas the Puerto Rican crested anole (Anolis cristatellus) produces
+  comparatively fewer, larger eggs over a longer period. Thus, despite evolving highly convergent
+  ecomorphological phenotypes and both being constrained to a single-egg clutch, these species
+  exhibit marked divergence in life-history trade-off strategies along the fast–slow continuum. Our
+  results indicate that ecomorphological convergence evolved uncoupled from life-history pathways in
+  these species.
+10.1093/evolinnean/kzaf009: ''
+10.1093/iob/obab033: >-
+  Every stage of organismal life history is being challenged by global warming. Many species are
+  already experiencing temperatures approaching their physiological limits; this is particularly
+  true for ectothermic species, such as lizards. Embryos are markedly sensitive to thermal insult.
+  Here, we demonstrate that temperatures currently experienced in natural nesting areas can modify
+  gene expression levels and induce neural and craniofacial malformations in embryos of the lizard
+  Anolis sagrei. Developmental abnormalities ranged from minor changes in facial structure to
+  significant disruption of anterior face and forebrain. The first several days of postoviposition
+  development are particularly sensitive to this thermal insult. These results raise new concern
+  over the viability of ectothermic species under contemporary climate change. Herein, we propose
+  and test a novel developmental hypothesis that describes the cellular and developmental origins of
+  those malformations: cell death in the developing forebrain and abnormal facial induction due to
+  disrupted Hedgehog signaling. Based on similarities in the embryonic response to thermal stress
+  among distantly related species, we propose that this developmental hypothesis represents a common
+  embryonic response to thermal insult among amniote embryos. Our results emphasize the importance
+  of adopting a broad, multidisciplinary approach that includes both lab and field perspectives when
+  trying to understand the future impacts of anthropogenic change on animal development.
+10.1093/jhered/esz055: >-
+  Understanding the origins and early stages of diversification is one of the most elusive tasks in
+  adaptive radiation research. Classical approaches, which aim to infer past processes from
+  present-day patterns of biological diversity, are fraught with difficulties and assumptions. An
+  alternative approach has been to study young clades of relatively few species, which may represent
+  the putative early stages of adaptive radiation. However, it is difficult to predict whether those
+  groups will ever reach the ecological and morphological disparity observed in the sorts of clades
+  usually referred to as adaptive radiations, thereby making their utility in informing the early
+  stages of such radiations uncertain. Caribbean Anolis lizards are a textbook example of an
+  adaptive radiation; anoles have diversified independently on each of the 4 islands in the Greater
+  Antilles, producing replicated radiations of phenotypically diverse species. However, the
+  underlying processes that drove these radiations occurred 30–65 million years ago and so are
+  unobservable, rendering major questions about how these radiations came to be difficult to tackle.
+  What did the ancestral species of the anole radiation look like? How did new species arise? What
+  processes drove adaptive diversification? Here, we review what we have learned about the cryptic
+  early stages of adaptive radiation from studies of Anolis lizards, and how these studies have
+  attempted to bridge the process-pattern divide of adaptive radiation research. Despite decades of
+  research, however, fundamental questions linking eco-evolutionary processes to macroevolutionary
+  patterns in anoles remain difficult to answer.
+10.1093/jhered/esz064: >-
+  Adaptive radiation plays a fundamental role in our understanding of the evolutionary process.
+  However, the concept has provoked strong and differing opinions concerning its definition and
+  nature among researchers studying a wide diversity of systems. Here, we take a broad view of what
+  constitutes an adaptive radiation, and seek to find commonalities among disparate examples,
+  ranging from plants to invertebrate and vertebrate animals, and remote islands to lakes and
+  continents, to better understand processes shared across adaptive radiations. We surveyed many
+  groups to evaluate factors considered important in a large variety of species radiations. In each
+  of these studies, ecological opportunity of some form is identified as a prerequisite for adaptive
+  radiation. However, evolvability, which can be enhanced by hybridization between distantly related
+  species, may play a role in seeding entire radiations. Within radiations, the processes that lead
+  to speciation depend largely on (1) whether the primary drivers of ecological shifts are (a)
+  external to the membership of the radiation itself (mostly divergent or disruptive ecological
+  selection) or (b) due to competition within the radiation membership (interactions among members)
+  subsequent to reproductive isolation in similar environments, and (2) the extent and timing of
+  admixture. These differences translate into different patterns of species accumulation and
+  subsequent patterns of diversity across an adaptive radiation. Adaptive radiations occur in an
+  extraordinary diversity of different ways, and continue to provide rich data for a better
+  understanding of the diversification of life.
+10.1093/sysbio/syab041: >-
+  The evolution of key innovations—unique features that enable a lineage to interact with the
+  environment in a novel way—may drive broad patterns of adaptive diversity. However, traditional
+  tests of the key innovation hypothesis, those which attempt to identify the evolutionary effect of
+  a purported key innovation by comparing patterns of diversity between lineages with and without
+  the key trait, have been challenged on both conceptual and statistical grounds. Here, we explore
+  alternative, untested hypotheses of the key innovation framework. In lizards, adhesive toepad
+  structures increase grip strength on vertical and smooth surfaces such as tree trunks and leaves
+  and have independently evolved multiple times. As such, toepads have been posited as a key
+  innovation for the evolution of arboreality. Leveraging a habitat use data set applied to a global
+  phylogeny of 2692 lizard species, we estimated multiple origins of toepads in three major clades
+  and more than 100 origins of arboreality widely across the phylogeny. Our results suggest that
+  toepads arise adaptively in arboreal lineages and are subsequently rarely lost while maintaining
+  arboreal ecologies. Padless lineages transition away from arboreality at a higher rate than those
+  with toepads, and high rates of invasion of arboreal niches by nonarboreal padbearing lineages
+  provide further evidence that toepads may be a key to unlocking evolutionary access to the
+  arboreal zone. Our results and analytical framework provide novel insights to understand and
+  evaluate the ecological and evolutionary consequences of key innovations.[Arboreality; ecological
+  transition; key innovation; macroevolution; phylogenetic comparative methods.]
+10.1098/rsbl.2020.0625: >-
+  Extreme climate events are predicted to increase in frequency and severity due to contemporary
+  climate change. Recent studies have documented the evolutionary impacts of extreme events on
+  single species, but no studies have yet investigated whether such events can drive community-wide
+  patterns of trait shifts. On 22 January 2020, subtropical south Florida experienced an extreme
+  cold episode during which air temperatures dropped below the lower thermal limit of resident
+  lizard populations. In the week immediately after the cold event, we documented decreased lower
+  thermal limits (CTmin) of six co-occurring lizard species that vary widely in ecology, body size
+  and thermal physiology. Although cold tolerance of these species differed significantly before the
+  cold snap, lizards sampled immediately after had converged on the same new, lower limit of thermal
+  tolerance. Here, we demonstrate that extreme climate events can drive substantial and synchronous
+  community-wide trait changes and provide evidence that tropical and subtropical ectotherms—often
+  characterized as unable to withstand rapid changes in climatic conditions—can endure climatic
+  conditions that exceed their physiological limits. Future studies investigating the mechanisms
+  driving these trait shifts will prove valuable in understanding the ability of ectotherm
+  communities to mitigate climate change.
+10.1098/rsbl.2023.0160: >-
+  Positive allometry of signalling traits has often been taken as evidence for sexual selection.
+  However, few studies have explored interspecific differences in allometric scaling relationships
+  among closely related species that vary in their degree of ecological
+  similarity.<em>Anolis</em>lizards possess an elaborate retractable throat fan called a dewlap that
+  is used for visual communication and differs greatly in size and colour among species. We observed
+  that<em>Anolis</em>dewlaps demonstrate positive allometry: relative dewlap size increases with
+  body size. We also observed that coexisting species are divergent in signal size allometries,
+  while convergent species—similar in other aspects of ecology, morphology and behaviour—typically
+  share similar dewlap allometric scaling relationships. These patterns suggest that dewlap scaling
+  relationships may follow the same pattern as other traits in the anole radiation, where
+  ecologically different sympatric species have evolved a suite of divergent traits.
+10.1098/rstb.2017.0390: >-
+  Functional traits are increasingly used to understand the ecology of plants and to predict their
+  responses to global changes. Unfortunately, trait data are unavailable for the majority of plant
+  species. The lack of trait data is especially prevalent for hard-to-measure traits and for
+  tropical plant species, potentially owing to the many inherent difficulties of working with
+  species in remote, hyperdiverse rainforest systems. The living collections of botanic gardens
+  provide convenient access to large numbers of tropical plant species and can potentially be used
+  to quickly augment trait databases and advance our understanding of species' responses to climate
+  change. In this review, we quantitatively assess the availability of trait data for tropical
+  versus temperate species, the diversity of species available for sampling in several exemplar
+  tropical botanic gardens and the validity of garden-based leaf and root trait measurements. Our
+  analyses support the contention that the living collections of botanic gardens are a valuable
+  scientific resource that can contribute significantly to research on plant functional ecology and
+  conservation.
+
+
+  This article is part of the theme issue ‘Biological collections for understanding biodiversity in
+  the Anthropocene’.
+10.1111/1365-2656.13182: >-
+  Seasonal changes in reproduction have been described for many taxa. As reproductive seasons
+  progress, females often shift from greater energetic investment in many small offspring towards
+  investing less total energy into fewer, better provisioned (i.e. larger) offspring. The underlying
+  causes of this pattern have not been assessed in many systems.
+
+
+  Two primary hypotheses have been proposed to explain these patterns. The first is an adaptive
+  hypothesis from life‐history theory: early offspring have a survival advantage over those produced
+  later. Accordingly, selection favours females that invest in offspring quantity early in the
+  season and offspring quality later. The second hypothesis suggests these patterns are not
+  intrinsic but result from passive responses to seasonal changes in the environment experienced by
+  reproducing females (i.e. maternal environment).
+
+
+  To disentangle the causes underlying this pattern, which has been reported in brown anole lizards
+  (<em>Anolis sagrei</em>), we performed complementary field and laboratory studies. The laboratory
+  study carefully controlled maternal environments and quantified reproductive patterns throughout
+  the reproductive season for each female. The field study measured similar metrics from free
+  ranging lizards across an entire reproductive season.
+
+
+  In the laboratory, females increased relative effort per offspring as the reproductive season
+  progressed; smaller eggs were laid earlier, larger eggs were laid later. Moreover, we observed
+  significant among‐individual variation in seasonal changes in reproduction, which is necessary for
+  traits to evolve via natural selection. Because these patterns consistently emerge under
+  controlled laboratory conditions, they likely represent an intrinsic and potentially adaptive
+  adjustment of reproductive effort as predicted by life‐history theory.
+
+
+  The field study revealed similar trends, further suggesting that intrinsic patterns observed in
+  the laboratory are strong enough to persist despite the environmental variability that
+  characterizes natural habitats. The observed patterns are indicative of an adaptive seasonal shift
+  in parental investment in response to a deteriorating offspring environment: allocating greater
+  resources to late‐produced offspring likely enhances maternal fitness.
+10.1111/btp.12665: "Tropical biodiversity is under threat from a wide variety of anthropogenic stressors. Understanding the effect of major stressors—most notably land use change, over‐harvesting, emergence of novel pathogens, and climate change—is a major goal of tropical biology. However, to do so requires baseline data with which to compare present‐day patterns. Unfortunately, the tropics suffer from a lack of basic historical data; the few studies which have published such data have proven invaluable. In 1989, Fauth et\_al. described their studies of reptile and amphibian diversity and population demographics across tropical elevational gradients in Costa Rica. Since then, Fauth et\_al.'s basic ecological data have been widely used to document shifting patterns of species composition and abundance. Here, 30 years later, we argue that (a) collecting foundational ecological data remains incredibly important, especially in the tropics, and especially in those taxa which are generally understudied (e.g., reptiles and amphibians), (b) despite being one of the original goals of the 1989 study, the mechanisms driving biogeographical patterns of diversity remain unclear (both in the tropics and globally), and (c) that revisiting sites of historic biodiversity surveys—particularly those along gradients of environmental change—is incredibly important to our understanding of how tropical diversity is currently, and will continue to be, affected by activities in the Anthropocene. In its simplest terms, there has never been a time where the collection of basic data in the tropics has ever been more important."
+10.1111/ddi.12517: >-
+  It is critical that we understand the effects of climate change on natural systems if we ever hope
+  to predict or mitigate consequent changes in diversity and ecosystem function. In order to
+  identify coherent ‘fingerprints’ of climate change across Earth's terrestrial and marine
+  ecosystems, various reviews have been conducted to synthesize studies of climate change impacts on
+  individual species, assemblages and systems. These reviews help to make information about climate
+  change impacts accessible for researchers as well as for the general public and policymakers. As
+  such, these reviews can be highly influential in setting the direction of policy and research.
+  Unfortunately, due to limited data availability, the majority of reviews of climate change impacts
+  suffer from severe taxonomic and geographic biases. In particular, tropical and marine systems are
+  grossly underrepresented, as are plants and endothermic animals. These biases may preclude a
+  comprehensive understanding of how climate change is affecting Earth's natural systems at a global
+  scale. In order to advance our understanding of climate change impacts on species and ecosystems,
+  we need to first assess the types of data that are and are not available and then correct these
+  biases through directed studies and initiatives.
+10.1111/ecog.01366: ''
+10.1111/evo.13295: ''
+10.1111/evo.13338: ''
+10.1111/jbi.13511: >-
+  Predicting environmentally suitable areas for non‐native species is an important step in managing
+  biotic invasions, and ecological niche models are commonly used to accomplish this task. Depending
+  on these models to enact appropriate management plans assumes their accuracy, but most niche model
+  studies do not provide validation for their model outputs. South Florida hosts the world's most
+  globally diverse non‐native lizard community, providing a unique opportunity to evaluate the
+  predictive ability of niche models by comparing model predictions to observed patterns of
+  distribution, abundance and physiology in established non‐native populations.Florida,
+  USA.Lizards.Using Maxent, we developed niche models for all 29 non‐native lizard species with
+  established populations in Miami‐Dade County, Florida, using native range data to predict habitat
+  suitability in the invaded range. We then used independently collected field data on abundance,
+  geographical spread and thermal tolerances of the non‐native populations to evaluate Maxent's
+  ability to make predictions in both geographical and environmental space in the non‐native
+  range.Maxent performed well in predicting across geographical space where these non‐native lizards
+  were most likely to occur, but within a given geographical extent was unable to predict which
+  individual species would be the most abundant or widespread. Comparisons with physiological data
+  also revealed an imperfect fit, but without any consistent biases.We performed one of the most
+  extensive field validations of Maxent's ability to predict where invasions are likely to occur,
+  and our results support its continued use in this role. However, the program was unable to predict
+  the relative abundance and geographical spread of established species, indicating limited utility
+  for identifying which invasive species will be the greatest management concern. These results
+  underscore the importance of other factors, such as time since introduction, dispersal ability and
+  biotic interactions in determining the relative success of non‐native species post‐establishment.
+10.1126/science.aaf3343: |-
+  Tropical species may be highly vulnerable to climate change
+
+  [Also see Report by
+
+  Chan
+  <em>et al.</em>
+
+  ]
+10.1146/annurev-ecolsys-121415-032254: >-
+  The process of adaptive radiation—the proliferation of species from a single ancestor and
+  diversification into many ecologically different forms—has been of great interest to evolutionary
+  biologists since Darwin. Since the middle of the last century, ecological opportunity has been
+  invoked as a potential key to understanding when and how adaptive radiation occurs. Interest in
+  the topic of ecological opportunity has accelerated as research on adaptive radiation has
+  experienced a resurgence, fueled in part by advances in phylogenetic approaches to studying
+  evolutionary diversification. Nonetheless, what the term actually means, much less how it
+  mechanistically leads to adaptive diversification, is currently debated; whether the term has any
+  predictive value or is a heuristic useful only for post hoc explanation also remains unclear.
+  Recent recognition that evolutionary change can occur rapidly and on a timescale commensurate with
+  ecological processes suggests that it is time to synthesize ecological and evolutionary approaches
+  to the study of community assembly and evolutionary diversification.
+10.1670/0022-1511-55.3.215: ''
+10.1670/23-043: ''
+10.17161/randa.v23i2.14116: ''
+10.17161/randa.v23i3.14134: ''
+10.17161/randa.v24i2.14170: ''
+10.17161/randa.v24i2.14173: ''
+10.17161/randa.v25i3.14316: ''
+10.17161/randa.v33i1.23091: ''
+10.21425/f5fbg22006: ''
+10.21425/f5fbg38649: ''
+10.32942/x2xp99: >-
+  PyTLidar is an open-source Python package that reconstructs 3D tree Quantitative Structure Models
+  (QSM) from Terrestrial Lidar Scanning (TLS) data, providing a user-friendly tool that improves and
+  expands upon the MATLAB-based TreeQSM method. QSMs are used to automate detection and calculation
+  of various topological and volumetric measurements that would normally take great effort to gather
+  in the field. PyTLidar provides an accessible, extensible, and GUI-driven workflow for researchers
+  and practitioners in forestry, ecology, and 3D vegetation modeling to create QSMs. The package
+  also integrates interactive visualization tools for inspecting model quality and viewing
+  calculated tree properties. The ease of use and installation of PyTLidar provides ecologists an
+  option to gather forest measurements that does not rely on proprietary tools. The key features of
+  PyTLidar are a reproduction of the TreeQSM core functionality, and enhancing the experience of
+  setting up experiments and viewing results. It provides functionality for loading and extracting
+  point cloud data from .las and .laz files as well as automatic calculation of a range of initial
+  parameters for the QSM model based on point cloud structure. The QSM creation methods include
+  generation of a Voronoi partition of the point cloud, segment detection, detection of parent-child
+  relationships of branches, and cylinder fitting. PyTLidar also calculates various tree metrics
+  such as branch length and volume and provides these results in text format as well as visual
+  graphics. QSMs are also output in an interactive format which can be viewed directly in the GUI as
+  well as saved and shared as an html file. All of this is packaged within a user-friendly GUI while
+  also providing support for command line and direct Python interfacing.
+10.64898/2026.06.10.731342: >-
+  Community science platforms like iNaturalist generate unprecedented volumes of biodiversity data,
+  but their scientific utility depends critically on accurate species identification—a persistent
+  challenge when contributors often lack taxonomic expertise. We developed “
+
+  <em>LizardLens</em>
+
+  ”, a two-stage machine learning pipeline that decouples object detection from species
+  classification to enable fine-grained identification of morphologically similar organisms in
+  visually complex field photographs. Using 10,000 verified iNaturalist images of five
+
+  <em>Anolis</em>
+
+  lizard species in Florida, we trained specialized YOLO-based detection and Swin Transformer
+  classification models and compared performance against state-of-the-art single-stage
+  architectures. Our two-stage pipeline achieved 83.0% Top-1 accuracy and a macro-averaged F1-score
+  of 89.0%, indicating strong precision-recall performance across species and outperforming
+  single-stage YOLOv8 and YOLOv12 models across all evaluation metrics for all species, with
+  relative improvements ranging from 10.5% to 13.2%. Gradient-weighted Class Activation Mapping
+  (Grad-CAM) indicated that the model’s predictions were consistently associated with regions
+  corresponding to diagnostic morphological (e.g., head shape, feet, and limb lengths) and pattern
+  features (e.g., ocular rings and body patterning), providing evidence that LizardLens leverages
+  biologically relevant visual cues consistent with those used by expert taxonomists. Error analysis
+  identified partial occlusion and multiple proximate individuals as primary sources of missed
+  detections, while spurious detections of lizard-like environmental features (e.g., sticks, bark)
+  represented the dominant false positive error mode. We deployed LizardLens as an accessible web
+  application featuring interactive bounding box correction, ranked species predictions with
+  confidence scores, directly supporting the “
+
+  <em>Lizards on the Loose</em>
+
+  ” middle school community science initiative. By combining technical advances in fine-grained
+  visual classification with user-centered design, LizardLens demonstrates how machine learning can
+  simultaneously enhance data quality for biodiversity monitoring and provide authentic scientific
+  experiences for student participants. Our approach is generalizable to other small-bodied
+  organisms in complex habitats and provides a framework for translating computer vision advances
+  into practical tools for community science and conservation.
+10.64898/2026.06.10.731351: >-
+  Morphological measurements underpin a wide range of ecological and evolutionary research, yet the
+  manual landmarking workflows on which most morphometric studies depend remain a persistent
+  bottleneck that limits both the pace and scale of biological research. Machine learning offers
+  compelling solutions, but most automated landmarking tools require substantial computational
+  expertise, creating a gap between technical capability and practical adoption by biologists. Here,
+  we present LizardMorph, an integrated machine learning pipeline and web-based interface for
+  semi-automated anatomical landmark detection on biological images. LizardMorph couples a
+  fine-tuned ML-Morph shape predictor with an accessible, browser-based interface that enables
+  researchers to upload images, review automated landmark predictions, interactively correct
+  outliers through point-and-click editing, and export results in standard morphometric formats—all
+  without programming expertise or local software installation. Using dorsal X-ray radiographs of
+
+  <em>Anolis</em>
+
+  lizards with 34 anatomical landmarks as a proof-of-concept, we show that the ML-Morph model
+  achieves high predictive accuracy, with landmarks on well-defined skeletal structures predicted
+  with 100% accuracy within a 1 mm tolerance threshold. A controlled user study comparing
+  LizardMorph against traditional manual landmarking (TpsDig2) demonstrated significant efficiency
+  gains: experienced annotators completed LizardMorph landmark verification 37.5% faster than manual
+  annotation. Extrapolated to batch processing 1,000 lizards, LizardMorph saves experienced
+  researchers approximately 6.5 hours of manual processing time. Critically, LizardMorph implements
+  a human-in-the-loop design in which automated predictions serve as editable starting points,
+  preserving researcher oversight and enabling correction of the occasional large-error outliers
+  that would be unacceptable in fully automated workflows. LizardMorph is freely available as an
+  open-source tool and provides a replicable framework for developing ML-assisted annotation tools
+  that can democratize access to high-quality morphometric analysis across diverse biological
+  research communities.
+10.7936/gjg3-h168: ''
