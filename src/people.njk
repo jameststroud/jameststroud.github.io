@@ -36,7 +36,7 @@ seoTitle: "Lab Members · Stroud Lab, Georgia Tech"
     <div class="people-group">
       <h2 class="people-group__title">Principal Investigator</h2>
       <div class="pi">
-        <img class="person__photo" src="/assets/img/people/{{ p.photo }}" alt="{{ p.name }}, {{ p.role }}" sizes="15rem">
+        <img class="person__photo" src="/assets/img/people/{{ p.photo }}" alt="{{ p.name }}, {{ p.role }}" sizes="15rem" loading="eager" fetchpriority="high">
         <div>
           <h3 style="font-size:1.8rem"><a href="/james-stroud/">{{ p.name }}</a></h3>
           <p class="person__role">{{ p.role }}</p>

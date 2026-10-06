@@ -843,7 +843,9 @@ a.species__card.story-card {
   .split { grid-template-columns: 1fr; gap: 2rem; }
   .pi { grid-template-columns: 1fr; gap: 1.75rem; }
   .pi .person__photo { max-width: 13rem; }
-  .news-item { grid-template-columns: 1fr; gap: .5rem; }
+  /* The :has() rule above outranks a bare .news-item, so name it too. */
+  .news-item,
+  .news-item:has(.news-item__img) { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
   .press-list li { grid-template-columns: 1fr; gap: .25rem; }
   .pub { grid-template-columns: 1fr; gap: .25rem; }
   .pub__n { display: none; }
@@ -911,10 +913,86 @@ a.species__card.story-card {
   }
   .nav__sub a:hover { background: none; color: var(--on-navy); text-decoration: underline; }
   .nav__sub a[aria-current="page"] { color: var(--on-navy); box-shadow: inset 3px 0 0 var(--accent-lt); padding-left: .6rem; }
+
+  /* Tap targets: every control in the open menu is at least 44px tall. */
+  .js .nav__menu { min-height: 2.75rem; padding: 0 .75rem 0 0; }
+  .navbar__inner { padding-top: 0; padding-bottom: .1rem; }
+  .nav__link { display: flex; align-items: center; min-height: 2.75rem; padding: .3rem 0; }
+  .nav__toggle { min-width: 2.75rem; min-height: 2.75rem; padding: 0; display: grid; place-items: center; margin: 0 -.6rem 0 0; }
+  .nav__sub a { display: flex; align-items: center; min-height: 2.75rem; padding: .2rem 0; }
+
+  /* Links set in a row (person pages, footer, publication meta) get room to tap. */
+  .person__links { display: flex; flex-wrap: wrap; gap: 0 1.25rem; font-size: .9rem; }
+  .person__links a { margin-right: 0; padding: .55rem 0; min-width: 2.75rem; }
+  .footer p a { display: inline-block; min-width: 2.75rem; padding: .75rem 0; line-height: 1.25; }
+  .pub__meta { margin: -.4rem 0 -.7rem; } /* keeps the visual rhythm despite taller links */
+  .pub__meta a { display: inline-block; min-width: 2.75rem; padding: .7rem 0; margin-right: .5rem; }
+  .pub-search { font-size: 1rem; padding: .7rem .9rem; }
+  .paper__cite summary { padding: .6rem 0; }
+  /* Padding would push the border-bottom underline away from the text, so
+     these padded links draw the same underline with text-decoration. */
+  .person__links a, .footer p a, .pub__meta a {
+    border-bottom: 0;
+    text-decoration: underline 1px rgba(31,111,178,.32);
+    text-underline-offset: .3em;
+  }
+  .pub__meta a.pub__pdf { text-decoration-color: rgba(207,106,26,.35); }
+  .person__links a:hover, .footer p a:hover, .pub__meta a:hover { text-decoration-color: var(--accent); }
+}
+
+/* Phones: layout polish. Everything here sits below the 46rem breakpoint,
+   so tablet and desktop layouts are untouched. */
+@media (max-width: 46rem) {
+  .masthead { padding: 1.1rem 0 1rem; }
+  h1 { font-size: clamp(1.75rem, 1rem + 4vw, 2.1rem); }
+  .page-title { padding-top: 3rem; }
+
+  /* Photo heroes show the whole frame instead of a thin strip. The home
+     banner has words in the image, so it keeps its shape. */
+  .hero__img:not(.hero__img--short):not(.hero__img--banner) { aspect-ratio: 16 / 5; }
+
+  /* The strapline stacks one phrase per line, without dangling bullets. */
+  .strapline span { display: block; }
+  .strapline b { display: none; }
+
+  /* Browsers indent bare figures by 40px each side; use the full column. */
+  main figure { margin-left: 0; margin-right: 0; }
+
+  /* Headshots match the PI photo instead of filling the screen. */
+  .person__photo { max-width: 13rem; }
+
+  .card,
+  a.species__card.story-card { padding: 1.4rem 1.25rem; }
+
+  .labpics__nav { width: 2.75rem; height: 2.75rem; }
+  .lightbox { padding: 3.5rem .75rem 1.5rem; }
+  .lightbox__close { width: 2.75rem; height: 2.75rem; top: .6rem; right: .6rem; }
+}
+
+/* Phones and tablets: balance heading lines so none ends on a lone word. */
+@media (max-width: 64rem) {
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+/* Touch tablets keep the one-line menu, with taller tap targets. */
+@media (pointer: coarse) and (min-width: 46.0625rem) {
+  .nav__list { padding: .2rem 0; }
+  .nav__link { padding: .7rem 0; }
+  .nav__toggle { padding: .95rem .5rem; }
 }
 
 @media print {
   .navbar, .hero, .footer { display: none; }
+}
+
+/* Visitors who ask for reduced motion get no smooth scrolling, fades or zooms. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 /* Lightbox ------------------------------------------------------------ */

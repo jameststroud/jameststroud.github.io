@@ -240,7 +240,10 @@
     }
     mark();
 
+    // No automatic advance for visitors who ask for reduced motion.
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function startAuto() {
+      if (still) return;
       timer = setInterval(function () { show(i + 1); }, 4000);
     }
 
@@ -302,17 +305,31 @@
     });
   });
 
-  menu.addEventListener('click', function () {
-    var open = !nav.classList.contains('is-open');
+  function setMenu(open) {
     nav.classList.toggle('is-open', open);
     menu.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  menu.addEventListener('click', function () {
+    setMenu(!nav.classList.contains('is-open'));
   });
   nav.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && nav.classList.contains('is-open') && !nav.querySelector('.nav__item--sub.is-open')) {
-      nav.classList.remove('is-open');
-      menu.setAttribute('aria-expanded', 'false');
+      setMenu(false);
       menu.focus();
     }
+  });
+  // On small screens the menu closes once a link is chosen or focus tabs out
+  // of it, so it is not left open over the page.
+  nav.querySelectorAll('.nav__list a').forEach(function (a) {
+    a.addEventListener('click', function () { setMenu(false); closeAll(); });
+  });
+  nav.addEventListener('focusout', function (e) {
+    if (e.relatedTarget && !nav.contains(e.relatedTarget)) setMenu(false);
+  });
+  // Coming back with the Back button restores the page as it was left.
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) { setMenu(false); closeAll(); }
   });
   document.addEventListener('click', function (e) {
     if (!nav.contains(e.target)) closeAll();
