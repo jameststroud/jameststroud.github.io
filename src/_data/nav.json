@@ -7,8 +7,8 @@
         { "title": "Research overview", "url": "/research/" },
         { "title": "Lizard Island", "url": "/research/lizard-island/" },
         { "title": "Cold snaps and lizards", "url": "/research/cold-snaps/" },
-        { "title": "Hurricanes and lizards", "url": "/research/hurricanes-and-lizards/" },
         { "title": "Three-legged lizards", "url": "/research/three-legged-lizards/" },
+        { "title": "Sleepy Lizard Project", "url": "https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/", "external": true },
         { "title": "Software & Tools", "url": "/software/" }
       ]
     },
@@ -27,8 +27,7 @@
       "section": ["/outreach/", "/miami-lizards/", "/lizards-on-the-loose/"],
       "children": [
         { "title": "Teaching & Outreach", "url": "/outreach/" },
-        { "title": "Florida Anoles", "url": "/miami-lizards/" },
-        { "title": "Sleepy Lizard Project", "url": "https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/", "external": true }
+        { "title": "Florida Anoles", "url": "/miami-lizards/" }
       ]
     },
     { "title": "Join the Lab!", "url": "/join/", "section": ["/join/"] }
