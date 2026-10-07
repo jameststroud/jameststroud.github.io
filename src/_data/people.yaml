@@ -11,6 +11,7 @@
 - name: James T. Stroud, Ph.D.
   group: pi
   role: Principal Investigator
+  jobTitle: Assistant Professor   # used in search-engine structured data only
   photo: james-stroud.jpg
   email: stroud@gatech.edu
   scholar: https://scholar.google.com/citations?user=2QdWvJ4AAAAJ&hl=en

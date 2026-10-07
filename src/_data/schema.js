@@ -28,7 +28,7 @@ module.exports = () => {
     alternateName: ["James Stroud", "J.T. Stroud", "Dr. James Stroud"],
     givenName: "James",
     familyName: "Stroud",
-    jobTitle: pi.role,
+    jobTitle: pi.jobTitle || pi.role,
     description: "Evolutionary ecologist studying lizard evolution and ecology",
     hasOccupation: { "@type": "Occupation", name: "Evolutionary ecologist" },
     email: pi.email ? "mailto:" + pi.email : undefined,
@@ -67,6 +67,7 @@ module.exports = () => {
     labId,
     piId,
     profileUrl,
+    pi: piNode,
     graph: {
       "@context": "https://schema.org",
       "@graph": [
