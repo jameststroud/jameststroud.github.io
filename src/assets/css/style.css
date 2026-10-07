@@ -87,6 +87,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   color: var(--ink-faint);
   margin: 0 0 1rem;
 }
+.eyebrow a { color: inherit; }
 
 /* ==========================================================================
    Layout containers

@@ -194,6 +194,14 @@ module.exports = function (eleventyConfig) {
       },
     },
     sharpWebpOptions: { quality: 78 },
+    // Keep the source file's name (e.g. sagrei-dewlap-1a2b3c-960.webp) so
+    // image search sees "sagrei-dewlap" rather than a bare hash. The short
+    // hash keeps two different photos with the same name apart.
+    filenameFormat: function (id, src, width, format) {
+      const name = require("path").parse(src).name.toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "img";
+      return `${name}-${id.slice(0, 6)}-${width}.${format}`;
+    },
   });
 
   eleventyConfig.addPassthroughCopy("src/assets");

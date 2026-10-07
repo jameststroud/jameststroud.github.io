@@ -45,6 +45,9 @@ eleventyComputed:
     </details>
     {%- endif %}
 
+    {%- for s in collections.species %}{% if s.data.scientific in paper.plainTitle %}
+    <p class="paper__back">Species guide: <a href="{{ s.url }}">{{ s.data.common }} (<em>{{ s.data.scientific }}</em>)</a></p>
+    {%- endif %}{% endfor %}
     <p class="paper__back"><a href="/publications/">&larr; All publications from the lab</a></p>
   </div>
 </section>

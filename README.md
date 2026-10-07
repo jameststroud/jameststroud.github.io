@@ -209,7 +209,7 @@ These build themselves; there is nothing to maintain.
    `A` records pointing to `185.199.108.153`, `185.199.109.153`,
    `185.199.110.153`, and `185.199.111.153`, and GitHub will redirect it to
    `www`.
-5. For `jamestsroud.com`, point it at the same place; GitHub only serves one
+5. For `jameststroud.com`, point it at the same place; GitHub only serves one
    custom domain per repository, so set up a redirect at the registrar instead.
 
 The `src/CNAME` file in this repository keeps the custom domain from being reset
