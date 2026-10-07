@@ -9,9 +9,9 @@
   --bg:            #fffdf8;
   --bg-alt:        #f2eee1;
   --rule:          #e3dfd2;
-  --navy:          #4a8fab;
-  --navy-lt:       #ABD0DE;
-  --navy-soft:     #17547f;
+  --navy:          #60936b;
+  --navy-lt:       #b6d2ba;
+  --navy-soft:     #225e33;
   --green:         #3dc267;
   --gold:          #b1a066;
   --accent:        #cf6a1a;
@@ -42,7 +42,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(31,111,178,.32); transition: border-color .15s, color .15s; }
+a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(96,147,107,.32); transition: border-color .15s, color .15s; }
 a:hover { color: var(--accent-dk); border-bottom-color: var(--accent); }
 
 /* ==========================================================================
@@ -934,7 +934,7 @@ a.species__card.story-card {
      these padded links draw the same underline with text-decoration. */
   .person__links a, .footer p a, .pub__meta a {
     border-bottom: 0;
-    text-decoration: underline 1px rgba(31,111,178,.32);
+    text-decoration: underline 1px rgba(96,147,107,.32);
     text-underline-offset: .3em;
   }
   .pub__meta a.pub__pdf { text-decoration-color: rgba(207,106,26,.35); }
