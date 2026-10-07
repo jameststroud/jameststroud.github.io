@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if seoTitle %}{{ seoTitle }}{% elif title and page.url != "/" %}{{ title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
 <meta name="description" content="{{ description or 'The Stroud Lab at Georgia Tech studies the evolutionary ecology of lizards: natural selection in the wild, thermal physiology, and new technology for eco-evolutionary field studies.' }}">
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- else %}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{%- endif %}
 
 {%- set shareTitle = site.tagline if page.url == "/" else (title or site.title) %}
 {%- set shareText = description or site.tagline %}
