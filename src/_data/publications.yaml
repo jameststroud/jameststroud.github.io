@@ -22,6 +22,16 @@
 
 - year: 2026
   type: inreview
+  authors: "Garcia-Costoya, G., Cooper, T.L., Glenn, E.S., Suh, J.J., Anderson, M.R., Appleton, M.D., Garman, E.E., Griffin, K.C., Stroud, J.T."
+  title: "A major behavioral innovation enabled the poleward range expansion of a tropical ectotherm beyond its physiological limits"
+
+- year: 2026
+  type: inreview
+  authors: "Stroud, J.T., Freeman, B.G."
+  title: "Ecological release from predation, not competition, drives the island syndrome in Caribbean anole lizards"
+
+- year: 2026
+  type: inreview
   authors: "Spiridonov, A., Hoffman, F., DiMuro, L., Annapareddy, N., Clay, S., Appleton, M., Shi, B., Stroud, J.T."
   title: "Integrating body trait reference measurements improves deep learning pose estimation"
   
