@@ -93,6 +93,14 @@
 
 - year: 2025
   type: article
+  authors: "Griffin, K., Suh, J."
+  title: "Eleutherodactylus planirostris (Greenhouse Frog). Predation."
+  journal: "Herpetological Review"
+  detail: "56(4): 403
+  doi: "https://ssarherps.org/herpetological-review-pdfs/"
+  
+- year: 2025
+  type: article
   authors: "Michaelides, S.N., Stroud, J.T., Giery, S.T., Smith, B.E., Glor, R.E., Kolbe, J.J."
   title: "Invasion histories differ markedly among the four <em>Anolis</em> lizard species introduced to Bermuda"
   journal: "Journal of Herpetology"
