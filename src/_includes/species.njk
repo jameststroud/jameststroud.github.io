@@ -5,7 +5,7 @@ layout: base.njk
     the prose is the page body. See src/miami-lizards/*.njk. -#}
 <section class="section">
   <div class="wrap-text wrap-text--intro center">
-    <p class="eyebrow">Lizards of Miami &middot; {{ status }}</p>
+    <p class="eyebrow"><a href="/miami-lizards/">Lizards of Miami</a> &middot; {{ status }}</p>
     <h1>{{ common }} <span class="species__sci">(<em>{{ scientific }}</em>)</span></h1>
     <p class="lead">{{ lead | safe }}</p>
   </div>
@@ -87,4 +87,12 @@ layout: base.njk
   "publisher": { "@id": schema.labId },
   "image": (site.url ~ photo) if photo else undefined,
   "mainEntityOfPage": site.url ~ page.url
+} | jsonld | safe }}</script>
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Lizards of Miami", "item": site.url ~ "/miami-lizards/" },
+    { "@type": "ListItem", "position": 2, "name": common ~ " (" ~ scientific ~ ")", "item": site.url ~ page.url }
+  ]
 } | jsonld | safe }}</script>
