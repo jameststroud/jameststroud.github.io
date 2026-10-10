@@ -1078,6 +1078,18 @@ a.species__card { border-bottom: 0; color: inherit; display: block; }
 a.species__card:hover h3 { color: var(--accent-dk); }
 .story__body blockquote { margin: 1.5rem 0; padding-left: 1.2rem; border-left: 3px solid var(--gold); font-family: var(--serif); font-size: 1.25rem; font-style: italic; color: var(--ink-soft); }
 
+/* 3D view at the top of a research story (viewer3d in the story's front matter) */
+.viewer3d { margin: 0 0 1.5rem; }
+.viewer3d__frame {
+  position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: #1b2420;
+  isolation: isolate; -webkit-mask-image: -webkit-radial-gradient(white, black);
+  box-shadow: 0 1px 2px rgba(34,33,29,.06), 0 10px 30px rgba(34,33,29,.12), 0 30px 70px rgba(34,33,29,.10);
+}
+.viewer3d__frame::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
+.viewer3d__frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.viewer3d figcaption { max-width: var(--measure); margin: 1.1rem auto 0; text-align: center; color: var(--ink-soft); font-size: .95rem; }
+@media (max-width: 40rem) { .viewer3d__frame { border-radius: 16px; } }
+
 /* Media contact box and coverage list on research stories */
 .media-contact {
   border: 1px solid var(--rule); border-left: 4px solid var(--accent);
