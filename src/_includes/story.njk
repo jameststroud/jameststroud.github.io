@@ -12,7 +12,19 @@ layout: base.njk
 
 {%- set coverage = media.stories[page.fileSlug] | byOutletRank(media.outlets) %}
 
-{%- if photo %}
+{%- if viewer3d %}
+<section class="section--tight">
+  <div class="wrap">
+    <figure class="viewer3d">
+      <div class="viewer3d__frame">
+        <iframe src="{{ viewer3d }}" title="{{ viewer3dTitle or (title ~ ' in 3D') }}" loading="lazy"
+                allow="fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      </div>
+      {%- if viewer3dCaption %}<figcaption>{{ viewer3dCaption | safe }}</figcaption>{% endif %}
+    </figure>
+  </div>
+</section>
+{%- elif photo %}
 <section class="section--tight">
   <div class="wrap-text">
     <figure>
