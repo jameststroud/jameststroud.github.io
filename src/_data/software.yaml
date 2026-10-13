@@ -46,6 +46,14 @@
 
 - name: PyTLidar
   kicker: Structural Environment Quantification using LiDAR
+  image: pytlidar-growth-poster.jpg
+  imageAlt: A rainbow eucalyptus on Lizard Island modelled by PyTLidar as cylinders coloured by branch order
+  video: pytlidar-growth
+  videoAlt: A rainbow eucalyptus on Lizard Island as a lidar point cloud, then PyTLidar fitting cylinders to its branches, the finished model and its scanned leaves
+  videoPoster: pytlidar-growth-start.jpg
+  videoWidth: 1000
+  videoHeight: 1250
+  videoRest: 5.6
   summary: >
     A Python package for building quantitative structure models of trees from
     terrestrial lidar point clouds. We use it to measure the branches on Lizard
