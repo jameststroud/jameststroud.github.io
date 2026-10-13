@@ -3,6 +3,9 @@
 # Add a repository link once the code is public and the `repo` line will appear.
 # Add a `url` line for tools with a live web app: the name becomes a link and
 # the address is shown beneath the description.
+# A `video` line (name without .mp4/.webm) plays twice, stopping at `videoRest`
+# seconds. `videoPoster` shows until it starts and `videoAlt` describes it;
+# `image` (with `imageAlt`) is the still for reduced motion and no JavaScript.
 # ---------------------------------------------------------------------------
 
 - name: ML-Morph Web
