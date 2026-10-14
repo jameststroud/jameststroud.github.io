@@ -65,6 +65,14 @@
 - name: lande
   kicker: Toolbox for Natural Selection Analyses
   url: https://lande.thestroudlab.com
+  image: lande-fitness-surface-still.jpg
+  imageAlt: "The fitness surface lande fitted to 1,692 captures of four anole species on Lizard Island, drawn in 3D as fitted chance of survival over two discriminant axes, LD1 and LD3, coloured from blue for low to red for high survival. Gold diamonds mark the surface's peaks and a pin marks each species' highest point, above the lizards on the floor, filled if they survived to the next census. Data from Stroud et al. 2023, PNAS."
+  video: lande-fitness-surface
+  videoAlt: "Anoles on Lizard Island, 1,692 captures of four species, drop onto two discriminant axes, LD1 and LD3, and are marked by whether they survived to the next census. lande then fits the fitness surface, the fitted chance of survival, which rises over them in 3D coloured from blue to red, and gold diamonds and pins mark its peaks and each species' highest point. Data from Stroud et al. 2023, PNAS."
+  videoPoster: lande-fitness-surface-start.jpg
+  videoWidth: 1250
+  videoHeight: 1170
+  videoRest: 10.5
   summary: >
     An R package for analyzing and visualizing natural selection, in development
     in the lab.
