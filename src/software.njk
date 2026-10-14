@@ -30,6 +30,7 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
 <section class="section">
   <div class="wrap">
     <div class="split">
+      <figure class="software__media">
       <div class="photo-hover{% if s.video %} photo-hover--anim{% endif %}" tabindex="0">
         {%- if s.video %}
         <video muted playsinline preload="none" width="{{ s.videoWidth }}" height="{{ s.videoHeight }}" poster="/assets/img/software/{{ s.videoPoster or s.image }}" aria-label="{{ s.videoAlt or s.imageAlt or s.name }}" data-plays="2"{% if s.videoRest is defined %} data-rest="{{ s.videoRest }}"{% endif %}>
@@ -39,6 +40,13 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
         {%- endif %}
         <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}" sizes="(min-width: 60rem) 34rem, 100vw"{% if s.video %} class="photo-hover__still"{% endif %}>
       </div>
+      {%- if s.video or s.caption %}
+      <figcaption>
+        {%- if s.caption %}{{ s.caption | safe }}{% endif %}
+        {%- if s.video %}<span class="software__hint">Click to play animation!</span>{% endif %}
+      </figcaption>
+      {%- endif %}
+      </figure>
       <div>
         <p class="eyebrow">{{ s.kicker }}</p>
         <h2>{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h2>
@@ -117,6 +125,7 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
     var plays = Number(v.getAttribute('data-plays')) || 1;
     var rest = v.hasAttribute('data-rest') ? Number(v.getAttribute('data-rest')) : NaN;
     var label = v.getAttribute('aria-label') || '';
+    var hint = (v.closest('figure') || document).querySelector('.software__hint');
     var pass = 0, last = 0, done = false, held = false, refused = false;
     var inView = false, broken = false, ticking = false;
     v.muted = true;
@@ -126,6 +135,7 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
       broken = true;
       v.pause();
       v.style.display = 'none';
+      if (hint) hint.style.display = 'none';
       if (img) img.style.display = 'block';
       label = '';
       setRole();
