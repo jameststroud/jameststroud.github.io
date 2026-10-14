@@ -436,6 +436,11 @@ html:not(.js) .nav__item--sub:focus-within > .nav__sub { display: block; }
 .photo-hover:hover img, .photo-hover:focus-within img,
 .photo-hover:hover video, .photo-hover:focus-within video { transform: scale(1.035); }
 .photo-hover video { display: block; width: 100%; height: auto; }
+/* Software animations carry their own titles and cream backdrop, so they are
+   scaled down (never cropped) to sit beside the other media, centred in the column. */
+.photo-hover--anim video, .photo-hover--anim img {
+  width: auto; height: auto; max-width: 100%; max-height: 26rem; margin: 0 auto;
+}
 .js .photo-hover video[data-plays] { cursor: pointer; }
 .photo-hover__still { display: none; }
 /* Without JavaScript the animation cannot be started or paused, so the still is shown. */

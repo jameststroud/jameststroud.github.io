@@ -30,7 +30,7 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
 <section class="section">
   <div class="wrap">
     <div class="split">
-      <div class="photo-hover" tabindex="0">
+      <div class="photo-hover{% if s.video %} photo-hover--anim{% endif %}" tabindex="0">
         {%- if s.video %}
         <video muted playsinline preload="none" width="{{ s.videoWidth }}" height="{{ s.videoHeight }}" poster="/assets/img/software/{{ s.videoPoster or s.image }}" aria-label="{{ s.videoAlt or s.imageAlt or s.name }}" data-plays="2"{% if s.videoRest is defined %} data-rest="{{ s.videoRest }}"{% endif %}>
           <source src="/assets/img/software/{{ s.video }}.mp4" type="video/mp4">
