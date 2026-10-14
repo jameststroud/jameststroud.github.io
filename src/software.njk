@@ -31,7 +31,13 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
   <div class="wrap">
     <div class="split">
       <div class="photo-hover" tabindex="0">
-        <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}" sizes="(min-width: 60rem) 34rem, 100vw">
+        {%- if s.video %}
+        <video muted playsinline preload="none" width="{{ s.videoWidth }}" height="{{ s.videoHeight }}" poster="/assets/img/software/{{ s.videoPoster or s.image }}" aria-label="{{ s.videoAlt or s.imageAlt or s.name }}" data-plays="2"{% if s.videoRest is defined %} data-rest="{{ s.videoRest }}"{% endif %}>
+          <source src="/assets/img/software/{{ s.video }}.mp4" type="video/mp4">
+          <source src="/assets/img/software/{{ s.video }}.webm" type='video/webm; codecs="av01.0.08M.08"'>
+        </video>
+        {%- endif %}
+        <img src="/assets/img/software/{{ s.image }}" alt="{{ s.imageAlt or s.name }}" sizes="(min-width: 60rem) 34rem, 100vw"{% if s.video %} class="photo-hover__still"{% endif %}>
       </div>
       <div>
         <p class="eyebrow">{{ s.kicker }}</p>
@@ -94,3 +100,143 @@ seoTitle: "LizardLens, ML-Morph Web & PyTLidar Software · Stroud Lab"
     </p>
   </div>
 </section>
+
+<script>
+// Software videos play twice once half of one is on screen, then stop at
+// data-rest seconds. A click, tap, Enter or Space pauses, resumes or replays.
+// With reduced motion, or if the video cannot play, the still is shown.
+(function () {
+  var videos = document.querySelectorAll('video[data-plays]');
+  if (!videos.length) return;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  function moving() { return !(still && still.matches); }
+
+  videos.forEach(function (v) {
+    var frame = v.closest('.photo-hover') || v;
+    var img = frame.querySelector('.photo-hover__still');
+    var plays = Number(v.getAttribute('data-plays')) || 1;
+    var rest = v.hasAttribute('data-rest') ? Number(v.getAttribute('data-rest')) : NaN;
+    var label = v.getAttribute('aria-label') || '';
+    var pass = 0, last = 0, done = false, held = false, refused = false;
+    var inView = false, broken = false, ticking = false;
+    v.muted = true;
+    v.loop = plays > 1;
+
+    function showStill() {
+      broken = true;
+      v.pause();
+      v.style.display = 'none';
+      if (img) img.style.display = 'block';
+      label = '';
+      setRole();
+    }
+    var sources = v.querySelectorAll('source');
+    if (sources.length) sources[sources.length - 1].addEventListener('error', showStill);
+    if (!('IntersectionObserver' in window)) { showStill(); return; }
+
+    // The frame is a pause and play button while the animation is shown.
+    function setRole() {
+      if (moving() && !broken) {
+        frame.setAttribute('role', 'button');
+        frame.setAttribute('aria-label', label + '. Press to pause or play the animation.');
+      } else {
+        frame.removeAttribute('role');
+        frame.removeAttribute('aria-label');
+      }
+    }
+    setRole();
+
+    function restart() {
+      done = false; held = false; refused = false; pass = 0; last = 0;
+      v.loop = plays > 1;
+      v.currentTime = 0;
+    }
+
+    function showRest() {
+      v.pause();
+      if (!isNaN(rest) && v.currentTime !== rest) v.currentTime = rest;
+    }
+
+    function finish() {
+      done = true;
+      showRest();
+    }
+
+    function play() {
+      if (!moving() || broken) return;
+      var p = v.play();
+      if (!p || !p.then) return;
+      p.then(function () {
+        if (refused) restart();
+      }, function (e) {
+        // A browser that will not start it without a tap (iOS in Low Power
+        // Mode, for one) shows the resting frame instead. A tap plays it, and
+        // it tries again the next time it scrolls into view.
+        if (e && e.name === 'NotAllowedError') { refused = true; showRest(); }
+      });
+    }
+
+    // Count the plays from the time jumping back to the start, and stop
+    // at data-rest on the last one.
+    function check() {
+      if (done) return;
+      var t = v.currentTime;
+      if (t < last - 1) pass++;
+      last = t;
+      if (pass >= plays - 1) v.loop = false;
+      if (pass >= plays || (pass === plays - 1 && t >= rest)) finish();
+    }
+    function tick() {
+      ticking = false;
+      if (v.paused || done) return;
+      check();
+      ticking = true;
+      requestAnimationFrame(tick);
+    }
+    v.addEventListener('playing', function () { if (!ticking) { ticking = true; requestAnimationFrame(tick); } });
+    v.addEventListener('timeupdate', check);
+    v.addEventListener('ended', finish);
+
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && v.preload === 'none') v.preload = 'auto';
+        inView = e.intersectionRatio >= 0.49 ||
+          (e.isIntersecting && !!e.rootBounds && e.intersectionRect.height >= 0.49 * e.rootBounds.height);
+        if (inView) {
+          if (!done && !held) play();
+        } else if (!e.isIntersecting && !v.paused) {
+          v.pause();
+        }
+      });
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5] }).observe(v);
+
+    function toggle() {
+      if (!moving() || broken) return;
+      if (done) {
+        restart();
+        play();
+      } else if (v.paused) {
+        held = false;
+        play();
+      } else {
+        held = true;
+        v.pause();
+      }
+    }
+    frame.addEventListener('click', toggle);
+    frame.addEventListener('keydown', function (e) {
+      if (e.target !== frame || (e.key !== 'Enter' && e.key !== ' ')) return;
+      if (!moving() || broken) return;
+      e.preventDefault();
+      toggle();
+    });
+    if (still && still.addEventListener) {
+      still.addEventListener('change', function () {
+        setRole();
+        if (still.matches) v.pause();
+        else if (inView && !done && !held) play();
+      });
+    }
+  });
+})();
+</script>

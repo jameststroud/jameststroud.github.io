@@ -432,8 +432,15 @@ html:not(.js) .nav__item--sub:focus-within > .nav__sub { display: block; }
   margin: 0;
   border-radius: 2px;
 }
-.photo-hover img { transition: transform .5s ease; }
-.photo-hover:hover img, .photo-hover:focus-within img { transform: scale(1.035); }
+.photo-hover img, .photo-hover video { transition: transform .5s ease; }
+.photo-hover:hover img, .photo-hover:focus-within img,
+.photo-hover:hover video, .photo-hover:focus-within video { transform: scale(1.035); }
+.photo-hover video { display: block; width: 100%; height: auto; }
+.js .photo-hover video[data-plays] { cursor: pointer; }
+.photo-hover__still { display: none; }
+/* Without JavaScript the animation cannot be started or paused, so the still is shown. */
+html:not(.js) .photo-hover video { display: none; }
+html:not(.js) .photo-hover__still { display: block; }
 .photo-hover__caption {
   position: absolute;
   inset: 0;
@@ -984,11 +991,15 @@ a.species__card.story-card {
 
 @media print {
   .navbar, .hero, .footer { display: none; }
+  .photo-hover video { display: none; }
+  .photo-hover__still { display: block; }
 }
 
 /* Visitors who ask for reduced motion get no smooth scrolling, fades or zooms. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .photo-hover video { display: none; }
+  .photo-hover__still { display: block; }
   *, *::before, *::after {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;

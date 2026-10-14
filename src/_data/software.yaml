@@ -3,6 +3,9 @@
 # Add a repository link once the code is public and the `repo` line will appear.
 # Add a `url` line for tools with a live web app: the name becomes a link and
 # the address is shown beneath the description.
+# A `video` line (name without .mp4/.webm) plays twice, stopping at `videoRest`
+# seconds. `videoPoster` shows until it starts and `videoAlt` describes it;
+# `image` (with `imageAlt`) is the still for reduced motion and no JavaScript.
 # ---------------------------------------------------------------------------
 
 - name: ML-Morph Web
@@ -43,6 +46,14 @@
 
 - name: PyTLidar
   kicker: Structural Environment Quantification using LiDAR
+  image: pytlidar-growth-poster.jpg
+  imageAlt: A rainbow eucalyptus on Lizard Island modelled by PyTLidar as cylinders coloured by branch order
+  video: pytlidar-growth
+  videoAlt: A rainbow eucalyptus on Lizard Island as a lidar point cloud, then PyTLidar fitting cylinders to its branches, the finished model and its scanned leaves
+  videoPoster: pytlidar-growth-start.jpg
+  videoWidth: 1000
+  videoHeight: 1250
+  videoRest: 5.6
   summary: >
     A Python package for building quantitative structure models of trees from
     terrestrial lidar point clouds. We use it to measure the branches on Lizard
