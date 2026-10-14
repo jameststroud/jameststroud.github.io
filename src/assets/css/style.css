@@ -441,6 +441,12 @@ html:not(.js) .nav__item--sub:focus-within > .nav__sub { display: block; }
 .photo-hover--anim video, .photo-hover--anim img {
   width: auto; height: auto; max-width: 100%; max-height: 26rem; margin: 0 auto;
 }
+.software__media { margin: 0; }
+.software__media figcaption { text-align: center; }
+.software__hint { display: block; margin-top: .15rem; color: var(--accent-dk); font-style: normal; font-weight: 600; font-size: .85rem; }
+/* The hint only makes sense while the animation can be played. */
+html:not(.js) .software__hint { display: none; }
+@media (prefers-reduced-motion: reduce) { .software__hint { display: none; } }
 .js .photo-hover video[data-plays] { cursor: pointer; }
 .photo-hover__still { display: none; }
 /* Without JavaScript the animation cannot be started or paused, so the still is shown. */

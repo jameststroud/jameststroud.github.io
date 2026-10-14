@@ -6,6 +6,8 @@
 # A `video` line (name without .mp4/.webm) plays twice, stopping at `videoRest`
 # seconds. `videoPoster` shows until it starts and `videoAlt` describes it;
 # `image` (with `imageAlt`) is the still for reduced motion and no JavaScript.
+# `caption` (HTML allowed) is the legend under the media; entries with a video
+# also get "Click to play animation!" after it.
 # ---------------------------------------------------------------------------
 
 - name: ML-Morph Web
@@ -54,6 +56,7 @@
   videoWidth: 1000
   videoHeight: 1250
   videoRest: 5.6
+  caption: A scan of a rainbow eucalyptus on Lizard Island, our long-term evolutionary field study site.
   summary: >
     A Python package for building quantitative structure models of trees from
     terrestrial lidar point clouds. We use it to measure the branches on Lizard
@@ -73,6 +76,9 @@
   videoWidth: 1250
   videoHeight: 1170
   videoRest: 10.5
+  caption: >-
+    Data from Lizard Island, from
+    <a href="https://www.pnas.org/doi/10.1073/pnas.2222071120">Stroud et al. 2023, <em>PNAS</em></a>.
   summary: >
     An R package for analyzing and visualizing natural selection, in development
     in the lab.
