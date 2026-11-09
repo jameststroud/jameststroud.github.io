@@ -94,12 +94,41 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("paperDescription", function (p) {
     const plain = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
     const cut = (s, n) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…");
+    if (p.summary) return cut(plain(p.summary), 158);
     if (p.abstract) return cut(plain(p.abstract), 158);
     const names = eleventyConfig.getFilter("authorList")(p.authors);
     const who = names.length > 2 ? `${names[0]} et al.` : names.join(" and ");
     const venue = p.journal ? `${plain(p.journal)}, ${p.year}` : String(p.year);
     const full = `${plain(p.title)}. ${who} (${venue}). A Stroud Lab publication.`;
     return full.length <= 158 ? full : cut(`${plain(p.title)}. ${who} (${venue}).`, 158);
+  });
+
+  // Up to `n` other papers that share the rarest title words with this one
+  // (species names such as "sagrei" count for far more than "lizards"), for
+  // the "More from the lab" list. Thin pages are left out, so the links point
+  // at pages search engines can index.
+  eleventyConfig.addFilter("relatedPapers", function (paper, papers, n) {
+    const STOP = new Set(("a an and the of in on for to from with by is are at as its how why what when do does " +
+      "not into over under between among across new using use via their our we this that these those than " +
+      "evidence study response reply comment").split(" "));
+    const toks = (p) => new Set(String(p.plainTitle || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase().replace(/[^a-z]+/g, " ").split(" ")
+      .filter((w) => w.length > 3 && !STOP.has(w)).map((w) => w.replace(/(ies)$/, "y").replace(/s$/, "")));
+    const all = (papers || []).map((p) => ({ p, t: toks(p) }));
+    const df = {};
+    all.forEach(({ t }) => t.forEach((w) => { df[w] = (df[w] || 0) + 1; }));
+    const mine = toks(paper);
+    return all
+      .filter(({ p }) => p.slug !== paper.slug && !p.thin)
+      .map(({ p, t }) => {
+        let score = 0;
+        t.forEach((w) => { if (mine.has(w) && df[w] > 1) score += Math.log(all.length / df[w]); });
+        return { p, score };
+      })
+      .filter((x) => x.score >= 2.5)
+      .sort((a, b) => b.score - a.score || Number(b.p.year) - Number(a.p.year))
+      .slice(0, n || 4)
+      .map((x) => x.p);
   });
 
   // A reference in the site's house style, e.g. for "Cite this paper".
@@ -206,7 +235,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
-  eleventyConfig.addPassthroughCopy({ "src/files": "files" });
+  // PDFs only, so notes such as src/files/README.txt are not published.
+  eleventyConfig.addPassthroughCopy({ "src/files": "files" }, { filter: ["**/*.pdf"] });
 
   eleventyConfig.addFilter("highlightAuthors", function (authors, names) {
     let out = authors;

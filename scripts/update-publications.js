@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Looks for papers that are on your ORCID record or in Crossref but not yet in
-// src/_data/publications.yaml, and adds them in the site's house style.
+// src/_data/publications.yaml, and adds them in the site's house style. Also
+// fills src/_data/abstracts.yaml from Crossref, with OpenAlex and PubMed as
+// fallbacks for papers Crossref has no abstract for.
 //
 // Run weekly by .github/workflows/update-publications.yml, which then opens a
 // pull request for you to check. You can also run it yourself:
@@ -52,6 +54,26 @@ async function getJSON(url, fixtureName) {
   }
   throw new Error(`gave up on ${url}`);
 }
+
+async function getText(url, fixtureName) {
+  if (FIXTURES) {
+    const f = path.join(FIXTURES, fixtureName);
+    return fs.existsSync(f) ? fs.readFileSync(f, "utf8") : null;
+  }
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const res = await fetch(url, { headers: { "User-Agent": UA } });
+    if (res.status === 404) return null;
+    if (res.ok) return res.text();
+    if (res.status === 429 || res.status >= 500) {
+      await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
+      continue;
+    }
+    throw new Error(`${res.status} from ${url}`);
+  }
+  throw new Error(`gave up on ${url}`);
+}
+
+const pause = (ms) => (FIXTURES ? Promise.resolve() : new Promise((r) => setTimeout(r, ms)));
 
 const normDoi = (d) => String(d || "").trim().toLowerCase()
   .replace(/^https?:\/\/(dx\.)?doi\.org\//, "").replace(/^doi:\s*/, "");
@@ -174,25 +196,80 @@ function jatsToText(x) {
     .trim();
 }
 
-// Fill abstracts.yaml for every listed DOI we have not looked up before.
-// An empty string records "Crossref has no abstract", so it is not re-asked.
+// OpenAlex stores abstracts as an inverted index: { word: [positions] }.
+async function openAlexAbstract(doi) {
+  const url = `https://api.openalex.org/works/doi:${encodeURIComponent(doi)}?mailto=${encodeURIComponent(site.email)}`;
+  const w = await getJSON(url, "openalex-" + safeName(doi));
+  const inv = w && w.abstract_inverted_index;
+  if (!inv) return "";
+  const words = [];
+  for (const [word, positions] of Object.entries(inv)) for (const i of positions) words[i] = word;
+  return words.filter((x) => x !== undefined).join(" ").replace(/\s+/g, " ").trim();
+}
+
+// PubMed: find the record by DOI, then read its <AbstractText> sections.
+async function pubmedAbstract(doi) {
+  const base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils";
+  const tool = `tool=thestroudlab&email=${encodeURIComponent(site.email)}`;
+  const hit = await getJSON(`${base}/esearch.fcgi?db=pubmed&retmode=json&${tool}&term=${encodeURIComponent(doi + "[doi]")}`,
+    "pubmed-search-" + safeName(doi));
+  const ids = (hit && hit.esearchresult && hit.esearchresult.idlist) || [];
+  if (ids.length !== 1) return "";
+  await pause(400); // NCBI allows three requests a second without an API key
+  const xml = await getText(`${base}/efetch.fcgi?db=pubmed&retmode=xml&rettype=abstract&${tool}&id=${ids[0]}`,
+    "pubmed-" + safeName(doi).replace(/\.json$/, ".xml"));
+  const parts = [];
+  const re = /<AbstractText([^>]*)>([\s\S]*?)<\/AbstractText>/g;
+  let m;
+  while ((m = re.exec(xml || ""))) {
+    const label = (/Label="([^"]+)"/.exec(m[1]) || [])[1];
+    const body = m[2]
+      .replace(/<\/?i>/gi, (t) => (t[1] === "/" ? "</em>" : "<em>"))
+      .replace(/<(?!\/?em>)[^>]*>/g, "")
+      .replace(/&(amp|lt|gt|quot|apos|nbsp);/g, (_, e) => ENTITIES[e])
+      .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+      .replace(/\s+/g, " ").trim();
+    if (body) parts.push(label && !/^(unlabelled|abstract)$/i.test(label) ? `${label.charAt(0) + label.slice(1).toLowerCase()}: ${body}` : body);
+  }
+  return parts.join("\n\n");
+}
+
+// Fill abstracts.yaml for every listed DOI. A DOI never looked up before is
+// asked of Crossref. Any DOI still without an abstract (an empty value) is
+// then asked of OpenAlex and PubMed, on every run, so abstracts those services
+// add later are picked up. Keys that are page slugs rather than DOIs are
+// abstracts pasted in by hand and are left alone.
 async function fillAbstracts(dois, knownWorks) {
   const current = fs.existsSync(ABSTRACTS) ? yaml.load(fs.readFileSync(ABSTRACTS, "utf8")) || {} : {};
-  const have = new Set(Object.keys(current).map(normDoi));
-  let found = 0;
+  const keyOf = {};
+  Object.keys(current).forEach((k) => { keyOf[normDoi(k)] = k; });
+  const found = { Crossref: 0, OpenAlex: 0, PubMed: 0 };
   for (const doi of dois) {
-    if (!doi || have.has(doi)) continue;
-    const w = knownWorks.get(doi) || (await crossrefWork(doi));
-    const text = w && w.abstract ? jatsToText(w.abstract) : "";
-    current[doi] = text;
-    if (text) found++;
+    if (!doi) continue;
+    let key = keyOf[doi];
+    if (key === undefined) {
+      const w = knownWorks.get(doi) || (await crossrefWork(doi));
+      key = keyOf[doi] = doi;
+      current[key] = w && w.abstract ? jatsToText(w.abstract) : "";
+      if (current[key]) { found.Crossref++; continue; }
+    }
+    if (String(current[key] || "").trim()) continue;
+    for (const [source, lookup] of [["OpenAlex", openAlexAbstract], ["PubMed", pubmedAbstract]]) {
+      let text = "";
+      try { text = await lookup(doi); } catch (err) { console.error(`${source} lookup failed for ${doi}: ${err.message}`); }
+      // Very short results are usually a title or a stub, not an abstract.
+      if (text && text.split(/\s+/).length >= 40) { current[key] = text; found[source]++; break; }
+    }
   }
   const header = [
     "# ---------------------------------------------------------------------------",
-    "# ABSTRACTS, keyed by DOI. Shown on each paper's page on the website.",
+    "# ABSTRACTS, keyed by DOI (or by the page slug, for a paper with no DOI).",
+    "# Shown on each paper's page on the website.",
     "#",
-    "# Filled automatically from Crossref by the weekly publication check. An",
-    "# empty value means Crossref had none; paste one in by hand if you like.",
+    "# Filled automatically from Crossref, OpenAlex and PubMed by the weekly",
+    "# publication check. An empty value means none of them had one yet; paste",
+    "# one in by hand if you like (scripts/draft-abstracts.js can pull drafts",
+    "# from the lab's PDFs).",
     "# <em>...</em> is allowed for species names; blank lines start paragraphs.",
     "# ---------------------------------------------------------------------------",
     "",
@@ -308,7 +385,9 @@ async function main() {
   }
   const allDois = parsed.map((p) => normDoi(p.doi)).filter(Boolean);
   const abs = await fillAbstracts(allDois, works);
-  if (abs.found) report.push("", `Also added ${abs.found} paper abstract${abs.found === 1 ? "" : "s"} from Crossref to \`abstracts.yaml\`; they appear on each paper's own page.`);
+  const absParts = Object.entries(abs.found).filter(([, n]) => n).map(([src, n]) => `${n} from ${src}`);
+  const absTotal = Object.values(abs.found).reduce((a, b) => a + b, 0);
+  if (absTotal) report.push("", `Also added ${absTotal} paper abstract${absTotal === 1 ? "" : "s"} to \`abstracts.yaml\` (${absParts.join(", ")}); they appear on each paper's own page. OpenAlex abstracts lose italics, so check species names.`);
   report.push("", "---", "_Opened automatically by the weekly publication check (`.github/workflows/update-publications.yml`)._");
   const md = report.join("\n") + "\n";
 

@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for item in collections.all | sort(false, false, "url") %}
-{%- if item.url and not item.data.sitemapExclude %}
+{%- if item.url and not item.data.sitemapExclude and not (item.data.paper and item.data.paper.thin) %}
   <url><loc>{{ site.url }}{{ item.url }}</loc></url>
 {%- endif %}
 {%- endfor %}

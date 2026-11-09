@@ -68,6 +68,10 @@ Almost certainly `/lizards-on-the-loose/`. It is the "under construction" page n
 
 **Fixes itself** when the page is written and its `noindex` and `sitemapExclude` lines come out.
 
+## Status (pull request of 9 November 2026)
+
+Phases 1 to 3 are built. 13 abstracts were pulled from the lab's PDFs, checked and added; 2 drafts were rejected (one was body text from a *TREE* letter, one was a reference list). After this change 37 of 95 paper pages are indexable and 58 are held back until they get an abstract or a `summary:`. The first weekly run after merge will try OpenAlex and PubMed for the 24 held-back papers that have DOIs. The `summary:` lines are not written: they need the lab's own words.
+
 ## The plan
 
 Phases 1 to 3 are code changes on one branch. Phase 4 is Search Console work after deploy.
