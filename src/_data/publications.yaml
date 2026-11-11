@@ -15,6 +15,10 @@
 #     press: true                        # optional: adds a "press coverage" tag
 #     pdf: "filename.pdf"                # optional: force which file in src/files/papers/ is linked
 #     slug: "2016-stroud-..."            # optional: pin the paper page's URL (keep the old slug when fixing a title or year)
+#     summary: "One to three plain sentences on what the paper found."
+#                                        # optional: shown as "About this paper". A paper page
+#                                        # with no summary and no abstract (abstracts.yaml) is
+#                                        # kept out of Google until it has one of the two.
 #
 # ---------------------------------------------------------------------------
 

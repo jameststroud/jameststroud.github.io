@@ -1,6 +1,9 @@
 # Eleventy build output
 _site/
 
+# Drafts written by scripts/draft-abstracts.js, for review only
+abstracts-draft.yaml
+
 # Dependencies
 node_modules/
 

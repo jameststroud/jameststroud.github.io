@@ -1,8 +1,11 @@
 # ---------------------------------------------------------------------------
-# ABSTRACTS, keyed by DOI. Shown on each paper's page on the website.
+# ABSTRACTS, keyed by DOI (or by the page slug, for a paper with no DOI).
+# Shown on each paper's page on the website.
 #
-# Filled automatically from Crossref by the weekly publication check. An
-# empty value means Crossref had none; paste one in by hand if you like.
+# Filled automatically from Crossref, OpenAlex and PubMed by the weekly
+# publication check. An empty value means none of them had one yet; paste
+# one in by hand if you like (scripts/draft-abstracts.js can pull drafts
+# from the lab's PDFs).
 # <em>...</em> is allowed for species names; blank lines start paragraphs.
 # ---------------------------------------------------------------------------
 10.1002/ece3.1645: >-
@@ -58,9 +61,75 @@
   limits for which the early embryonic stages can properly develop. Our results emphasize the
   importance of studying early embryonic stages of development and the importance of studying
   stage‐specific effects of thermal stress on squamate development.
-10.1007/s10530-017-1389-1: ''
-10.1007/s10980-016-0362-1: ''
-10.1007/s11252-019-0831-9: ''
+10.1007/s10530-017-1389-1: >-
+  Bermuda is an isolated, oceanic island with only one endemic terrestrial vertebrate, the
+  Critically Endangered Bermuda skink (<em>Plestiodon longirostris</em>; Squamata, Scincidae). Major
+  declines in <em>P. longirostris</em> populations have been caused primarily by habitat loss and
+  mortality via invasive species (e.g., predation from birds and cats) and human waste products
+  (e.g., trapped in discarded bottles). However, biotic interactions and interspecific competition
+  with invasive lizards have also been identified as potentially detrimental to <em>P.
+  longisrostris</em> populations. Here, we provide the first occurrence records of a highly invasive
+  lizard, the Cuban brown anole (<em>Anolis sagrei</em>), on Bermuda. We assess the brown anole’s
+  diet, habitat use, morphology, and island-wide distribution for comparison to the native skink,
+  <em>P. longirostris</em>. Results of this study indicate that <em>A. sagrei</em> in Bermuda are
+  highly terrestrial (>60% of all lizards observed on the ground vs. in trees) and forage primarily
+  on terrestrial invertebrates. These data indicate substantial ecological overlap with the
+  exclusively-terrestrial <em>P. longirostris</em>. This is in contrast to the other established
+  non-native lizards on Bermuda, which are principally arboreal and have successfully coexisted with
+  <em>P. longirostris</em> for >60 years. At present, the geographic distributions of <em>A.
+  sagrei</em> and <em>P. longirostris</em> do not overlap. However, all extant skink populations are
+  within several kilometers of brown anole populations (with the nearest being <0.5 km). The
+  extensive overlap in ecological niche between the Bermuda skink and the invasive brown anole will
+  likely present a serious conservation threat if contact is made. This study is exceptional in
+  providing clear in situ ecological data which predict a conservation threat of an established
+  invasive species to a Critically Endangered island endemic prior to coexistence. Continued
+  monitoring of this situation as <em>P. longirostris</em> and <em>A. sagrei</em> inevitably come
+  into contact will allow these a priori hypotheses of conservation risk via ecological overlap to
+  be tested.
+10.1007/s10980-016-0362-1: >-
+  Context: Urban landscapes are a mixture of built structures, human-altered vegetation, and remnant
+  semi-natural areas. The spatial arrangement of abiotic and biotic conditions resulting from
+  urbanization doubtless influences the establishment and spread of non-native species in a city.
+
+  Objectives: We investigated the effects of habitat structure, thermal microclimates, and species
+  coexistence on the spread of a non-native lizard (<em>Anolis cristatellus</em>) in the Miami
+  metropolitan area of South Florida (USA).
+
+  Methods: We used transect surveys to estimate lizard occurrence and abundance on trees and to
+  measure vegetation characteristics, and we assessed forest cover and impervious surface using GIS.
+  We sampled lizard body temperatures, habitat use, and relative abundance at multiple sites.
+
+  Results: At least one of five <em>Anolis</em> species occupied 79% of the 1035 trees surveyed in
+  primarily residential areas, and non-native <em>A. cristatellus</em> occupied 25% of trees.
+  Presence and abundance of <em>A. cristatellus</em> were strongly associated with forest patches,
+  dense vegetation, and high canopy cover, which produced cooler microclimates suitable for this
+  species. Presence of <em>A. cristatellus</em> was negatively associated with the ecologically
+  similar non-native <em>A. sagrei</em>, resulting in reduced abundance and a shift in perch use of
+  <em>A. cristatellus</em>.
+
+  Conclusions: The limited spread of <em>A. cristatellus</em> in Miami over 35 years is due to the
+  patchy, low-density distribution of wooded habitat, which limits dispersal by diffusion. The
+  presence of congeners may also limit spread. Open habitats—some parks, yards and roadsides—contain
+  few if any <em>A. cristatellus</em>, and colonization of isolated forest habitat appears to depend
+  on human-mediated dispersal.
+10.1007/s11252-019-0831-9: >-
+  Understanding how novel environmental conditions presented by urbanization affect the ecology and
+  behavior of species is an important component of global change biology. Behavior is the first way
+  in which organisms respond to novel conditions. We investigated differences in habitat use,
+  movement, and social behavior of invasive adult male Cuban brown anoles (<em>Anolis sagrei</em>)
+  in natural and urban areas in Miami, FL. We observed that urban lizards used broader perches and
+  frequented more artificial human-made substrates (e.g. walls) than lizards in a natural forest
+  habitat. Extensive behavioral observations (ca. 1200 min) revealed that urban <em>A. sagrei</em>
+  also performed more dewlap displays, changed perches less, and jumped less. Our analysis of the
+  structural environment revealed that urban areas are more open – in other words, have higher
+  visibility at typical lizard perch heights, and have fewer and broader perches than natural areas.
+  An increase in openness may explain why we observed a greater than two-fold increase in the
+  frequency of dewlap displaying – the primary mechanism of visual communication in anoles.
+  Similarly, less perch changes and fewer jumps – a form of locomotion frequently used in
+  perch-perch movement when perches are close – is likely driven by a three-fold decrease in tree
+  density. Understanding how behavior and ecology differ in urban vs. natural ecosystems provides
+  insight into how species persist in urban landscapes, and how such behavioral shifts might
+  facilitate biological invasions.
 10.1016/j.biocon.2015.08.034: ''
 10.1016/j.fooweb.2017.05.003: ''
 10.1016/j.jnc.2014.05.003: ''
@@ -129,7 +198,21 @@
   form, strength, direction, or existence and in which stabilizing selection rarely occurred. Our
   results suggest that lack of substantial phenotypic evolutionary change through time may be the
   result of selection, but not persistent stabilizing selection as classically envisioned.
-10.1086/737525: ''
+10.1086/737525: >-
+  Natural selection is widely considered responsible for the fit between organisms and their
+  environment. Lizard limb length variation is a paradigmatic example: studies have shown that limb
+  length differences tightly correlate with habitat use among species, while small differences in
+  limb length between individuals can affect biomechanical function, fitness, and survival within
+  populations. It has therefore been surprising for many field biologists to find otherwise-healthy
+  wild lizards with damaged or missing limbs, appearing to challenge associated expectations of
+  substantial fitness costs. We document limb loss (from a foot to an entire limb) in 58 lizard
+  species, with all cases showing healed limbs and many lizards appearing robust and healthy. Data
+  indicate that limb-deficient lizards typically comprise less than 1% of populations and often
+  exhibit body condition, sprint speed performance, and survival comparable to limb-intact
+  individuals. We discuss the implications of these findings for how evolutionary adaptation is
+  studied and understood in natural populations and provide a perspective on conventional
+  assumptions about the strength and ubiquity of selection pressures on seemingly critical traits.
+  Is natural selection always as omnipresent as Darwin envisioned it to be?
 10.1093/biolinnean/blae088: >-
   Convergence is considered powerful evidence for adaptation to similar natural selection pressures.
   However, for many ecologically and morphologically convergent species, it remains unclear whether
@@ -365,16 +448,83 @@
   Recent recognition that evolutionary change can occur rapidly and on a timescale commensurate with
   ecological processes suggests that it is time to synthesize ecological and evolutionary approaches
   to the study of community assembly and evolutionary diversification.
-10.1670/0022-1511-55.3.215: ''
-10.1670/23-043: ''
+10.1670/0022-1511-55.3.215: >-
+  Determining whether organisms have preferences for certain aspects of the habitat is important for
+  understanding the process of habitat selection. <em>Anolis</em> lizards (anoles) have evolved to
+  occupy distinct parts of the arboreal environment. Depending on the population or species, anoles
+  perch on different aspects of the structural habitat varying in diameter, height, and type of
+  substrate. We used laboratory and mesocosm trials to assess whether 2 species of <em>Anolis</em>
+  lizards have preferences for the diameter and type of substrate they use for perching. Results
+  reveal <em>A. cristatellus</em> and <em>A. sagrei</em> both prefer larger diameter perches.
+  Lizards from natural forests and urban populations showed no difference in perch-diameter
+  preference. In contrast, <em>A. sagrei</em> from an urban site overwhelmingly preferred to perch
+  on wood substrates over polyvinyl chloride and metal ones. The larger diameter and wood substrates
+  preferred by anoles in our trials should confer increased locomotor performance for these species
+  based on previous studies. Rapid environmental change caused by humans can decouple the
+  relationship between habitat preferences and fitness, so it is essential to test for changing
+  preferences in organisms that experience urbanization and other forms of global change.
+10.1670/23-043: >-
+  Islands are the recipients of numerous invasive amphibians and reptiles, often resulting in
+  negative impacts on native biodiversity. In the Caribbean, <em>Anolis</em> lizards, a well-studied
+  system for their adaptive radiation, are also commonly introduced outside of their native range,
+  which has resulted in reshaping species-area and species-isolation relationships. We used
+  mitochondrial DNA (mtDNA) sequence data in a phylogeographic framework to reconstruct and compare
+  invasion histories of four non-native <em>Anolis</em> species (<em>A. grahami</em>, <em>A.
+  extremus</em>, <em>A. leachii</em>, and <em>A. sagrei</em>) established in Bermuda over the past
+  120 years. Our findings support different invasion histories for the four species, including the
+  number of native-range sources, genetic diversity, secondary introductions and opportunities for
+  intraspecific hybridization between previously isolated lineages. The extent of population genetic
+  structure in the native range and the mode of introduction (i.e., intentional vs. unintentional)
+  may influence patterns of the invasion history and genetic diversity for introduced
+  <em>Anolis</em> lizards in Bermuda. These results suggest that human-mediated introductions can
+  create substantial variation in invasion dynamics, which in turn may influence fates of species in
+  new environments.
 10.17161/randa.v23i2.14116: ''
 10.17161/randa.v23i3.14134: ''
 10.17161/randa.v24i2.14170: ''
 10.17161/randa.v24i2.14173: ''
 10.17161/randa.v25i3.14316: ''
 10.17161/randa.v33i1.23091: ''
-10.21425/f5fbg22006: ''
-10.21425/f5fbg38649: ''
+10.21425/f5fbg22006: >-
+  Temperature-change trajectories are being used to identify the geographic barriers and thermal
+  ‘cul-de-sacs’ that will limit the ability of many species to track climate change by migrating. We
+  argue that there are many other potential barriers to species’ migrations. These include stable
+  ecotones, discordant shifts in climatic variables, human land use, and species’ limited dispersal
+  abilities. To illustrate our argument, for each 0.5° latitude/longitude grid cell of the Earth’s
+  land surface, we mapped and tallied the number of cells for which future (2060–2080) climate
+  represents an analog of the focal cell’s current climate. We compared results when only
+  considering temperature with those for which both temperature and total annual precipitation were
+  considered in concert. We also compared results when accounting for only geographic barriers (no
+  cross-continental migration) with those involving both geographic and potential ecological
+  barriers (no cross-biome migration). As expected, the number of future climate analogs available
+  to each pixel decreased markedly with each added layer of complexity (e.g. the proportion of the
+  Earth’s land surface without any available future climate analogs increased from 3% to more than
+  36% with the inclusion of precipitation and ecological boundaries). While including additional
+  variables can increase model complexity and uncertainty, we must strive to incorporate the factors
+  that we know will limit species’ ranges and migrations if we hope to predict the effects of
+  climate change at a high-enough degree of accuracy to guide management decisions.
+10.21425/f5fbg38649: >-
+  The tropics have long been a focal point of interest in ecology and evolutionary biology - but
+  where actually are the tropics? Classically, the tropics have been defined as all areas lying
+  between 23.4° North and South as these zones receive direct overhead solar radiation at some point
+  during the year. However, a suite of different environmental and climatic characteristics have
+  also been employed to classify regions as tropical or not. The aims of this paper are to 1)
+  briefly review some of the different criteria commonly used to define the tropics, 2) map the
+  extent and distribution of tropical land areas according to these different criteria, and 3) asses
+  the concordance between these criteria and a sample of recent “tropical” studies. More
+  specifically, we review eight criteria that are frequently used (implicitly or explicitly) to
+  define the tropics. We then map the location and extent of land areas that are “definitely
+  tropical” (i.e., the core tropics) and areas that are “tropical by most definitions”. Finally, we
+  examine how the different classifications apply to tropical research through an analysis of the
+  study locations of >200 recent tropical biology articles. Depending on the definition, the extent
+  of the terrestrial tropics ranges from 23 million to 66 million km2 – a nearly threefold
+  difference. Likewise, the classification of many areas as being tropical vs. non-tropical depends
+  on the specific criterion employed. Of the tropical studies reviewed here, only 44% were based on
+  data collected from the core tropics, and 12% of tropical studies were based on data collected
+  from sites outside of the geographic tropics but with tropical climates. Many different criteria
+  are used to classify areas as tropical vs. non-tropical, leading to inconsistencies when
+  estimating the extent of tropical areas and variation in the classification of ecosystems and
+  species as being tropical vs. non-tropical.
 10.32942/x2xp99: >-
   PyTLidar is an open-source Python package that reconstructs 3D tree Quantitative Structure Models
   (QSM) from Terrestrial Lidar Scanning (TLS) data, providing a user-friendly tool that improves and
@@ -461,4 +611,81 @@
   that can democratize access to high-quality morphometric analysis across diverse biological
   research communities.
 10.7936/gjg3-h168: ''
+2017-martin-herpetofauna-central-uzbekistan: >-
+  The diverse habitats of central Uzbekistan support a rich herpetofaunal community, but
+  distributions and relative abundances of the species comprising this community remain poorly
+  known. Here, we present an annotated species inventory of this under-explored area, with detailed
+  notes on distributions and population statuses. Fieldwork was concentrated in southern Navoi and
+  western Samarkand provinces, although some records were also made in the far north of Navoi
+  province, near the city of Uchkuduk. Data were collected between March and May/June in 2011, 2012,
+  and 2013, with herpetofaunal records being made opportunistically throughout this period. Survey
+  effort was concentrated in semi-desert steppe habitats, especially the Karnabchul steppe area
+  located to the south of the city of Navoi and an expanse of unnamed steppe located to the north of
+  Navoi. Further records were made in a range of other habitat types, notably wetlands, sand dune
+  fields, and low rocky mountains. Total fieldwork equated to approximately 8,680 person-hours of
+  opportunistic survey effort. In total, we detected two amphibian and 26 reptile species in our
+  study area, including one species classified as Globally Vulnerable by the IUCN. We present
+  distributional data supporting the first record of regional range extensions of five species from
+  within our study area. Our results represent the most detailed data concerning reptile and
+  amphibian diversity and distributions produced from Uzbekistan in recent years. We conclude by
+  recommending that further, systemized survey work needs to be conducted within the area to
+  supplement our findings with more robust estimates of species abundances supported by more
+  detailed information on species-habitat relationships.
+2019-giery-geographic-variation-trophic-ecology-brown-anole: >-
+  Here we analyze a large dataset of the diet of the brown anole (<em>Anolis sagrei</em>). We asked
+  how the trophic niche varies among populations with the specific goal of testing a long-standing
+  model of adaptive diversification – ecological release. Our results do not support the predicted
+  inverse relationship between community richness and niche breadth. Instead, we find that
+  population niche breadth increases with increasing community richness. Using a subset of data for
+  which we have individual-level data we also find that variation in niche structure along this
+  community richness gradient is driven by increasing variation within and among individuals. Our
+  results show that a widely cited dynamic underpinning ecological models of adaptive
+  diversification – ecological release – does not appear to explain interpopulation niche variation
+  in <em>A. sagrei</em>. While we do not have data sufficient to explain this incongruence between
+  theory and observation, we briefly discuss some ideas worth exploring. Ultimately, we hope our
+  findings stimulate new ideas and further evaluation of the relationship between community
+  richness, competition, and the origins of intrapopulation diversity.
+2019-mantilla-histopathology-large-epidermal-cysts-invasive-puerto: >-
+  Large masses were observed on the head and bodies of non-native Puerto Rican crested anoles
+  (<em>Anolis cristatellus</em>) in Miami, Florida USA. Following examination, the masses were found
+  to be epidermal inclusion cysts. The cysts did not appear to interfere with body condition or
+  behavior. This is the first record of epidermal inclusion cysts in <em>A. cristatellus</em> in
+  either the native (Puerto Rico) or non-native (Florida) range.
+2019-maurer-nocturnal-activity-antiguan-lizards-under-artificial: >-
+  Widespread human development has led to the proliferation of artificial light at night, an
+  increasingly recognized but poorly understood component of anthropogenic global change. Animals
+  specialized to diurnal activity are presented opportunities to use this night-light niche, but the
+  ecological consequences are largely unknown. While published records make note of nocturnal
+  activity in a diversity of diurnal taxa, few case studies have gone beyond isolated observations
+  to quantify patterns of nocturnal activity, document animal behavior, and describe new species
+  interactions. From 13 June to 15 July 2017, we conducted hourly nocturnal surveys to assess how
+  two species of diurnal <em>Anolis</em> lizards (Leach’s Anole, <em>Anolis leachii</em>, and Watt’s
+  Anole, <em>A. wattsi</em>) use artificial light on Long Island, Antigua. Our data show that both
+  anole species foraged in artificially illuminated habitats and were more active prior to sunrise
+  compared to the early night. Mark-resight data for a focal species, <em>A. leachii</em>, suggest
+  that patterns of nocturnal activity were not significantly different between individuals. Finally,
+  our behavioral observations for the two anoles and a third lizard species, the nocturnal
+  Thick-tailed Gecko (<em>Thecadactylus rapicauda</em>), reveal a lack of agonistic interactions.
+  Our study reveals an altered temporal niche for two diurnal Antiguan lizards and adds to a growing
+  body of evidence documenting the broad influences of anthropogenic change on biodiversity.
+2019-mothes-predicting-invasion-dynamics-anoles-other-lizards: >-
+  Ecological niche models are commonly used to predict areas of environmental suitability for
+  non-native species. Depending on these models to enact appropriate management plans assumes that
+  they are accurate, however most niche model studies do not provide appropriate validation. South
+  Florida hosts the world’s largest and most globally diverse non-native lizard community, providing
+  a unique opportunity to evaluate the predictive ability of niche models by comparing model
+  predictions to observed patterns of dispersal, abundance, and physiology in established non-native
+  populations. Using Maxent, we developed niche models for 30 non-native lizard species established
+  within Miami-Dade County, FL, including all 8 established non-native <em>Anolis</em> species,
+  using native range data to project suitability in the invaded range. We then compared projections
+  to data available on distribution, as well as empirically collected data on abundance and
+  physiology (upper and lower thermal tolerances). Maxent performed well in predicting general
+  invasion patterns of non-native species across geographic space, however performed poorly in
+  predicting the relative invasion success of each species. Additionally, comparisons between
+  predicted and observed thermal tolerances showed that most of the models overpredicted the range
+  of suitable thermal habitat for each species. Overall, the niche models accurately predicted
+  geographic hotspots for these species to occur but could not predict relative invasion success of
+  each species individually. These results suggest that other factors, such as time since
+  introduction, dispersal ability, biotic interactions, adaptation, and source populations may also
+  influence the relative success of non-native species after they become established.
 https://ssarherps.org/herpetological-review-pdfs/: ''

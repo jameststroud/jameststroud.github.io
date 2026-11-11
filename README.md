@@ -152,7 +152,18 @@ To preview locally without changing anything:
 - **Every publication has its own page** at `/publications/<year>-<author>-<title>/`,
   built from `publications.yaml`, with the tags Google Scholar reads, a citation
   and BibTeX. Abstracts come from `src/_data/abstracts.yaml`, which the weekly
-  publication check fills from Crossref; you can paste one in by hand too.
+  publication check fills from Crossref, then OpenAlex and PubMed; you can
+  paste one in by hand too, keyed by DOI or (for a paper with no DOI) by the
+  page slug. `npm run draft-abstracts` pulls draft abstracts out of the PDFs
+  in `src/files/papers/` into `abstracts-draft.yaml` for you to check and copy
+  across. For notes and popular pieces with no abstract, add a `summary:` to
+  the entry in `publications.yaml` instead.
+- **Paper pages with no abstract and no summary are kept out of Google** (a
+  `noindex` tag, and left out of the sitemap) because a page with only a title
+  and a citation can lower how Google rates the rest of the site. The page still
+  works and is still listed on `/publications/`. Add either one and it becomes
+  indexable on the next build. `npm run check` after a build lists how many
+  are still waiting; the deploy runs the same check.
 
 ---
 

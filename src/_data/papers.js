@@ -3,8 +3,13 @@
 // /publications/<slug>/. Everything comes from publications.yaml; you never
 // need to edit this file.
 //
-// Abstracts live in abstracts.yaml, keyed by DOI. The weekly publication
-// check fills that file from Crossref; you can also paste one in by hand.
+// Abstracts live in abstracts.yaml, keyed by DOI (or by page slug for a paper
+// with no DOI). The weekly publication check fills that file from Crossref,
+// OpenAlex and PubMed; you can also paste one in by hand.
+//
+// A paper with neither an abstract nor a `summary:` in publications.yaml is
+// marked `thin`: its page stays live but is kept out of search engines and the
+// sitemap until it has some text of its own.
 // ---------------------------------------------------------------------------
 
 const fs = require("fs");
@@ -60,7 +65,13 @@ module.exports = function () {
       plainTitle: plain(p.title),
       doiBare: doi || null,
       pdfFile: pdfs.byTitle[p.title] || null,
-      abstract: doi && absByDoi[doi] ? String(absByDoi[doi]).trim() : null,
+      abstract: null,
+      summary: p.summary ? String(p.summary).trim() : null,
     });
+  }).map((p) => {
+    const a = (p.doiBare && absByDoi[p.doiBare]) || absByDoi[p.slug];
+    p.abstract = a ? String(a).trim() : null;
+    p.thin = !p.abstract && !p.summary;
+    return p;
   });
 };

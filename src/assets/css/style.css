@@ -1078,6 +1078,9 @@ a.species__card.story-card {
   line-height: 1.5; overflow-x: auto; white-space: pre;
 }
 .paper__back { margin-top: 2.5rem; }
+.paper__related { margin: .5rem 0 2rem; padding-left: 1.2rem; }
+.paper__related li { margin-bottom: .6rem; }
+.paper__related-meta { display: block; font-size: .9rem; color: var(--ink-soft); }
 
 /* ==========================================================================
    Species and story pages

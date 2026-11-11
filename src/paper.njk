@@ -31,6 +31,11 @@ eleventyComputed:
       {%- if paper.url and not paper.doi %} <a class="btn btn--accent" href="{{ paper.url }}">Read it online</a>{% endif %}
     </p>
 
+    {%- if paper.summary %}
+    <h2 class="paper__h2">About this paper</h2>
+    <div class="paper__abstract">{{ paper.summary | abstractHtml | safe }}</div>
+    {%- endif %}
+
     {%- if paper.abstract %}
     <h2 class="paper__h2">Abstract</h2>
     <div class="paper__abstract">{{ paper.abstract | abstractHtml | safe }}</div>
@@ -43,6 +48,16 @@ eleventyComputed:
       <pre class="paper__bibtex" id="bibtex">{{ paper | bibtex }}</pre>
       <button type="button" class="btn paper__copy" data-copy="bibtex">Copy BibTeX</button>
     </details>
+    {%- endif %}
+
+    {%- set related = paper | relatedPapers(papers, 4) %}
+    {%- if related.length %}
+    <h2 class="paper__h2">More from the lab</h2>
+    <ul class="paper__related">
+      {%- for r in related %}
+      <li><a href="{{ r.url_page }}">{{ r.title | safe }}</a> <span class="paper__related-meta">{{ r.journal | safe if r.journal else "" }}{% if r.journal %}, {% endif %}{{ r.year }}</span></li>
+      {%- endfor %}
+    </ul>
     {%- endif %}
 
     {%- for s in collections.species %}{% if s.data.scientific in paper.plainTitle %}
