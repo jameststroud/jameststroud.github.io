@@ -20,24 +20,6 @@ seoTitle: "Lizard Ecology and Evolution Research · Stroud Lab"
   </div>
 </section>
 
-<section class="section--tight">
-  <div class="wrap">
-    <h2 class="center">Stories from the lab</h2>
-    <div class="cards cards--stories" style="margin-top:1.5rem">
-      {%- for s in collections.stories %}
-      <a class="card species__card story-card" href="{{ s.data.externalUrl or s.url }}"{% if s.data.externalUrl %} target="_blank" rel="noopener"{% endif %}>
-        <p class="card__kicker">Story</p>
-        <h3>{{ s.data.cardTitle }}</h3>
-        <p>{{ s.data.cardText }}</p>
-        {%- if s.data.cardPhoto %}
-        <div class="story-card__photo"><img src="{{ s.data.cardPhoto }}" alt="{{ s.data.cardPhotoAlt or '' }}" sizes="(min-width: 62rem) 18rem, (min-width: 40rem) 50vw, 100vw"></div>
-        {%- endif %}
-      </a>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="wrap">
     <div class="split">
@@ -148,7 +130,7 @@ seoTitle: "Lizard Ecology and Evolution Research · Stroud Lab"
           our own machine-learning software for various research tasks in the lab, such as automated landmarking of
           our lizard radiographs and toepad scans, and LiDAR point cloud processing.
         </p>
-        <p><a href="/software/">See the software and tools</a></p>
+        <p><a href="/research/lizard-backpacks/">Read about our lizard backpacks</a> · <a href="/software/">See the software and tools</a></p>
       </div>
     </div>
   </div>
@@ -185,6 +167,24 @@ seoTitle: "Lizard Ecology and Evolution Research · Stroud Lab"
           introduction?
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <h2 class="center">Stories from the lab</h2>
+    <div class="cards cards--stories" style="margin-top:1.5rem">
+      {%- for s in collections.stories %}
+      <a class="card species__card story-card" href="{{ s.data.externalUrl or s.url }}"{% if s.data.externalUrl %} target="_blank" rel="noopener"{% endif %}>
+        <p class="card__kicker">Story</p>
+        <h3>{{ s.data.cardTitle }}</h3>
+        <p>{{ s.data.cardText }}</p>
+        {%- if s.data.cardPhoto %}
+        <div class="story-card__photo"><img src="{{ s.data.cardPhoto }}" alt="{{ s.data.cardPhotoAlt or '' }}" sizes="(min-width: 62rem) 18rem, (min-width: 40rem) 50vw, 100vw"></div>
+        {%- endif %}
+      </a>
+      {%- endfor %}
     </div>
   </div>
 </section>

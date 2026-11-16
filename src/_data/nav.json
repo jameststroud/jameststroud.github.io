@@ -6,8 +6,8 @@
       "children": [
         { "title": "Research overview", "url": "/research/" },
         { "title": "Lizard Island", "url": "/research/lizard-island/" },
-        { "title": "Cold snaps and lizards", "url": "/research/cold-snaps/" },
-        { "title": "Three-legged lizards", "url": "/research/three-legged-lizards/" },
+        { "title": "Falling iguanas", "url": "/research/cold-snaps/" },
+        { "title": "Lizard Backpacks", "url": "/research/lizard-backpacks/" },
         { "title": "Sleepy Lizard Project", "url": "https://iamtaylornotyou.github.io/Sleeping-Lizard-Project/", "external": true },
         { "title": "Software & Tools", "url": "/software/" }
       ]
